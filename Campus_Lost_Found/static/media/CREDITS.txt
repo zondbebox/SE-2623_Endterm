@@ -1,0 +1,25 @@
+CAMPUS LOST & FOUND - MEDIA CREDITS
+Category photos are illustrative and do not identify actual lost items.
+
+Headphones on desk.jpg - Lirazelf
+https://commons.wikimedia.org/wiki/File:Headphones_on_desk.jpg
+CC BY-SA 3.0 Unported - https://creativecommons.org/licenses/by-sa/3.0/
+Changes: landscape crop (electronics/stationery) or padded landscape framing (bags), resize, PNG/JPEG/WebP re-encoding. Adapted photos retain the source licence.
+Files: electronics.webp; baseline/electronics.png
+
+Backpack-1.jpg - Wikisafar
+https://commons.wikimedia.org/wiki/File:Backpack-1.jpg
+CC BY-SA 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/
+Changes: landscape crop (electronics/stationery) or padded landscape framing (bags), resize, PNG/JPEG/WebP re-encoding. Adapted photos retain the source licence.
+Files: bags.webp; baseline/bags.png
+
+Paper notebooks.jpg - Mattes
+https://commons.wikimedia.org/wiki/File:Paper_notebooks.jpg
+Public domain — released by the copyright holder (PD-self) - https://commons.wikimedia.org/wiki/File:Paper_notebooks.jpg#Licensing
+Changes: landscape crop (electronics/stationery) or padded landscape framing (bags), resize, PNG/JPEG/WebP re-encoding. Adapted photos retain the source licence.
+Files: stationery.webp; baseline/stationery.png
+
+logo.svg and architecture.svg: original project SVG code; no external image source.
+confirmation.css: original project CSS animation, 0.38 s, reduced motion supported.
+Project code and SVG/CSS assets: educational demonstration; copyright remains with the project authors.
+Audio experiment: original synthesized non-speech three-note phrase; no third-party recording/music.

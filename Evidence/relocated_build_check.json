@@ -1,0 +1,82 @@
+{
+  "login": "passed",
+  "analytics": "122 rows",
+  "empty_research": "passed",
+  "empty_telemetry": "passed",
+  "pillow_webp": "passed",
+  "main_database_unchanged": true,
+  "method": "Extract the preflight archive into a new directory; run its included Windows Python. Flask test-client checks and full backup/restore use that relocated copy.",
+  "backup": {
+    "archive_sha256": "8dc9ea915aef79bdd4e20557ceee6f90fbefceda0b14a3374e2888c207039797",
+    "file_count": 3,
+    "databases": {
+      "data/campus.sqlite3": {
+        "counts": {
+          "categories": 10,
+          "notices": 122,
+          "users": 20
+        },
+        "schema_version": 1,
+        "integrity_check": "ok",
+        "foreign_key_violations": []
+      },
+      "data/research.sqlite3": {
+        "counts": {
+          "research_sessions": 0
+        },
+        "schema_version": 0,
+        "integrity_check": "ok",
+        "foreign_key_violations": []
+      },
+      "data/telemetry.sqlite3": {
+        "counts": {
+          "locker_events": 0
+        },
+        "schema_version": 0,
+        "integrity_check": "ok",
+        "foreign_key_violations": []
+      }
+    },
+    "excluded": [
+      "runtime/session.key"
+    ],
+    "consistency_note": "Separate SQLite snapshots and photos; pause app changes during backup."
+  },
+  "restore": {
+    "success": true,
+    "databases": {
+      "data/campus.sqlite3": {
+        "counts": {
+          "categories": 10,
+          "notices": 122,
+          "users": 20
+        },
+        "schema_version": 1,
+        "integrity_check": "ok",
+        "foreign_key_violations": []
+      },
+      "data/research.sqlite3": {
+        "counts": {
+          "research_sessions": 0
+        },
+        "schema_version": 0,
+        "integrity_check": "ok",
+        "foreign_key_violations": []
+      },
+      "data/telemetry.sqlite3": {
+        "counts": {
+          "locker_events": 0
+        },
+        "schema_version": 0,
+        "integrity_check": "ok",
+        "foreign_key_violations": []
+      }
+    }
+  },
+  "relocated_tests": {
+    "count": 65,
+    "seconds": 39.396,
+    "exit_code": 0,
+    "log": "Evidence/relocated_tests_65.txt"
+  }
+}

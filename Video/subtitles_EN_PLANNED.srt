@@ -1,0 +1,158 @@
+1
+00:00:00,000 --> 00:00:04,000
+Hello, I am Zhanzhol.
+We are group SE-2623.
+
+2
+00:00:04,000 --> 00:00:09,000
+Campus Lost and Found helps students
+search for missing items
+
+3
+00:00:09,000 --> 00:00:12,000
+and share found objects.
+
+4
+00:00:12,000 --> 00:00:15,000
+This is our running local prototype.
+
+5
+00:00:15,000 --> 00:00:20,000
+I search for a notebook,
+open a matching notice,
+
+6
+00:00:20,000 --> 00:00:24,000
+and check its location and status.
+These are fictional classroom accounts.
+
+7
+00:00:24,000 --> 00:00:30,000
+An astanait.edu.kz address in this demo
+does not prove university identity,
+
+8
+00:00:30,000 --> 00:00:35,000
+and real university sign-in
+is not connected.
+
+9
+00:00:35,000 --> 00:00:40,000
+For my formats section, I compare the same
+project image as PNG, JPEG and WebP.
+
+10
+00:00:40,000 --> 00:00:43,000
+PNG preserves every pixel.
+
+11
+00:00:43,000 --> 00:00:47,000
+Lossy compression trades some detail
+for smaller files.
+
+12
+00:00:47,000 --> 00:00:50,000
+SVG keeps the logo sharp.
+
+13
+00:00:50,000 --> 00:00:54,000
+I am Daniil. My part integrates the media
+and measures their cost.
+
+14
+00:00:54,000 --> 00:00:59,000
+The page uses local WebP images
+and an SVG logo.
+
+15
+00:00:59,000 --> 00:01:05,000
+At a narrow screen width,
+images fit the layout.
+
+16
+00:01:05,000 --> 00:01:09,000
+Now I post a found bottle.
+I choose its category
+
+17
+00:01:09,000 --> 00:01:13,000
+and add a title, description,
+location and date.
+
+18
+00:01:13,000 --> 00:01:17,000
+I press Publish notice.
+The success message confirms the change.
+
+19
+00:01:17,000 --> 00:01:25,000
+Refreshing the page shows
+that the notice remains saved.
+
+20
+00:01:25,000 --> 00:01:30,000
+We compare the same page before and after
+optimisation with cache disabled
+
+21
+00:01:30,000 --> 00:01:32,000
+and Fast 4G throttling.
+
+22
+00:01:32,000 --> 00:01:36,000
+Our evidence records transferred bytes,
+request count and loading time.
+
+23
+00:01:36,000 --> 00:01:40,000
+Page loading is different
+from the search performance requirement.
+
+24
+00:01:40,000 --> 00:01:44,000
+I am Daulet. My part covers
+accessibility and the video.
+
+25
+00:01:44,000 --> 00:01:49,000
+I mark this notice as returned.
+The result appears as text,
+
+26
+00:01:49,000 --> 00:01:53,000
+so sound is unnecessary.
+The success animation respects reduced motion.
+
+27
+00:01:53,000 --> 00:01:59,000
+Meaningful images have alternative text,
+
+28
+00:01:59,000 --> 00:02:05,000
+while decorative images
+have empty alternative text.
+
+29
+00:02:05,000 --> 00:02:11,000
+This diagram shows the browser, the Flask
+application running with Waitress,
+
+30
+00:02:11,000 --> 00:02:16,000
+and the SQLite database on one computer.
+Images are local files.
+
+31
+00:02:16,000 --> 00:02:21,000
+Our video includes each member's
+own voice and English subtitles.
+
+32
+00:02:21,000 --> 00:02:26,000
+This remains a local demo
+with test accounts,
+
+33
+00:02:26,000 --> 00:02:30,000
+without real university sign-in
+or outgoing email.

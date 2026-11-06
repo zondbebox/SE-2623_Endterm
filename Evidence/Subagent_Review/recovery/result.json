@@ -1,0 +1,113 @@
+{
+  "reviewer_id": "AI-05",
+  "kind": "automated_technical_review",
+  "scope": "Full data backup and scratch restore; read-only inspection of Linux launchers",
+  "command": "python/python.exe -B test_backup_full.py",
+  "working_directory": "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\ai_review_2026-11-01\\recovery\\app",
+  "exit_code": 0,
+  "count": 4,
+  "test_count": 4,
+  "passed": 4,
+  "failed": 0,
+  "status": "tests_passed_with_static_finding",
+  "started_utc": "2026-11-01T18:31:52.9085243Z",
+  "completed_utc": "2026-11-01T18:31:55.6897689Z",
+  "complete_log": "test_backup_full.log",
+  "stdout_log": "test_backup_full.stdout.log",
+  "stderr_log": "test_backup_full.stderr.log",
+  "copy_manifest": "copy_manifest.json",
+  "verified_behaviors": [
+    "Archive includes the main database, research and telemetry databases, and private photos; SHA-256 values match, and runtime/session.key is excluded.",
+    "Restored main database has 120 notices, the research fixture retains its row, and the restored photo bytes match.",
+    "A live database changed to 119 notices remains unchanged after restoring the archived 120-notice snapshot into a new folder; existing destinations are rejected.",
+    "A traversal entry is rejected without creating the destination or escaped file.",
+    "A corrupted photo payload is rejected without creating the restored destination."
+  ],
+  "concrete_findings": [
+    {
+      "id": "AI-05-F1",
+      "severity": "medium",
+      "category": "static_limit_mismatch",
+      "file": "backup_full.py",
+      "lines": [
+        112,
+        120,
+        145
+      ],
+      "title": "A backup within the advertised file-count limit can exceed the restore manifest limit",
+      "evidence": "create_full_backup permits 9,999 payload files and writes an indented JSON manifest without checking its byte length; restore_full_check rejects manifests above 1,048,576 bytes. A read-only calculation with 1 database entry and 9,998 allowed photo paths produced a 1,819,930-byte manifest before realistic database metadata is added.",
+      "impact": "A sufficiently large photo collection may produce a successful backup that this restore checker rejects.",
+      "recommendation": "Make archive creation and restoration use consistent manifest-size and file-count limits.",
+      "verification": "Code inspection plus serializer-size calculation; a 9,999-file end-to-end archive was not created.",
+      "evidence_file": "manifest_limit_analysis.json"
+    }
+  ],
+  "static_observations": [
+    "SQLite snapshots use the online backup API; restore validates hashes, database integrity, foreign keys, table counts, photo references, allowed paths, duplicate entries, symlink entries, encryption flags, and archive size.",
+    "The archive is a set of separately captured SQLite snapshots and copied photos; its own instructions require pausing app changes for cross-resource consistency.",
+    "Restore uses a fresh scratch directory and does not implement replacement of live project data.",
+    "Linux launchers share quoted path handling and set -euo pipefail; setup requires Python 3.10+, creates a cached Linux virtual environment, installs pinned requirements when their hash changes, and does not invoke sudo.",
+    "The Linux database viewer binds to 127.0.0.1 with read-only flags; scripts have no UTF-8 BOM or CRLF line endings."
+  ],
+  "linux_scripts": [
+    {
+      "name": "_linux_common.sh",
+      "utf8_bom": false,
+      "carriage_return_count": 0,
+      "executed": false
+    },
+    {
+      "name": "BACKUP.sh",
+      "utf8_bom": false,
+      "carriage_return_count": 0,
+      "executed": false
+    },
+    {
+      "name": "DATABASE.sh",
+      "utf8_bom": false,
+      "carriage_return_count": 0,
+      "executed": false
+    },
+    {
+      "name": "DB.sh",
+      "utf8_bom": false,
+      "carriage_return_count": 0,
+      "executed": false
+    },
+    {
+      "name": "RESTORE_CHECK.sh",
+      "utf8_bom": false,
+      "carriage_return_count": 0,
+      "executed": false
+    },
+    {
+      "name": "START.sh",
+      "utf8_bom": false,
+      "carriage_return_count": 0,
+      "executed": false
+    },
+    {
+      "name": "TESTS.sh",
+      "utf8_bom": false,
+      "carriage_return_count": 0,
+      "executed": false
+    }
+  ],
+  "manifest_limit_analysis": {
+    "analysis": "Read-only manifest-size calculation using the exact serializer and the allowed maximum file count; no backup was created",
+    "file_count": 9999,
+    "illustrative_payload_bytes": 9999,
+    "serialized_manifest_bytes": 1819930,
+    "restore_manifest_limit_bytes": 1048576,
+    "exceeds_restore_limit": true
+  },
+  "coverage_limits": [
+    "Tests were executed only on Windows using the copied bundled python/python.exe.",
+    "Linux launchers, virtual environment creation, dependency installation, and Linux runtime behavior were inspected only and were not executed.",
+    "The four assigned tests are synthetic automated technical checks, not a human study. Nominal human usability is untested.",
+    "Concurrent writers, disk exhaustion or interrupted final moves, actual large archives, and every malformed archive variant were not tested.",
+    "No application or test source was edited. All review writes were confined to this reviewer folder."
+  ],
+  "human_participants": 0,
+  "human_usability_tested": false
+}

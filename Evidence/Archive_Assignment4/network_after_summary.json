@@ -1,0 +1,57 @@
+{
+  "requests": 7,
+  "bytes": 97437,
+  "load_ms": 536.4,
+  "finish_ms": 531.91,
+  "settings": {
+    "cacheDisabled": true,
+    "profile": "Fast 4G",
+    "downloadBps": 1012500,
+    "uploadBps": 168750,
+    "latencyMs": 165
+  },
+  "resources": [
+    {
+      "url": "http://127.0.0.1:5055/",
+      "bytes": 8180,
+      "start_ms": 0.0,
+      "end_ms": 204.53
+    },
+    {
+      "url": "http://127.0.0.1:5055/static/style.css",
+      "bytes": 14820,
+      "start_ms": 227.52,
+      "end_ms": 468.64
+    },
+    {
+      "url": "http://127.0.0.1:5055/static/media/confirmation.css",
+      "bytes": 1009,
+      "start_ms": 227.96,
+      "end_ms": 442.96
+    },
+    {
+      "url": "http://127.0.0.1:5055/static/media/logo.svg",
+      "bytes": 1038,
+      "start_ms": 228.08,
+      "end_ms": 476.41
+    },
+    {
+      "url": "http://127.0.0.1:5055/static/media/electronics.webp",
+      "bytes": 32048,
+      "start_ms": 228.18,
+      "end_ms": 500.45
+    },
+    {
+      "url": "http://127.0.0.1:5055/static/media/bags.webp",
+      "bytes": 10216,
+      "start_ms": 228.29,
+      "end_ms": 461.47
+    },
+    {
+      "url": "http://127.0.0.1:5055/static/media/stationery.webp",
+      "bytes": 30126,
+      "start_ms": 228.4,
+      "end_ms": 531.91
+    }
+  ]
+}

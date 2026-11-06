@@ -1,0 +1,11 @@
+test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite (__main__.CampusApplicationIntegrationTests.test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite) ... ok
+test_browse_retains_valid_filters_pagination_and_safe_fallbacks (__main__.CampusApplicationIntegrationTests.test_browse_retains_valid_filters_pagination_and_safe_fallbacks) ... ok
+test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) ... ok
+test_out_of_range_form_categories_cannot_create_or_change_notices (__main__.CampusApplicationIntegrationTests.test_out_of_range_form_categories_cannot_create_or_change_notices) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 3.616s
+
+OK
+
+EXIT_CODE: 0

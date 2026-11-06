@@ -1,0 +1,12 @@
+test_admin_dashboard_discloses_simulation_and_escapes_untrusted_labels (__main__.AnalyticsTests.test_admin_dashboard_discloses_simulation_and_escapes_untrusted_labels) ... ok
+test_aggregates_match_independent_queries_without_modifying_database (__main__.AnalyticsTests.test_aggregates_match_independent_queries_without_modifying_database) ... ok
+test_anonymous_and_student_cannot_access_dashboard_or_export (__main__.AnalyticsTests.test_anonymous_and_student_cannot_access_dashboard_or_export) ... ok
+test_csv_neutralizes_formulas_and_omits_personal_fields (__main__.AnalyticsTests.test_csv_neutralizes_formulas_and_omits_personal_fields) ... ok
+test_full_monday_sunday_weeks_include_gaps_and_sort_by_date (__main__.AnalyticsTests.test_full_monday_sunday_weeks_include_gaps_and_sort_by_date) ... ok
+test_location_counts_sort_largest_first_with_stable_name_tiebreak (__main__.AnalyticsTests.test_location_counts_sort_largest_first_with_stable_name_tiebreak) ... ok
+test_zero_categories_and_empty_dataset_are_retained (__main__.AnalyticsTests.test_zero_categories_and_empty_dataset_are_retained) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 3.125s
+
+OK

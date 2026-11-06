@@ -1,0 +1,27 @@
+test_backup_rejects_oversized_manifest_before_publishing_archive (__main__.FullBackupTests.test_backup_rejects_oversized_manifest_before_publishing_archive) ... FAIL
+test_restore_rejects_manifest_above_shared_limit_without_destination (__main__.FullBackupTests.test_restore_rejects_manifest_above_shared_limit_without_destination) ... FAIL
+test_manifest_at_shared_limit_can_be_written_and_restored (__main__.FullBackupTests.test_manifest_at_shared_limit_can_be_written_and_restored) ... ok
+
+======================================================================
+FAIL: test_backup_rejects_oversized_manifest_before_publishing_archive (__main__.FullBackupTests.test_backup_rejects_oversized_manifest_before_publishing_archive)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\work\endterm\ai_review_2026-11-01\recovery\app\test_backup_full.py", line 123, in test_backup_rejects_oversized_manifest_before_publishing_archive
+    with self.assertRaises(self.api().BackupError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: BackupError not raised
+
+======================================================================
+FAIL: test_restore_rejects_manifest_above_shared_limit_without_destination (__main__.FullBackupTests.test_restore_rejects_manifest_above_shared_limit_without_destination)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\work\endterm\ai_review_2026-11-01\recovery\app\test_backup_full.py", line 132, in test_restore_rejects_manifest_above_shared_limit_without_destination
+    with self.assertRaises(self.api().BackupError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: BackupError not raised
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.839s
+
+FAILED (failures=2)
+Exit code: 1

@@ -1,0 +1,12 @@
+ENDTERM STAGE 2 - INTEGRATION
+The Assignment 3 Flask/SQLite database and Assignment 4 multimedia form one prototype.
+Added: local domain-limited registration, private JPEG/PNG uploads, mailto contact,
+administrator analytics, a real external-user timing recorder and labelled locker simulation.
+Windows: START.bat. Linux: bash START.sh (Python 3.10+, venv; Internet for first setup).
+TESTS.bat / bash TESTS.sh run seven test modules; final Windows verification: 65 tests.
+Main database: data/campus.sqlite3, 122 fictional notices at delivery.
+Research and telemetry are separate files created when those features are used.
+The report, presentation, defense guide, Analysis, Testing and Evidence are in the parent folder.
+BACKUP includes the data files and private uploads; RESTORE_CHECK never replaces working data.
+The existing Assignment 4 video is a fallback; its uploaded captions need timing correction.
+See START_HERE_RU.txt and the parent START_HERE_RU.txt for current status and instructions.

@@ -1,0 +1,130 @@
+{
+  "reviewer_id": "AI-01",
+  "kind": "AI software correction following historical AI software review",
+  "finding_fixed": "AI-01-F1 and the same SQLite integer overflow in notice-ID handlers",
+  "source_path": "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\outputs\\Endterm\\Campus_Lost_Found",
+  "source_files_changed": [
+    "app.py",
+    "test_app.py"
+  ],
+  "source_hashes": {
+    "app.py": {
+      "before_sha256": "e7fe0749cc5e6e97fe3b6a2a18fc51e03fbce59970c5b1d7c40be856137c5911",
+      "after_sha256": "00d05ad3cd1363e8ef5ebfb6d5665396ebf8daea10e3fc8215f8a47ddab98f48"
+    },
+    "test_app.py": {
+      "before_sha256": "fe4006c0ccc6fda46ae739ba583ff7dc412f41ceabecd60897e4386cedcca9ff",
+      "after_sha256": "7fd59b9354358992ea91499999f2ebe8b185c5b03c3321966c3f58afdfaad64a"
+    }
+  },
+  "exact_changes": [
+    "Add SQLite signed-64-bit maximum constant. load_notice now rejects IDs outside 1..9223372036854775807 with 404 before SQL binding, covering detail, photo, edit, returned and admin removal handlers.",
+    "Reject positive browse pages greater than 1152921504606846976 with HTTP 400 before computing a SQLite OFFSET. The maximum safe page and ordinary empty pages retain HTTP 200 behavior.",
+    "Catch ValueError when converting digit-like category strings, and reject category integers above 9223372036854775807 with HTTP 400. Valid category values continue to filter normally.",
+    "Keep existing negative/invalid page fallback to page 1 and ignored nonnumeric/negative browse categories. Do not clamp invalid numeric IDs into existing rows.",
+    "Leave category form validation unchanged: real create/edit probes establish that oversized positive/negative strings already render the existing inline validation error without writes.",
+    "Add four regression methods covering integer boundaries, all seven notice-route method combinations, no unintended notice writes, valid filtered pagination and safe existing fallback behavior."
+  ],
+  "new_regression_methods": [
+    "test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite",
+    "test_browse_retains_valid_filters_pagination_and_safe_fallbacks",
+    "test_notice_routes_reject_out_of_range_ids_without_changing_rows",
+    "test_out_of_range_form_categories_cannot_create_or_change_notices"
+  ],
+  "tdd": {
+    "red": {
+      "command": ".\\python\\python.exe -B test_app.py CampusApplicationIntegrationTests.test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite CampusApplicationIntegrationTests.test_browse_retains_valid_filters_pagination_and_safe_fallbacks CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows CampusApplicationIntegrationTests.test_out_of_range_form_categories_cannot_create_or_change_notices",
+      "methods": 4,
+      "failing_subcases": 20,
+      "exit_code": 1,
+      "explanation": "Six browse cases returned 500 instead of 400; fourteen notice-ID route cases returned 500 instead of 404. Valid-pagination and form-rejection characterization methods passed before the fix.",
+      "log_path": "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\ai_review_2026-11-01\\student\\fix-red.log"
+    },
+    "green": {
+      "command": ".\\python\\python.exe -B test_app.py CampusApplicationIntegrationTests.test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite CampusApplicationIntegrationTests.test_browse_retains_valid_filters_pagination_and_safe_fallbacks CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows CampusApplicationIntegrationTests.test_out_of_range_form_categories_cannot_create_or_change_notices",
+      "methods": 4,
+      "passed": 4,
+      "exit_code": 0,
+      "log_path": "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\ai_review_2026-11-01\\student\\fix-green.log"
+    },
+    "note": "Two additional existing-fallback controls (5,000-digit positive page and negative category) were added after the initial red run and before the implementation; the regression method count remained four."
+  },
+  "verification": [
+    {
+      "suite": "backend/test_backend.py",
+      "executed": 14,
+      "passed": 14,
+      "source_test_method_count": 14,
+      "exit_code": 0,
+      "log_path": "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\ai_review_2026-11-01\\student\\fix-suite-backend.log"
+    },
+    {
+      "suite": "test_app.py",
+      "executed": 17,
+      "passed": 17,
+      "source_test_method_count": 17,
+      "exit_code": 0,
+      "log_path": "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\ai_review_2026-11-01\\student\\fix-test-app-all.log"
+    },
+    {
+      "suite": "test_media.py",
+      "executed": 2,
+      "passed": 2,
+      "source_test_method_count": 2,
+      "exit_code": 0,
+      "log_path": "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\ai_review_2026-11-01\\student\\fix-suite-media.log"
+    },
+    {
+      "suite": "test_stage2_core.py",
+      "executed": 11,
+      "passed": 11,
+      "source_test_method_count": 11,
+      "exit_code": 0,
+      "log_path": "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\ai_review_2026-11-01\\student\\fix-suite-stage2_core.log"
+    },
+    {
+      "suite": "test_analytics.py",
+      "executed": 7,
+      "passed": 7,
+      "source_test_method_count": 7,
+      "exit_code": 0,
+      "log_path": "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\ai_review_2026-11-01\\student\\fix-suite-analytics.log"
+    },
+    {
+      "suite": "test_stage2_features.py",
+      "executed": 14,
+      "passed": 14,
+      "source_test_method_count": 14,
+      "exit_code": 0,
+      "log_path": "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\ai_review_2026-11-01\\student\\fix-suite-stage2_features.log"
+    },
+    {
+      "suite": "test_backup_full.py",
+      "executed": 7,
+      "passed": 7,
+      "source_test_method_count": 7,
+      "exit_code": 0,
+      "log_path": "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\ai_review_2026-11-01\\student\\fix-suite-backup_full.log"
+    }
+  ],
+  "test_app_total": 17,
+  "previous_test_app_total": 13,
+  "expected_full_suite_method_count": 72,
+  "full_suite_executed": 72,
+  "full_suite_passed": 72,
+  "full_suite_failures": 0,
+  "full_suite_errors": 0,
+  "suite_execution_note": "Executed every command from TESTS.bat with portable Python -B, avoiding only its interactive pause. Full test_app execution is logged separately and not repeated in the remaining-suite loop.",
+  "historical_baseline": {
+    "result_path": "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\ai_review_2026-11-01\\student\\result.json",
+    "result_modified": false,
+    "isolated_app_copy_modified": false,
+    "note": "The original 15-test AI-01 review remains historical and still describes the pre-fix snapshot."
+  },
+  "limitations": [
+    "No browser or human usability study was conducted.",
+    "This verification uses local automated tests and synthetic temporary fixtures; it does not claim human participation.",
+    "No Canva or report documents were changed. No persistent participant records were created."
+  ],
+  "diff_path": "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\ai_review_2026-11-01\\student\\fix-source.diff"
+}

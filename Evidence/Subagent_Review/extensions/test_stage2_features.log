@@ -1,0 +1,19 @@
+test_admin_forms_reject_missing_csrf (__main__.Stage2Tests.test_admin_forms_reject_missing_csrf) ... ok
+test_cli_heartbeat_preserves_current_simulated_state (__main__.Stage2Tests.test_cli_heartbeat_preserves_current_simulated_state) ... ok
+test_consent_code_device_and_task_are_required (__main__.Stage2Tests.test_consent_code_device_and_task_are_required) ... ok
+test_csv_export_neutralises_spreadsheet_formulas (__main__.Stage2Tests.test_csv_export_neutralises_spreadsheet_formulas) ... ok
+test_duplicate_participant_task_cannot_inflate_results (__main__.Stage2Tests.test_duplicate_participant_task_cannot_inflate_results) ... ok
+test_empty_research_has_no_invented_observations (__main__.Stage2Tests.test_empty_research_has_no_invented_observations) ... ok
+test_five_people_both_tasks_required_and_exact_boundaries (__main__.Stage2Tests.test_five_people_both_tasks_required_and_exact_boundaries) ... ok
+test_get_and_post_permissions (__main__.Stage2Tests.test_get_and_post_permissions) ... ok
+test_invalid_notice_is_rejected_without_event (__main__.Stage2Tests.test_invalid_notice_is_rejected_without_event) ... ok
+test_locker_open_alert_close_and_heartbeat_preserve_state (__main__.Stage2Tests.test_locker_open_alert_close_and_heartbeat_preserve_state) ... ok
+test_new_features_do_not_mutate_main_database (__main__.Stage2Tests.test_new_features_do_not_mutate_main_database) ... ok
+test_observation_entry_does_not_extend_stopped_task_time (__main__.Stage2Tests.test_observation_entry_does_not_extend_stopped_task_time) ... ok
+test_timer_uses_server_duration_and_finishes_once (__main__.Stage2Tests.test_timer_uses_server_duration_and_finishes_once) ... ok
+test_unavailable_open_locker_assignment_can_be_reset_without_erasing_history (__main__.Stage2Tests.test_unavailable_open_locker_assignment_can_be_reset_without_erasing_history) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 4.872s
+
+OK

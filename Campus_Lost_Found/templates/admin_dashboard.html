@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Admin panel · Campus Lost & Found{% endblock %}
+{% block extra_head %}<link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">{% endblock %}
+{% block content %}
+<div class="admin-panel">
+  <header class="admin-hero">
+    <div><p class="eyebrow">CAMPUS OPERATIONS</p><h1>Admin panel</h1><p>Keep an eye on notices and help items find their way home.</p></div>
+    <span class="admin-access"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6z"/><path d="m8 12 3 3 5-6"/></svg>Administrator access</span>
+  </header>
+  <nav class="admin-tabs" aria-label="Admin panel sections"><a href="{{ url_for('admin_dashboard') }}" aria-current="page"><span class="admin-tab-pill" aria-hidden="true"></span>Overview</a><a href="{{ url_for('admin_notices') }}">Notices</a><a href="{{ url_for('admin_users') }}">Users</a></nav>
+  <dl class="admin-stats" aria-label="Current database counts">
+    <div class="admin-stat"><dt>All notices</dt><dd data-summary="notices">{{ counts.notices }}</dd><a href="{{ url_for('admin_notices') }}">Browse notices <span aria-hidden="true">↗</span></a></div>
+    <div class="admin-stat"><dt>Open notices</dt><dd data-summary="open">{{ counts.open }}</dd><a href="{{ url_for('admin_notices', status='open') }}">Still to be reunited <span aria-hidden="true">↗</span></a></div>
+    <div class="admin-stat"><dt>Returned</dt><dd data-summary="returned">{{ counts.returned }}</dd><a href="{{ url_for('admin_notices', status='returned') }}">Successful returns <span aria-hidden="true">↗</span></a></div>
+    <div class="admin-stat"><dt>Local users</dt><dd data-summary="users">{{ counts.users }}</dd><a href="{{ url_for('admin_users') }}">View user list <span aria-hidden="true">↗</span></a></div>
+  </dl>
+  <p class="admin-context">Current local database · Includes synthetic teaching data</p>
+  <div class="admin-overview-grid">
+    <section class="admin-card" aria-labelledby="latest-heading">
+      <div class="admin-section-heading"><div><p class="eyebrow">NOTICE BOARD</p><h2 id="latest-heading">Latest notices</h2></div><a href="{{ url_for('admin_notices') }}">View all <span aria-hidden="true">→</span></a></div>
+      <ul class="admin-latest">
+        {% for notice in latest %}
+        <li data-notice-id="{{ notice.id }}"><span class="admin-item-mark" aria-hidden="true">{{ '↗' if notice.type == 'found' else '⌕' }}</span><div class="admin-latest-copy"><a href="{{ url_for('detail', notice_id=notice.id) }}">{{ notice.title }}</a><p>{{ notice.category }} · {{ notice.email }}</p><time datetime="{{ notice.created_at }}">{{ notice.created_at[:10] }}</time></div><span class="admin-status {{ notice.status }}">{{ notice.status|capitalize }}</span></li>
+        {% else %}<li class="admin-empty"><h3>No notices yet</h3><p>New notices will appear here after they are published.</p></li>{% endfor %}
+      </ul>
+    </section>
+    <section class="admin-card admin-tools" aria-labelledby="tools-heading">
+      <p class="eyebrow">WORKSPACE</p><h2 id="tools-heading">Admin tools</h2><p class="admin-tools-intro">Explore activity and run the campus demo.</p>
+      <a class="admin-tool" href="{{ url_for('analytics') }}"><span class="admin-tool-icon" aria-hidden="true">▥</span><span><strong>Analytics</strong><small>Notice trends, charts and CSV export</small></span><span aria-hidden="true">↗</span></a>
+      <a class="admin-tool" href="{{ url_for('stage2.research') }}"><span class="admin-tool-icon" aria-hidden="true">◎</span><span><strong>User testing</strong><small>Record tasks and review observations</small></span><span aria-hidden="true">↗</span></a>
+      <a class="admin-tool" href="{{ url_for('stage2.smart_locker') }}"><span class="admin-tool-icon" aria-hidden="true">▤</span><span><strong>Smart locker</strong><small>Simulate the locker and its events</small></span><span aria-hidden="true">↗</span></a>
+      <p class="admin-tools-note">Locker controls are simulated. User testing records belong to the separate research workspace.</p>
+    </section>
+  </div>
+</div>
+{% endblock %}

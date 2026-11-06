@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}How it works | Campus Lost & Found{% endblock %}
+{% block content %}
+<div class="page-top"><div><p class="eyebrow">A SMALL ACTION. A HAPPY RETURN.</p><h1>From lost to returned.</h1><p>Three steps to reconnect a campus item with its owner.</p></div></div>
+<ol class="how-steps">
+  <li><h2>Search first</h2><p>Use a title, category or status to find a matching notice. Open it and check the location and distinguishing details.</p></li>
+  <li><h2>Share the details</h2><p>Post a Lost or Found notice with a useful title, category, date and location. Keep names, ID numbers and other private details out of the description.</p></li>
+  <li><h2>Close the loop</h2><p>Arrange a safe return. The notice owner can edit the notice and mark it as returned. The status is always shown as text.</p></li>
+</ol>
+<section class="architecture"><h2>How the prototype saves your work</h2><img src="{{url_for('static',filename='media/architecture.svg')}}" width="960" height="280" alt="A browser sends a request to the Flask application. Flask validates permissions and reads or writes the local SQLite database. The saved result returns to the browser."><p>Local browser → Flask and permission checks → SQLite database → updated notice. Data remains available after the app restarts.</p></section>
+<section class="access-note"><h2>Quiet and accessible</h2><p>No sound plays. Status text carries every result, including successful publication and return. The short confirmation animation respects your system's reduced-motion preference. Category photos are illustrative; read the notice to identify the actual item.</p></section>
+<a class="button" href="{{url_for('browse')}}">Browse notices</a>
+{% endblock %}

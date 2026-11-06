@@ -1,0 +1,97 @@
+source,question,group,metric,count
+synthetic,category,Books and Stationery,open,12
+synthetic,category,Books and Stationery,returned,1
+synthetic,category,Books and Stationery,total,13
+synthetic,category,Accessories,open,12
+synthetic,category,Accessories,returned,0
+synthetic,category,Accessories,total,12
+synthetic,category,Bags,open,12
+synthetic,category,Bags,returned,0
+synthetic,category,Bags,total,12
+synthetic,category,Clothing,open,12
+synthetic,category,Clothing,returned,0
+synthetic,category,Clothing,total,12
+synthetic,category,Documents,open,12
+synthetic,category,Documents,returned,0
+synthetic,category,Documents,total,12
+synthetic,category,Keys and Access Cards,open,12
+synthetic,category,Keys and Access Cards,returned,0
+synthetic,category,Keys and Access Cards,total,12
+synthetic,category,Other,open,12
+synthetic,category,Other,returned,0
+synthetic,category,Other,total,12
+synthetic,category,Sports Equipment,open,12
+synthetic,category,Sports Equipment,returned,0
+synthetic,category,Sports Equipment,total,12
+synthetic,category,Drinkware,open,0
+synthetic,category,Drinkware,returned,13
+synthetic,category,Drinkware,total,13
+synthetic,category,Electronics,open,0
+synthetic,category,Electronics,returned,12
+synthetic,category,Electronics,total,12
+synthetic,location,Library study area,lost,12
+synthetic,location,Library study area,found,1
+synthetic,location,Library study area,total,13
+synthetic,location,Computer lab corridor,lost,0
+synthetic,location,Computer lab corridor,found,12
+synthetic,location,Computer lab corridor,total,12
+synthetic,location,Ground floor lockers,lost,0
+synthetic,location,Ground floor lockers,found,12
+synthetic,location,Ground floor lockers,total,12
+synthetic,location,Lecture room corridor,lost,12
+synthetic,location,Lecture room corridor,found,0
+synthetic,location,Lecture room corridor,total,12
+synthetic,location,Block C lobby,lost,0
+synthetic,location,Block C lobby,found,9
+synthetic,location,Block C lobby,total,9
+synthetic,location,Bus stop near campus,lost,9
+synthetic,location,Bus stop near campus,found,0
+synthetic,location,Bus stop near campus,total,9
+synthetic,location,Cafeteria seating area,lost,9
+synthetic,location,Cafeteria seating area,found,0
+synthetic,location,Cafeteria seating area,total,9
+synthetic,location,Coworking area,lost,9
+synthetic,location,Coworking area,found,0
+synthetic,location,Coworking area,total,9
+synthetic,location,Main entrance,lost,9
+synthetic,location,Main entrance,found,0
+synthetic,location,Main entrance,total,9
+synthetic,location,Reading room desk,lost,0
+synthetic,location,Reading room desk,found,9
+synthetic,location,Reading room desk,total,9
+synthetic,location,Sports hall entrance,lost,0
+synthetic,location,Sports hall entrance,found,9
+synthetic,location,Sports hall entrance,total,9
+synthetic,location,Student lounge,lost,0
+synthetic,location,Student lounge,found,9
+synthetic,location,Student lounge,total,9
+synthetic,location,"Library, second floor",lost,0
+synthetic,location,"Library, second floor",found,1
+synthetic,location,"Library, second floor",total,1
+synthetic,weekly,2026-08-24 to 2026-08-30,lost,0
+synthetic,weekly,2026-08-24 to 2026-08-30,found,2
+synthetic,weekly,2026-08-24 to 2026-08-30,total,2
+synthetic,weekly,2026-08-31 to 2026-09-06,lost,9
+synthetic,weekly,2026-08-31 to 2026-09-06,found,7
+synthetic,weekly,2026-08-31 to 2026-09-06,total,16
+synthetic,weekly,2026-09-07 to 2026-09-13,lost,10
+synthetic,weekly,2026-09-07 to 2026-09-13,found,11
+synthetic,weekly,2026-09-07 to 2026-09-13,total,21
+synthetic,weekly,2026-09-14 to 2026-09-20,lost,11
+synthetic,weekly,2026-09-14 to 2026-09-20,found,10
+synthetic,weekly,2026-09-14 to 2026-09-20,total,21
+synthetic,weekly,2026-09-21 to 2026-09-27,lost,12
+synthetic,weekly,2026-09-21 to 2026-09-27,found,9
+synthetic,weekly,2026-09-21 to 2026-09-27,total,21
+synthetic,weekly,2026-09-28 to 2026-10-04,lost,9
+synthetic,weekly,2026-09-28 to 2026-10-04,found,12
+synthetic,weekly,2026-09-28 to 2026-10-04,total,21
+synthetic,weekly,2026-10-05 to 2026-10-11,lost,9
+synthetic,weekly,2026-10-05 to 2026-10-11,found,9
+synthetic,weekly,2026-10-05 to 2026-10-11,total,18
+synthetic,weekly,2026-10-12 to 2026-10-18,lost,0
+synthetic,weekly,2026-10-12 to 2026-10-18,found,1
+synthetic,weekly,2026-10-12 to 2026-10-18,total,1
+synthetic,weekly,2026-10-19 to 2026-10-25,lost,0
+synthetic,weekly,2026-10-19 to 2026-10-25,found,1
+synthetic,weekly,2026-10-19 to 2026-10-25,total,1

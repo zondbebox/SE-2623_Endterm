@@ -1,0 +1,49 @@
+/* Optional photo field; the native chooser remains available without JavaScript. */
+.photo-upload { min-width: 0; }
+.photo-upload .photo-native { margin-top: 2px; }
+.photo-upload .photo-surface {
+  display: grid;
+  grid-template-columns: 68px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  padding: 20px;
+  border: 1px dashed #a9c6b4;
+  border-radius: 16px;
+  background: linear-gradient(125deg, #f1f7ec, #fbfcf8 80%);
+}
+.photo-upload .photo-visual {
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 16px;
+  background: #e2eedb;
+  color: #3a7450;
+  overflow: hidden;
+}
+.photo-upload .photo-visual svg { width: 30px; height: 30px; }
+.photo-upload .photo-preview { display: block; width: 100%; height: 100%; object-fit: cover; }
+.photo-upload .photo-copy { min-width: 0; }
+.photo-upload .photo-title { display: block; color: #204832; font-size: 14px; line-height: 1.45; overflow-wrap: anywhere; }
+.photo-upload .photo-description { display: block; margin-top: 5px; color: #5b7262; font-size: 12px; line-height: 1.5; }
+.photo-upload .photo-actions { display: flex; flex-direction: column; align-items: stretch; gap: 5px; }
+.photo-upload .photo-choose { min-height: 42px; border: 1px solid #b3cbb9; border-radius: 10px; padding: 10px 15px; background: #fff; color: #24583a; font-size: 12px; font-weight: 700; white-space: nowrap; }
+.photo-upload .photo-clear { min-height: 36px; border-radius: 8px; padding: 7px 9px; background: transparent; color: #5b7262; font-size: 11px; text-decoration: underline; text-underline-offset: 3px; }
+.photo-upload .photo-choose:hover { border-color: #5e9673; background: #eaf3e5; }
+.photo-upload .photo-clear:hover { color: #214a32; background: #eaf1e5; }
+.photo-upload .photo-surface:focus-within { border-color: #43835c; box-shadow: 0 0 0 4px #146b550b; }
+.photo-upload[data-selected=true] .photo-surface { border-style: solid; background: #f4f8ef; }
+.photo-upload .photo-error { margin-top: 8px; color: #a03536; font-size: 12px; line-height: 1.5; }
+.photo-upload .photo-sr-status { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  html[data-motion=on] .photo-upload :is(.photo-surface, .photo-choose, .photo-clear) { transition: background-color .2s, border-color .2s, box-shadow .2s; }
+  html[data-motion=on] .photo-upload[data-selected=true] .photo-preview { animation: photo-preview-arrive .28s ease-out; }
+}
+@keyframes photo-preview-arrive { from { opacity: .5; transform: scale(.96); } to { opacity: 1; transform: scale(1); } }
+@media (max-width: 700px) {
+  .photo-upload .photo-surface { grid-template-columns: 54px minmax(0, 1fr); gap: 14px; padding: 16px; }
+  .photo-upload .photo-visual { width: 54px; height: 54px; border-radius: 12px; }
+  .photo-upload .photo-actions { grid-column: 1 / -1; flex-direction: row; flex-wrap: wrap; gap: 8px; }
+  .photo-upload .photo-choose { flex: 1; }
+  .photo-upload .photo-clear { min-height: 42px; }
+}

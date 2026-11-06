@@ -1,0 +1,9 @@
+test_backup_rejects_oversized_manifest_before_publishing_archive (__main__.FullBackupTests.test_backup_rejects_oversized_manifest_before_publishing_archive) ... ok
+test_restore_rejects_manifest_above_shared_limit_without_destination (__main__.FullBackupTests.test_restore_rejects_manifest_above_shared_limit_without_destination) ... ok
+test_manifest_at_shared_limit_can_be_written_and_restored (__main__.FullBackupTests.test_manifest_at_shared_limit_can_be_written_and_restored) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.573s
+
+OK
+Exit code: 0

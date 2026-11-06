@@ -1,0 +1,32 @@
+test_admin_confirmation_is_read_only_until_posted (__main__.CampusApplicationIntegrationTests.test_admin_confirmation_is_read_only_until_posted) ... ok
+test_anonymous_requests_cannot_read_or_write_notices (__main__.CampusApplicationIntegrationTests.test_anonymous_requests_cannot_read_or_write_notices) ... ok
+test_five_failed_logins_trigger_rate_limit_on_next_attempt (__main__.CampusApplicationIntegrationTests.test_five_failed_logins_trigger_rate_limit_on_next_attempt) ... ok
+test_invalid_forms_do_not_insert_records (__main__.CampusApplicationIntegrationTests.test_invalid_forms_do_not_insert_records) ... ok
+test_invalid_password_rejected_without_leaking_credentials_to_audit (__main__.CampusApplicationIntegrationTests.test_invalid_password_rejected_without_leaking_credentials_to_audit) ... ok
+test_missing_or_wrong_csrf_rejects_write (__main__.CampusApplicationIntegrationTests.test_missing_or_wrong_csrf_rejects_write) ... ok
+test_owner_create_edit_and_return_persist_after_application_restart (__main__.CampusApplicationIntegrationTests.test_owner_create_edit_and_return_persist_after_application_restart) ... ok
+test_search_treats_sql_and_like_metacharacters_as_literal_text (__main__.CampusApplicationIntegrationTests.test_search_treats_sql_and_like_metacharacters_as_literal_text) ... ok
+test_sql_injection_cannot_bypass_login (__main__.CampusApplicationIntegrationTests.test_sql_injection_cannot_bypass_login) ... ok
+test_stored_markup_is_escaped_in_browse_and_detail (__main__.CampusApplicationIntegrationTests.test_stored_markup_is_escaped_in_browse_and_detail) ... ok
+test_student_cannot_edit_or_close_another_owners_notice (__main__.CampusApplicationIntegrationTests.test_student_cannot_edit_or_close_another_owners_notice) ... ok
+test_student_cannot_remove_notice_even_with_forged_admin_role (__main__.CampusApplicationIntegrationTests.test_student_cannot_remove_notice_even_with_forged_admin_role) ... ok
+test_valid_login_establishes_session_and_logout_clears_it (__main__.CampusApplicationIntegrationTests.test_valid_login_establishes_session_and_logout_clears_it) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 6.654s
+
+OK
+
+COMMAND: .\python\python.exe -B test_app.py
+EXIT_CODE: 0
+
+test_help_requires_login (__main__.MediaIntegrationTests.test_help_requires_login) ... ok
+test_media_is_served_and_has_alternative_text (__main__.MediaIntegrationTests.test_media_is_served_and_has_alternative_text) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.479s
+
+OK
+
+COMMAND: .\python\python.exe -B test_media.py
+EXIT_CODE: 0

@@ -1,0 +1,111 @@
+{
+  "reviewer_id": "AI-04",
+  "kind": "automated technical review",
+  "reviewed_at": "2026-11-01T23:32:08.7388648+05:00",
+  "source_app": "C:/Users/Zhanzhol/Documents/Codex/2026-10-06/new-chat/outputs/Endterm/Campus_Lost_Found",
+  "isolated_app": "C:/Users/Zhanzhol/Documents/Codex/2026-10-06/new-chat/work/endterm/ai_review_2026-11-01/extensions/app",
+  "command": "python/python.exe -B test_stage2_features.py",
+  "exitcode": 0,
+  "count": 14,
+  "passed": 14,
+  "failures": 0,
+  "errors": 0,
+  "duration_seconds": 4.872,
+  "status": "passed",
+  "log_path": "C:/Users/Zhanzhol/Documents/Codex/2026-10-06/new-chat/work/endterm/ai_review_2026-11-01/extensions/test_stage2_features.log",
+  "copy_log_path": "C:/Users/Zhanzhol/Documents/Codex/2026-10-06/new-chat/work/endterm/ai_review_2026-11-01/extensions/copy.log",
+  "copy_exclusions": [
+    "runtime",
+    "backups",
+    "__pycache__",
+    "*.pyc",
+    "evidence"
+  ],
+  "concrete_findings": [
+    {
+      "id": "F1",
+      "severity": "verified behavior",
+      "finding": "All 14 assigned behavioral tests passed with exit code 0 in the isolated copy.",
+      "evidence": "test_stage2_features.log"
+    },
+    {
+      "id": "F2",
+      "severity": "verified behavior",
+      "finding": "Recorder durations are calculated from server UTC start/stop timestamps. A stopped 25-second attempt retains 25 seconds after 90 additional seconds of observation entry. Repeated finish requests are rejected without changing duration.",
+      "evidence": "test_timer_uses_server_duration_and_finishes_once; test_observation_entry_does_not_extend_stopped_task_time; stage2_features.py utc_now/research"
+    },
+    {
+      "id": "F3",
+      "severity": "verified behavior",
+      "finding": "Participant codes, device description, approved task and operator consent confirmation are required. One attempt per participant/task and a five-person cohort are enforced. Results remain Pending until all 10 attempts have final observations; success thresholds are inclusive at 120 and 60 seconds.",
+      "evidence": "test_consent_code_device_and_task_are_required; test_duplicate_participant_task_cannot_inflate_results; test_five_people_both_tasks_required_and_exact_boundaries"
+    },
+    {
+      "id": "F4",
+      "severity": "verified behavior",
+      "finding": "Locker readings are constrained to source SIMULATED. Invalid notice references are rejected, heartbeat preserves state, the ten-second open warning appears, and reset retains historical events after a notice becomes unavailable.",
+      "evidence": "test_invalid_notice_is_rejected_without_event; test_locker_open_alert_close_and_heartbeat_preserve_state; test_unavailable_open_locker_assignment_can_be_reset_without_erasing_history; test_cli_heartbeat_preserves_current_simulated_state"
+    },
+    {
+      "id": "F5",
+      "severity": "verified behavior",
+      "finding": "Admin access and CSRF checks pass; CSV formula-like entries are escaped; feature activity leaves the main database unchanged.",
+      "evidence": "test_get_and_post_permissions; test_admin_forms_reject_missing_csrf; test_csv_export_neutralises_spreadsheet_formulas; test_new_features_do_not_mutate_main_database"
+    },
+    {
+      "id": "F6",
+      "severity": "evidence boundary",
+      "finding": "The packaged data folder contains only campus.sqlite3. No packaged research.sqlite3 or telemetry.sqlite3 exists. These tests create temporary fixtures with an injected clock and clean them afterward; they are not genuine human participant observations.",
+      "evidence": "data folder inspection; test_stage2_features.py setUpClass/setUp/tearDownClass; research template explicitly excludes automated tests and team rehearsals"
+    }
+  ],
+  "limitations": [
+    "Automated technical validation only. No real outside participants were recruited, observed, or counted, and no human usability success criteria were established by this review.",
+    "Timer behavior was verified using an injected deterministic test clock. The production path uses current UTC timestamps; no real elapsed-time human task was run.",
+    "The real-volunteer checkbox is an operator declaration, not independent verification of participant identity, consent, completion, or absence of coaching.",
+    "Timers use wall-clock UTC rather than a monotonic clock. Backward clock movement is rejected, but this suite does not test forward clock jumps.",
+    "All locker telemetry is simulated local SQLite data. No sensor, hardware, door operation, network, or physical item ownership/presence was verified.",
+    "No browser UI interaction or accessibility review was performed. The assigned 14-test suite is not an exhaustive audit."
+  ],
+  "research_database_populated": false,
+  "source_research_database_present": false,
+  "source_telemetry_database_present": false,
+  "source_and_copy_hashes": [
+    {
+      "path": "test_stage2_features.py",
+      "source_sha256": "F030D99CF954620F835923FB7B9D33DCB1C0AA3539BF4E14BD94E7D91884C9F0",
+      "copy_sha256": "F030D99CF954620F835923FB7B9D33DCB1C0AA3539BF4E14BD94E7D91884C9F0",
+      "identical": true
+    },
+    {
+      "path": "stage2_features.py",
+      "source_sha256": "970F4D88491BB371A8B6989718D585230B1499EBEF22A2C351748B55AEA2E021",
+      "copy_sha256": "970F4D88491BB371A8B6989718D585230B1499EBEF22A2C351748B55AEA2E021",
+      "identical": true
+    },
+    {
+      "path": "templates/research.html",
+      "source_sha256": "523293CFA34A1F671137848DC923435C9AFC66BFF11F24C89574B30AF9967FC3",
+      "copy_sha256": "523293CFA34A1F671137848DC923435C9AFC66BFF11F24C89574B30AF9967FC3",
+      "identical": true
+    },
+    {
+      "path": "templates/smart_locker.html",
+      "source_sha256": "75192328F40EE86E26F4D781FDC31E948C6F9BC6DE135BE9116A92EA9387078E",
+      "copy_sha256": "75192328F40EE86E26F4D781FDC31E948C6F9BC6DE135BE9116A92EA9387078E",
+      "identical": true
+    },
+    {
+      "path": "simulate_locker.py",
+      "source_sha256": "CEAA4D52F24AE01583BE198325DEDDE85E6D9080AF0EF5929C38F0EA8FFADDA4",
+      "copy_sha256": "CEAA4D52F24AE01583BE198325DEDDE85E6D9080AF0EF5929C38F0EA8FFADDA4",
+      "identical": true
+    },
+    {
+      "path": "data/campus.sqlite3",
+      "source_sha256": "949CC097157945D128B5DF37C87539F0BAF6E853A5942C15AE57650667B03770",
+      "copy_sha256": "949CC097157945D128B5DF37C87539F0BAF6E853A5942C15AE57650667B03770",
+      "identical": true
+    }
+  ]
+}

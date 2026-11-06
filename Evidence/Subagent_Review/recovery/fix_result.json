@@ -1,0 +1,66 @@
+{
+  "reviewer_id": "AI-05",
+  "kind": "targeted_bug_fix",
+  "finding_resolved": "AI-05-F1",
+  "status": "targeted_and_backup_module_tests_passed",
+  "completed_utc": "2026-11-01T18:34:27.6563443Z",
+  "changed_app_files": [
+    "backup_full.py",
+    "test_backup_full.py"
+  ],
+  "change": "Added MAX_MANIFEST_BYTES = 1 MiB, checked the serialized UTF-8 manifest before creating the archive, and used the same bound for restore manifest and total expanded-size checks. Existing APIs and archive format remain unchanged.",
+  "red": {
+    "command": "python/python.exe -B test_backup_full.py FullBackupTests.test_backup_rejects_oversized_manifest_before_publishing_archive FullBackupTests.test_restore_rejects_manifest_above_shared_limit_without_destination FullBackupTests.test_manifest_at_shared_limit_can_be_written_and_restored",
+    "exit_code": 1,
+    "count": 3,
+    "passed": 1,
+    "failed": 2,
+    "reason": "The existing writer and reader ignored the patchable shared manifest limit, so both oversized-manifest tests failed with BackupError not raised.",
+    "log": "fix_red.log"
+  },
+  "green_targeted": {
+    "command": "python/python.exe -B test_backup_full.py FullBackupTests.test_backup_rejects_oversized_manifest_before_publishing_archive FullBackupTests.test_restore_rejects_manifest_above_shared_limit_without_destination FullBackupTests.test_manifest_at_shared_limit_can_be_written_and_restored",
+    "exit_code": 0,
+    "count": 3,
+    "passed": 3,
+    "failed": 0,
+    "log": "fix_green_targeted.log"
+  },
+  "green_full_module": {
+    "command": "python/python.exe -B test_backup_full.py",
+    "exit_code": 0,
+    "count": 7,
+    "passed": 7,
+    "failed": 0,
+    "log": "fix_green_full_module.log"
+  },
+  "regression_coverage": [
+    "Oversized manifests fail before a ZIP is published, temporary backup files are cleaned up, and the source database bytes remain unchanged.",
+    "The reader rejects a manifest above the same patchable limit without creating the restore destination.",
+    "Writer and reader both accept a manifest exactly at the shared byte-size limit.",
+    "All original four full-backup and scratch-restore tests continue to pass."
+  ],
+  "source_matches_tested_copy": [
+    {
+      "file": "backup_full.py",
+      "source_sha256": "2B9463355360D47DD7B8AEFD0FD1832BDD279394D968332079E3C41077D09B3B",
+      "tested_copy_sha256": "2B9463355360D47DD7B8AEFD0FD1832BDD279394D968332079E3C41077D09B3B",
+      "match": true
+    },
+    {
+      "file": "test_backup_full.py",
+      "source_sha256": "B7F612461BD7E6735BF7DCD1810CFA55965A80A6AF9BE3D78E24B83D79E29A3D",
+      "tested_copy_sha256": "B7F612461BD7E6735BF7DCD1810CFA55965A80A6AF9BE3D78E24B83D79E29A3D",
+      "match": true
+    }
+  ],
+  "historical_review_preserved": "result.json and the initial test_backup_full.log remain historical baseline evidence.",
+  "coverage_limits": [
+    "Validation ran on Windows using the private copied bundled Python runtime.",
+    "Small fixtures and patched size limits exercised the boundary; no 9,999-file or 512 MiB archive was created.",
+    "Linux execution and nominal human usability remain untested.",
+    "The complete application suite was not rerun by this subagent; the root agent will run it once all concurrent fixes are complete.",
+    "No live database or other application, document, or Canva file was edited."
+  ],
+  "human_usability_tested": false
+}

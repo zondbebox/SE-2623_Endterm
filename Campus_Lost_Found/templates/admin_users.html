@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Local users · Campus Lost & Found{% endblock %}
+{% block extra_head %}<link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">{% endblock %}
+{% block content %}
+<div class="admin-panel">
+  <header class="admin-page-heading"><p class="eyebrow">ADMIN PANEL</p><h1>Local users</h1><p>See registered accounts and the number of notices each has published.</p></header>
+  <nav class="admin-tabs" aria-label="Admin panel sections"><a href="{{ url_for('admin_dashboard') }}">Overview</a><a href="{{ url_for('admin_notices') }}">Notices</a><a href="{{ url_for('admin_users') }}" aria-current="page"><span class="admin-tab-pill" aria-hidden="true"></span>Users</a></nav>
+  <p class="admin-readonly"><strong>Read-only user list.</strong> Roles and accounts cannot be changed here. Notice counts include open and returned notices.</p>
+  <form class="admin-search admin-user-search" method="get" action="{{ url_for('admin_users') }}" role="search">
+    <div class="field"><label for="admin-user-query">Search by email</label><input id="admin-user-query" type="search" name="q" value="{{ q }}" maxlength="120" placeholder="Enter an email or part of it"></div><button class="button" type="submit">Search users</button><a class="admin-reset" href="{{ url_for('admin_users') }}">Clear search</a>
+  </form>
+  <div class="admin-results-heading"><p>{{ paging.total }} user{{ '' if paging.total == 1 else 's' }}{% if q %} matching your search{% endif %}</p><p>Sorted by email</p></div>
+  <div class="admin-table-scroll" role="region" aria-label="Local user list; scroll horizontally on narrow screens" tabindex="0">
+    <table class="admin-table admin-user-table"><caption>Users {{ paging.start }}–{{ paging.end }} of {{ paging.total }}</caption><thead><tr><th scope="col">User</th><th scope="col">Email</th><th scope="col">Role</th><th scope="col">Notices</th></tr></thead><tbody>
+    {% for user in users %}<tr data-user-id="{{ user.id }}"><th scope="row">#{{ user.id }}</th><td>{{ user.email }}</td><td><span class="admin-role {{ user.role }}">{{ user.role|capitalize }}</span></td><td data-notice-count>{{ user.notice_count }}</td></tr>
+    {% else %}<tr><td colspan="4" class="admin-empty"><h2>No users found</h2><p>Try a different email or clear the search.</p></td></tr>{% endfor %}
+    </tbody></table>
+  </div>
+  <nav class="admin-pagination" aria-label="User pages">{% if paging.page > 1 %}<a class="button secondary" href="{{ url_for('admin_users', q=q, page=paging.page-1) }}" rel="prev">Previous</a>{% endif %}<span>Page {{ paging.page }} of {{ paging.pages }}</span>{% if paging.page < paging.pages %}<a class="button secondary" href="{{ url_for('admin_users', q=q, page=paging.page+1) }}" rel="next">Next</a>{% endif %}</nav>
+</div>
+{% endblock %}

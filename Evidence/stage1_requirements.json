@@ -1,0 +1,143 @@
+{
+  "source_files": [
+    "outputs/SE-2623_Campus_Lost_Found_Midterm_Portrait.pdf",
+    "outputs/SE-2623_Campus_Lost_Found_Midterm_With_Mockups.pdf"
+  ],
+  "source_pages": {
+    "functional_requirements": 3,
+    "non_functional_requirements_and_success_criteria": 4
+  },
+  "source_status": "Proposed acceptance criteria in Stage 1, not measured results.",
+  "requirements": [
+    {
+      "id": "F1",
+      "text": "University account sign-in",
+      "priority": "Must",
+      "acceptance": "Reject identities outside astanait.edu.kz"
+    },
+    {
+      "id": "F2",
+      "text": "Publish a lost or found notice",
+      "priority": "Must",
+      "acceptance": "A valid notice appears in the list"
+    },
+    {
+      "id": "F3",
+      "text": "Attach one photo",
+      "priority": "Should",
+      "acceptance": "Accept JPG/PNG files up to 5 MB"
+    },
+    {
+      "id": "F4",
+      "text": "Browse notices and open details",
+      "priority": "Must",
+      "acceptance": "List and details show saved content"
+    },
+    {
+      "id": "F5",
+      "text": "Search title; filter by category",
+      "priority": "Must",
+      "acceptance": "Seeded matching notices appear"
+    },
+    {
+      "id": "F6",
+      "text": "Contact via university email",
+      "priority": "Must",
+      "acceptance": "Contact opens the author's email"
+    },
+    {
+      "id": "F7",
+      "text": "Edit own notice; mark returned",
+      "priority": "Must",
+      "acceptance": "Owner changes persist after refresh"
+    },
+    {
+      "id": "F8",
+      "text": "Administrator removes misuse",
+      "priority": "Must",
+      "acceptance": "Admin succeeds; student is denied"
+    },
+    {
+      "id": "N1",
+      "text": "Search p95 <= 2 seconds with 10 concurrent users.",
+      "priority": "Must",
+      "acceptance": "Repeated searches on the demo laptop."
+    },
+    {
+      "id": "N2",
+      "text": "Enforce university identity and owner/admin rights.",
+      "priority": "Must",
+      "acceptance": "Invalid identities and forbidden actions."
+    },
+    {
+      "id": "N3",
+      "text": "Support 360 px screens and keyboard input.",
+      "priority": "Must",
+      "acceptance": "Core screens, labels and focus order."
+    },
+    {
+      "id": "N4",
+      "text": "Pass 20/20 checks during a 30-minute demo.",
+      "priority": "Must",
+      "acceptance": "Core pages plus retry when offline."
+    }
+  ],
+  "non_functional_types": {
+    "N1": "Performance",
+    "N2": "Security",
+    "N3": "Usability",
+    "N4": "Availability"
+  },
+  "success_criteria": [
+    {
+      "id": "SC1",
+      "text": "4/5 testers post a notice within 2 minutes",
+      "numerator": 4,
+      "denominator": 5,
+      "unit": "testers",
+      "time_limit_seconds": 120
+    },
+    {
+      "id": "SC2",
+      "text": "4/5 testers find an item within 1 minute",
+      "numerator": 4,
+      "denominator": 5,
+      "unit": "testers",
+      "time_limit_seconds": 60
+    },
+    {
+      "id": "SC3",
+      "text": "5/5 invalid-access checks are blocked",
+      "numerator": 5,
+      "denominator": 5,
+      "unit": "checks",
+      "time_limit_seconds": null
+    }
+  ],
+  "user_groups": [
+    {
+      "name": "Students",
+      "need": "Find or return an item",
+      "scope": "Post, search, contact and close notices"
+    },
+    {
+      "name": "Administrator",
+      "need": "Keep notices relevant",
+      "scope": "Review notices and remove misuse"
+    }
+  ],
+  "excluded_scope": [
+    "Payments",
+    "Live chat",
+    "Delivery",
+    "Automatic item matching"
+  ],
+  "identity_limit": "University SSO configuration and university permission were pending. Clearly label simulated sign-in when used; email-suffix checks do not prove account ownership.",
+  "instructor_feedback": "User reported no Midterm feedback, recorded in work/endterm/implementation_plan.txt.",
+  "survey_evidence": {
+    "responses": 10,
+    "useful": 9,
+    "return_over_three_days": 4,
+    "sampling": "Convenience sample; not representative of all university students."
+  }
+}

@@ -1,0 +1,18 @@
+Bundled for an offline educational demonstration on Windows x64.
+
+Python 3.14.8 embeddable package, Python Software Foundation.
+Official source: https://www.python.org/downloads/release/python-3148/
+Archive: https://www.python.org/ftp/python/3.14.8/python-3.14.8-embed-amd64.zip
+Verified SHA-256: a93abe456ab01bd96d7a085b3cdb6566b3063f4241360d114142fbdb07f0a310
+License: python/LICENSE.txt
+
+Third-party Python packages were obtained from PyPI on 12 October 2026.
+Flask 3.1.3, Werkzeug 3.1.9, Waitress 3.0.2, SQLite-web 0.8.2,
+Blinker 1.9.0, Click 8.5.0, ItsDangerous 2.2.0, Jinja2 3.1.6,
+MarkupSafe 3.0.4, Peewee 4.5.3 and Pygments 2.21.0.
+Original package metadata and license files are retained in vendor/*.dist-info.
+SQLite-web source: https://github.com/coleifer/sqlite-web
+
+The MarkupSafe Python fallback runs on the bundled Python interpreter;
+an unused extension wheel built for CPython 3.12 is also retained.
+All imports and the complete test suite were checked with the bundled Python 3.14.8.

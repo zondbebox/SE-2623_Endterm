@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-01",
+  "method": "Windows automated unittest discovery using bundled Python",
+  "command": "python/python.exe -B -m unittest discover -v",
+  "test_methods": 72,
+  "passed": 72,
+  "exit_code": 0,
+  "historical_baseline": {
+    "date": "2026-10-30",
+    "test_methods": 65
+  },
+  "added_regression_methods": 7,
+  "baseline_review_method": "Five AI subagents, separate application copies, selected existing automated suites plus source inspection and supplemental probes",
+  "baseline_review_counts": {
+    "student_workflow_media": 15,
+    "registration_private_uploads": 11,
+    "database_analytics": 21,
+    "recorder_simulated_locker": 14,
+    "backup_recovery": 4
+  },
+  "changed_app_files": {
+    "app.py": "00d05ad3cd1363e8ef5ebfb6d5665396ebf8daea10e3fc8215f8a47ddab98f48",
+    "test_app.py": "7fd59b9354358992ea91499999f2ebe8b185c5b03c3321966c3f58afdfaad64a",
+    "backup_full.py": "2b9463355360d47dd7b8aefd0fd1832bdd279394d968332079e3c41077d09b3b",
+    "test_backup_full.py": "b7f612461bd7e6735bf7dcd1810cfa55965a80a6af9be3d78e24b83d79e29a3d"
+  },
+  "fixes": [
+    "Bounds checks for SQLite numeric parameters and notice IDs",
+    "Shared one-MiB backup manifest limit before archive publication and on restore"
+  ],
+  "human_usability_sessions_recorded": 0,
+  "pending": [
+    "Five external participants",
+    "Current browser/Fast 4G/offline retry checks",
+    "Linux execution"
+  ]
+}

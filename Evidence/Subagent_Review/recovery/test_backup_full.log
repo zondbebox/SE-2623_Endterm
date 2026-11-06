@@ -1,0 +1,24 @@
+Reviewer: AI-05
+Kind: automated technical review
+Working directory: 
+C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\work\endterm\ai_review_2026-11-01\recovery\app
+Command: python/python.exe -B test_backup_full.py
+Started UTC: 
+2026-11-01T18:31:52.9085243Z
+Completed UTC: 
+2026-11-01T18:31:55.6897689Z
+Exit code: 
+0
+
+STDOUT:
+STDERR:
+test_archive_includes_online_databases_photos_hashes_and_excludes_session_key (__main__.FullBackupTests.test_archive_includes_online_databases_photos_hashes_and_excludes_session_key) ... ok
+test_corrupt_payload_hash_is_rejected_without_creating_restored_folder (__main__.FullBackupTests.test_corrupt_payload_hash_is_rejected_without_creating_restored_folder) ... ok
+test_recovery_keeps_changed_live_database_and_rejects_existing_destination (__main__.FullBackupTests.test_recovery_keeps_changed_live_database_and_rejects_existing_destination) ... ok
+test_traversal_zip_is_rejected_without_writing_destination (__main__.FullBackupTests.test_traversal_zip_is_rejected_without_writing_destination) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.371s
+
+OK
+

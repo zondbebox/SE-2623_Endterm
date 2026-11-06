@@ -1,0 +1,24 @@
+{% extends 'base.html' %}{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='photo-upload.css') }}">
+<script src="{{ url_for('static', filename='photo-upload.js') }}" defer></script>
+{% endblock %}{% block content %}<a class="back" href="{{url_for('browse')}}">← Back to notices</a><div class="page-top"><div><p class="eyebrow">SHARE WITH YOUR CAMPUS</p><h1>{{'Edit your notice' if editing else 'Post a notice'}}</h1><p>A clear description helps the right person find it.</p></div></div><div class="form-layout"><form method="post" enctype="multipart/form-data" class="form-card"><input type="hidden" name="csrf" value="{{session.csrf}}">{% if error %}<p class="form-error" role="alert">{{error}}</p>{% endif %}<div class="form-grid"><div class="field"><label for="type">Notice type</label><select id="type" name="type" required><option value="lost" {% if values.get('type')=='lost' %}selected{% endif %}>Lost</option><option value="found" {% if values.get('type')=='found' %}selected{% endif %}>Found</option></select></div><div class="field"><label for="category_id">Category</label><select id="category_id" name="category_id" required><option value="">Choose a category</option>{% for cat in categories %}<option value="{{cat.id}}" {% if values.get('category_id')|string==cat.id|string %}selected{% endif %}>{{cat.name}}</option>{% endfor %}</select></div><div class="field full"><label for="title">Title</label><input id="title" name="title" minlength="3" maxlength="120" required value="{{values.get('title','')}}" placeholder="Blue notebook near the library"></div><div class="field full"><label for="description">Description</label><textarea id="description" name="description" minlength="10" maxlength="1200" required placeholder="Colour, brand and a useful identifying detail">{{values.get('description','')}}</textarea><span class="hint">10–1,200 characters. Keep personal information out of the description.</span></div><div class="field"><label for="location">Campus location</label><input id="location" name="location" minlength="2" maxlength="100" required value="{{values.get('location','')}}" placeholder="Library, second floor"></div><div class="field"><label for="event_date">Date lost or found</label><input id="event_date" name="event_date" type="date" min="2020-01-01" max="{{today}}" required value="{{values.get('event_date',today)}}"></div><div class="field full photo-upload" data-photo-upload data-editing="{{ 'true' if editing else 'false' }}">
+<label id="photo-label" for="photo">Item photograph <span class="muted">(optional)</span></label>
+<input class="photo-native" id="photo" name="photo" type="file" accept="image/jpeg,image/png,.jpg,.jpeg,.png" aria-describedby="photo-hint">
+<div class="photo-surface" role="group" aria-labelledby="photo-label" aria-describedby="photo-hint" hidden>
+  <div class="photo-visual" aria-hidden="true">
+    <svg class="photo-icon" viewBox="0 0 32 32" fill="none" focusable="false"><rect x="4" y="5" width="24" height="22" rx="5" stroke="currentColor" stroke-width="1.7"/><circle cx="21" cy="12" r="2.2" stroke="currentColor" stroke-width="1.7"/><path d="m5 23 7-8 6 6 4-4 5 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <img class="photo-preview" alt="" hidden>
+  </div>
+  <div class="photo-copy">
+    <strong class="photo-title">Add a photo of the item</strong>
+    <span class="photo-description">A clear picture makes it easier to recognise.</span>
+  </div>
+  <div class="photo-actions">
+    <button class="photo-choose" type="button">Choose photo</button>
+    <button class="photo-clear" type="button" hidden>Clear selection</button>
+  </div>
+</div>
+<span class="hint" id="photo-hint">JPG or PNG · Up to 5 MB · Up to 12 megapixels.{% if editing %} Leave empty to keep the current photograph.{% endif %}</span>
+<p class="photo-error" role="alert" hidden></p>
+<span class="photo-sr-status" role="status" aria-live="polite"></span>
+</div></div><div class="actions"><button class="button">{{'Save changes' if editing else 'Publish notice'}}</button><a class="button secondary" href="{{url_for('browse')}}">Cancel</a></div></form><aside class="side-note"><h2>A useful notice</h2><p>Describe the item, where it was seen and when.</p><p>Your signed-in account owns this notice. You can edit it or mark it as returned later.</p><p>You may attach one photograph of the item. Avoid faces, ID cards and other personal information. Signed-in users can view attached photographs.</p></aside></div>{% endblock %}

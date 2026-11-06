@@ -1,0 +1,13 @@
+test_archive_includes_online_databases_photos_hashes_and_excludes_session_key (__main__.FullBackupTests.test_archive_includes_online_databases_photos_hashes_and_excludes_session_key) ... ok
+test_backup_rejects_oversized_manifest_before_publishing_archive (__main__.FullBackupTests.test_backup_rejects_oversized_manifest_before_publishing_archive) ... ok
+test_corrupt_payload_hash_is_rejected_without_creating_restored_folder (__main__.FullBackupTests.test_corrupt_payload_hash_is_rejected_without_creating_restored_folder) ... ok
+test_manifest_at_shared_limit_can_be_written_and_restored (__main__.FullBackupTests.test_manifest_at_shared_limit_can_be_written_and_restored) ... ok
+test_recovery_keeps_changed_live_database_and_rejects_existing_destination (__main__.FullBackupTests.test_recovery_keeps_changed_live_database_and_rejects_existing_destination) ... ok
+test_restore_rejects_manifest_above_shared_limit_without_destination (__main__.FullBackupTests.test_restore_rejects_manifest_above_shared_limit_without_destination) ... ok
+test_traversal_zip_is_rejected_without_writing_destination (__main__.FullBackupTests.test_traversal_zip_is_rejected_without_writing_destination) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.724s
+
+OK
+Exit code: 0

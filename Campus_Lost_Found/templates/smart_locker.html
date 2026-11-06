@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Demo locker · Campus Lost & Found{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='stage2.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='locker.css') }}">
+<script src="{{ url_for('static', filename='locker.js') }}" defer></script>
+<div class="stage2 locker-app">
+<p class="eyebrow">ADMINISTRATOR · SOFTWARE SIMULATION</p>
+<h1>Demo locker LF-01</h1>
+<section class="stage2-card">
+<div class="locker-state-layout"><div id="locker-reading"><h2>Latest simulated state</h2>
+{% if latest %}
+<p class="stage2-value">{{ latest.door_state|upper }}</p>
+<p>{{ 'Notice #' ~ latest.notice_id if latest.notice_id is not none else 'Unassigned' }} · {{ latest.observed_at }} (UTC) · {{ latest.source }}</p>
+{% if alert %}<p class="stage2-alert" role="alert"><strong>OPEN TOO LONG</strong> — last reported open for {{ '%.1f'|format(elapsed) }} seconds.</p>{% elif latest.door_state == 'open' %}<p>Open for {{ '%.1f'|format(elapsed) }} seconds. The demonstration warning threshold is 10 seconds.</p>{% else %}<p>Closed. No open-door warning.</p>{% endif %}
+{% else %}<p>No simulated readings yet. Choose a found notice and simulate a door state.</p>{% endif %}
+<a href="{{ url_for('stage2.smart_locker') }}" data-locker-refresh>Refresh state and evaluate warning</a>
+<p class="stage2-muted">The warning is evaluated when this page is requested. Refresh after 10 seconds. This demo does not push notifications or monitor a real door.</p>
+{% if stale_assignment %}
+<p class="stage2-alert">The assigned notice was removed or changed to Lost. Reset this unavailable assignment before selecting another notice.</p>
+<form method="post" data-locker-form><input type="hidden" name="csrf" value="{{ session.csrf }}"><input type="hidden" name="action" value="reset"><button type="submit">Reset unavailable assignment</button></form>
+<p class="stage2-muted">Records a new SIMULATED closed, unassigned state. Earlier readings remain in history; no notice is changed and no physical door is operated.</p>
+{% endif %}
+</div><div class="locker-visual" data-door="{{ latest.door_state if latest else 'unknown' }}" aria-hidden="true"><div class="locker-shell"><div class="locker-interior">LF-01</div><div class="locker-door"><span class="locker-number">LF / 01</span></div><span class="locker-light"></span></div><span class="locker-caption">SOFTWARE SIMULATION</span></div></div></section>
+<section class="stage2-card"><h2>Generate a simulated reading</h2>
+<form method="post" class="stage2-form" id="locker-controls" data-locker-form>
+<input type="hidden" name="csrf" value="{{ session.csrf }}">
+<label>Existing found notice<select name="notice_id" required>{% for notice in notices %}<option value="{{ notice.id }}" {% if latest and notice.id == latest.notice_id %}selected{% endif %}>#{{ notice.id }} · {{ notice.title }} · {{ notice.status }}</option>{% endfor %}</select></label>
+<div class="stage2-actions"><button name="action" value="open">Simulate open</button><button name="action" value="closed">Simulate close</button><button name="action" value="heartbeat" data-unavailable="{{ 'false' if latest else 'true' }}" {% if not latest %}disabled{% endif %}>Simulate heartbeat</button></div>
+</form>
+<div class="locker-feedback" hidden><p id="locker-status" role="status" aria-live="polite" aria-atomic="true">Ready to record a reading.</p><button type="button" data-locker-refresh>Refresh status</button></div>
+<p>Heartbeats preserve the most recent state and assignment. Close the current locker before assigning another notice. The original notice is never automatically marked returned.</p>
+</section>
+<h2>Last 30 simulated readings</h2>
+<div class="stage2-table"><table><thead><tr><th>Event</th><th>UTC time</th><th>Door</th><th>Type</th><th>Notice</th><th>Source</th></tr></thead><tbody id="locker-history">
+{% for event in events %}<tr><td>{{ event.id }}</td><td>{{ event.observed_at }}</td><td>{{ event.door_state }}</td><td>{{ event.event_type }}</td><td>{{ event.notice_id if event.notice_id is not none else 'Unassigned' }}</td><td>{{ event.source }}</td></tr>
+{% else %}<tr><td colspan="6">No readings recorded.</td></tr>{% endfor %}
+</tbody></table></div>
+<p class="stage2-muted">A separate telemetry file keeps the original users/categories/notices schema unchanged. References are checked by the application against notices.id, not enforced as cross-database foreign keys. All records are explicitly SIMULATED.</p>
+</div>
+{% endblock %}

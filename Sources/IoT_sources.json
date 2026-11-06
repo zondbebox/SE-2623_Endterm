@@ -1,0 +1,78 @@
+{
+  "d1": {
+    "title": "D1. IoT in our sector: University of Birmingham",
+    "text": "Campus Lost & Found belongs to campus facilities within higher education. A real example is the University of Birmingham's partnership with Siemens: the university announced a rollout of 23,000 Enlighted IoT sensors, and Enlighted's case study describes installation in lighting fixtures [1,2]. Sensors collect energy consumption, occupancy, movement and temperature; Enlighted Manage analyses these readings to support decisions about room use and energy efficiency [2]. The manufacturer's documented architecture sends sensor data wirelessly over IEEE 802.15.4 to gateways, then over Ethernet/TCP/IP using TLS to Manage; this is a different wireless protocol from Wi-Fi [3]. Sensors also control lighting locally. Manage supports processing on a local server or in the cloud, although the campus sources do not identify which hosting option Birmingham uses [3]. The benefit is responsive lighting and better space planning, with campus data also supporting teaching and research [1,2]. One potential risk, in our assessment, is that detailed occupancy histories could expose people's routines if combined with other records. Restricting access, keeping aggregated reports and setting a retention limit would reduce that risk.",
+    "word_count": 175,
+    "word_count_method": "Whitespace-separated words after removing numeric citation markers; title excluded.",
+    "citation_ids": [
+      1,
+      2,
+      3
+    ],
+    "coverage": {
+      "devices": "Enlighted IoT sensors installed in lighting fixtures.",
+      "connectivity": "Vendor-documented architecture: IEEE 802.15.4 wireless sensor-to-gateway links, then Ethernet/TCP/IP with TLS to Manage.",
+      "data": "Energy consumption, occupancy, motion and temperature.",
+      "processing": "Lighting control happens locally; Manage analyses sensor data. The product supports on-premises or cloud Manage, but the cited campus sources do not identify Birmingham's exact hosting choice.",
+      "benefit": "Lighting and energy management, space-use decisions, and data for teaching and research.",
+      "risk": "Our assessment: combining detailed occupancy histories with other records could expose routines; this is a potential risk, not an allegation of a breach."
+    }
+  },
+  "sources": [
+    {
+      "id": 1,
+      "author": "University of Birmingham",
+      "date": "2021-09-08",
+      "title": "The University of Birmingham partners with Siemens to create the smartest university campus in the world",
+      "url": "https://www.birmingham.ac.uk/news-archive/2021/the-university-of-birmingham-partners-with-siemens-to-create-the-smartest-university-campus-in-the-world",
+      "type": "Primary institutional announcement",
+      "checked_date": "2026-10-30",
+      "claims_supported": [
+        "Partnership and planned 23,000-sensor rollout",
+        "Campus data intended for teaching and research"
+      ],
+      "caveat": "An announcement of planned rollout alone does not prove completed installation; source 2 provides the installation account."
+    },
+    {
+      "id": 2,
+      "author": "Enlighted",
+      "date": null,
+      "display_date": "n.d.",
+      "title": "University of Birmingham: Case Study",
+      "url": "https://www.enlightedinc.com/wp-content/uploads/2022/09/Enlighted_Case-Study_University-of-Birmingham_r2.pdf",
+      "type": "Primary supplier case study",
+      "checked_date": "2026-10-30",
+      "claims_supported": [
+        "23,000 sensors installed in lighting fixtures",
+        "Energy, occupancy, motion and temperature data analysed by Manage",
+        "Space-use and energy-efficiency use cases"
+      ],
+      "relevant_pages": [
+        2
+      ],
+      "caveat": "Supplier-authored. No publication date is printed in the inspected PDF; the URL path is not treated as a publication date. Avoid its marketing superlatives and unsupported causal attribution of historical carbon reductions."
+    },
+    {
+      "id": 3,
+      "author": "Enlighted",
+      "date": null,
+      "display_date": "n.d.",
+      "title": "Network and IT Design Guidance",
+      "url": "https://support.enlightedinc.com/help/articles/Knowledge/ka03o000001DtdvAAC",
+      "type": "Primary technical documentation",
+      "checked_date": "2026-10-30",
+      "claims_supported": [
+        "Local lighting control",
+        "IEEE 802.15.4 sensor-to-gateway links",
+        "Ethernet/TCP/IP and TLS to Manage",
+        "On-premises and cloud Manage options"
+      ],
+      "caveat": "Documents the product architecture, not a verified as-built diagram of Birmingham. Do not claim a specific campus hosting option from this source."
+    }
+  ],
+  "bibliography": [
+    "[1] University of Birmingham. (2021, September 8). The University of Birmingham partners with Siemens to create the smartest university campus in the world. https://www.birmingham.ac.uk/news-archive/2021/the-university-of-birmingham-partners-with-siemens-to-create-the-smartest-university-campus-in-the-world (accessed 30 October 2026).",
+    "[2] Enlighted. (n.d.). University of Birmingham: Case Study. https://www.enlightedinc.com/wp-content/uploads/2022/09/Enlighted_Case-Study_University-of-Birmingham_r2.pdf (accessed 30 October 2026).",
+    "[3] Enlighted. (n.d.). Network and IT Design Guidance. https://support.enlightedinc.com/help/articles/Knowledge/ka03o000001DtdvAAC (accessed 30 October 2026)."
+  ]
+}

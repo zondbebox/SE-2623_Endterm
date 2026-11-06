@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Create a local account | Campus Lost & Found{% endblock %}
+{% block content %}
+<div class="login-layout">
+  <section><p class="eyebrow">LOCAL STUDENT ACCOUNT</p><h1>Join the noticeboard.</h1>
+    <p class="intro">Create an account for this classroom demonstration.</p>
+    <aside class="side-note"><h2>About your account</h2><p>Use an address ending in @astanait.edu.kz. The address format is checked, but this prototype does not verify university membership or email ownership.</p><p>University SSO is not connected. Choose a new local password. Do not use your university password.</p></aside>
+  </section>
+  <form method="post" class="form-card login-form">
+    <h2>Create account</h2>
+    {% if error %}<p class="form-error" role="alert">{{error}}</p>{% endif %}
+    <input type="hidden" name="csrf" value="{{session.csrf}}">
+    <div class="field"><label for="email">University-format email</label><input id="email" name="email" type="email" maxlength="254" value="{{email}}" autocomplete="username" required><span class="hint">Letters, digits, dots, underscores and hyphens before @astanait.edu.kz.</span></div>
+    <div class="field"><label for="password">New local password</label><input id="password" name="password" type="password" minlength="12" maxlength="128" autocomplete="new-password" required><span class="hint">12–128 characters. Never enter your university password.</span></div>
+    <button class="button">Create student account</button>
+    <a href="{{url_for('login')}}">Already have an account? Sign in</a>
+  </form>
+</div>
+{% endblock %}

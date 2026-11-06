@@ -1,0 +1,284 @@
+{
+  "source_label": "synthetic",
+  "database_file": "Campus_Lost_Found/data/campus.sqlite3",
+  "database_sha256": "949cc097157945d128b5df37c87539f0baf6e853a5942c15ae57650667b03770",
+  "freeze_utc": "2026-10-30T10:34:00Z",
+  "generated_utc": "2026-10-30T10:41:32+00:00",
+  "counts": {
+    "notices": 122,
+    "open": 96,
+    "returned": 26,
+    "lost": 60,
+    "found": 62,
+    "earliest_event_date": "2026-08-30",
+    "latest_event_date": "2026-10-25",
+    "categories": 10,
+    "locations": 13,
+    "weeks": 9
+  },
+  "category_series": [
+    {
+      "category_id": 4,
+      "category": "Books and Stationery",
+      "total": 13,
+      "open": 12,
+      "returned": 1
+    },
+    {
+      "category_id": 9,
+      "category": "Accessories",
+      "total": 12,
+      "open": 12,
+      "returned": 0
+    },
+    {
+      "category_id": 3,
+      "category": "Bags",
+      "total": 12,
+      "open": 12,
+      "returned": 0
+    },
+    {
+      "category_id": 5,
+      "category": "Clothing",
+      "total": 12,
+      "open": 12,
+      "returned": 0
+    },
+    {
+      "category_id": 8,
+      "category": "Documents",
+      "total": 12,
+      "open": 12,
+      "returned": 0
+    },
+    {
+      "category_id": 2,
+      "category": "Keys and Access Cards",
+      "total": 12,
+      "open": 12,
+      "returned": 0
+    },
+    {
+      "category_id": 10,
+      "category": "Other",
+      "total": 12,
+      "open": 12,
+      "returned": 0
+    },
+    {
+      "category_id": 7,
+      "category": "Sports Equipment",
+      "total": 12,
+      "open": 12,
+      "returned": 0
+    },
+    {
+      "category_id": 6,
+      "category": "Drinkware",
+      "total": 13,
+      "open": 0,
+      "returned": 13
+    },
+    {
+      "category_id": 1,
+      "category": "Electronics",
+      "total": 12,
+      "open": 0,
+      "returned": 12
+    }
+  ],
+  "location_series": [
+    {
+      "location": "Library study area",
+      "lost": 12,
+      "found": 1,
+      "total": 13
+    },
+    {
+      "location": "Computer lab corridor",
+      "lost": 0,
+      "found": 12,
+      "total": 12
+    },
+    {
+      "location": "Ground floor lockers",
+      "lost": 0,
+      "found": 12,
+      "total": 12
+    },
+    {
+      "location": "Lecture room corridor",
+      "lost": 12,
+      "found": 0,
+      "total": 12
+    },
+    {
+      "location": "Block C lobby",
+      "lost": 0,
+      "found": 9,
+      "total": 9
+    },
+    {
+      "location": "Bus stop near campus",
+      "lost": 9,
+      "found": 0,
+      "total": 9
+    },
+    {
+      "location": "Cafeteria seating area",
+      "lost": 9,
+      "found": 0,
+      "total": 9
+    },
+    {
+      "location": "Coworking area",
+      "lost": 9,
+      "found": 0,
+      "total": 9
+    },
+    {
+      "location": "Main entrance",
+      "lost": 9,
+      "found": 0,
+      "total": 9
+    },
+    {
+      "location": "Reading room desk",
+      "lost": 0,
+      "found": 9,
+      "total": 9
+    },
+    {
+      "location": "Sports hall entrance",
+      "lost": 0,
+      "found": 9,
+      "total": 9
+    },
+    {
+      "location": "Student lounge",
+      "lost": 0,
+      "found": 9,
+      "total": 9
+    },
+    {
+      "location": "Library, second floor",
+      "lost": 0,
+      "found": 1,
+      "total": 1
+    }
+  ],
+  "weekly_series": [
+    {
+      "week_start": "2026-08-24",
+      "week_end": "2026-08-30",
+      "label": "2026-08-24 to 2026-08-30",
+      "lost": 0,
+      "found": 2,
+      "total": 2
+    },
+    {
+      "week_start": "2026-08-31",
+      "week_end": "2026-09-06",
+      "label": "2026-08-31 to 2026-09-06",
+      "lost": 9,
+      "found": 7,
+      "total": 16
+    },
+    {
+      "week_start": "2026-09-07",
+      "week_end": "2026-09-13",
+      "label": "2026-09-07 to 2026-09-13",
+      "lost": 10,
+      "found": 11,
+      "total": 21
+    },
+    {
+      "week_start": "2026-09-14",
+      "week_end": "2026-09-20",
+      "label": "2026-09-14 to 2026-09-20",
+      "lost": 11,
+      "found": 10,
+      "total": 21
+    },
+    {
+      "week_start": "2026-09-21",
+      "week_end": "2026-09-27",
+      "label": "2026-09-21 to 2026-09-27",
+      "lost": 12,
+      "found": 9,
+      "total": 21
+    },
+    {
+      "week_start": "2026-09-28",
+      "week_end": "2026-10-04",
+      "label": "2026-09-28 to 2026-10-04",
+      "lost": 9,
+      "found": 12,
+      "total": 21
+    },
+    {
+      "week_start": "2026-10-05",
+      "week_end": "2026-10-11",
+      "label": "2026-10-05 to 2026-10-11",
+      "lost": 9,
+      "found": 9,
+      "total": 18
+    },
+    {
+      "week_start": "2026-10-12",
+      "week_end": "2026-10-18",
+      "label": "2026-10-12 to 2026-10-18",
+      "lost": 0,
+      "found": 1,
+      "total": 1
+    },
+    {
+      "week_start": "2026-10-19",
+      "week_end": "2026-10-25",
+      "label": "2026-10-19 to 2026-10-25",
+      "lost": 0,
+      "found": 1,
+      "total": 1
+    }
+  ],
+  "interpretation": "The frozen dataset contains 122 synthetic notices: 96 open and 26 marked returned, comprising 60 lost and 62 found notices. Eight categories each have 12 open notices; Electronics and Drinkware have none. The generator strongly shapes this pattern: all 12 Electronics notices and all 13 Drinkware notices are marked returned. It cannot establish that these categories are easier to recover.\n\nLibrary study area has the largest location total, with 13 notices (12 lost and 1 found). Locations are free-form labels, so \"Library study area\" and \"Library, second floor\" remain separate groups. Normalising location choices would make future comparisons more consistent. Notice counts also do not identify unique physical items or account for how many people use each location.\n\nWeekly totals reach 21 in four consecutive September weeks. This reflects the seed schedule and later demonstration edits, not observed campus demand. Weeks are grouped by item event date, not publication, processing or return time; boundary weeks have partial date coverage. These aggregates verify the dashboard and suggest interface improvements, while real service evaluation requires independent observations.",
+  "interpretation_word_count": 175,
+  "interpretation_word_count_method": "Whitespace-delimited words (Python str.split).",
+  "queries": {
+    "category": {
+      "filename": "01_category_backlog.sql",
+      "sql": "SELECT c.id AS category_id, c.name AS category,\n       COUNT(n.id) AS total,\n       SUM(CASE WHEN n.status = 'open' THEN 1 ELSE 0 END) AS open,\n       SUM(CASE WHEN n.status = 'returned' THEN 1 ELSE 0 END) AS returned\nFROM categories AS c\nLEFT JOIN notices AS n ON n.category_id = c.id\nGROUP BY c.id, c.name\nORDER BY open DESC, total DESC, c.name COLLATE NOCASE, c.id;",
+      "sha256": "efd2f14db214bcde0dde889e5d527016b978da301113c1f667e965517a604f88"
+    },
+    "location": {
+      "filename": "02_location_types.sql",
+      "sql": "SELECT location,\n       SUM(CASE WHEN type = 'lost' THEN 1 ELSE 0 END) AS lost,\n       SUM(CASE WHEN type = 'found' THEN 1 ELSE 0 END) AS found,\n       COUNT(*) AS total\nFROM notices\nGROUP BY location\nORDER BY total DESC, location COLLATE NOCASE, location;",
+      "sha256": "1dad5ca39da04056b6db59412a849ca7c2174aff88243731649cb270c5cb90e0"
+    },
+    "weekly": {
+      "filename": "03_weekly_events.sql",
+      "sql": "WITH RECURSIVE\nbounds AS (\n    SELECT date(MIN(event_date), 'weekday 0', '-6 days') AS first_week,\n           date(MAX(event_date), 'weekday 0', '-6 days') AS last_week\n    FROM notices\n),\nweeks(week_start) AS (\n    SELECT first_week FROM bounds WHERE first_week IS NOT NULL\n    UNION ALL\n    SELECT date(week_start, '+7 days') FROM weeks, bounds\n    WHERE week_start < last_week\n)\nSELECT w.week_start,\n       date(w.week_start, '+6 days') AS week_end,\n       w.week_start || ' to ' || date(w.week_start, '+6 days') AS label,\n       SUM(CASE WHEN n.type = 'lost' THEN 1 ELSE 0 END) AS lost,\n       SUM(CASE WHEN n.type = 'found' THEN 1 ELSE 0 END) AS found,\n       COUNT(n.id) AS total\nFROM weeks AS w\nLEFT JOIN notices AS n\n  ON n.event_date BETWEEN w.week_start AND date(w.week_start, '+6 days')\nGROUP BY w.week_start\nORDER BY w.week_start;",
+      "sha256": "ee7b83025214e75eed8ee8bb6f212f9969e663a51bc4d6a0312400b2be89f10b"
+    }
+  },
+  "checks": {
+    "all_three_aggregate_totals_equal_notice_count": true,
+    "status_and_type_totals_equal_notice_count": true,
+    "database_read_only": true
+  },
+  "limits": [
+    "Synthetic data and demonstration edits are not observed campus behaviour.",
+    "Returned is current status, not measured recovery time.",
+    "The deterministic generator creates category and location bias.",
+    "Location labels are free form; equivalent places may appear separately.",
+    "Weekly bins use event_date, include zero weeks, and may have partial boundary coverage."
+  ],
+  "reproduction": {
+    "python": "3.12.14",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.4",
+    "command": "python reproduce_analysis.py"
+  },
+  "frozen_copy": "Analysis/frozen_campus.sqlite3"
+}

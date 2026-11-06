@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Manage notices · Campus Lost & Found{% endblock %}
+{% block extra_head %}<link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">{% endblock %}
+{% block content %}
+<div class="admin-panel">
+  <header class="admin-page-heading"><p class="eyebrow">ADMIN PANEL</p><h1>Manage notices</h1><p>Find a notice, review its details, or open the removal confirmation.</p></header>
+  <nav class="admin-tabs" aria-label="Admin panel sections"><a href="{{ url_for('admin_dashboard') }}">Overview</a><a href="{{ url_for('admin_notices') }}" aria-current="page"><span class="admin-tab-pill" aria-hidden="true"></span>Notices</a><a href="{{ url_for('admin_users') }}">Users</a></nav>
+  <form class="admin-search" method="get" action="{{ url_for('admin_notices') }}" role="search">
+    <div class="field"><label for="admin-query">Search notice titles</label><input id="admin-query" type="search" name="q" value="{{ q }}" maxlength="120" placeholder="Try a title or item keyword"></div>
+    <div class="field"><label for="admin-status">Status</label><select id="admin-status" name="status"><option value="" {% if not status %}selected{% endif %}>All statuses</option><option value="open" {% if status == 'open' %}selected{% endif %}>Open</option><option value="returned" {% if status == 'returned' %}selected{% endif %}>Returned</option></select></div>
+    <button class="button" type="submit">Search notices</button><a class="admin-reset" href="{{ url_for('admin_notices') }}">Clear filters</a>
+  </form>
+  <div class="admin-results-heading"><p>{{ paging.total }} notice{{ '' if paging.total == 1 else 's' }}{% if q or status %} matching your filters{% endif %}</p><p>Newest first · Publication dates in UTC</p></div>
+  <div class="admin-table-scroll" role="region" aria-label="Notice list; scroll horizontally on narrow screens" tabindex="0">
+    <table class="admin-table admin-notice-table"><caption>Notices {{ paging.start }}–{{ paging.end }} of {{ paging.total }}</caption><thead><tr><th scope="col">Notice / owner</th><th scope="col">Category</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">Published</th><th scope="col">Actions</th></tr></thead><tbody>
+    {% for notice in notices %}<tr data-notice-id="{{ notice.id }}"><th scope="row"><strong>{{ notice.title }}</strong><span class="admin-owner">{{ notice.email }}</span><small>#{{ notice.id }}</small></th><td>{{ notice.category }}</td><td>{{ notice.type|capitalize }}</td><td><span class="admin-status {{ notice.status }}">{{ notice.status|capitalize }}</span></td><td><time datetime="{{ notice.created_at }}">{{ notice.created_at[:10] }}</time></td><td><div class="admin-row-actions"><a href="{{ url_for('detail', notice_id=notice.id) }}" aria-label="View {{ notice.title }}">View</a><a class="admin-remove" href="{{ url_for('remove', notice_id=notice.id) }}" aria-label="Review removal of {{ notice.title }}">Remove</a></div></td></tr>
+    {% else %}<tr><td colspan="6" class="admin-empty"><h2>No notices found</h2><p>Try another keyword or clear the filters.</p></td></tr>{% endfor %}
+    </tbody></table>
+  </div>
+  <nav class="admin-pagination" aria-label="Notice pages">{% if paging.page > 1 %}<a class="button secondary" href="{{ url_for('admin_notices', q=q, status=status, page=paging.page-1) }}" rel="prev">Previous</a>{% endif %}<span>Page {{ paging.page }} of {{ paging.pages }}</span>{% if paging.page < paging.pages %}<a class="button secondary" href="{{ url_for('admin_notices', q=q, status=status, page=paging.page+1) }}" rel="next">Next</a>{% endif %}</nav>
+</div>
+{% endblock %}

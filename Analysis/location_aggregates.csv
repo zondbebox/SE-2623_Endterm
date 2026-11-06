@@ -1,0 +1,14 @@
+source,location,lost,found,total
+synthetic,Library study area,12,1,13
+synthetic,Computer lab corridor,0,12,12
+synthetic,Ground floor lockers,0,12,12
+synthetic,Lecture room corridor,12,0,12
+synthetic,Block C lobby,0,9,9
+synthetic,Bus stop near campus,9,0,9
+synthetic,Cafeteria seating area,9,0,9
+synthetic,Coworking area,9,0,9
+synthetic,Main entrance,9,0,9
+synthetic,Reading room desk,0,9,9
+synthetic,Sports hall entrance,0,9,9
+synthetic,Student lounge,0,9,9
+synthetic,"Library, second floor",0,1,1

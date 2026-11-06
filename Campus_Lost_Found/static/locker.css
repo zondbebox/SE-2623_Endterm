@@ -1,0 +1,17 @@
+.locker-feedback:not([hidden]){display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:48px;margin-top:14px;padding:9px 13px;border-radius:10px;background:#f0f6ed;color:#315841}
+.locker-feedback p{margin:0;font-size:13px;line-height:1.5}
+.locker-feedback button{flex-shrink:0;min-height:34px;padding:6px 10px;border:1px solid #bad0bb;border-radius:7px;background:transparent;color:#245c41;font-size:12px}
+.locker-app[data-request-state=error] .locker-feedback{background:#fff3e3;color:#7c421d}
+.locker-app[data-request-state=pending] .locker-feedback p::before{content:'';display:inline-block;width:7px;height:7px;margin-right:8px;border-radius:50%;background:#3e8660}
+.locker-app button:disabled{cursor:wait;opacity:.55;transform:none!important}
+.locker-app button[data-unavailable=true]:disabled{cursor:not-allowed}
+.locker-interactive .locker-door{animation:none!important}
+@media(prefers-reduced-motion:no-preference){
+ html[data-motion=on] .locker-interactive .locker-door{transition:transform .85s cubic-bezier(.22,.8,.24,1)}
+ html[data-motion=on] .locker-interactive .locker-light{transition:background-color .35s}
+ html[data-motion=on] .locker-app[data-request-state=pending] .locker-feedback p::before{animation:locker-pending .8s ease-in-out infinite alternate}
+ html[data-motion=on] #locker-history tr.is-new-reading{animation:locker-reading-arrive .75s ease-out}
+}
+@keyframes locker-pending{to{opacity:.3;transform:scale(.7)}}
+@keyframes locker-reading-arrive{from{background:#dcecd5}to{background:transparent}}
+@media(max-width:480px){.locker-feedback:not([hidden]){align-items:flex-start}.locker-feedback button{white-space:normal;max-width:90px}}

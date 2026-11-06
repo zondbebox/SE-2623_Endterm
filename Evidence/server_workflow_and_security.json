@@ -1,0 +1,98 @@
+{
+  "utc": "2026-10-30T10:43:22.174228+00:00",
+  "method": "Flask request client against isolated copy of shipped real SQLite; not a browser screenshot, human usability test or external participant result. Source database untouched.",
+  "security_checks": [
+    {
+      "id": "SC3-1",
+      "action": "Register an address outside astanait.edu.kz",
+      "http_status": 200,
+      "blocked": true
+    },
+    {
+      "id": "SC3-2",
+      "action": "Sign in with an incorrect password",
+      "http_status": 200,
+      "blocked": true
+    },
+    {
+      "id": "SC3-3",
+      "action": "Anonymous visitor opens private notice details",
+      "http_status": 302,
+      "blocked": true
+    },
+    {
+      "id": "SC3-4",
+      "action": "Student edits another owner notice",
+      "http_status": 403,
+      "blocked": true
+    },
+    {
+      "id": "SC3-5",
+      "action": "Student opens administrator removal action",
+      "http_status": 403,
+      "blocked": true
+    }
+  ],
+  "invalid_access_blocked": 5,
+  "invalid_access_total": 5,
+  "workflow": [
+    {
+      "step": 1,
+      "action": "Student publishes a found notice with one PNG",
+      "result": "Saved notice and random private photo filename",
+      "row": {
+        "id": 123,
+        "owner_id": 1,
+        "title": "Endterm evidence notebook",
+        "status": "open",
+        "photo_filename": "4f65dbcec7121f25c0d766eaa86c120f6b7be2f8ee8caadb.png"
+      }
+    },
+    {
+      "step": 2,
+      "action": "Search title and category",
+      "result": "Matching saved notice appears in rendered HTML"
+    },
+    {
+      "step": 3,
+      "action": "Inspect contact link on saved detail",
+      "result": "mailto:zhanzhol.demo@astanait.edu.kz?subject=Campus%20Lost%20%26%20Found%20notice%20%23123",
+      "limit": "Destination verified; opening an installed mail client is not automated and no email is sent."
+    },
+    {
+      "step": 4,
+      "action": "Owner edits notice and reloads",
+      "result": "Description update persists in SQLite"
+    },
+    {
+      "step": 5,
+      "action": "Owner marks returned",
+      "result": "Returned status persists",
+      "row": {
+        "id": 123,
+        "title": "Endterm evidence notebook",
+        "status": "returned"
+      }
+    },
+    {
+      "step": 6,
+      "action": "Administrator reviews removal confirmation then removes synthetic notice",
+      "result": "Row and private photograph removed; main source database unchanged"
+    },
+    {
+      "step": 7,
+      "action": "Administrator opens /admin/analytics",
+      "result": "HTTP 200 with real server-rendered page"
+    },
+    {
+      "step": 8,
+      "action": "Administrator opens /admin/research",
+      "result": "HTTP 200 with real server-rendered page"
+    },
+    {
+      "step": 9,
+      "action": "Administrator opens /admin/smart-locker",
+      "result": "HTTP 200 with real server-rendered page"
+    }
+  ]
+}

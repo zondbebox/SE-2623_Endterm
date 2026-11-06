@@ -1,0 +1,42 @@
+{"route": "/", "query": {"page": "2"}, "status_code": 200}
+{"route": "/", "query": {"category": "1"}, "status_code": 200}
+[2026-11-01 23:29:48,848] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\work\endterm\ai_review_2026-11-01\student\app\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\work\endterm\ai_review_2026-11-01\student\app\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\work\endterm\ai_review_2026-11-01\student\app\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\work\endterm\ai_review_2026-11-01\student\app\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\work\endterm\ai_review_2026-11-01\student\app\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\work\endterm\ai_review_2026-11-01\student\app\app.py", line 196, in browse
+    notices = db().execute('SELECT n.*, c.name AS category FROM notices n JOIN categories c ON c.id=n.category_id' + where + ' ORDER BY n.id DESC LIMIT 8 OFFSET ?', params + [(page-1)*8]).fetchall()
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+{"route": "/", "query": {"page": "1152921504606846977"}, "status_code": 500}
+[2026-11-01 23:29:48,852] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\work\endterm\ai_review_2026-11-01\student\app\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\work\endterm\ai_review_2026-11-01\student\app\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\work\endterm\ai_review_2026-11-01\student\app\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\work\endterm\ai_review_2026-11-01\student\app\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\work\endterm\ai_review_2026-11-01\student\app\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\work\endterm\ai_review_2026-11-01\student\app\app.py", line 195, in browse
+    count = db().execute('SELECT count(*) FROM notices n' + where, params).fetchone()[0]
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+{"route": "/", "query": {"category": "9223372036854775808"}, "status_code": 500}
+{"database_sha256_before": "949cc097157945d128b5df37c87539f0baf6e853a5942c15ae57650667b03770", "database_sha256_after": "949cc097157945d128b5df37c87539f0baf6e853a5942c15ae57650667b03770", "database_unchanged": true}
+
+COMMAND: .\app\python\python.exe -B browse_boundary_probe.py
+EXIT_CODE: 0

@@ -1,0 +1,179 @@
+{
+  "report": {
+    "pages": 21,
+    "size": "A4 portrait",
+    "visual_review": "All 21 pages inspected; after final corrections pages 2, 3, 6, 10, 12, 16, 18 and 21 re-rendered and inspected. No clipping or overlap observed."
+  },
+  "guide": {
+    "pages": 15,
+    "a4_portrait": true,
+    "visual_review_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "visual_review_result": "All pages inspected from native Word PDF exported render; no clipping, overlap, missing Cyrillic or broken table rows observed.",
+    "render_method": "Packaged render_docx.py attempted; LibreOffice absent. Installed Microsoft Word COM ExportAsFixedFormat succeeded under approved escalation, then Poppler pdftoppm 110 dpi.",
+    "title_and_heading_nonblack_styles": [],
+    "paragraph_border_count": 0,
+    "replacement_characters": 0,
+    "contains_65_test_statement": true,
+    "contains_pending_external_testing": true,
+    "contains_simulation_disclosure": true,
+    "script_words": 484,
+    "planned_total_seconds": 390,
+    "planned_live_seconds": 120,
+    "files": {
+      "SE-2623_Endterm_Defense_Guide.pdf": {
+        "bytes": 301295,
+        "sha256": "2855713ab3965db4d104fc2aac690640d4f99ca4e8b53827df487f482efab8c2"
+      },
+      "SE-2623_Endterm_Defense_Guide.docx": {
+        "bytes": 57072,
+        "sha256": "395ce59da6d5923f91787d399cb4198097021374b299bda76971729c6fc6fa17"
+      },
+      "START_HERE_RU.txt": {
+        "bytes": 11680,
+        "sha256": "22ce651d81363d243c1220b97317a1cd52fcca0326c5edd48be4a1652dc6c9fa"
+      }
+    },
+    "deadline_revision": {
+      "changed_content_pages": [
+        6,
+        8
+      ],
+      "visual_review_pages": [
+        6,
+        8
+      ],
+      "result": "Week 9 submission deadline corrected in slide 9 and answer 8, with matching Russian explanations. Changed pages visually inspected after native Word PDF export; no clipping, overlap, or pagination change. Other pages preserve identical content ignoring extraction whitespace.",
+      "startup_guide_unchanged": true,
+      "browser_evidence_reference_preserved": true
+    }
+  },
+  "presentation": {
+    "revision": "r4",
+    "pdf": "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\outputs\\Endterm\\SE-2623_Endterm_Presentation.pdf",
+    "pptx": "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\outputs\\Endterm\\SE-2623_Endterm_Presentation.pptx",
+    "page_count": 9,
+    "page_size": "A4 portrait: 210 x 297 mm",
+    "pdf_render_method": "ReportLab full-page images from validated artifact-tool PNGs at 288 dpi",
+    "pdf_text_selectable": false,
+    "editable_source": "PPTX native text/shapes/table and three native charts with embedded data workbooks",
+    "slide_renders": [
+      "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\presentation\\renders\\r4\\slide-01.png",
+      "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\presentation\\renders\\r4\\slide-02.png",
+      "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\presentation\\renders\\r4\\slide-03.png",
+      "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\presentation\\renders\\r4\\slide-04.png",
+      "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\presentation\\renders\\r4\\slide-05.png",
+      "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\presentation\\renders\\r4\\slide-06.png",
+      "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\presentation\\renders\\r4\\slide-07.png",
+      "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\presentation\\renders\\r4\\slide-08.png",
+      "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\presentation\\renders\\r4\\slide-09.png"
+    ],
+    "pdf_renders": [
+      "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\presentation\\pdf-renders\\r4\\page-1.png",
+      "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\presentation\\pdf-renders\\r4\\page-2.png",
+      "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\presentation\\pdf-renders\\r4\\page-3.png",
+      "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\presentation\\pdf-renders\\r4\\page-4.png",
+      "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\presentation\\pdf-renders\\r4\\page-5.png",
+      "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\presentation\\pdf-renders\\r4\\page-6.png",
+      "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\presentation\\pdf-renders\\r4\\page-7.png",
+      "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\presentation\\pdf-renders\\r4\\page-8.png",
+      "C:\\Users\\Zhanzhol\\Documents\\Codex\\2026-10-06\\new-chat\\work\\endterm\\presentation\\pdf-renders\\r4\\page-9.png"
+    ],
+    "pdf_sha256": "740a18e7d817790d468921c76794330bc58971f9a54b6c393f020a5f0c400b34",
+    "pptx_sha256": "89325668e50ec19e198c60a8d87128e7baf5f6f802e450d2fb1270161b4ed15e",
+    "visual_qa": "All nine final PDF pages rendered with Poppler and individually inspected; no clipping, overflow, overlap or illegible labels observed.",
+    "native_slide_count": 9,
+    "native_chart_count": 3,
+    "native_table_count": 1,
+    "embedded_chart_workbook_count": 3,
+    "pptx_image_count": 0,
+    "native_chart_values_match_stats": true,
+    "speaker_notes_match_guide": true,
+    "spoken_word_count_including_handoffs": 484,
+    "visual_qa_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "stability_status_at_build": "complete",
+    "pending": [
+      "Five outside participants and both timed usability criteria",
+      "Three actual observed usability problems",
+      "Current browser, keyboard, 360 px and offline retry evidence",
+      "Three Fast4G browser page-load measurements"
+    ],
+    "r4_visual_review": {
+      "individually_reinspected": [
+        4,
+        7,
+        9
+      ],
+      "byte_identical_to_individually_reviewed_r3": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        8
+      ],
+      "result": "pass; no clipping, overlap or illegibility"
+    },
+    "availability_evidence": {
+      "checks": 20,
+      "passed": 20,
+      "duration_seconds": 1800.0,
+      "complete": true,
+      "N4": "PARTLY - offline/retry pending"
+    }
+  },
+  "final_artifact_checks": {
+    "SE-2623_CampusLostFound_ICT_ProjectStage2.pdf": {
+      "pages": 21,
+      "size": "A4 portrait",
+      "sha256": "f435583ab170449d03cf90c6e3c0ecf0795290a493633d1b1086c3a66313f999"
+    },
+    "SE-2623_Endterm_Defense_Guide.pdf": {
+      "pages": 15,
+      "size": "A4 portrait",
+      "sha256": "2855713ab3965db4d104fc2aac690640d4f99ca4e8b53827df487f482efab8c2"
+    },
+    "SE-2623_Endterm_Presentation.pdf": {
+      "pages": 9,
+      "size": "A4 portrait",
+      "sha256": "740a18e7d817790d468921c76794330bc58971f9a54b6c393f020a5f0c400b34"
+    },
+    "main_database": {
+      "notices": 122,
+      "frozen_copy_identical": true,
+      "human_observations": "none fabricated; recorder starts empty"
+    },
+    "availability": {
+      "checks": 20,
+      "passed": 20,
+      "elapsed_seconds": 1800.0,
+      "N4": "Partly; offline/retry pending"
+    }
+  },
+  "release_status": "Working build for testing and review; external-participant results, current browser evidence and Linux execution remain pending."
+}

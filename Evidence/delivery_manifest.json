@@ -1,0 +1,4082 @@
+{
+  "date": "2026-11-05",
+  "test_methods": 83,
+  "files": {
+    "Analysis/01_category_backlog.png": {
+      "bytes": 237765,
+      "sha256": "381479b79a5936ace43cac549a5a15a55d22478c1e065e221fb600e9d14c3338"
+    },
+    "Analysis/01_category_backlog.sql": {
+      "bytes": 377,
+      "sha256": "efd2f14db214bcde0dde889e5d527016b978da301113c1f667e965517a604f88"
+    },
+    "Analysis/01_category_backlog.svg": {
+      "bytes": 17728,
+      "sha256": "68625a5eee3073626f53dbbde8091edb31b672b49d08ab8032e50afb9d79f682"
+    },
+    "Analysis/02_location_types.png": {
+      "bytes": 257305,
+      "sha256": "de335f03f9c2799401bb1e00595d466d8c68a9797d43ad118a15c47a518fcdfc"
+    },
+    "Analysis/02_location_types.sql": {
+      "bytes": 264,
+      "sha256": "1dad5ca39da04056b6db59412a849ca7c2174aff88243731649cb270c5cb90e0"
+    },
+    "Analysis/02_location_types.svg": {
+      "bytes": 17917,
+      "sha256": "3ac0566dfc7534cd379ab80c401d9201ec34358d4c80b3fc8162d3fb32451240"
+    },
+    "Analysis/03_weekly_events.png": {
+      "bytes": 319657,
+      "sha256": "87b155e4e76958876419271f5457f613c7d5fe05806cec495d2b440fb50a246b"
+    },
+    "Analysis/03_weekly_events.sql": {
+      "bytes": 866,
+      "sha256": "ee7b83025214e75eed8ee8bb6f212f9969e663a51bc4d6a0312400b2be89f10b"
+    },
+    "Analysis/03_weekly_events.svg": {
+      "bytes": 17750,
+      "sha256": "69708cfc42e4681007acda8aa801cde93613042c268dfd2ac307bccdaeb542dc"
+    },
+    "Analysis/README.txt": {
+      "bytes": 929,
+      "sha256": "d5745c7a6f584d01a1f3e0f39ad38167a257bc0c602d8d9a02b168cad5aef781"
+    },
+    "Analysis/all_aggregates.csv": {
+      "bytes": 4502,
+      "sha256": "c31199df78f77ff83478973d94fbb22aa5195fb02b106b2e9a1327a084708f73"
+    },
+    "Analysis/category_aggregates.csv": {
+      "bytes": 384,
+      "sha256": "4dc5861781b6bf7e61bdd98a0dc51b26343a8b47d829dd27bfde2eb508479633"
+    },
+    "Analysis/frozen_campus.sqlite3": {
+      "bytes": 90112,
+      "sha256": "949cc097157945d128b5df37c87539f0baf6e853a5942c15ae57650667b03770"
+    },
+    "Analysis/interpretation_en.txt": {
+      "bytes": 1194,
+      "sha256": "3b018d5ee22f386b4ff1120afdd2aeec6cc32dbd3c501cc8111c4a2c81967de8"
+    },
+    "Analysis/location_aggregates.csv": {
+      "bytes": 512,
+      "sha256": "afb9d9bf7dcd3912cb4f0bf17069156ddaad06e6b5f1aaf1bb2dea243de6e99d"
+    },
+    "Analysis/reproduce_analysis.py": {
+      "bytes": 17844,
+      "sha256": "d2610c1722dbdf02d181e35cdc706d3663f543139d7a573b41ea74f069bb05a4"
+    },
+    "Analysis/requirements-analysis.txt": {
+      "bytes": 34,
+      "sha256": "11580fbdd48cc51af202a622a3bd8eda389c8574fe638ef0f85beec08f2dde81"
+    },
+    "Analysis/stats.json": {
+      "bytes": 9241,
+      "sha256": "9bac0f10db6b57b1b68b5b2746cc9b5f56e064b5b303fd4e051f74b2d9672861"
+    },
+    "Analysis/weekly_aggregates.csv": {
+      "bytes": 639,
+      "sha256": "ce467010d2d987db70faba536889a6d9250e0738cac54594c6b43684ef4c18d2"
+    },
+    "CANVA_LINK.txt": {
+      "bytes": 1136,
+      "sha256": "d2763aa53fd933c74a34fd1649a21dca5596da1f0eb100b21f5087cafd2c1ff2"
+    },
+    "Campus_Lost_Found/BACKUP.bat": {
+      "bytes": 285,
+      "sha256": "652d19bd2c348953c0a1df003acf988a708569957403838dad2cc12a4cea5cae"
+    },
+    "Campus_Lost_Found/BACKUP.sh": {
+      "bytes": 332,
+      "sha256": "5d47a7e5fefc8c1e1e34bf80dd907e14a340d8340678d39d228a8a434c02899a"
+    },
+    "Campus_Lost_Found/DATABASE.bat": {
+      "bytes": 280,
+      "sha256": "fb1b58659d989a782031cd725f037178f1cab6232852e3e524fa8c0eef99ddd6"
+    },
+    "Campus_Lost_Found/DATABASE.sh": {
+      "bytes": 548,
+      "sha256": "ced6c3829ea8eaea1addb51905f95e98c579e561c0cc847ffda6fc1438e7245c"
+    },
+    "Campus_Lost_Found/DB.bat": {
+      "bytes": 65,
+      "sha256": "b6f90288b298a5b3b6d94100ed5856698d9ff576c4d79996320ba2e300545f6e"
+    },
+    "Campus_Lost_Found/DB.sh": {
+      "bytes": 182,
+      "sha256": "e8ced879ebd0117b1c5f50d88aeb2e1cd893fe936f8ee1a843080b9d259ceb2c"
+    },
+    "Campus_Lost_Found/INTEGRATION_D.txt": {
+      "bytes": 1001,
+      "sha256": "c923558b9dd06d71d05c12a88261487f5936f05733da1b596515e0f1abe69209"
+    },
+    "Campus_Lost_Found/RESTORE_CHECK.bat": {
+      "bytes": 234,
+      "sha256": "9709f36b800c504870415db04b99c45c157dcac586125b213196982000458e41"
+    },
+    "Campus_Lost_Found/RESTORE_CHECK.sh": {
+      "bytes": 287,
+      "sha256": "48879396e6794a1d9950d98d4ce9a39c2af861c23653ce00a9eaa880fef6d4be"
+    },
+    "Campus_Lost_Found/START.bat": {
+      "bytes": 156,
+      "sha256": "05718d4fbb9f2a8295a294f399a43b5ab0727f4e87029f2e729067a75c118753"
+    },
+    "Campus_Lost_Found/START.sh": {
+      "bytes": 280,
+      "sha256": "b13e2f0bf463e366731db49f6b417b8996d6e5890fd44966f3fc8f03015cbdfb"
+    },
+    "Campus_Lost_Found/START_HERE_RU.txt": {
+      "bytes": 7298,
+      "sha256": "fde498777562c5e51da1e479cada3b69ea676513de671255932e7fedb71ff815"
+    },
+    "Campus_Lost_Found/START_LINUX_RU.txt": {
+      "bytes": 7028,
+      "sha256": "536d81c160650f61b522f9f52025e23854832ab8b036a42bd5447043e89ded27"
+    },
+    "Campus_Lost_Found/TESTS.bat": {
+      "bytes": 683,
+      "sha256": "95881bba587551fa6ec6759105e284a371654bf95484fe13d85009d962b57f69"
+    },
+    "Campus_Lost_Found/TESTS.sh": {
+      "bytes": 481,
+      "sha256": "cc402f00e6f4c6cc8752eba0cc76560d47facf377e39f669faa80267177b4721"
+    },
+    "Campus_Lost_Found/THIRD_PARTY_NOTICES.txt": {
+      "bytes": 1002,
+      "sha256": "883733912b2e434eab125cc541ecec4bdec0561526362bd6ee37b113929b13bd"
+    },
+    "Campus_Lost_Found/_linux_common.sh": {
+      "bytes": 3182,
+      "sha256": "5008eda226a851abc4ccc74355ec5766a359368cd4e0bfb26079f95eeb48c8d4"
+    },
+    "Campus_Lost_Found/admin_panel.py": {
+      "bytes": 4329,
+      "sha256": "abf8d0a554ca9cddea15fc0cfd3a42b06829af644ade2202975161bea5ed6fdd"
+    },
+    "Campus_Lost_Found/analytics_routes.py": {
+      "bytes": 3850,
+      "sha256": "d98a36cfe5c54fc1e3ca41efea46bcbd7bb485cc55beaf8f73e9831004dcc6cb"
+    },
+    "Campus_Lost_Found/app.py": {
+      "bytes": 19331,
+      "sha256": "cf588ca72d25915e26f32b05b00f789834075b77d607512acdd8917b5c2d471a"
+    },
+    "Campus_Lost_Found/backend/README.md": {
+      "bytes": 6820,
+      "sha256": "b8e9a9e76c24222a95e1a4376bd664f3b2d904b115ecbdc1ed4646c5a7c14554"
+    },
+    "Campus_Lost_Found/backend/__init__.py": {
+      "bytes": 70,
+      "sha256": "292ee92440e5b4595b8e2b872521a0101da126c919578bdaec149bef3321324e"
+    },
+    "Campus_Lost_Found/backend/analytics.py": {
+      "bytes": 3387,
+      "sha256": "04f4bc3c4cd2f759ac12d150844003078d147aedbb76e31772d16a36840f3303"
+    },
+    "Campus_Lost_Found/backend/db.py": {
+      "bytes": 16737,
+      "sha256": "fc021549feb6ac6a215163bfc4da8cb9315d79a91252bce5b08858669a8d2055"
+    },
+    "Campus_Lost_Found/backend/manage.py": {
+      "bytes": 3179,
+      "sha256": "db89f6198aba8649da812a8d5b83926aa49617ea901ada951cc4249c6dcaed6b"
+    },
+    "Campus_Lost_Found/backend/schema.sql": {
+      "bytes": 3538,
+      "sha256": "29c5afcb20bc96add795a62368d0890767e35bc3de857e812980e275db4d488f"
+    },
+    "Campus_Lost_Found/backend/test_backend.py": {
+      "bytes": 10264,
+      "sha256": "952896aabb5e664ba182650a64a416d0c7a7f4839d44b9e15c4a2031766d5722"
+    },
+    "Campus_Lost_Found/backup_full.py": {
+      "bytes": 10865,
+      "sha256": "2b9463355360d47dd7b8aefd0fd1832bdd279394d968332079e3c41077d09b3b"
+    },
+    "Campus_Lost_Found/backup_tools.py": {
+      "bytes": 1050,
+      "sha256": "f05aff98ea58cce7d9974cf39d3d4cb2096df5899369f3f33e6bd3d42ddbc71e"
+    },
+    "Campus_Lost_Found/benchmark_search.py": {
+      "bytes": 2228,
+      "sha256": "a3f88b963d5a8a37e16db9fedc110d7b4fc88fc58fde143954d9484250a75657"
+    },
+    "Campus_Lost_Found/data/campus.sqlite3": {
+      "bytes": 90112,
+      "sha256": "949cc097157945d128b5df37c87539f0baf6e853a5942c15ae57650667b03770"
+    },
+    "Campus_Lost_Found/licenses/Pillow-12.3.0-LICENSE.txt": {
+      "bytes": 78016,
+      "sha256": "4f7866a74802c6326f81faff59a56546b6aec2b10b91973e0e9308de95e79857"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/AvifImagePlugin.py": {
+      "bytes": 9596,
+      "sha256": "80733b71d411630ea63c782333de241a12bd83f0f1cafcd8ccde4516bed4b5a1"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/BdfFontFile.py": {
+      "bytes": 3463,
+      "sha256": "2c54f5932a79e45789cd0b1fbd64694f2f53009f5485e3fe7bd95e2ddf77cf35"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/BlpImagePlugin.py": {
+      "bytes": 17048,
+      "sha256": "522b1467bdc20f8edfd8b19346573e4df6f10dda93915b72a3b8efe6f6104c17"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/BmpImagePlugin.py": {
+      "bytes": 20377,
+      "sha256": "e23760527cf54ebb06b6e56d73be70ff896666c04f55fdd1047bf99434f9da63"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/BufrStubImagePlugin.py": {
+      "bytes": 1757,
+      "sha256": "3b2a82334b9422e153315099108f4fda20377a83785d540f7c57cdb835bfc9e4"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ContainerIO.py": {
+      "bytes": 4777,
+      "sha256": "23ac8efd814412a30a035724804133176aff224e69fc68ccf91ad63896234a56"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/CurImagePlugin.py": {
+      "bytes": 2814,
+      "sha256": "3aab7fa3ba3b1d758a01e368073544be1c4a14cbf75b751cf390a73a842e8612"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/DcxImagePlugin.py": {
+      "bytes": 2264,
+      "sha256": "2f6d5cde0557e883e6938cee7ff96db779807917dcb8209c5e1902569b9e7765"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/DdsImagePlugin.py": {
+      "bytes": 19733,
+      "sha256": "eae2016bb3476be917ff549086c18b89d8e911d0f6d3f0900486a90fe2808cac"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/EpsImagePlugin.py": {
+      "bytes": 17253,
+      "sha256": "3582af51b5623fc766008fa1e3df028a918aaf7073f4f6435fc5d1607f3deb2c"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ExifTags.py": {
+      "bytes": 10339,
+      "sha256": "362cafb665044fbf41322a248a3313a7fabc75e596ce9c9db5371305f272f0a1"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/FitsImagePlugin.py": {
+      "bytes": 4875,
+      "sha256": "2ff9142b7f02394b95f65a13e64f4366a12df74a3600245d64f63696fb1ed0bd"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/FliImagePlugin.py": {
+      "bytes": 5113,
+      "sha256": "2f5bdfe108ec68c57479141399fcb5c27a89f65f61195e65bd320b5bbce7cc3f"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/FontFile.py": {
+      "bytes": 4419,
+      "sha256": "a424a370fdf10adc8e780110f3e12f9366e0e479ec49c560400e715108ff0554"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/FpxImagePlugin.py": {
+      "bytes": 7724,
+      "sha256": "b3610e701e56459102379804abd517a576a44e2dfc905322133d8ccd1029c7f5"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/FtexImagePlugin.py": {
+      "bytes": 3685,
+      "sha256": "fb32afbe131373351ede8d1fe07a430bdfc32ba94a1d3e4b0017f4af9fb797ee"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/GbrImagePlugin.py": {
+      "bytes": 3156,
+      "sha256": "21bff2df967334e98ca86d92b8eca3c518773b1b78d90a5c11c80b6ba0619ad0"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/GdImageFile.py": {
+      "bytes": 2951,
+      "sha256": "ace96a8ea2945fc25827a18b1b3a8792cf85a4033bdb43b2a1d1c636222e9283"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/GifImagePlugin.py": {
+      "bytes": 43596,
+      "sha256": "0cf9dd837ba23b412c95765aea4422bbf6e7c2210c6eefde91eab43d4308b0d5"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/GimpGradientFile.py": {
+      "bytes": 4137,
+      "sha256": "cec216d4c915ea4a39964e072555de8121d4df250fc16d695329d1b39cf48990"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/GimpPaletteFile.py": {
+      "bytes": 1935,
+      "sha256": "126047710f44c42e1fe3bb5a0fb4bb1ba55a324afd1e3ca7955f0d7535d5e624"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/GribStubImagePlugin.py": {
+      "bytes": 1786,
+      "sha256": "73c88f12a40e48171616a756122b9cb9b8da5f061f6520761a365761568f0313"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/Hdf5StubImagePlugin.py": {
+      "bytes": 1768,
+      "sha256": "ac831d7fbb83b248c9ab07ba0af18bc3fb6325f875828e6f2929e67ed05d08a8"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/IcnsImagePlugin.py": {
+      "bytes": 12798,
+      "sha256": "4e8092cb968527bffa9e266ccc53917c232bf3f5393babe0775447315aff27fa"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/IcoImagePlugin.py": {
+      "bytes": 13499,
+      "sha256": "0d9a018f6ccabfbe9293de8f2aaf1e97d69900cd89df050b56a3dea27a3fd33d"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImImagePlugin.py": {
+      "bytes": 11992,
+      "sha256": "5fd881490e31eeb6aec5b3889fbda3eefe9301481995da580f970073a67530d0"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/Image.py": {
+      "bytes": 158171,
+      "sha256": "59f1b98ed7bfd7b516b9f13ffd9dd3bc0aa1a495042accdb5ae4609b41c329d5"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageChops.py": {
+      "bytes": 8257,
+      "sha256": "859f043d43e5408cee82c11e755f2dae4297d230420c66fa0acce66ba65e3194"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageCms.py": {
+      "bytes": 41773,
+      "sha256": "0effeeecadc71257d6eabcbd4cf43277ff35c6aeda0e7ba4c60ab67676bf49de"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageColor.py": {
+      "bytes": 9761,
+      "sha256": "295faeec79d95abacbdf3b8100e2ea7ab23eeef15c5d3c5d2dea1a6158ec9f02"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageDraw.py": {
+      "bytes": 36421,
+      "sha256": "98aa4388d2629866aad9dd734bec67ad3f9981ab1ed4390281b4c17be9027cf6"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageDraw2.py": {
+      "bytes": 7470,
+      "sha256": "1b4388cfbb0e5bf4e7af5b431ee8d3c8f54476aa216fb33838e3ade19424550c"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageEnhance.py": {
+      "bytes": 3740,
+      "sha256": "ba00d4d2c963691ff369389bb6e9a54ef7fea851f5c755ba97640ca5cdfce975"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageFile.py": {
+      "bytes": 30828,
+      "sha256": "e972c9d8785ad1fd44f860a375d8719f3fdff8e46da1cc311950699f93e4f539"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageFilter.py": {
+      "bytes": 19714,
+      "sha256": "1702a1b8f1c497a99f816a3aa94509b2ba2ce357ec480308c015e406c6bcc15e"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageFont.py": {
+      "bytes": 65080,
+      "sha256": "e9601111f8817e8387fd792b3643e709a5a11febea43cb49de1732e776ba5f60"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageGrab.py": {
+      "bytes": 8475,
+      "sha256": "b0df963537d02a3f90a20b6385edd5338efc7b6b28ee2248f30de562d1358530"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageMath.py": {
+      "bytes": 10659,
+      "sha256": "d39d8fd05608b184178f75263ff0b04a0509de58e8e6945f14dfe4eac85e4496"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageMode.py": {
+      "bytes": 2480,
+      "sha256": "50b900fa3b02806c31563af62cf48fe367439a3ea759a424f4be142a3eca7d28"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageMorph.py": {
+      "bytes": 10673,
+      "sha256": "56bd50401e6f198a4655f7d11894287781fbfc095098ede5f81961a5a61e0f22"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageOps.py": {
+      "bytes": 26446,
+      "sha256": "ad146c4c218335150d4099e851f1f78c582f5df6c46648893f0ab56dea38a3e4"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImagePalette.py": {
+      "bytes": 9498,
+      "sha256": "f4a973fbb23a253494a7695f64933a5740f270540a926e91c5fc970d3e14fe7c"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImagePath.py": {
+      "bytes": 391,
+      "sha256": "6679c9baf40db5b2918429abeb54c4984875bd5579ffdd163043cbf0ea72e65f"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageQt.py": {
+      "bytes": 6903,
+      "sha256": "4a9c4778f81687981d8d5206342e061b9bfd577b26426fe73e224372b8671d77"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageSequence.py": {
+      "bytes": 2341,
+      "sha256": "82e64751da56af39f3664718d0e6290f3b85d2e15794212edbad283feedefdf2"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageShow.py": {
+      "bytes": 10684,
+      "sha256": "d660d3b5502fb540e2d414a9eeefa85541c368deecd916c99196f07d0eb62082"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageStat.py": {
+      "bytes": 5662,
+      "sha256": "5b4b946bc60d0babe1a3095ead2cd923013b46ef8aa76ad6baa18d2c114b672a"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageText.py": {
+      "bytes": 19087,
+      "sha256": "082c1145853cadd845f42775d7ac896b6cc63d9b2e80572cf579acb6fcc01d54"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageTk.py": {
+      "bytes": 8398,
+      "sha256": "4f1d337fd913681b801af66ea342401eb35b9379fa7b0af86677569d6c592b44"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageTransform.py": {
+      "bytes": 4052,
+      "sha256": "66eea8c925c436dabbd76fa792a14ba9a7d83ef891020b209337cb586d0add5f"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImageWin.py": {
+      "bytes": 8345,
+      "sha256": "7d018c99917dc076f4f6d33c7697ccb8de5ac75bfe1c3d38389a645ce6b1ddc7"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/ImtImagePlugin.py": {
+      "bytes": 2768,
+      "sha256": "afe643cf75e38ba10117c7949caea2b8211912d965a74c4b452210d3f875e141"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/IptcImagePlugin.py": {
+      "bytes": 6663,
+      "sha256": "e05b6e7b88dd6bba546342e1dbbd8e0df84e0488893992b4410d9ed0f610c228"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/Jpeg2KImagePlugin.py": {
+      "bytes": 15088,
+      "sha256": "00e20588471f2455caa9018885d958480c3d23e6d8f087eb421450fc0f6b3c18"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/JpegImagePlugin.py": {
+      "bytes": 32223,
+      "sha256": "049fc12cf436b101a5622456a1b83ba8b28b54cf8106d3953aed751bb0c08f3f"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/JpegPresets.py": {
+      "bytes": 12621,
+      "sha256": "51422c2b3bf2cdd3f3b2774e0ddf747aefe5b8ca9ab86d4f261d7450eb90be68"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/McIdasImagePlugin.py": {
+      "bytes": 1955,
+      "sha256": "3fd77592be12b5ed10564c5faa2c77d6c7c60fcb169fe7959982b4c20e83bc8c"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/MicImagePlugin.py": {
+      "bytes": 2702,
+      "sha256": "b82c463389652053e37eed8a8e2fb34a73da727aa2194646aacfc3b5bdc992d2"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/MpegImagePlugin.py": {
+      "bytes": 2094,
+      "sha256": "91e9bdce87ec06d22aeb194c25cb0590e5d370908f1080a4f657214df47da432"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/MpoImagePlugin.py": {
+      "bytes": 6987,
+      "sha256": "ffc580b1881e62444336ab32d08ff2c38a72c3471a75dadfd4c5940cd2808636"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/MspImagePlugin.py": {
+      "bytes": 6072,
+      "sha256": "bb75dc1140d81926046847543a19e3867a64650264a537520781251e9c4e3e58"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/PSDraw.py": {
+      "bytes": 7230,
+      "sha256": "eec05f0067c19aa9d958c4e445f2e6e28057b519415c0b984fffcd3f71ad1f0d"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/PaletteFile.py": {
+      "bytes": 1270,
+      "sha256": "41d11af7d8cb0be3cf844a86cbaff87c3b9af13cca4925339007987029455fb3"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/PalmImagePlugin.py": {
+      "bytes": 8965,
+      "sha256": "2247aeefa9db5ba83130696a516c1b579ec12441abd775465c842f9162b9e265"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/PcdImagePlugin.py": {
+      "bytes": 1842,
+      "sha256": "819b027170c8a845532b6cfe1962a9b53db9a455350143a0a6bdc9d3a7233c28"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/PcfFontFile.py": {
+      "bytes": 7240,
+      "sha256": "50f65bca80f8295af7df1b6da0f6a2db5d63ce8f8f0e92386dc9f26cb0eee75e"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/PcxImagePlugin.py": {
+      "bytes": 6596,
+      "sha256": "5e6f1423fe7f01006c89693b07c489add784ffccfb0d20405269cda636e79396"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/PdfImagePlugin.py": {
+      "bytes": 9720,
+      "sha256": "3c3f19e0ea596e3f572f479bed0d9b18bc3846552d77c74f2c2e14e86ff60036"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/PdfParser.py": {
+      "bytes": 39753,
+      "sha256": "c5e04f3c748cc2b7f711208a1689b7c3af0e61e11cb454ee06a209fb5217b901"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/PixarImagePlugin.py": {
+      "bytes": 1830,
+      "sha256": "f919ee2521a1185f0cb14b221d9ab757307157e04d9cadf99018c97e1633c17b"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/PngImagePlugin.py": {
+      "bytes": 53977,
+      "sha256": "26e6495edc516f7589dea911c330d7f16d4ec96eed78af838da00902e77e6040"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/PpmImagePlugin.py": {
+      "bytes": 12719,
+      "sha256": "22331d42c009691d13c90bb591ddebe28eaad28e49295c2ae21475d0e7804715"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/PsdImagePlugin.py": {
+      "bytes": 9249,
+      "sha256": "b3ce408b7129bc190d12ce0db3ad408e114a048b134669021878a7e72afb372d"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/QoiImagePlugin.py": {
+      "bytes": 8831,
+      "sha256": "c25feb0cc7e1c9c5aae865c1157f31ce8235d5728c6567afd9629288ce2df372"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/SgiImagePlugin.py": {
+      "bytes": 6602,
+      "sha256": "4f0891938baa8e0836d7e3a2154066044d893d63a30c716654f8141fbbce3b75"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/SpiderImagePlugin.py": {
+      "bytes": 10626,
+      "sha256": "b0087770827cbc65aee9619de92721c9ca2aec36a338fa25680a31abbea5b68c"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/SunImagePlugin.py": {
+      "bytes": 4734,
+      "sha256": "60a604bee1b84149227acdf838ab5758a4d8499f14deacdc13fbdd4eb3ae46cc"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/TarIO.py": {
+      "bytes": 1503,
+      "sha256": "2bab4b9050dc69aaf7bdbe84c986fb1b8a15101e35c7f2ccb8625e513f70e434"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/TgaImagePlugin.py": {
+      "bytes": 8017,
+      "sha256": "52bbc8363a079783087f2c5fe5b2f75519425af38deee0e92507e6cf7c939588"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/TiffImagePlugin.py": {
+      "bytes": 88301,
+      "sha256": "7c7c771b1358c4096239c5973199672870c7e4cc34c4ce33a391695a7e251df7"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/TiffTags.py": {
+      "bytes": 17772,
+      "sha256": "16c76a6c8409388ee2846ecc67f2b8614403678ce8fab6986e28550dee3653d1"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/WalImageFile.py": {
+      "bytes": 5891,
+      "sha256": "70b442298cac9c4d2fe59fd47745ded180de338988c45197a83231f157ae31c6"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/WebPImagePlugin.py": {
+      "bytes": 10289,
+      "sha256": "c7022669e4536810944b2d1a5a69a18dc7176706cbd36363994b0fcc2003d69c"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/WmfImagePlugin.py": {
+      "bytes": 5390,
+      "sha256": "136d180c964920aad44327ed3a6ac9ac0b97ba60c6662c231f237620a282c9b8"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/XVThumbImagePlugin.py": {
+      "bytes": 2209,
+      "sha256": "384b448508022cb82fc7c275888f75d533338c9e624e538ea90a4b431d5bcd0e"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/XbmImagePlugin.py": {
+      "bytes": 2767,
+      "sha256": "c1cd0da5f4f3952871f589a2d33c28d1a5598c36b8fc1ecd1221b64e008eeb94"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/XpmImagePlugin.py": {
+      "bytes": 4539,
+      "sha256": "232f0ac0e8e7546541c5f4f6c6d0f737050a52dcec0f678753b3aeb48461a9d9"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/__init__.py": {
+      "bytes": 2122,
+      "sha256": "3fffff8502f4b59ca61d39cce713d55ffef046954262fce1abac3e97f3803734"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/__main__.py": {
+      "bytes": 140,
+      "sha256": "5fc788a469661df9e9ef36b3a7999d6afdb6f08b5c7f696488c3f4b4b53a5fd7"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_avif.cp314-win_amd64.pyd": {
+      "bytes": 7890432,
+      "sha256": "d8bd3032b72992a8166144a4063bae4a55c0f178d237454f17102301731e912a"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_avif.pyi": {
+      "bytes": 66,
+      "sha256": "cc3f2f0283c2f1a1085637dc90bb45b24456e6c6a255e977fac254036a476867"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_binary.py": {
+      "bytes": 2664,
+      "sha256": "ba6dc47fa221e747297ee81afcbdaef2ea9be664c7a4b51f5382563132e0b20b"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_deprecate.py": {
+      "bytes": 2106,
+      "sha256": "522ac3970b3279feaeeac2ffae51379a72ad45fd666af9a7864b7fd4f03b43c0"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_imaging.cp314-win_amd64.pyd": {
+      "bytes": 2627072,
+      "sha256": "d823c0e3b54035d08703bb427c553c956c2607b79395f2952e17a5447c5f1105"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_imaging.pyi": {
+      "bytes": 924,
+      "sha256": "8d2446dead5dc2204ca8ec0884bb5305edcb30ac2c8b76244dc0dfb0a577d84d"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_imagingcms.cp314-win_amd64.pyd": {
+      "bytes": 272384,
+      "sha256": "dff90929dbeb9d51eebf09f4454d0beb65775f7644145a63d66fa8ca9f5a96fd"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_imagingcms.pyi": {
+      "bytes": 4576,
+      "sha256": "e7f48329eecac13f5a6f911e1bec27e85e6cbff7ecd28db5db1a0f066dc7f88a"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_imagingft.cp314-win_amd64.pyd": {
+      "bytes": 2171392,
+      "sha256": "93c3ca5a3e7119897be9825a0a4228d485410fc8f1e42257edf7e89052c79bce"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_imagingft.pyi": {
+      "bytes": 1903,
+      "sha256": "535ae9c2a417d6150bbd3028f1f634fc8ad79e0f953ee09755a581523da9d73d"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_imagingmath.cp314-win_amd64.pyd": {
+      "bytes": 21504,
+      "sha256": "a7b3d6e462d338744694bc332f9f6f9c5717d532b7a74ad2762b3289521d0d9e"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_imagingmath.pyi": {
+      "bytes": 66,
+      "sha256": "cc3f2f0283c2f1a1085637dc90bb45b24456e6c6a255e977fac254036a476867"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_imagingmorph.cp314-win_amd64.pyd": {
+      "bytes": 12288,
+      "sha256": "591905867dd3da9bcf85bc1f84be66817d0399c5a5f25755322e4088c0d42c51"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_imagingmorph.pyi": {
+      "bytes": 66,
+      "sha256": "cc3f2f0283c2f1a1085637dc90bb45b24456e6c6a255e977fac254036a476867"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_imagingtk.cp314-win_amd64.pyd": {
+      "bytes": 14848,
+      "sha256": "79208042672ff0b9e3669d5078ad35413470861e783feeaf1430458c41036593"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_imagingtk.pyi": {
+      "bytes": 66,
+      "sha256": "cc3f2f0283c2f1a1085637dc90bb45b24456e6c6a255e977fac254036a476867"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_tkinter_finder.py": {
+      "bytes": 558,
+      "sha256": "1f5530ddd57b8161c88ffa2c527245c56875691b10d8c74aa4d3f7bd0c10716d"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_typing.py": {
+      "bytes": 964,
+      "sha256": "b7e3154b97ffa5174bf8cd3bd9866a957141fc3f33d4a3a5f0470ab13fddf6ce"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_util.py": {
+      "bytes": 713,
+      "sha256": "78ff087e658999b13f3ea6d425be2a4ea18d2e2e334f44d369daebaa6ca483b6"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_version.py": {
+      "bytes": 91,
+      "sha256": "8367607a728dc206da64e3de6b24f826f3030d7f3c053f25c3b3a1fde94fb9d7"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_webp.cp314-win_amd64.pyd": {
+      "bytes": 416256,
+      "sha256": "f4d851381d1bd937753ba78e951c96a85f3a6c5ac402beec23fc13fdb6d45198"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/_webp.pyi": {
+      "bytes": 66,
+      "sha256": "cc3f2f0283c2f1a1085637dc90bb45b24456e6c6a255e977fac254036a476867"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/features.py": {
+      "bytes": 11118,
+      "sha256": "cbf7a5342ce007a46030ff4031fdc274e3f78dda0de21a38bf1a122b383a7967"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/py.typed": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Campus_Lost_Found/media_vendor/PIL/report.py": {
+      "bytes": 105,
+      "sha256": "ea6ecd3afd5adb8e7bed9889a315fcf62a7925e3a07f63b517de5febed4ae5a3"
+    },
+    "Campus_Lost_Found/media_vendor/pillow-12.3.0.dist-info/METADATA": {
+      "bytes": 9273,
+      "sha256": "2c4378001803cfac65809a50722d46e0da4ce8061e717f103e5d52734bab30f5"
+    },
+    "Campus_Lost_Found/media_vendor/pillow-12.3.0.dist-info/RECORD": {
+      "bytes": 9378,
+      "sha256": "02a5d5217463cba91845e6d71e246e1939a4768825ec3ee01ba796684dd2749f"
+    },
+    "Campus_Lost_Found/media_vendor/pillow-12.3.0.dist-info/WHEEL": {
+      "bytes": 101,
+      "sha256": "8e1c6b44fded7447e6eeda01d57edd979c7a7f46eee93bded9c5b021d91b2fc5"
+    },
+    "Campus_Lost_Found/media_vendor/pillow-12.3.0.dist-info/licenses/LICENSE": {
+      "bytes": 78016,
+      "sha256": "4f7866a74802c6326f81faff59a56546b6aec2b10b91973e0e9308de95e79857"
+    },
+    "Campus_Lost_Found/media_vendor/pillow-12.3.0.dist-info/sboms/pillow-12.3.0.cdx.json": {
+      "bytes": 22279,
+      "sha256": "40fa909b0f23405a7b97a6d91671a639a40acea7671b04387da22ba3e9fca50a"
+    },
+    "Campus_Lost_Found/media_vendor/pillow-12.3.0.dist-info/top_level.txt": {
+      "bytes": 4,
+      "sha256": "ae266aae4fa1c99aa1e5fd59d19c228b774a7f112c07286ef5c53d20e0c5f8d6"
+    },
+    "Campus_Lost_Found/media_vendor/pillow-12.3.0.dist-info/zip-safe": {
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    "Campus_Lost_Found/python/LICENSE.txt": {
+      "bytes": 35407,
+      "sha256": "935cf13e19f8c31b497d20b05d73623431a226b230c3599bc30fa3348979bc68"
+    },
+    "Campus_Lost_Found/python/_asyncio.pyd": {
+      "bytes": 78560,
+      "sha256": "58b3e50104db6bf9d76e3d8106f9f477d34109a887d547ee086b0289e6a4e224"
+    },
+    "Campus_Lost_Found/python/_bz2.pyd": {
+      "bytes": 87776,
+      "sha256": "b02f580daa0b390b2228d2a8186ef119be658c89cc64d0bd909550786ed993f2"
+    },
+    "Campus_Lost_Found/python/_ctypes.pyd": {
+      "bytes": 143072,
+      "sha256": "b96680c6bcad9e9403711ec0977866325e8e5aab93b56e83c3df6280ae72a82a"
+    },
+    "Campus_Lost_Found/python/_decimal.pyd": {
+      "bytes": 290016,
+      "sha256": "196c42414c16e804874988783b8a356bf1d012d32e99efbc6e360e94920c46ec"
+    },
+    "Campus_Lost_Found/python/_elementtree.pyd": {
+      "bytes": 138976,
+      "sha256": "31aff8dca815a05904b5d3020fbdd5bdb596b6a07a36f31728996f28e06dab24"
+    },
+    "Campus_Lost_Found/python/_hashlib.pyd": {
+      "bytes": 69344,
+      "sha256": "5dee7b9fff3e6d0abe20601b9e62f3a14cd048167ee0b80781131dc81dec9469"
+    },
+    "Campus_Lost_Found/python/_lzma.pyd": {
+      "bytes": 160992,
+      "sha256": "9099ef451fe61d8feef9e02894902b88fdc8ee404e3f8b7412b150878c973803"
+    },
+    "Campus_Lost_Found/python/_multiprocessing.pyd": {
+      "bytes": 38624,
+      "sha256": "18041441b3f558925f903bc7af644a4d84b1cd746a4998748b4fffd82e767a6b"
+    },
+    "Campus_Lost_Found/python/_overlapped.pyd": {
+      "bytes": 58080,
+      "sha256": "eca5d3df23b762c846801194b6c971aae4eb288e1fc2914752b3a6c2df5aebfb"
+    },
+    "Campus_Lost_Found/python/_queue.pyd": {
+      "bytes": 36576,
+      "sha256": "1e2e1ede7eeaf30a80ece546420dec67a02716e25d3a7c638e4deb0c21e973a1"
+    },
+    "Campus_Lost_Found/python/_remote_debugging.pyd": {
+      "bytes": 93408,
+      "sha256": "0497ee6846cd92419ada56c091ab675ab6896ad3bfdcf88eec4dcda2cdfd5a4d"
+    },
+    "Campus_Lost_Found/python/_socket.pyd": {
+      "bytes": 87776,
+      "sha256": "18a77c4e1f4a71ca60b9dbbba809e98cd324f3e1470d091689b87754a8c65588"
+    },
+    "Campus_Lost_Found/python/_sqlite3.pyd": {
+      "bytes": 133344,
+      "sha256": "e69caeadb409777bce26f78622653558bbb86f08479b412399eaa0e6fd1e44f1"
+    },
+    "Campus_Lost_Found/python/_ssl.pyd": {
+      "bytes": 192224,
+      "sha256": "49df86fe76ed8fd97bb11a485286b49f5f5ebe953383648976a39c9de6f0524d"
+    },
+    "Campus_Lost_Found/python/_uuid.pyd": {
+      "bytes": 28384,
+      "sha256": "7e2cdd954b44b1be1fac1c354f774dab5f5becfce59688e62338427b125c62bf"
+    },
+    "Campus_Lost_Found/python/_wmi.pyd": {
+      "bytes": 40160,
+      "sha256": "5366924c1c96d9c9f82f95967fbf73244d4b4930f39103d7e7ba2b01046e0a46"
+    },
+    "Campus_Lost_Found/python/_zoneinfo.pyd": {
+      "bytes": 51936,
+      "sha256": "cdf82faa904e557b847a0ac6e97b4274945615fdbd319a28bcaa1f70f740636f"
+    },
+    "Campus_Lost_Found/python/_zstd.pyd": {
+      "bytes": 503520,
+      "sha256": "526d977236cc63895902977f216bf3ca93a4233489240656b295eafb6f518d07"
+    },
+    "Campus_Lost_Found/python/libcrypto-3.dll": {
+      "bytes": 6021880,
+      "sha256": "75495fe0e079ab00d49be740d3c710a0b94e3f74f9648cb7cc9f768fc7f52319"
+    },
+    "Campus_Lost_Found/python/libffi-8.dll": {
+      "bytes": 39696,
+      "sha256": "eff52743773eb550fcc6ce3efc37c85724502233b6b002a35496d828bd7b280a"
+    },
+    "Campus_Lost_Found/python/libssl-3.dll": {
+      "bytes": 1308920,
+      "sha256": "8957182a9c385bfd9f3f790921de2ddc614cf91f99edbed4e9e5446a46504e32"
+    },
+    "Campus_Lost_Found/python/libtommath.dll": {
+      "bytes": 95456,
+      "sha256": "aaea8a20db7a7a96d4bef74ad724c4a02595a9c47659f6cbd6f145af0c97aa78"
+    },
+    "Campus_Lost_Found/python/pyexpat.pyd": {
+      "bytes": 201440,
+      "sha256": "36d775e2c2fa5bbda86ddc7c6ea632414df04f7a403b9e17587c99088d29cd7b"
+    },
+    "Campus_Lost_Found/python/python.cat": {
+      "bytes": 601161,
+      "sha256": "8d723cf908852e0ae02d6ad4451a0214ce7c7a09aa6d9a4a7fc48024583f8494"
+    },
+    "Campus_Lost_Found/python/python.exe": {
+      "bytes": 106208,
+      "sha256": "434b361fe0c5960d404974feed493db47f2603a1ace2574312104fbed0182c6f"
+    },
+    "Campus_Lost_Found/python/python3.dll": {
+      "bytes": 73952,
+      "sha256": "f9acdbcf3383a52353f8d7db3cbda3d3701b1cf7ac3053985fdac766c29e7808"
+    },
+    "Campus_Lost_Found/python/python314._pth": {
+      "bytes": 63,
+      "sha256": "b11290f66488f224ab2c9e66948c1333a7de0ca5745e5b553403a9df578b4a8e"
+    },
+    "Campus_Lost_Found/python/python314.dll": {
+      "bytes": 6792928,
+      "sha256": "854fe7549eb4b2ac478935a38ae2ca1b774c6fdc3d87f0263fbd697ff86d7149"
+    },
+    "Campus_Lost_Found/python/python314.zip": {
+      "bytes": 4152838,
+      "sha256": "dfa08b46ce09089b7e6bc139784d5609a07770bab66df8d37938ca9bd508e436"
+    },
+    "Campus_Lost_Found/python/pythonw.exe": {
+      "bytes": 104672,
+      "sha256": "4e24680bce514188c85ae91323691dcb0364990da0d6319558519e50cbb5a43c"
+    },
+    "Campus_Lost_Found/python/select.pyd": {
+      "bytes": 33504,
+      "sha256": "a341519a00befc3b86dfddf5938915fed52ded1ad5aab518c57d0b3c8969e835"
+    },
+    "Campus_Lost_Found/python/sqlite3.dll": {
+      "bytes": 1584864,
+      "sha256": "5c47df970d2e8cc41239754ff167056fcecb1089f876736e51dab5d89f980300"
+    },
+    "Campus_Lost_Found/python/unicodedata.pyd": {
+      "bytes": 758496,
+      "sha256": "0527fee5192ab4567451d1296533600661571f6ebf9e8f4e0f60b63a4a4fd2e8"
+    },
+    "Campus_Lost_Found/python/vcruntime140.dll": {
+      "bytes": 178616,
+      "sha256": "d1f4225df2cd877dbf130d5668a021dce3f94118455ff5ec952061c30afc9ce7"
+    },
+    "Campus_Lost_Found/python/vcruntime140_1.dll": {
+      "bytes": 50112,
+      "sha256": "a7146c08f89fe5b04541ab507cdb59ff7b44534d4ba3c668a426c6450a03434e"
+    },
+    "Campus_Lost_Found/python/winsound.pyd": {
+      "bytes": 32992,
+      "sha256": "7681b4d88ac96763bb89f018d1c658feeca782d8bfc6d223b06d2ef125780579"
+    },
+    "Campus_Lost_Found/requirements-linux.txt": {
+      "bytes": 278,
+      "sha256": "1a0f9baeb240fc03426144176af358d216d4778a56a99c783e3e32fb158a2408"
+    },
+    "Campus_Lost_Found/requirements.txt": {
+      "bytes": 63,
+      "sha256": "b345a21225707ad59b92ade30acc525246249a41b7c5fb65abcaa2ec4f3d48c2"
+    },
+    "Campus_Lost_Found/simulate_locker.py": {
+      "bytes": 1492,
+      "sha256": "ceaa4d52f24ae01583be198325dedde85e6d9080af0ef5929c38f0ea8ffadda4"
+    },
+    "Campus_Lost_Found/stage2_features.py": {
+      "bytes": 14547,
+      "sha256": "970f4d88491bb371a8b6989718d585230b1499ebef22a2c351748b55aea2e021"
+    },
+    "Campus_Lost_Found/static/admin.css": {
+      "bytes": 9904,
+      "sha256": "aea24815ec60c8c569ee9df0658a9174b9866a628bfa4c144fd93446f120d753"
+    },
+    "Campus_Lost_Found/static/analytics.css": {
+      "bytes": 3540,
+      "sha256": "219a0c8d9bc44237553e7c42a0e32a3c936990bc8c0dee57fa24d22fca9e0452"
+    },
+    "Campus_Lost_Found/static/locker.css": {
+      "bytes": 1688,
+      "sha256": "933445598b6742a88078d1e4ae22fefc058b1f24e29810ddbed1a3211001ea67"
+    },
+    "Campus_Lost_Found/static/locker.js": {
+      "bytes": 6275,
+      "sha256": "586e9c951d8af367faa863aaafa55c9e830e63192bd11d05b328f60a205dc50a"
+    },
+    "Campus_Lost_Found/static/media/CREDITS.txt": {
+      "bytes": 1680,
+      "sha256": "7f8079a9e2ac64fb07394166a650a768d544026322e079b1d2dad1e81fb49a7c"
+    },
+    "Campus_Lost_Found/static/media/architecture.svg": {
+      "bytes": 1245,
+      "sha256": "c9f5c8304efe58feaf3a33757aa600c5050810e53275b9f722e6dd215ca60e59"
+    },
+    "Campus_Lost_Found/static/media/bags.webp": {
+      "bytes": 9446,
+      "sha256": "3be49b5d04935b0f8675c2a13cb57db94e85561d0753fb81cb583d576756ee86"
+    },
+    "Campus_Lost_Found/static/media/baseline/bags.png": {
+      "bytes": 591575,
+      "sha256": "b8b1a7d0c73cd38c8daa8faf4f88da61542edd6834c5ed6e3b64c93c31f97fb6"
+    },
+    "Campus_Lost_Found/static/media/baseline/electronics.png": {
+      "bytes": 1291402,
+      "sha256": "b4e23063003659fee33eac687aba9cbc126cd13417c1ccdf1f511f02ec8f87e0"
+    },
+    "Campus_Lost_Found/static/media/baseline/stationery.png": {
+      "bytes": 1213923,
+      "sha256": "3721b464f31e715aff8a56b20e6baa3fa2a271dd6c9fa3564c8e407e356ec002"
+    },
+    "Campus_Lost_Found/static/media/confirmation.css": {
+      "bytes": 220,
+      "sha256": "a20f9d6f55404b5b41102e48ee383a712711de0f969e312c42fb8c9c255626f9"
+    },
+    "Campus_Lost_Found/static/media/electronics.webp": {
+      "bytes": 31268,
+      "sha256": "24cc64ac9f37d36f2af0502cb34007d8cb32d1d715e1e18e790b3054fe604112"
+    },
+    "Campus_Lost_Found/static/media/logo.svg": {
+      "bytes": 253,
+      "sha256": "de7204a4790d199d406ae702f6a5c075ac81deb169ca1e6a7f42c8d96389147f"
+    },
+    "Campus_Lost_Found/static/media/stationery.webp": {
+      "bytes": 29348,
+      "sha256": "0bae950cc3f96480f700cb8e5322502f8ca96c912dd2a940a7b7db473d0e035b"
+    },
+    "Campus_Lost_Found/static/motion.css": {
+      "bytes": 14538,
+      "sha256": "bb7107df323ef664f94b1c1b9eda49395910b6db9095d7ffe041aa0e3f486d50"
+    },
+    "Campus_Lost_Found/static/motion.js": {
+      "bytes": 8499,
+      "sha256": "484a43e4a763ff7e82118225838631c426b1a0f186e4715bf8070ebcb6507879"
+    },
+    "Campus_Lost_Found/static/navigation.css": {
+      "bytes": 5114,
+      "sha256": "b2b5283d4b052ba44515acc6c7c2330c311af6f796b694dbf327cbed978dc2dc"
+    },
+    "Campus_Lost_Found/static/navigation.js": {
+      "bytes": 4141,
+      "sha256": "1cd2ab0a8c5ce0f860465230870f7a003bfd43a42ff2ed2f5282ac676f397d04"
+    },
+    "Campus_Lost_Found/static/photo-upload.css": {
+      "bytes": 3080,
+      "sha256": "f41c1993ebd0121bfe1b0c3825724efc0fe51e786f72a78068ee20933505d41d"
+    },
+    "Campus_Lost_Found/static/photo-upload.js": {
+      "bytes": 4287,
+      "sha256": "9826e6b3274efa515ff3136dc233922ef4504aadeccb991b86ee000144ce233d"
+    },
+    "Campus_Lost_Found/static/stage2.css": {
+      "bytes": 1772,
+      "sha256": "b7b06ddced312020b2945f149f3e0ae2b19cc273584faed5a76ea035d4df49b6"
+    },
+    "Campus_Lost_Found/static/style.css": {
+      "bytes": 14520,
+      "sha256": "34a0b339974bf7b278a5dbbb27c1a2a7b5f3349d2d940e77bb996eaa776d0833"
+    },
+    "Campus_Lost_Found/templates/admin_dashboard.html": {
+      "bytes": 4139,
+      "sha256": "fa8e17cb0fab0dff1fbb0338fee8be3329c16b43c692f396c2cab506be0ed139"
+    },
+    "Campus_Lost_Found/templates/admin_notices.html": {
+      "bytes": 3630,
+      "sha256": "dc51b87096065548172b0b77dc40ddd35cf920748c8bceb7ea901cb642c1964d"
+    },
+    "Campus_Lost_Found/templates/admin_users.html": {
+      "bytes": 2808,
+      "sha256": "ca6b6854eb39eaa382d463935b5c63b77a279582d961c7aacfdbe49efa0fca4a"
+    },
+    "Campus_Lost_Found/templates/analytics.html": {
+      "bytes": 8275,
+      "sha256": "79d98ee93b0183952686a080ab8b52bdb77e70c9c76ad55a752cacbe5745d7dd"
+    },
+    "Campus_Lost_Found/templates/base.html": {
+      "bytes": 3098,
+      "sha256": "279fc30749ad9339869ec6e31469478d48ef789f4d6f77a572088a0c64322af7"
+    },
+    "Campus_Lost_Found/templates/browse.html": {
+      "bytes": 3842,
+      "sha256": "21818f9d06a10e22c2a93afa578cd195131fb543513dc01fac3a16a9406f473b"
+    },
+    "Campus_Lost_Found/templates/detail.html": {
+      "bytes": 2046,
+      "sha256": "b9263ead7403c20638e66fb7a2346601490194478205a66dc7f2946833d64b35"
+    },
+    "Campus_Lost_Found/templates/error.html": {
+      "bytes": 274,
+      "sha256": "a895bb9b63e85e0142a92154029eae421f0a70405ae7dbece9d06a56803f4b78"
+    },
+    "Campus_Lost_Found/templates/form.html": {
+      "bytes": 4585,
+      "sha256": "99c6f1851fed734b1ebf70e532fbf0c71d03cf901155edaacaf1e26706fba504"
+    },
+    "Campus_Lost_Found/templates/hero_art.html": {
+      "bytes": 1408,
+      "sha256": "0d0ea4bcf28580b6197bb5a127c015c214d1fbf4589eff3e0b95ab9b9ff2cc21"
+    },
+    "Campus_Lost_Found/templates/how_it_works.html": {
+      "bytes": 1742,
+      "sha256": "14518ab74ad76a3154c01102d47a21f558af03e9c7796421b6984ad696eb2edc"
+    },
+    "Campus_Lost_Found/templates/login.html": {
+      "bytes": 1588,
+      "sha256": "5a06112849261a15ef03cd05a79b317ee63e6029d96364c90fd897f8d195baa1"
+    },
+    "Campus_Lost_Found/templates/register.html": {
+      "bytes": 1607,
+      "sha256": "ef5bf260567de21c9f70b7b03fb71f08b71707bf89085b54f55e6e5dc4cf6605"
+    },
+    "Campus_Lost_Found/templates/remove.html": {
+      "bytes": 540,
+      "sha256": "7122e911480cb78b630cd8ba882c919c73e6eacee909a36d304513ddb65a4eb5"
+    },
+    "Campus_Lost_Found/templates/research.html": {
+      "bytes": 4966,
+      "sha256": "523293cfa34a1f671137848dc923435c9afc66bff11f24c89574b30af9967fc3"
+    },
+    "Campus_Lost_Found/templates/smart_locker.html": {
+      "bytes": 4571,
+      "sha256": "021b4777d179fb500adf6589ab75911d52676cd03b21069480102752dc8c0466"
+    },
+    "Campus_Lost_Found/test_admin_panel.py": {
+      "bytes": 10869,
+      "sha256": "adcee2fa9d2f2f7b3db1beb0c2580ea9d4a3fec9fe2441e5875c63f8fedf33e1"
+    },
+    "Campus_Lost_Found/test_analytics.py": {
+      "bytes": 8637,
+      "sha256": "0d3f51318125a53fe04a5044fe56be42c8a0779d658fc59390fa9137ce7981f4"
+    },
+    "Campus_Lost_Found/test_app.py": {
+      "bytes": 20415,
+      "sha256": "7fd59b9354358992ea91499999f2ebe8b185c5b03c3321966c3f58afdfaad64a"
+    },
+    "Campus_Lost_Found/test_backup_full.py": {
+      "bytes": 7431,
+      "sha256": "b7f612461bd7e6735bf7dcd1810cfa55965a80a6af9be3d78e24b83d79e29a3d"
+    },
+    "Campus_Lost_Found/test_media.py": {
+      "bytes": 1692,
+      "sha256": "3c452f52ff31d04fef998f8b70b7e46f3e1a1f9ea3c1525d6120f55ab556e9d6"
+    },
+    "Campus_Lost_Found/test_stage2_core.py": {
+      "bytes": 11147,
+      "sha256": "90ca0dbbd69ec735ed1d7049a835c03b6c6655f5587757df07fd141a4e39ef8a"
+    },
+    "Campus_Lost_Found/test_stage2_features.py": {
+      "bytes": 12281,
+      "sha256": "f030d99cf954620f835923fb7b9d33dcb1c0aa3539bf4e14bd94e7d91884c9f0"
+    },
+    "Campus_Lost_Found/vendor/bin/flask.exe": {
+      "bytes": 124048,
+      "sha256": "4cb0be9c81da57e305e57f3a04828988c8d34c4c6da3cc3162e5eebeca0d1f6a"
+    },
+    "Campus_Lost_Found/vendor/bin/pwiz.exe": {
+      "bytes": 124043,
+      "sha256": "5f10da3a2803259e6fa542d48ae13feb56a18082dc2313fc6b84a70d28154ac3"
+    },
+    "Campus_Lost_Found/vendor/bin/pwmigrate.exe": {
+      "bytes": 124059,
+      "sha256": "0f7d25f725e950d278b49acdfee76a0e6f3bb4dbc6e67d319e715fb5b758e9f2"
+    },
+    "Campus_Lost_Found/vendor/bin/pygmentize.exe": {
+      "bytes": 124055,
+      "sha256": "3af169be1f35c0fd36824d85d098877b03ace30473cfb748ca92fbb496774e7d"
+    },
+    "Campus_Lost_Found/vendor/bin/sqlite_web.exe": {
+      "bytes": 124060,
+      "sha256": "d744dddc65146477eba8aaa6c1eb004e27ba186e2ccaafba4b0d21d8912e258c"
+    },
+    "Campus_Lost_Found/vendor/bin/sqlite_wsgi.exe": {
+      "bytes": 124061,
+      "sha256": "27ca8a0bae6a2a68509e2e469aa95a8cb1891cf5a881437234321cd7ca2ee7e0"
+    },
+    "Campus_Lost_Found/vendor/bin/waitress-serve.exe": {
+      "bytes": 124052,
+      "sha256": "a559818ee054abc8b33a07dcc8f2f7d44c913a4a4323ce9dcd4d1e3a1b3cee7f"
+    },
+    "Campus_Lost_Found/vendor/blinker-1.9.0.dist-info/INSTALLER": {
+      "bytes": 4,
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+    },
+    "Campus_Lost_Found/vendor/blinker-1.9.0.dist-info/LICENSE.txt": {
+      "bytes": 1054,
+      "sha256": "9eb73a1f38597a4aa17025d2ae1be3839624c795e985d4f0e9769ce29faca467"
+    },
+    "Campus_Lost_Found/vendor/blinker-1.9.0.dist-info/METADATA": {
+      "bytes": 1633,
+      "sha256": "b8846233cc238db1e40ad6c2c93bdcb54dfb200664d2411ee64c4095dd5dbf30"
+    },
+    "Campus_Lost_Found/vendor/blinker-1.9.0.dist-info/RECORD": {
+      "bytes": 832,
+      "sha256": "120ec4f992a9123a6e063f430208b31e97b7d3bd11474c0a9c4b19f6bc531058"
+    },
+    "Campus_Lost_Found/vendor/blinker-1.9.0.dist-info/WHEEL": {
+      "bytes": 82,
+      "sha256": "0a950253178741b44de54191407611268acee407fe432fdf1cc72d710f034862"
+    },
+    "Campus_Lost_Found/vendor/blinker/__init__.py": {
+      "bytes": 317,
+      "sha256": "23611d66aa72e0bca35f5ec79f5cb32465828de2da55a3f3b0c80790b7e3fdc4"
+    },
+    "Campus_Lost_Found/vendor/blinker/_utilities.py": {
+      "bytes": 1675,
+      "sha256": "d09ede7975d3531d08bdff1ab1fa71d32715929d04a9faa78f5d7bc769985fd1"
+    },
+    "Campus_Lost_Found/vendor/blinker/base.py": {
+      "bytes": 19132,
+      "sha256": "4290eebd75dcc09178f65501707e418924f8e91cfdc121bb556fe9ecdff4dbb3"
+    },
+    "Campus_Lost_Found/vendor/blinker/py.typed": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Campus_Lost_Found/vendor/click-8.5.0.dist-info/INSTALLER": {
+      "bytes": 4,
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+    },
+    "Campus_Lost_Found/vendor/click-8.5.0.dist-info/METADATA": {
+      "bytes": 2567,
+      "sha256": "e87bce0bd194de70dfb8e708e0a6b0483009f25611804eaf87bfeb63e6c20501"
+    },
+    "Campus_Lost_Found/vendor/click-8.5.0.dist-info/RECORD": {
+      "bytes": 2533,
+      "sha256": "43d8bb1ce44dea5d9423b7eae1d6ba911974425b96acc170b036e1655a901e10"
+    },
+    "Campus_Lost_Found/vendor/click-8.5.0.dist-info/WHEEL": {
+      "bytes": 82,
+      "sha256": "1b68144734c4b66791f27add5d425f3620775585718a03d0f9b110ba3a4d88db"
+    },
+    "Campus_Lost_Found/vendor/click-8.5.0.dist-info/licenses/LICENSE.txt": {
+      "bytes": 1475,
+      "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d"
+    },
+    "Campus_Lost_Found/vendor/click/__init__.py": {
+      "bytes": 5145,
+      "sha256": "5abfc54d37d47cc788b7e7a05e9514787f8c5a0b7db429d0f24d748ac89964ca"
+    },
+    "Campus_Lost_Found/vendor/click/_compat.py": {
+      "bytes": 17939,
+      "sha256": "8db1da2965cf3e5dc66c6c53833cbc613ea1cd2440b9d0eb6aa8360eb46d4913"
+    },
+    "Campus_Lost_Found/vendor/click/_termui_impl.py": {
+      "bytes": 32805,
+      "sha256": "88b97d9b7a5b947b10a16d8ab269837bc84c7e55c28ba72ea5f2fb339112336a"
+    },
+    "Campus_Lost_Found/vendor/click/_textwrap.py": {
+      "bytes": 6270,
+      "sha256": "ed9d0ded59a7fbae933524d4c29e8e5c96dc5174666044fd87d736b9c0fca104"
+    },
+    "Campus_Lost_Found/vendor/click/_utils.py": {
+      "bytes": 996,
+      "sha256": "782642b7026db180f941892435627c318ffc001223cbc31cce030cc95637dab4"
+    },
+    "Campus_Lost_Found/vendor/click/_winconsole.py": {
+      "bytes": 8543,
+      "sha256": "292c5f35b3256116ba18e26e08b82c8363dbddd56480934fa8b24f69ef8f6b5d"
+    },
+    "Campus_Lost_Found/vendor/click/core.py": {
+      "bytes": 147845,
+      "sha256": "4c65a613c1c407dce907a4e123b12cec5fe0f62088a8b9f86fabd4b60c4b6d78"
+    },
+    "Campus_Lost_Found/vendor/click/decorators.py": {
+      "bytes": 21680,
+      "sha256": "16069357615691fcdfc9c794bb515f6009eb35aad6f7a76c017bdce06dae8d55"
+    },
+    "Campus_Lost_Found/vendor/click/exceptions.py": {
+      "bytes": 11862,
+      "sha256": "1ef498df81b86ae8ff6d8451f3e4fc094f09c2aff5f8e72c454e1ecdfa337849"
+    },
+    "Campus_Lost_Found/vendor/click/formatting.py": {
+      "bytes": 10444,
+      "sha256": "f125b628692f8dfcfd43535b7a88cc1ee64137471f9d0243b389aa0cfea85e6b"
+    },
+    "Campus_Lost_Found/vendor/click/globals.py": {
+      "bytes": 1923,
+      "sha256": "80cf8d87a0383341c1fd2824685e4ce2770618c0c773f7e51d7bbdfe88781845"
+    },
+    "Campus_Lost_Found/vendor/click/parser.py": {
+      "bytes": 19052,
+      "sha256": "a09f9f53fde6bf1ba022e36d1da0804d9e7a9601261d18208c9892a84818ae30"
+    },
+    "Campus_Lost_Found/vendor/click/py.typed": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Campus_Lost_Found/vendor/click/shell_completion.py": {
+      "bytes": 26172,
+      "sha256": "18522f75ddffe655e943978d1953255c447842867d3fd67fbdc1543d3df7da09"
+    },
+    "Campus_Lost_Found/vendor/click/termui.py": {
+      "bytes": 35370,
+      "sha256": "8ec8022b8e4528f873ec413194a5d1614e96da50b6c4a71f6260b326762a7e9c"
+    },
+    "Campus_Lost_Found/vendor/click/testing.py": {
+      "bytes": 27584,
+      "sha256": "76f4e649bc53000d667c8c0deff1591970fa034b0f085a207165839b2301019a"
+    },
+    "Campus_Lost_Found/vendor/click/types.py": {
+      "bytes": 46842,
+      "sha256": "1e988904a7a7f68abad630c7fb9c038a4345fa2e6701c976a6e51f10bdfb52dd"
+    },
+    "Campus_Lost_Found/vendor/click/utils.py": {
+      "bytes": 21483,
+      "sha256": "f43d5743dc07240e612feefa0a69d2b1697b6900149f8f809ffcd97ecb482dbf"
+    },
+    "Campus_Lost_Found/vendor/flask-3.1.3.dist-info/INSTALLER": {
+      "bytes": 4,
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+    },
+    "Campus_Lost_Found/vendor/flask-3.1.3.dist-info/METADATA": {
+      "bytes": 3167,
+      "sha256": "aa6760ed6f545704474d70733e4a63a7f1481e376973edc896a13d02a7224c7c"
+    },
+    "Campus_Lost_Found/vendor/flask-3.1.3.dist-info/RECORD": {
+      "bytes": 3725,
+      "sha256": "23a592c631b85767e3a7eeb4cd1db50127c182fd2adbb543cfe8f605808fb260"
+    },
+    "Campus_Lost_Found/vendor/flask-3.1.3.dist-info/REQUESTED": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Campus_Lost_Found/vendor/flask-3.1.3.dist-info/WHEEL": {
+      "bytes": 82,
+      "sha256": "1b68144734c4b66791f27add5d425f3620775585718a03d0f9b110ba3a4d88db"
+    },
+    "Campus_Lost_Found/vendor/flask-3.1.3.dist-info/entry_points.txt": {
+      "bytes": 40,
+      "sha256": "6c13fb853392e5fcfdccbb42eec3e87c164094c904bc1c6eecaa92ea5e65bdce"
+    },
+    "Campus_Lost_Found/vendor/flask-3.1.3.dist-info/licenses/LICENSE.txt": {
+      "bytes": 1475,
+      "sha256": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea"
+    },
+    "Campus_Lost_Found/vendor/flask/__init__.py": {
+      "bytes": 2701,
+      "sha256": "987bc937d4b0b65d510ed8c2a82218c889e22bf499fe5fe1a94ca73b382927da"
+    },
+    "Campus_Lost_Found/vendor/flask/__main__.py": {
+      "bytes": 30,
+      "sha256": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279"
+    },
+    "Campus_Lost_Found/vendor/flask/app.py": {
+      "bytes": 61719,
+      "sha256": "93bb56f0b1d14a57548baccab0528aec0c5afd62f8ceed5edb03cdb6122cbbba"
+    },
+    "Campus_Lost_Found/vendor/flask/blueprints.py": {
+      "bytes": 4541,
+      "sha256": "a79404da5635f0622d6ddaff44a46967c0e8d7b8343ef4062206644940e15f69"
+    },
+    "Campus_Lost_Found/vendor/flask/cli.py": {
+      "bytes": 37184,
+      "sha256": "3df87bdbe07196fa07d101c20ce7351ef5c6ecaab95deb5fdf3ccdcf690d4879"
+    },
+    "Campus_Lost_Found/vendor/flask/config.py": {
+      "bytes": 13219,
+      "sha256": "3e2a85d033da9ba1d6d051f8087d61a574c17b7d0d4b38cf10ec2bcf56fa92dd"
+    },
+    "Campus_Lost_Found/vendor/flask/ctx.py": {
+      "bytes": 15521,
+      "sha256": "a0c7b44d1b12716d2a75a22a6af56c93c3fdaa212f018e551e7d45020917f279"
+    },
+    "Campus_Lost_Found/vendor/flask/debughelpers.py": {
+      "bytes": 6080,
+      "sha256": "3c6203852b56fde7d18e969adf31c8a68fa1b52b49391e35229dce2563d8070a"
+    },
+    "Campus_Lost_Found/vendor/flask/globals.py": {
+      "bytes": 1713,
+      "sha256": "5dd419992b4198f22cf2df77b63c7aa4eec19b78286c068e3569057141da19ab"
+    },
+    "Campus_Lost_Found/vendor/flask/helpers.py": {
+      "bytes": 23517,
+      "sha256": "ac96607bbfc9dbcf09d5442fe7e90d7f8a046b0df7d8f3fc3535b44112016d71"
+    },
+    "Campus_Lost_Found/vendor/flask/json/__init__.py": {
+      "bytes": 5602,
+      "sha256": "84b351f3df296aaa1e7dd78086b69ae70c89cbe6e6441da4d9d578120572d99f"
+    },
+    "Campus_Lost_Found/vendor/flask/json/provider.py": {
+      "bytes": 7672,
+      "sha256": "e62984cd8e478d5d87a1456b41b24ba970b330da595df0f46355ea74b5765c10"
+    },
+    "Campus_Lost_Found/vendor/flask/json/tag.py": {
+      "bytes": 9281,
+      "sha256": "0e168dc2e20e85db7647be28382f58e19f19a6bc4562245be5d50fe5bcb220dc"
+    },
+    "Campus_Lost_Found/vendor/flask/logging.py": {
+      "bytes": 2377,
+      "sha256": "f2c33758c4ee6e2d5c05bd9cfe53e45a937427c74c02aae029160b2e2d5d0952"
+    },
+    "Campus_Lost_Found/vendor/flask/py.typed": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Campus_Lost_Found/vendor/flask/sansio/README.md": {
+      "bytes": 228,
+      "sha256": "fb45f5b440a78a59b3d5ca20c7e621370e5dee0b8aec62ababf0c45763b3954d"
+    },
+    "Campus_Lost_Found/vendor/flask/sansio/app.py": {
+      "bytes": 38106,
+      "sha256": "c211944500e43748e6852e021ceec343de861a5652d2411390a9009284639785"
+    },
+    "Campus_Lost_Found/vendor/flask/sansio/blueprints.py": {
+      "bytes": 24637,
+      "sha256": "4ea7beec4919fad6d67219bc883a027c3f38f1fd3fde72efe8d3637883ef1f03"
+    },
+    "Campus_Lost_Found/vendor/flask/sansio/scaffold.py": {
+      "bytes": 30371,
+      "sha256": "c120125d8745456266a9c2f45eaf93ecdf8f0d55128851af8cef643d9839f1b9"
+    },
+    "Campus_Lost_Found/vendor/flask/sessions.py": {
+      "bytes": 14969,
+      "sha256": "7b2c11aa6cad4e66275ff102efcf980462684dce570ff951a61406e4b6cdd5dd"
+    },
+    "Campus_Lost_Found/vendor/flask/signals.py": {
+      "bytes": 750,
+      "sha256": "57b94c530c3b0aa809d93854067d4f89ab59b506a73b2b7b399a6ed86648fb7e"
+    },
+    "Campus_Lost_Found/vendor/flask/templating.py": {
+      "bytes": 7678,
+      "sha256": "bdb224c18031b1211f0f14080f580a46f05041c19612e5980a71f45cadc4a8e2"
+    },
+    "Campus_Lost_Found/vendor/flask/testing.py": {
+      "bytes": 10117,
+      "sha256": "cf30bb5f184158e3fd1faf7b215ff8486ecb8372f36f93d68b210ff77fca4171"
+    },
+    "Campus_Lost_Found/vendor/flask/typing.py": {
+      "bytes": 3293,
+      "sha256": "2fe2f9b768ca812d1a3a65618a843fca5a9c8225459c0eb2c4ef912cd86af865"
+    },
+    "Campus_Lost_Found/vendor/flask/views.py": {
+      "bytes": 6962,
+      "sha256": "c73271ea826a18495386d12085937b65018cc394c3172b91c5491e73046e0280"
+    },
+    "Campus_Lost_Found/vendor/flask/wrappers.py": {
+      "bytes": 9406,
+      "sha256": "8d492fe2655e93622ae21c3177846faab20c6faf41bf43c49438162e6779391a"
+    },
+    "Campus_Lost_Found/vendor/itsdangerous-2.2.0.dist-info/INSTALLER": {
+      "bytes": 4,
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+    },
+    "Campus_Lost_Found/vendor/itsdangerous-2.2.0.dist-info/LICENSE.txt": {
+      "bytes": 1475,
+      "sha256": "63af09891b6be8ad1a4252ed43af0f4efba7fc948e228367bed7f3c5ae0b09d7"
+    },
+    "Campus_Lost_Found/vendor/itsdangerous-2.2.0.dist-info/METADATA": {
+      "bytes": 1924,
+      "sha256": "d2b934fb56708a1b94e439f0255c0f5a8108e3258ec827b18a1dc9c991db9611"
+    },
+    "Campus_Lost_Found/vendor/itsdangerous-2.2.0.dist-info/RECORD": {
+      "bytes": 1549,
+      "sha256": "b303bcd128d85b48cefd16f82f5c7c48a95e8dd186422c220a4c79bf176cb1aa"
+    },
+    "Campus_Lost_Found/vendor/itsdangerous-2.2.0.dist-info/WHEEL": {
+      "bytes": 81,
+      "sha256": "1196c6921ec87b83e865f450f08d19b8ff5592537f4ef719e83484e546abe33e"
+    },
+    "Campus_Lost_Found/vendor/itsdangerous/__init__.py": {
+      "bytes": 1427,
+      "sha256": "e122bbe6c09edbdc5b460404d5942d3079ca52e65801fddb4a964eadf7f52006"
+    },
+    "Campus_Lost_Found/vendor/itsdangerous/_json.py": {
+      "bytes": 473,
+      "sha256": "c0f4069a07b6c99f77dbc107285ea069d19ec866022502b1b54fa22ca13a5270"
+    },
+    "Campus_Lost_Found/vendor/itsdangerous/encoding.py": {
+      "bytes": 1409,
+      "sha256": "c304f3e6aff7ccb71a01dba793afef4a84adc06a9859edf4ed997f53ceda4453"
+    },
+    "Campus_Lost_Found/vendor/itsdangerous/exc.py": {
+      "bytes": 3201,
+      "sha256": "46bddec68d0c44511c3d996dc1e7322b5e955756c4d8af7f175f9dfa58dc527e"
+    },
+    "Campus_Lost_Found/vendor/itsdangerous/py.typed": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Campus_Lost_Found/vendor/itsdangerous/serializer.py": {
+      "bytes": 15601,
+      "sha256": "3e67700032ea912c902d9d2338a0200ec016e24fc7d13940ef5122df3d02e5a2"
+    },
+    "Campus_Lost_Found/vendor/itsdangerous/signer.py": {
+      "bytes": 9647,
+      "sha256": "60ed0257b341bc703a8f9e3d4441c91548d4a23c36a47ab0714a509d4ef23584"
+    },
+    "Campus_Lost_Found/vendor/itsdangerous/timed.py": {
+      "bytes": 8083,
+      "sha256": "e91bc332a36e9863317f4f8796969974df4f51042646fad01a994a871ba2bd4b"
+    },
+    "Campus_Lost_Found/vendor/itsdangerous/url_safe.py": {
+      "bytes": 2505,
+      "sha256": "6b3e1ee5f5e2fefb3e61b5a3f186709f8c2254a7de0fef8610a453e547aee0fe"
+    },
+    "Campus_Lost_Found/vendor/jinja2-3.1.6.dist-info/INSTALLER": {
+      "bytes": 4,
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+    },
+    "Campus_Lost_Found/vendor/jinja2-3.1.6.dist-info/METADATA": {
+      "bytes": 2871,
+      "sha256": "68c5548fb67c4132a13898d9b31ec50c6bea2abdd915d921f214355c3a6499c8"
+    },
+    "Campus_Lost_Found/vendor/jinja2-3.1.6.dist-info/RECORD": {
+      "bytes": 3619,
+      "sha256": "1bb3b46d00f55f63d24c3a34a7f955ef6692d4691217a53b15261769607f9f7c"
+    },
+    "Campus_Lost_Found/vendor/jinja2-3.1.6.dist-info/WHEEL": {
+      "bytes": 82,
+      "sha256": "ff6a3334508b59cf776cae1628708ef9e0d410d0e5a3e76073d714deaa2460ee"
+    },
+    "Campus_Lost_Found/vendor/jinja2-3.1.6.dist-info/entry_points.txt": {
+      "bytes": 58,
+      "sha256": "38bf39818535783f1cb8f9629227c59e05e97818dac65eab209f0a902ff7afe2"
+    },
+    "Campus_Lost_Found/vendor/jinja2-3.1.6.dist-info/licenses/LICENSE.txt": {
+      "bytes": 1475,
+      "sha256": "3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b"
+    },
+    "Campus_Lost_Found/vendor/jinja2/__init__.py": {
+      "bytes": 1928,
+      "sha256": "c717a93bd8bb0c7b2a910ae004476e2ed7e8cf6402b93ebf81b2f85d237585b5"
+    },
+    "Campus_Lost_Found/vendor/jinja2/_identifier.py": {
+      "bytes": 1958,
+      "sha256": "ff361cb4d2b346a964fe6bab4cd973ae3bb514524bed56bf223aaa77b8a2da55"
+    },
+    "Campus_Lost_Found/vendor/jinja2/async_utils.py": {
+      "bytes": 2834,
+      "sha256": "bcaf8f76cba8ace3275929c4913de25094489139d880ed93e8c9c6c43807239a"
+    },
+    "Campus_Lost_Found/vendor/jinja2/bccache.py": {
+      "bytes": 14061,
+      "sha256": "821d2ab3daee9675e8d0f857e634c9cb6507cc8f3016743ade8fefc3b9e1cd18"
+    },
+    "Campus_Lost_Found/vendor/jinja2/compiler.py": {
+      "bytes": 74131,
+      "sha256": "f51a42425e57f3c0479652623ec1cf876f791e1d2e029bf0149350baeb542de3"
+    },
+    "Campus_Lost_Found/vendor/jinja2/constants.py": {
+      "bytes": 1433,
+      "sha256": "18ca05c9d045fe476969128fa0ce5c97932f8aab9544b57266d7e9e7ed7a8e0d"
+    },
+    "Campus_Lost_Found/vendor/jinja2/debug.py": {
+      "bytes": 6297,
+      "sha256": "0a71ea0831ddf81546bed8bff19b13a259d7361037102b18fba9ffda9c14f07c"
+    },
+    "Campus_Lost_Found/vendor/jinja2/defaults.py": {
+      "bytes": 1267,
+      "sha256": "6e805c4b0efc87e969db461b697489b2a900236b8dfe60ff4ed0b27697aae705"
+    },
+    "Campus_Lost_Found/vendor/jinja2/environment.py": {
+      "bytes": 61513,
+      "sha256": "f6786b3fb0a1f8d6c65f4d30bf2af8cb2fae84d1ead8e09ceb48201ab9e2fdf9"
+    },
+    "Campus_Lost_Found/vendor/jinja2/exceptions.py": {
+      "bytes": 5071,
+      "sha256": "8a81de1eb5b009635a5d7d629c798755b96f73885a3bb017b230a9dc67d6bf1d"
+    },
+    "Campus_Lost_Found/vendor/jinja2/ext.py": {
+      "bytes": 31875,
+      "sha256": "e4f1797877e1f265c02315c71d1076c576d7a218bca44de71d23b16baeae4bb1"
+    },
+    "Campus_Lost_Found/vendor/jinja2/filters.py": {
+      "bytes": 55212,
+      "sha256": "3d0fc481df67f634a0b671906321782b98f69d8c21508ba584f9f28a691dafe9"
+    },
+    "Campus_Lost_Found/vendor/jinja2/idtracking.py": {
+      "bytes": 10555,
+      "sha256": "fa5979948a7bde930bdc4ad46222098fbb5d996c5c1ff2250efdf203f862658a"
+    },
+    "Campus_Lost_Found/vendor/jinja2/lexer.py": {
+      "bytes": 29786,
+      "sha256": "2d88988a8e9bafe4dea7d9cf72ea565ec3c4b6396ec37a75994fa534155151f9"
+    },
+    "Campus_Lost_Found/vendor/jinja2/loaders.py": {
+      "bytes": 24055,
+      "sha256": "c08ae7c63bdc6ea8795705b6f0d4a47e8b620eaf2a342c4839215b1948922c1e"
+    },
+    "Campus_Lost_Found/vendor/jinja2/meta.py": {
+      "bytes": 4397,
+      "sha256": "3930cf91a16f5361e0bf1fba6a4cfbd79e05f012166919af25c045bf0a291f0c"
+    },
+    "Campus_Lost_Found/vendor/jinja2/nativetypes.py": {
+      "bytes": 4210,
+      "sha256": "ec620600b54981dc8bf34a1925d4146947f04ade6ada549265b5edd1d35ffcce"
+    },
+    "Campus_Lost_Found/vendor/jinja2/nodes.py": {
+      "bytes": 34579,
+      "sha256": "9b50eecdcafaaa1648f0943a57226050d8a78c07f96d0ce28d29839ccb2f531f"
+    },
+    "Campus_Lost_Found/vendor/jinja2/optimizer.py": {
+      "bytes": 1651,
+      "sha256": "ac99c246543ba59b04126321b100e00bfa4ac831f13f94cf4bacd53c6b2072ef"
+    },
+    "Campus_Lost_Found/vendor/jinja2/parser.py": {
+      "bytes": 40383,
+      "sha256": "94b385cb7b0498773921a1074621f5b1056721dda6a14433872789653b5d637d"
+    },
+    "Campus_Lost_Found/vendor/jinja2/py.typed": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Campus_Lost_Found/vendor/jinja2/runtime.py": {
+      "bytes": 34249,
+      "sha256": "80393e1af76b8895ea82c19b1e0adc2933f4629eb33d7ce1ceb2290851f78c05"
+    },
+    "Campus_Lost_Found/vendor/jinja2/sandbox.py": {
+      "bytes": 15009,
+      "sha256": "330d9a8ad958d88f256bb15885c5f6606f41b5461c2e70f41a1ddddbd7035ab6"
+    },
+    "Campus_Lost_Found/vendor/jinja2/tests.py": {
+      "bytes": 5926,
+      "sha256": "54bb018551675a0f8fc52073d4c8519cd5a03f5a2f5e4de778ed452d031e0bd4"
+    },
+    "Campus_Lost_Found/vendor/jinja2/utils.py": {
+      "bytes": 24129,
+      "sha256": "ad1a77a3d7bb64a4b87f2ad645b10bc8b729b8655315c9e8a1a39ad6ac7f1489"
+    },
+    "Campus_Lost_Found/vendor/jinja2/visitor.py": {
+      "bytes": 3557,
+      "sha256": "11c9cbd4f2307ffe1154238cc6c44db91f005c76d2d6a7c074c384da780a273e"
+    },
+    "Campus_Lost_Found/vendor/markupsafe-3.0.4.dist-info/INSTALLER": {
+      "bytes": 4,
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+    },
+    "Campus_Lost_Found/vendor/markupsafe-3.0.4.dist-info/METADATA": {
+      "bytes": 2764,
+      "sha256": "08fa79954ab288d778b0fee4f0e6c7dbc869e545a415747d1324622465d3b08d"
+    },
+    "Campus_Lost_Found/vendor/markupsafe-3.0.4.dist-info/RECORD": {
+      "bytes": 1104,
+      "sha256": "4fb848896dddbef0cb0421320e55ab2855fabfe2dc7d9667d3ecea106620e031"
+    },
+    "Campus_Lost_Found/vendor/markupsafe-3.0.4.dist-info/WHEEL": {
+      "bytes": 101,
+      "sha256": "547199cfb31450578b25778938b82f94e190e69e750e6c850e3b6d657fa1a30f"
+    },
+    "Campus_Lost_Found/vendor/markupsafe-3.0.4.dist-info/licenses/LICENSE.txt": {
+      "bytes": 1503,
+      "sha256": "4631ec0db5fd90a547e336817264c6798214338146f8ac94b4a57f96ee8c9ec4"
+    },
+    "Campus_Lost_Found/vendor/markupsafe-3.0.4.dist-info/top_level.txt": {
+      "bytes": 11,
+      "sha256": "ab2d0f9637b9209bafb020637a32728430a310075c0cb2bfd9a81571ec7c67a5"
+    },
+    "Campus_Lost_Found/vendor/markupsafe/__init__.py": {
+      "bytes": 13760,
+      "sha256": "f16b1936306299dc0ed098d142949dd00c2979dab90125cabeda5e09a5383f33"
+    },
+    "Campus_Lost_Found/vendor/markupsafe/_native.py": {
+      "bytes": 218,
+      "sha256": "da9b64278d3209ca7d92adcbd4daa98237e9641fa86e789828514a50e9078784"
+    },
+    "Campus_Lost_Found/vendor/markupsafe/_speedups.c": {
+      "bytes": 4527,
+      "sha256": "79f73a6b3739d166cac523629f1578ae4b485f6c7359f2ac2ef9dc0bc67723fc"
+    },
+    "Campus_Lost_Found/vendor/markupsafe/_speedups.cp312-win_amd64.pyd": {
+      "bytes": 11776,
+      "sha256": "a1bf1fb566f920b5670dca3b31acb0148636cfff8aa8108d938f91550358b231"
+    },
+    "Campus_Lost_Found/vendor/markupsafe/_speedups.pyi": {
+      "bytes": 42,
+      "sha256": "2d20e65d839e7c7e07569017b8bf2c97b02db4bc34a178759e3568559a76c2a4"
+    },
+    "Campus_Lost_Found/vendor/markupsafe/py.typed": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Campus_Lost_Found/vendor/peewee-4.5.3.dist-info/INSTALLER": {
+      "bytes": 4,
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+    },
+    "Campus_Lost_Found/vendor/peewee-4.5.3.dist-info/METADATA": {
+      "bytes": 10627,
+      "sha256": "28f19f3c7f3715e16fcabb6e4b853fdda0e0ce6b84bbe14f12e0754ceeba1421"
+    },
+    "Campus_Lost_Found/vendor/peewee-4.5.3.dist-info/RECORD": {
+      "bytes": 4791,
+      "sha256": "735414f1215c3e00a1ebbe4a84ce4d7630349f3025b53967ed0d25294fef5a25"
+    },
+    "Campus_Lost_Found/vendor/peewee-4.5.3.dist-info/WHEEL": {
+      "bytes": 91,
+      "sha256": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1"
+    },
+    "Campus_Lost_Found/vendor/peewee-4.5.3.dist-info/entry_points.txt": {
+      "bytes": 73,
+      "sha256": "21e491a43feec6a5fb9044f8c71b9860363867ff849d54ab37df1a2c1ae7a6d8"
+    },
+    "Campus_Lost_Found/vendor/peewee-4.5.3.dist-info/licenses/LICENSE": {
+      "bytes": 1058,
+      "sha256": "3740096125b08735a247b8dd08cd82e0ba984d3bebd9221d378576637e5240da"
+    },
+    "Campus_Lost_Found/vendor/peewee-4.5.3.dist-info/top_level.txt": {
+      "bytes": 35,
+      "sha256": "a2f9d99d3dd3d5cc8018a5bbeec0bdfb0ba426358a5f2f06f848d7eda0c4c521"
+    },
+    "Campus_Lost_Found/vendor/peewee-stubs/__init__.pyi": {
+      "bytes": 81094,
+      "sha256": "132b31ed427ef3a1f53d2b57ffd80e228cd664e82120f6f40dee5a2624fcf977"
+    },
+    "Campus_Lost_Found/vendor/peewee.py": {
+      "bytes": 340516,
+      "sha256": "a547f9e3cd7e02a29b0673bacae7b43dd57cee5523b897575256e7d7840869e6"
+    },
+    "Campus_Lost_Found/vendor/playhouse/README.md": {
+      "bytes": 3383,
+      "sha256": "33545a96f99159af15b128752743e3dca85a25455202319c001e11233ab64dbf"
+    },
+    "Campus_Lost_Found/vendor/playhouse/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Campus_Lost_Found/vendor/playhouse/apsw_ext.py": {
+      "bytes": 6187,
+      "sha256": "48aa538af4094543fdad3debeacb4acd0c067d9ad48a99b133653edff2ef9ac2"
+    },
+    "Campus_Lost_Found/vendor/playhouse/cockroachdb.py": {
+      "bytes": 8965,
+      "sha256": "37b4dbaad9ac572d1bea340ab08861c4f6426bf04aecb0359fcef992c5f7505c"
+    },
+    "Campus_Lost_Found/vendor/playhouse/cysqlite_ext.py": {
+      "bytes": 10741,
+      "sha256": "0eb2452b1e2f5779f7853ad8bae7f8d230244792baf25f732bd3193f0e595481"
+    },
+    "Campus_Lost_Found/vendor/playhouse/dataset.py": {
+      "bytes": 15720,
+      "sha256": "6304efc419d64619002c464e92dcdfa9acbf38907840efee797b354c5fd97215"
+    },
+    "Campus_Lost_Found/vendor/playhouse/db_url.py": {
+      "bytes": 5163,
+      "sha256": "f81982c6e6f8d8cfc7e4c057816ba43e0236a1b04a5c957f5d6d45b64946eab1"
+    },
+    "Campus_Lost_Found/vendor/playhouse/fields.py": {
+      "bytes": 2849,
+      "sha256": "d958370acd0d79aff1f5e7344b47f8c73f0038b05f2414fef9a9042c8eccd5ef"
+    },
+    "Campus_Lost_Found/vendor/playhouse/flask_utils.py": {
+      "bytes": 7863,
+      "sha256": "e704f928e29a06ba3885fb4d316334f8e20cce6a25b4a7a647e4ea5680ad3a7b"
+    },
+    "Campus_Lost_Found/vendor/playhouse/fts_parser.py": {
+      "bytes": 8290,
+      "sha256": "5c2b25340c89c5f45d9a54d7aa97702774abab767e8c107873501575fce66fe0"
+    },
+    "Campus_Lost_Found/vendor/playhouse/hybrid.py": {
+      "bytes": 1528,
+      "sha256": "ad100f04898fdb1eb50e8621e7798b9b824c3e83422cf15377bfd622babafe05"
+    },
+    "Campus_Lost_Found/vendor/playhouse/kv.py": {
+      "bytes": 5622,
+      "sha256": "6a78f12dffd98a0ffb29f0e373bf4eb190bdbe00bd5a1ebb1fd45a833047477f"
+    },
+    "Campus_Lost_Found/vendor/playhouse/migrate.py": {
+      "bytes": 38323,
+      "sha256": "0c10d0b32ab3bfa0d6e561864317de98325108bdfff688f4532ea5b6cbcf4a83"
+    },
+    "Campus_Lost_Found/vendor/playhouse/migrations.py": {
+      "bytes": 31850,
+      "sha256": "e6317e61207696463ed336df6d69d25e42c2ee080c7e891fda64a25307e2e308"
+    },
+    "Campus_Lost_Found/vendor/playhouse/mysql_ext.py": {
+      "bytes": 3588,
+      "sha256": "2c15970c942834fd0d87d2894efcc54a90f9649edf6154e7067b1a3cf9493159"
+    },
+    "Campus_Lost_Found/vendor/playhouse/pool.py": {
+      "bytes": 10933,
+      "sha256": "9ff787e35160606fce2ad331e0a6739c318fa79ee83a1e067fe76b061173150f"
+    },
+    "Campus_Lost_Found/vendor/playhouse/postgres_ext.py": {
+      "bytes": 24436,
+      "sha256": "f0f8081e83d93d7590e3ae9fb9368f794d7545b5f0d962482aa816f3075f99c3"
+    },
+    "Campus_Lost_Found/vendor/playhouse/pwasyncio.py": {
+      "bytes": 45330,
+      "sha256": "b1d65b506a7864970f8f1ea0efa2efde401a5af3fd072a41880b952090b99391"
+    },
+    "Campus_Lost_Found/vendor/playhouse/pydantic_utils.py": {
+      "bytes": 5920,
+      "sha256": "0cefa0dcda978d72a14f567be281c5f53b4294d4bb884aabe69dff5c4f9c4df5"
+    },
+    "Campus_Lost_Found/vendor/playhouse/reflection.py": {
+      "bytes": 34216,
+      "sha256": "10c4ac1004811de21ac865329c670746c00ef59c13cb4ab60a632fe9da2e76a8"
+    },
+    "Campus_Lost_Found/vendor/playhouse/schema_diff.py": {
+      "bytes": 6117,
+      "sha256": "99fbfa6ddc1748d6a5d117c7ac671a8de8da82326ba65359c3d47e028a8de602"
+    },
+    "Campus_Lost_Found/vendor/playhouse/shortcuts.py": {
+      "bytes": 12711,
+      "sha256": "1c4dde8ce4a7ba9f862bc303a5aaba73d9c224946e03abe1d43ac044983f3340"
+    },
+    "Campus_Lost_Found/vendor/playhouse/signals.py": {
+      "bytes": 2507,
+      "sha256": "f3fe49a453f069769f84f1a0907cf9d1e1cf2a105bf5605f8e541089d1bc1084"
+    },
+    "Campus_Lost_Found/vendor/playhouse/sqlcipher_ext.py": {
+      "bytes": 2062,
+      "sha256": "4ac7ef1395055c1b37ce548814678054fbcbb0105077a72a9e06f130273353e6"
+    },
+    "Campus_Lost_Found/vendor/playhouse/sqlite_changelog.py": {
+      "bytes": 4793,
+      "sha256": "73715a60d67e6969c3ad9f6d832f56c43441e9af2c16290331a8cecd89987884"
+    },
+    "Campus_Lost_Found/vendor/playhouse/sqlite_ext.py": {
+      "bytes": 29726,
+      "sha256": "e552ea6791661d89ec17fdf507fa84c887c6724d9f96ff7e8c55b07c8f73d361"
+    },
+    "Campus_Lost_Found/vendor/playhouse/sqlite_udf.py": {
+      "bytes": 16244,
+      "sha256": "76168344ae12f57c3c8672252384fc9880754a1d7b1b6de2043b80e2433a0f82"
+    },
+    "Campus_Lost_Found/vendor/playhouse/sqliteq.py": {
+      "bytes": 10608,
+      "sha256": "6b59a52ba4120d6b64b195245ba9130962866c40fd13af7ac83c5af5ad025e87"
+    },
+    "Campus_Lost_Found/vendor/playhouse/test_utils.py": {
+      "bytes": 1926,
+      "sha256": "904f2e204d9d53de03f56c44e4b0eeb1af3026010ff786f18576971710cd5af2"
+    },
+    "Campus_Lost_Found/vendor/pwiz.py": {
+      "bytes": 8431,
+      "sha256": "671fbfce94d4ab4e0dc9f3d74593b9d5a885c76368420258faf8a583c2718005"
+    },
+    "Campus_Lost_Found/vendor/pygments-2.21.0.dist-info/INSTALLER": {
+      "bytes": 4,
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+    },
+    "Campus_Lost_Found/vendor/pygments-2.21.0.dist-info/METADATA": {
+      "bytes": 2527,
+      "sha256": "1dde075570136774c706bf0009183a793fe0ee262e4a5590cc6eff8453eedd43"
+    },
+    "Campus_Lost_Found/vendor/pygments-2.21.0.dist-info/RECORD": {
+      "bytes": 48126,
+      "sha256": "c7ad4ec3dd0d1539b2e1a0797587f7c4d10ae6c23136d5bbde4584acf1bacac6"
+    },
+    "Campus_Lost_Found/vendor/pygments-2.21.0.dist-info/WHEEL": {
+      "bytes": 87,
+      "sha256": "ccec20e2307acd7da453dd7437e70c6b08e2bc3ead3bc3445af135da37b56d59"
+    },
+    "Campus_Lost_Found/vendor/pygments-2.21.0.dist-info/entry_points.txt": {
+      "bytes": 53,
+      "sha256": "b945f0f9784c281117e2959c0ada6e4d39cf84bde1ece104da35a2e75550b1af"
+    },
+    "Campus_Lost_Found/vendor/pygments-2.21.0.dist-info/licenses/AUTHORS": {
+      "bytes": 11048,
+      "sha256": "71a83872ad82f57be692cf827e048e2cd51d45169cfa1ea3f28706d97a872c0f"
+    },
+    "Campus_Lost_Found/vendor/pygments-2.21.0.dist-info/licenses/LICENSE": {
+      "bytes": 1331,
+      "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17"
+    },
+    "Campus_Lost_Found/vendor/pygments/__init__.py": {
+      "bytes": 2962,
+      "sha256": "83fe99688e06ed80d7d44d325f79027de83a434c60f249bceffd67fda3e7d2b1"
+    },
+    "Campus_Lost_Found/vendor/pygments/__main__.py": {
+      "bytes": 351,
+      "sha256": "4195a3d13e934d1b2aafec3ed18bd520ba350f202fcf3c9d18244e370744ceaa"
+    },
+    "Campus_Lost_Found/vendor/pygments/cmdline.py": {
+      "bytes": 23542,
+      "sha256": "93faf94133e61101476a726ac5ec7e93fd72ad4cacc30d86237565c9f8ac108a"
+    },
+    "Campus_Lost_Found/vendor/pygments/console.py": {
+      "bytes": 1721,
+      "sha256": "0b5f3d240c210b5421d002a0b21cdbd70543cc5a819efd55678e644c40c83b7d"
+    },
+    "Campus_Lost_Found/vendor/pygments/filter.py": {
+      "bytes": 1913,
+      "sha256": "d5d9db92ad80742dc0907b770da5f09ce91304b0a1975911ea76922f09ebfed7"
+    },
+    "Campus_Lost_Found/vendor/pygments/filters/__init__.py": {
+      "bytes": 40349,
+      "sha256": "d37658748626c6758287b80d5c3ee5110f3af437f89331e7386338e222716a7f"
+    },
+    "Campus_Lost_Found/vendor/pygments/formatter.py": {
+      "bytes": 4369,
+      "sha256": "3d30674d6d041e47b6bf39402aebc72648f7fbf08c8fc76e231fb7c955227bea"
+    },
+    "Campus_Lost_Found/vendor/pygments/formatters/__init__.py": {
+      "bytes": 5352,
+      "sha256": "a8f1b8ab972e69944606096610954b3f8483bf8dd0237b4052c923df433e98e6"
+    },
+    "Campus_Lost_Found/vendor/pygments/formatters/_mapping.py": {
+      "bytes": 4176,
+      "sha256": "d42c37ec5b9094d69c9f144a9ad94f5f89f22e85fdfedb64a39670b1c354659e"
+    },
+    "Campus_Lost_Found/vendor/pygments/formatters/bbcode.py": {
+      "bytes": 3299,
+      "sha256": "96f1b5444649bf4a4ce9531ef90c0b4aea34625d516bf5f9d7087dddf5bc0369"
+    },
+    "Campus_Lost_Found/vendor/pygments/formatters/groff.py": {
+      "bytes": 5089,
+      "sha256": "141f3b388130e52e19d23c955572f672c7a08251dacddcaa3f6f1acb7ac38988"
+    },
+    "Campus_Lost_Found/vendor/pygments/formatters/html.py": {
+      "bytes": 36351,
+      "sha256": "dcdd5f976d788e0caa9025fa2f3de04bc9761104bbbf85a3ef189e60d9653628"
+    },
+    "Campus_Lost_Found/vendor/pygments/formatters/img.py": {
+      "bytes": 23304,
+      "sha256": "e35b92634a4a83d56628962b1ee6af095820d33fa683cd69dbc404324b707f5a"
+    },
+    "Campus_Lost_Found/vendor/pygments/formatters/irc.py": {
+      "bytes": 4907,
+      "sha256": "85d3aa02f174d9b23c098f3fb6eb67529b4166958404bcd502a4b8fd8034b5ec"
+    },
+    "Campus_Lost_Found/vendor/pygments/formatters/latex.py": {
+      "bytes": 19814,
+      "sha256": "2b29f300b230261df0e1df7a7c69ae52a8c679dfa41b307778bbf3b96135ebe2"
+    },
+    "Campus_Lost_Found/vendor/pygments/formatters/other.py": {
+      "bytes": 5007,
+      "sha256": "948eba6f6e706b37926251c4df4c895618f744dbd6299a854bbb5480c32b1319"
+    },
+    "Campus_Lost_Found/vendor/pygments/formatters/pangomarkup.py": {
+      "bytes": 2209,
+      "sha256": "2f88d4ea83b5f14a8432a5de3791643ed922b17ad7b97abdc1c79c832ffa773a"
+    },
+    "Campus_Lost_Found/vendor/pygments/formatters/rtf.py": {
+      "bytes": 11924,
+      "sha256": "610616f0d4eb0785df3a32db433badc83e23df94e2985359d13dfd7444fd0cea"
+    },
+    "Campus_Lost_Found/vendor/pygments/formatters/svg.py": {
+      "bytes": 6852,
+      "sha256": "990a298756a62a40fcb3e1ee3bb8d6c07cdda52118a5001798253b94e8601810"
+    },
+    "Campus_Lost_Found/vendor/pygments/formatters/terminal.py": {
+      "bytes": 4629,
+      "sha256": "abb8cb2da9e57b7dde099903af80a81c037e7470457f50c1862e0570143cff51"
+    },
+    "Campus_Lost_Found/vendor/pygments/formatters/terminal256.py": {
+      "bytes": 11718,
+      "sha256": "95010cc07c0b4411695a264c3e72476ee9b0a0a1c14a80a5f0722fb85feb1811"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexer.py": {
+      "bytes": 35155,
+      "sha256": "2037632e5c3bbf18c6c12a14dc38815e0584b16b2e81e7b765c04af1b3e1b738"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/__init__.py": {
+      "bytes": 12070,
+      "sha256": "1b876da84e5030402aa1a683d6bc126597aea8a84cc92e2eb65333d6cce4ad38"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_ada_builtins.py": {
+      "bytes": 1546,
+      "sha256": "7596fe96876c48ce8be5e98b9602e0fab0a59b61ee9af9c72bbd827ad9d245d0"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_asy_builtins.py": {
+      "bytes": 27290,
+      "sha256": "ce0e787c6860cd65d0524ebea99e8e5b91932fd7783ab9c1f12250923ac3d31b"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_cl_builtins.py": {
+      "bytes": 13997,
+      "sha256": "a01174d19909c83d782e462e47ad371031483328ad9337b5d9a4fb5330d82d8b"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_cocoa_builtins.py": {
+      "bytes": 105176,
+      "sha256": "69beacabe8b2e4b6a913570d63297c3c95cb83a108357c7e94c45bc0445d298b"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_csound_builtins.py": {
+      "bytes": 18417,
+      "sha256": "c2e5a2423984321695bec57c6ff79fb1e6e053460a228302d040a939abd30883"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_css_builtins.py": {
+      "bytes": 12449,
+      "sha256": "aa1982e2d4461b9df3bf3310135aa7efde0bbdb54e0d1b5569cc5608fde42240"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_googlesql_builtins.py": {
+      "bytes": 16135,
+      "sha256": "9867ce1ae28a8d9a071c0019aba1e973af31d2a2b2731f925ffc060d27123982"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_julia_builtins.py": {
+      "bytes": 11886,
+      "sha256": "bbabf4c80cd98ea504363888439a8c7dcb28d6bffa111a866e3dda1f0167caa0"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_lasso_builtins.py": {
+      "bytes": 134513,
+      "sha256": "60efdcfdfd39668c6ca47c42477a16402a5985b00953304906156ebb04e3af97"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_lilypond_builtins.py": {
+      "bytes": 115114,
+      "sha256": "fbfe22e20a600e07051ef6993092f6b35ac8f5d48d636642eaf3baba5ec79a5d"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_lua_builtins.py": {
+      "bytes": 8110,
+      "sha256": "f8e5ac47584eeb4b9611ef87c9616d3cda086cf3a9b16ce35cd7cac067325e44"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_luau_builtins.py": {
+      "bytes": 958,
+      "sha256": "60b523d9b719d026f448190894d5d61c518350592975d389c7eba4ad9c7570c7"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_mapping.py": {
+      "bytes": 71218,
+      "sha256": "fd7e1ac14a895e47591c7a911460ebbe2a47caed81159ea292776c08a122b4fa"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_mql_builtins.py": {
+      "bytes": 24716,
+      "sha256": "0a472f3321d8878539ac6815e808128714674cebf4b66a846ce8957696852eab"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_mysql_builtins.py": {
+      "bytes": 26876,
+      "sha256": "4aa895615562aed9cde254a0b5f7913f1b55a5cba68d4bef52af67f0939bb90e"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_openedge_builtins.py": {
+      "bytes": 49401,
+      "sha256": "033175a3a78090c73abe7be6795a8d9d46545628f36cd6248f3ad476d0907b73"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_php_builtins.py": {
+      "bytes": 108054,
+      "sha256": "f60f962d3dea6d21a8950241ff83d2e855bfafb1d55c15af239396c4ab5bc289"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_postgres_builtins.py": {
+      "bytes": 13346,
+      "sha256": "4068369814d3860bf82dd5e3166e70aca68a9c253d0ee6e6262ea55c1ef2d8c8"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_qlik_builtins.py": {
+      "bytes": 12598,
+      "sha256": "dd99024838edc52c570c8f5eae28164cb49472dfdaa7f5b42ea7d98c578a4182"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_scheme_builtins.py": {
+      "bytes": 32567,
+      "sha256": "3b7051b6de6cb931126d9fdb491790e83d2bd06fd2abf8b8c0271491d52b752d"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_scilab_builtins.py": {
+      "bytes": 52414,
+      "sha256": "137dd1d2692735cfb9799f5482eeeeec0bffbd4c40690a0c4ed771dcc71ecb15"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_sourcemod_builtins.py": {
+      "bytes": 26780,
+      "sha256": "f2ab292f108bb1f37d27b37449665136cd00faa24e20644100968d31e59a3814"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_sql_builtins.py": {
+      "bytes": 6770,
+      "sha256": "7cba61a2707ac2fe8e8adf336a7262131811a0bbd9a055b897d94d1fe3d362fc"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_stan_builtins.py": {
+      "bytes": 16623,
+      "sha256": "b08a0e360e138cb90637b01bd2d641d4733bb50d3bd7f676738d67f655d9974e"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_stata_builtins.py": {
+      "bytes": 27230,
+      "sha256": "ca687c1b111c6ba7920a01e7aac2eab22f4eadf46a627b793bcc817a29c9ec31"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_tsql_builtins.py": {
+      "bytes": 15463,
+      "sha256": "330e949cc0728eed14f8e0604fc69fdc0e2eb5fad2d344e7e650e76b106d8fd7"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_usd_builtins.py": {
+      "bytes": 1661,
+      "sha256": "486a7f78f7f656e92dac5579f6ae9d7f8993cb1655ec0658b344c91525a80402"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_vbscript_builtins.py": {
+      "bytes": 4228,
+      "sha256": "4c5b72735d72be90ff3a536bac56dc08e26851891632adc47871c2a70ff324d7"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/_vim_builtins.py": {
+      "bytes": 120501,
+      "sha256": "fbfc065a71f61eee0d36d19ab32cdbc55e9c1b8fcb3b7fb2d0bae7eec7a20bb1"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/actionscript.py": {
+      "bytes": 11738,
+      "sha256": "2eb320bbbe7dec1e7e0b4832d169552e41e7db6b1105b93afe05170e120dc1c0"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/ada.py": {
+      "bytes": 5323,
+      "sha256": "056a10d82a56048e536f037e54609dd253ec2ee226617295b42535b4366b0336"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/agile.py": {
+      "bytes": 899,
+      "sha256": "0eefaf8e719910f1ee138d17c5330ef972ede7aa5870868a200c48c1c607147d"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/algebra.py": {
+      "bytes": 10161,
+      "sha256": "0e95500a7ba271e4c6c9f5d136f59d97ee2ceb89fad12dbcfaaa3e7c8328a63b"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/ambient.py": {
+      "bytes": 2608,
+      "sha256": "f0d93c597e2aac877dce3ff3823241b854f8d324171b6397c45861177474d20f"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/amdgpu.py": {
+      "bytes": 1725,
+      "sha256": "1a4563c28e78003b60a7258ef442e7c38600a14ed467db2c47751c86743d82a5"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/ampl.py": {
+      "bytes": 4179,
+      "sha256": "4e4aa4695c887db350a50043cdd4dbab480e6efd201896191eee4852fc42e1e5"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/apdlexer.py": {
+      "bytes": 30803,
+      "sha256": "a6e4a92c159ebdc89273c1b4c20d98ff2408a0682a3deb345019291489aabcee"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/apl.py": {
+      "bytes": 3407,
+      "sha256": "fa384f62c0554f87242fb0999ae90864d8bab5f68925b064dafbad95ddfbdabb"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/archetype.py": {
+      "bytes": 11577,
+      "sha256": "6ee847d961edc41a30cbf283e523e6e6f807a662e828c755f6d80cb3f6c4e315"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/arrow.py": {
+      "bytes": 3567,
+      "sha256": "7ba99bdc8c788cbed3306354a64f2245b272fd517b558d89d155249e5a3512f0"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/arturo.py": {
+      "bytes": 11417,
+      "sha256": "1a492539a8842533b3f04d3377177f85dd735f0bfb958829f08265eee875de18"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/asc.py": {
+      "bytes": 1696,
+      "sha256": "0af1528bb1580d6e9ebbee6888a19cd0c377685d575590e8148e7ede61e90439"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/asm.py": {
+      "bytes": 42201,
+      "sha256": "712dde10cc8fe9a7df189feee9391b74530893ca9b547c088f402420dce2405f"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/asn1.py": {
+      "bytes": 4267,
+      "sha256": "30b6a439e04591d84a2abe36787173a27a46213109c51fc6a1df2faa358fbdae"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/automation.py": {
+      "bytes": 19834,
+      "sha256": "a479d5df2510856d04fa271b7b13320d4288f2f68af32ed11c45b5821214d43c"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/bare.py": {
+      "bytes": 3023,
+      "sha256": "01da8bf59db49ddd1b84d19689e94b8401de8fa57cffc9b539652408ead2071f"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/basic.py": {
+      "bytes": 27949,
+      "sha256": "528343c4815600eb4751bfdbf9b73c7ca457cbefbddf99af3b79e46e40ab600e"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/bdd.py": {
+      "bytes": 1644,
+      "sha256": "29eb8ecd704b251c71336815eda32e62c755fda2451f206e17ca6d0695b10f93"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/berry.py": {
+      "bytes": 3212,
+      "sha256": "4c70735b6d7a5b1c59fffe6bedadfa2efed4b8621e76534686c37da19ef46545"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/bibtex.py": {
+      "bytes": 4814,
+      "sha256": "b207c5a97c8dc82c5138721ef02d20adeebdaf36c00c02e7a43b536aa1df49ab"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/bitbake.py": {
+      "bytes": 6132,
+      "sha256": "cf0a8af5cb612678a8f23c6a9542543ede4ee5dfc8e01c9df5dc24f79d257dd7"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/blueprint.py": {
+      "bytes": 6191,
+      "sha256": "756f8be5b148896c513c36ac85e7b610e6265c8447770b82675cb788df9aebfd"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/boa.py": {
+      "bytes": 3924,
+      "sha256": "56a605d5883f5dd0c0e6d2bf122ba8d6bafb79d881b0a513a41eb1cdafc1e5de"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/bqn.py": {
+      "bytes": 3674,
+      "sha256": "b1ee16d973ec3624f7eb3d009bd5f9178c8d2eb42f308e57f26898e91f5210cf"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/business.py": {
+      "bytes": 28348,
+      "sha256": "62a3300d5ed2c05eba5bbba0d0eeac8dab5f524ec606344b17d996300ae8cc3f"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/c_cpp.py": {
+      "bytes": 21069,
+      "sha256": "1f0609a8b90202179dc8c2a7accf3134455961335aef207e9778dbb7daa9050d"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/c_like.py": {
+      "bytes": 32374,
+      "sha256": "b88d49ff14bbb32edb8c6a7f47957b6602c92255bb366f33489e06a5884d864b"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/capnproto.py": {
+      "bytes": 2177,
+      "sha256": "91cdeb4fde4691e426ad6d4b78fe473156fb364f2ca97916e8e26491620761b0"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/carbon.py": {
+      "bytes": 3214,
+      "sha256": "fccfb461ba1f8d932b2486a25caa13eb0a64777ffa7c5abe39d499ed5f7ad48e"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/cddl.py": {
+      "bytes": 5079,
+      "sha256": "ed6ae2daadb229ec56a34083eecd9cec0a0200c6ebc32104e9ffe0cf907ac756"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/cel.py": {
+      "bytes": 5063,
+      "sha256": "89bb07acc93b69bba2e16a4c1086f6029c254ae81f8f401c35ca1435fadae253"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/chapel.py": {
+      "bytes": 5159,
+      "sha256": "857eb63bdd4f7177ba6fd7773a2ee55166029a224d774060428402da98af7c80"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/clean.py": {
+      "bytes": 6421,
+      "sha256": "fe85774db9aba65dd2d6984f312ea0c8c5b21991a3e96cb4abc69da5fe6fba76"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/codeql.py": {
+      "bytes": 2579,
+      "sha256": "8405f9d6e59e1b9664f498574a73b13cc6b39c53a9697e199d91d9da4aeb3c69"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/comal.py": {
+      "bytes": 3182,
+      "sha256": "d1f713c95e61dfaccf971a103d65867addb26988b91125e2169c7a11bb2a3f4d"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/compiled.py": {
+      "bytes": 1429,
+      "sha256": "3d18a6cbb79bdb078fed7e9b12e933d496922ee4001133b7e0aee66872c66f10"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/configs.py": {
+      "bytes": 53776,
+      "sha256": "f5ebf4c88cc7c0cf6b566c873dca88e5a022e4492594ffbcd2f4813904f7af64"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/console.py": {
+      "bytes": 4752,
+      "sha256": "516849db50690d68f7f75de5d8d7b9362eccfcdc1e52b2d34bc83207d68e9dbb"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/cplint.py": {
+      "bytes": 1391,
+      "sha256": "98923fa1fec008f8bfb00d0ad431b3b001f6379e0c5bd845ade8023fdaeedbb3"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/crystal.py": {
+      "bytes": 15757,
+      "sha256": "93c5f2f13a5f18a4cfbec3f55a293120b49c20b0fc897679a9c78b668a6c2d81"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/csound.py": {
+      "bytes": 17006,
+      "sha256": "ec5542c6d7065c7f27408a08ec4e6c91c4e8f61a848172de4849cbe6c419ff94"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/css.py": {
+      "bytes": 26457,
+      "sha256": "e808d7f72600c7d919fc12baa8be28c7b6ea82aaa21e9d600b7e3347b874783e"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/d.py": {
+      "bytes": 9917,
+      "sha256": "621f3f74f4a527015fd5e15bf36cbe9243f52f3a984a86bc5f6005ce59f4c7ad"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/dalvik.py": {
+      "bytes": 4609,
+      "sha256": "d1fe66079cbc834975203da5889ff9a8cd8d8f247f481b3b724b880de35b6e3f"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/data.py": {
+      "bytes": 27068,
+      "sha256": "70a3b62f0a8e789c630f7fc568c7748f1cb38f37ffb44f4828302511d51a9f72"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/dax.py": {
+      "bytes": 8101,
+      "sha256": "37ee5fc6e9017c5b45093d8b268ca0d5526c7e57561f15ca2d8dd93cb9cfae28"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/devicetree.py": {
+      "bytes": 4826,
+      "sha256": "4e283eb534aba661b36c6c4dda46b830c4e20b7e38ae86aff40e21a1cf68fe4c"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/diff.py": {
+      "bytes": 5385,
+      "sha256": "fbadbb966b98a49dae51550cfe8ad51a05c91972011925476e696a7e508479a3"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/dns.py": {
+      "bytes": 3894,
+      "sha256": "125cd2377204a11b3583a896327cd5215f07d31f56484175c018e6d9ad01cb11"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/dotnet.py": {
+      "bytes": 40222,
+      "sha256": "6f88399cc847b4e53ee627fa7fe25096db492f1dfa5d6a3ed8020dd7a738cb60"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/dsls.py": {
+      "bytes": 36750,
+      "sha256": "b88d5525a61ff79535b309a9c7ab1e1576ee9431ad21a6a7b49e7223cf378888"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/dylan.py": {
+      "bytes": 10412,
+      "sha256": "7e2f264b29e2e1d9c63f9c7572b13a04a36a2d626ce1d0d676692eafe4db6cd7"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/ecl.py": {
+      "bytes": 6374,
+      "sha256": "913fe4533e9199e42690c01aa9ac92e10a1aef2577fdede7cffc44a1afa250a9"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/eiffel.py": {
+      "bytes": 2656,
+      "sha256": "6d9a3d39633cac897b94987ad1b78bf51bf3ab1a3d91720a29a27c79639c6dfc"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/elm.py": {
+      "bytes": 3155,
+      "sha256": "5e3dc795b51312411417085e9b8342ba3c79e6d4364d2eb5fca71fe8108f1c02"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/elpi.py": {
+      "bytes": 7904,
+      "sha256": "459a805737717c0fc1a819ad3078fc013c397fd7b6e1228bf9078ed7842e2a4e"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/email.py": {
+      "bytes": 4690,
+      "sha256": "4713ecb47cbd455a42621557eed6664ccc97886e3ddd63681191cce7987eb0d2"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/erlang.py": {
+      "bytes": 19150,
+      "sha256": "d9a525541545b50751d90212b0378a4ce3e31ab57baf5724c972f5eca268b7d7"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/esoteric.py": {
+      "bytes": 10502,
+      "sha256": "b93611efba41a2d6f843d7a05a4dc8390df9fa067bb3e8a82ba9d5d1fade7c91"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/ezhil.py": {
+      "bytes": 3275,
+      "sha256": "b5b198b469ea64007c7df9f23dd78c3091ed29827b38072250546b47ff10a573"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/factor.py": {
+      "bytes": 19403,
+      "sha256": "94ab35b90cd3b4c3c4c7ceeb314ec1c3bf5044aaf3c415a706a4e925ab1936ed"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/fantom.py": {
+      "bytes": 10200,
+      "sha256": "a4ffc7fdfc5fbb742c8a5f3b1cd1eda79e4d7a253a329fcde0c992572aaee141"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/felix.py": {
+      "bytes": 9658,
+      "sha256": "0ef3ceb3f126e9f16d5014026995961d6827bc015e06b0def7b0b2f57c90f29b"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/fift.py": {
+      "bytes": 1647,
+      "sha256": "43d38b262be9e2782a16ca3b00f0af5fce61fa085d6e9f59aa93fc18a1f0b353"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/floscript.py": {
+      "bytes": 3028,
+      "sha256": "68e04a028eb8fb7727be833a4385ef2e78368aecf8eb4f5f21179a6f8b4c132e"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/forth.py": {
+      "bytes": 7196,
+      "sha256": "e1ed0e09f24670496442b1c89e640cb9cbec23d7658ee3f1e05620dfc7728e7a"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/fortran.py": {
+      "bytes": 10385,
+      "sha256": "a2ebce1dd31b8f9ea3e3436b8f6d560917f8acd2a9bb0a61c66b65515b27ce17"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/foxpro.py": {
+      "bytes": 26298,
+      "sha256": "9d5f32c844b7f50a0599336533cc65dccb5e3acbe6b7ac95d65eb1eb19d7a885"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/freefem.py": {
+      "bytes": 26916,
+      "sha256": "66664b2182d7b422b6916a86cc19ab929ef27213b2eef81f6a8ada7d49149752"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/func.py": {
+      "bytes": 3703,
+      "sha256": "66339eae3de78c971a1a71d673f9e95a3c5be03e4efae7710512bb44b1c489b5"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/functional.py": {
+      "bytes": 697,
+      "sha256": "e26f499409dfa57c52910408acd3a86f6553c229fa84f2c0a96ba1bfd6959008"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/futhark.py": {
+      "bytes": 3709,
+      "sha256": "fcc033f0f21d8652b4a4149a4f7f4ea8b86c39f837e844f46e8a00762ef49496"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/gcodelexer.py": {
+      "bytes": 877,
+      "sha256": "b7c24c59a6838d66707468911b0ae9b18b5f8ca4e689bc2547238b0a2259f2ac"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/gdscript.py": {
+      "bytes": 7565,
+      "sha256": "d5a21ecddc6a802eb35a1abaa00f06d5bc67b6b3f8625c13ed8ff9945416ab03"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/gleam.py": {
+      "bytes": 2395,
+      "sha256": "271e8b9d4a5657da668dd4982d432dd7a73751a999fafe57e8272e1215b17fef"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/go.py": {
+      "bytes": 3416,
+      "sha256": "467edf5298fa14b8d49056235baa8080315242193566b2aa00011daeb913dc09"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/grammar_notation.py": {
+      "bytes": 8046,
+      "sha256": "64661cc214af3a8970d49edc03d3dcee1569708b1e95a0a0c70b2f01fe724607"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/graph.py": {
+      "bytes": 4111,
+      "sha256": "5ff22c763c57667e69f43ab870b5f2ab0a380bc7a671803c34fe9567d65305a5"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/graphics.py": {
+      "bytes": 39137,
+      "sha256": "29f0af855765ea2dcdede95bcde85df46c7a5ab538898c82f788ec4f055d2fa0"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/graphql.py": {
+      "bytes": 5604,
+      "sha256": "45613f91f5540c4027bfff926323a2f4825492ceb536f39a92651f58e968af3a"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/graphviz.py": {
+      "bytes": 1937,
+      "sha256": "ca1cc5776e77ece2a73e5462185f588848df0736919cc75a185db921be2fa8b9"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/gsql.py": {
+      "bytes": 3993,
+      "sha256": "fc5266b8a359b31e5f1505323c5a7cfb77104e99eb680edfc1c2273c8361f1bd"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/hare.py": {
+      "bytes": 2652,
+      "sha256": "782ad13f072cc172fe6474d6365844d40d391bdaf1cd2db4fc8a9275dbf633d6"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/haskell.py": {
+      "bytes": 33323,
+      "sha256": "b2be60ab753bc6dd03d818b8d71753b016a9a275faa2d3f5a8fc91302bb133b1"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/haxe.py": {
+      "bytes": 31169,
+      "sha256": "fcccd02535b1d7c903f5b3ffb27881b2129bb4e643466e0e66789f68e830fda6"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/hdl.py": {
+      "bytes": 22742,
+      "sha256": "24240a5ba1c57684dd14589b2fdd05d66edc60984cdc83f60169b121810381d9"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/hexdump.py": {
+      "bytes": 3656,
+      "sha256": "4801abfd812474bf289a8d6e41bfcfb54080112c84f213e554aec518690eaf74"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/html.py": {
+      "bytes": 22007,
+      "sha256": "44e7c717c5a080f8f869d13af92f6c2af0a1e546342b423cebc5313b9cbeddf2"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/idl.py": {
+      "bytes": 15451,
+      "sha256": "493174d34643cb4dc40e3598610cf2b02a578d2726360d3d9f32e0127860c96a"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/igor.py": {
+      "bytes": 31636,
+      "sha256": "4afe4418125e2b2d143b297af8617794179ea1602b55c30326d42d976457458a"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/inferno.py": {
+      "bytes": 3138,
+      "sha256": "27acc5ad8be43cb77f3c6a9c1fb4769d1b1a8d6f117d1b97d716654730b8f580"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/installers.py": {
+      "bytes": 14494,
+      "sha256": "8a82b62543d2264f6f72ca1edcd012bccb7ea5a5ddd7f367ddef1699aa89ec21"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/int_fiction.py": {
+      "bytes": 56547,
+      "sha256": "0548ef5e29548ae305f9eb971100f3419b38e639ff68bb35ede4ca71f129b6b2"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/iolang.py": {
+      "bytes": 1908,
+      "sha256": "d18ca304058fe31977cddf0f72c3ad64c21b4a1d742979c908b73ac6a725919a"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/j.py": {
+      "bytes": 4856,
+      "sha256": "e7aa946ecd42ef029d67af96a4d9f11e7b4daacc56ae8aa23bb91e236ca8475a"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/javascript.py": {
+      "bytes": 63365,
+      "sha256": "66ecc85bbaf14527e07a18f5124df6d5c4c6dd2524ae60e2c2ff419a935f5393"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/jmespath.py": {
+      "bytes": 2087,
+      "sha256": "397235a96eb2972a6c99b40b460993afc1b291a219df37cf1f25f0a9eb1f0d90"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/jslt.py": {
+      "bytes": 3703,
+      "sha256": "50e570d49dee2be855456a26a052b68cc4bfc9eba8e62aa06be2e15d4248ebad"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/json5.py": {
+      "bytes": 2505,
+      "sha256": "1b2799e7c0312a42498a21fb26e3e66a40d95eba296ba6c3905460b891e27ea5"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/jsonnet.py": {
+      "bytes": 5543,
+      "sha256": "acfb28f5dfcf54c9cd54995632ab64192c4b25bf44c5bd0e7008cc3ad32018c1"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/jsx.py": {
+      "bytes": 2748,
+      "sha256": "fb4d2d73e553905687924155e5bbf39eebca51e083e717d6992e11aa2d67abc1"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/julia.py": {
+      "bytes": 11688,
+      "sha256": "d8947bf137ec1a8188f0acb767ed72412ac22207a2704bc4c1d093c4e861e019"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/jvm.py": {
+      "bytes": 73264,
+      "sha256": "3d1314c66ceda1506dc2fc8d8b668de3b3f9a8000300397296abf373a89f43d4"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/kuin.py": {
+      "bytes": 11401,
+      "sha256": "47f5ab6f2ba850ada9bd89739928ecd255c783237de2cd8d276e7458208ad7e3"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/kusto.py": {
+      "bytes": 3486,
+      "sha256": "68ff467856a0ddc8a7e68002170d8c5d35c475cf1bb4c549426d37264bfcd740"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/ldap.py": {
+      "bytes": 6554,
+      "sha256": "ff26b8fc89e7488463f9162319a816159243cb535d810528710cd55a3891a7af"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/lean.py": {
+      "bytes": 8588,
+      "sha256": "a8ffe2c1443b3096750b9b37298056f16bbafaeb958f83c01b76b61a18e9f7d5"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/lilypond.py": {
+      "bytes": 9755,
+      "sha256": "a36eb8a2f19916b731f19c292915fe82350408ad70e53f13d27e8ba138cff765"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/lisp.py": {
+      "bytes": 157900,
+      "sha256": "082f9565a184b962d6b6e4baeaafb5c53fa420f553b8bf32a99e58c51dc75603"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/macaulay2.py": {
+      "bytes": 35392,
+      "sha256": "3f8de481bba8e96da37a24a081c0bc209506911c2a85b6b6b49468db6e9a940c"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/make.py": {
+      "bytes": 7834,
+      "sha256": "c005742914574c014c9622df00a5c38a1408136540554bd68c567ecae33b6b4f"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/maple.py": {
+      "bytes": 7965,
+      "sha256": "699e253339bd844b601e6d3eb64061067dd2a7047ab2b235796e79b723ffde6b"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/markup.py": {
+      "bytes": 66526,
+      "sha256": "905716c9a974ecaefe8e589bdba47b53dc87a037e7fee6ca7998d573d3151865"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/math.py": {
+      "bytes": 698,
+      "sha256": "36ca65e8866d0b287d7a089851a85ba164a6cb8709095654071c959c2b85d5a8"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/matlab.py": {
+      "bytes": 132992,
+      "sha256": "db56996adf424e9c492c4c8e77314178f3851295c1e2117a1dcabacda38883d7"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/maxima.py": {
+      "bytes": 2718,
+      "sha256": "85af9ff89cc692382002be64c6656aeffb894c27291ecb505a7b0b1d82213705"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/meson.py": {
+      "bytes": 4347,
+      "sha256": "59703a71d331f0e01537fadac1b028a2962c3b6cfdff8e77b373803aeb648020"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/mime.py": {
+      "bytes": 7585,
+      "sha256": "97906c16469ddda809e8a0e0fc81c8ea7534028d18f447308d8a183fcbd00fe8"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/minecraft.py": {
+      "bytes": 13701,
+      "sha256": "6c16cc6eabec5604df3bb081c5fd37a063ffa8e020af0d3a3d2cc7d5017bb71b"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/mips.py": {
+      "bytes": 4659,
+      "sha256": "429801a0c3f3b24d6df747081745bf115f9067c2f08136a94be7d2212c597057"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/ml.py": {
+      "bytes": 35398,
+      "sha256": "8ea03c4b1624f04e8396b98f203d4ce27b4116a88f61af53c2c3597276c5e097"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/modeling.py": {
+      "bytes": 14664,
+      "sha256": "3e9944ac4e316acbdf2fc423634dfa022bbbe6280c6c59b222a39de42dfc280a"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/modula2.py": {
+      "bytes": 53075,
+      "sha256": "7575b428d16edc44e0001b0f32c2217492340ca17e296b53f37d452accf6557c"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/mojo.py": {
+      "bytes": 24232,
+      "sha256": "42b55c8bdf9620e82f48b7335e85a19bc003dcf18062ce95acde457068f839fa"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/monte.py": {
+      "bytes": 6292,
+      "sha256": "253c7e8d2ac52a5591c00d6ace13ddeb8ec44c648497084fe1832556b7d7c97f"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/mosel.py": {
+      "bytes": 9300,
+      "sha256": "aa01fa2f19a84a80436ff2eb2f7797b30b7f7ac68f217f7abe4032ebcc051ffc"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/ncl.py": {
+      "bytes": 64002,
+      "sha256": "4595e4c4e2be887b292d7fec1554f4c1ce47eaffa96b890a8213fbf5f24640f4"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/nimrod.py": {
+      "bytes": 6416,
+      "sha256": "2fc5b0e4251a3fea23cb0a106579e30b4f26e417bae1f0729d27f969618868fc"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/nit.py": {
+      "bytes": 2727,
+      "sha256": "7dfac12626787281fa4c79ac48195c084a43e7c951c7090b9290286d3fefe7ee"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/nix.py": {
+      "bytes": 4424,
+      "sha256": "33613e93ef85ee99deb8c00e69ef5a838b2b26c2a1589d5fd5f46e78ee8fb4a3"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/numbair.py": {
+      "bytes": 1756,
+      "sha256": "b404e2236e8ae0e7c0ca3dd2cb7ffc83230c5c5038160cc86bf42e2b89d5eaeb"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/oberon.py": {
+      "bytes": 4216,
+      "sha256": "b87d4590f79709f75dd0843ffbe4bc48750d69fd9d9e3890663b484fe8f1bb80"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/objective.py": {
+      "bytes": 23663,
+      "sha256": "443e67856d79a60dc552ecb521f1af6ff8786deff7879f879055a92d5448f1e5"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/ooc.py": {
+      "bytes": 3005,
+      "sha256": "1c48d61dd403564eed45bfd3b846f5fc2e6a8bea5e270c3260154085fe3d312d"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/openscad.py": {
+      "bytes": 3703,
+      "sha256": "b5eda22fc5647d7ba5fcf617973f142b7fd0b4c8dd98d82dd181c2604bdd12d3"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/other.py": {
+      "bytes": 1766,
+      "sha256": "380957cecad50d4c7831adb97f21bdf14e4b681107cadf8b259d881ef3092566"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/parasail.py": {
+      "bytes": 2987,
+      "sha256": "2afebfcb6f164c30eeb086f29d4b14523fe86b3c7886e45b3b40e1f477ddea30"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/parsers.py": {
+      "bytes": 26598,
+      "sha256": "98a6a52af631d51ac2cf656911465a50ffdab061f86cfe05fd3bdd2b143c0ec7"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/pascal.py": {
+      "bytes": 30992,
+      "sha256": "e1d7b05e4c1cd767ff8a231f74d0ea6f16ffa2a0045f6742cdbe55219eb6579e"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/pawn.py": {
+      "bytes": 8256,
+      "sha256": "9fae014ada93c53cea72a0a03440b21fb82ff9760461f97fdd21683579b03efa"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/pddl.py": {
+      "bytes": 2992,
+      "sha256": "6bc03691e085f6a350bd56508ab8015797c7e2eddc8ebb5af3e79927cb6cc666"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/perl.py": {
+      "bytes": 39195,
+      "sha256": "a33cc07976383b699321734eb96a261558aa5ba23a20f422b060f5f8797f5686"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/phix.py": {
+      "bytes": 23252,
+      "sha256": "9c4596b79f8ea080daa70e0827f70d2f5f5387c66db7a3884207aea2055e775d"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/php.py": {
+      "bytes": 13171,
+      "sha256": "53ac26c4f33ea52f92635377a9dbf479b5030712c7ebe10520571ab54be0ef8c"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/pointless.py": {
+      "bytes": 1977,
+      "sha256": "80d72e861398f5c12920fc86163321d8322d341d540fc0a68dc79790344ca1d1"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/pony.py": {
+      "bytes": 3280,
+      "sha256": "aeaae13684cfa0018b99a6028724cce002e0693b272da92f980122d63b155303"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/praat.py": {
+      "bytes": 12679,
+      "sha256": "b1f54077bcdf46c23e4dc0a8bae60c5a5714f04071030278c2487466e36c677e"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/procfile.py": {
+      "bytes": 1158,
+      "sha256": "7e1453b6c73230c3dc3dbbf38f156d5e2c759989693bee09b9650bec36f810d2"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/prolog.py": {
+      "bytes": 12866,
+      "sha256": "0b9a4c6a9525ceb57a29a3c47720fc6917408a02259d4ce31559c5bb44ef1d60"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/promql.py": {
+      "bytes": 4741,
+      "sha256": "d387d2fd1e8705686928d7b758fa7f417808745bc9af9a7a2b14ad658c3bc875"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/prql.py": {
+      "bytes": 8750,
+      "sha256": "5c985df1da4458f0482a6417c7fd3dfb3d4dca8b4b5c8b24a6ecd7dfa1f2907a"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/ptx.py": {
+      "bytes": 4498,
+      "sha256": "9aaa9a0b5ec31a999d736bf9e6efb87bfd61b41c665efb8a2b4ed572c6f369ba"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/purescript.py": {
+      "bytes": 6086,
+      "sha256": "71b0c0972f8d50de0efd2524eafe73252510ce865925b39330759e6513f1ea5a"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/python.py": {
+      "bytes": 54574,
+      "sha256": "e7a326fd60673e33dab44397c99abe3f108224d619a34e5b20af5ed62eb603a5"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/q.py": {
+      "bytes": 6939,
+      "sha256": "d826c962046ef2ecfcc0e4a9e4532bd3ce8a082ec88d246620e0d5634b8aac20"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/qlik.py": {
+      "bytes": 3696,
+      "sha256": "f5be90fba8d779eada211716b6c2ac61608e94185f9a337320de3da54bcc47e2"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/qvt.py": {
+      "bytes": 6106,
+      "sha256": "5e5fe58b3be198cc0efa5d7531417366e04a1dbf9c3cd0cdec5fcf5e19349c18"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/r.py": {
+      "bytes": 6476,
+      "sha256": "fb865a3f8e5fb2ae4488469cb19908d8f41d8b5f9c1d5fb0a1e7fec0b2f7e794"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/rdf.py": {
+      "bytes": 16063,
+      "sha256": "14cd79e1f0759717cea52a5e5ba6d639595de64241804b98c93f6e76df8470ad"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/rebol.py": {
+      "bytes": 18262,
+      "sha256": "090de931a033eb850caa2415ad8a111273a08d4e503de17f1f769a1cd755442f"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/rego.py": {
+      "bytes": 1751,
+      "sha256": "622d06e2c79c4d638bec25212cb0b327d800e922730c9a4f24d8a3de15e2c42d"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/rell.py": {
+      "bytes": 2484,
+      "sha256": "fa86be247000c913fcfbe66616b3ed6a27f340dbaaceac9d98dd631775dc94e9"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/resource.py": {
+      "bytes": 2930,
+      "sha256": "443118ee24afda1810dd5f88d4378e2953ae98d2a016a6d5d8c7bff58db5a35d"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/ride.py": {
+      "bytes": 5038,
+      "sha256": "d7383b90660f29121e932b996377fa395a91957cab5feb11fad1c45f533d9f3e"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/rita.py": {
+      "bytes": 1130,
+      "sha256": "7c234494f8a4e9d0c867319df7a90a81d958e10aa9ff3548f3bc1a4c11cc05f8"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/rnc.py": {
+      "bytes": 1975,
+      "sha256": "3cd7e79d396766336fbc6df704d302a8fcdd03d2d9118bc3b06a1a0ddff69a7f"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/roboconf.py": {
+      "bytes": 2077,
+      "sha256": "97a05e2484be64051bdf3739184b9521bd1e76b4693c598a75f7c4071ef86718"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/robotframework.py": {
+      "bytes": 18451,
+      "sha256": "f2cd54ec695d87344f191eddf3facc486d19273f593a6f8b1aa0531882f0b765"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/ruby.py": {
+      "bytes": 22987,
+      "sha256": "e524c32dcbe6981c06751a7514d8735b6e48f40e1cbc1bf8e1dc0b36e5f2fd5e"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/rust.py": {
+      "bytes": 8263,
+      "sha256": "eea0f7286562afeb5459ffdb3c1b78117f25f5a2167bc4db94c08523be68a2b7"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/sas.py": {
+      "bytes": 9457,
+      "sha256": "045f872eace39c15bae27930dc4e4ea659179c891ff8e4b7497dc799624acf25"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/savi.py": {
+      "bytes": 4881,
+      "sha256": "1c29658017b7af33ffefed9bd6149411b136758cf4f08cacc5ce837318f77f67"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/scdoc.py": {
+      "bytes": 2527,
+      "sha256": "f67eb84be6ced5d238c7ed8ace1da3ac333a804981e5823b721ea774f078f9cc"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/scripting.py": {
+      "bytes": 83232,
+      "sha256": "becc3f28d4cc15be72cd61e50f077bc390bc6ca09eaf665e2ff055b54869cb44"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/sgf.py": {
+      "bytes": 1988,
+      "sha256": "c9afec1b84cebc35b0cc433a7088b8d1749b8644ee1c2aafa3eb879cd61f8b94"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/shell.py": {
+      "bytes": 36425,
+      "sha256": "ac9d7284cfa949c675d02e92642159c1e1c16e277b4510bdaa6953506dbae718"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/sieve.py": {
+      "bytes": 2517,
+      "sha256": "09747d4b59c67954e59f6bb947ad348718240262455554d34c187f9376b0fa99"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/slash.py": {
+      "bytes": 8491,
+      "sha256": "565c2fd845f9fecd15f931a79575bb5637d021e685a63d2913f2146a6740a674"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/smalltalk.py": {
+      "bytes": 7207,
+      "sha256": "ab9d8d1de825de98e7d6332425603d2749ce03f0395735142d900f81bfbab8d5"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/smithy.py": {
+      "bytes": 3233,
+      "sha256": "3c1cccc71a99b258a2fd4dc05933147e363a70e153c013ef36374befe891b3b6"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/smv.py": {
+      "bytes": 2808,
+      "sha256": "0f9d489fd42bda758589c600397fdb2697858262770549045e7bd73e6034e03e"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/snobol.py": {
+      "bytes": 2781,
+      "sha256": "057ff554f5198be724282625176b2db50a6b1766cb5073a2f1b961227147bfdb"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/solidity.py": {
+      "bytes": 3166,
+      "sha256": "a73d03674c621f0b9f85b43d85d08fac732303b34cb1aea1c59d673be0386371"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/soong.py": {
+      "bytes": 2342,
+      "sha256": "a7a14c3524ae0ecf3aa163d34d552c7aed498f4d27b61e691b88e9d648deea18"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/sophia.py": {
+      "bytes": 3379,
+      "sha256": "3009162d8c611c935c737514cd60f75432f35516dfe8801ddaecf8abb0d8df02"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/special.py": {
+      "bytes": 3588,
+      "sha256": "f20a5388b20214dc0871a866dbcda68bc36a8bfea0c1832c01f8c920cd81aba9"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/spice.py": {
+      "bytes": 2801,
+      "sha256": "4acea84770bc560e60e80e4b9b8768fb3db8c9e54731b50cefbd333daca00faa"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/sql.py": {
+      "bytes": 41901,
+      "sha256": "dc32eda1c5dfada16969e6d35da79c3e90c26e9ebf0e3cc5d63b783acf4a8684"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/srcinfo.py": {
+      "bytes": 1749,
+      "sha256": "3078f4d9507b58fdc07283b3d5655802a34cff7a052e311a01d6b4ef99175415"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/stata.py": {
+      "bytes": 6418,
+      "sha256": "2a88e693158794493e1ef9b1237d776b9da7cc7fc91cda9fbfaaf78c9a050f2f"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/supercollider.py": {
+      "bytes": 3700,
+      "sha256": "1feab03fab146a8b5e9ac5f1bae829ba2e8a9d4de3b487437d2ddb1addc9be1e"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/tablegen.py": {
+      "bytes": 4012,
+      "sha256": "af2bb3c3e02b2ddbe5639e582419fa79b3b30e8dcbf149db479c5c641f3132ca"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/tact.py": {
+      "bytes": 10812,
+      "sha256": "61b39660da77d366413cce5a7dfccce3e0ae749e31459c896fefef4830a8cc2a"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/tal.py": {
+      "bytes": 2907,
+      "sha256": "c5962686ff2606bf80de87a81647123fb9c36d7d6bdb590a3a786c2d3b4bddb1"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/tcl.py": {
+      "bytes": 5661,
+      "sha256": "a34273c981450f339864ae434d2e1b0e761cdf748a050cd1f0764c3cac401687"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/teal.py": {
+      "bytes": 3525,
+      "sha256": "a60a4f8bdc563ee992afe85e4a9181183714e6cdea374685523da66872c4dcc3"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/templates.py": {
+      "bytes": 75715,
+      "sha256": "3466380edf397c73eab52a6310202a417690d9a82f396c9283cd0775788acf71"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/teraterm.py": {
+      "bytes": 10045,
+      "sha256": "60276f20b46af8574e27f1df888918553a07ddce88d9045b4281f5ed0e3d1f1f"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/testing.py": {
+      "bytes": 10813,
+      "sha256": "185e52a5a9c6c2380a2a861aae2df649db5d3965975e37bcc555f9f99cd38cb8"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/text.py": {
+      "bytes": 1071,
+      "sha256": "caaea638bcf73e2cca34c9b8fd8f141e7f6f11e05fa846395bedccedd9358d8b"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/textedit.py": {
+      "bytes": 8065,
+      "sha256": "fc35b77d2c36e44902ffefc644a7a9eb80e4c649af8e56d4c59362f9a8d3475f"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/textfmts.py": {
+      "bytes": 15527,
+      "sha256": "5928890f334a09c3ac0684d4e0d098537ded8b96471a2d0fc76f5e1a34faa41d"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/theorem.py": {
+      "bytes": 17903,
+      "sha256": "73e7a0ead2185946f149882b3ad2d97c5c6ba3883dd49700230ac82462cfa285"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/thingsdb.py": {
+      "bytes": 6257,
+      "sha256": "14d2a302b4b5bda74710ddd95da65d0cbaaf706e7d19b17a024e4cf1132c4cb5"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/tlb.py": {
+      "bytes": 1453,
+      "sha256": "bd6b05abf32b22bce01b6abea9dce9728362bfd2a4368c38c7d79bb3dfc70300"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/tls.py": {
+      "bytes": 1543,
+      "sha256": "199d65bd9f0f524d7e2d386ad4aba2a9212732a255aa21e8fc0fb5e9a2ae24e7"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/tnt.py": {
+      "bytes": 10459,
+      "sha256": "30d6137e48b1d31e4bd690d5f15f3318b4bb194f33edbb7ec298816a9d96d3d5"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/trafficscript.py": {
+      "bytes": 1509,
+      "sha256": "d536b0a26e9b28933ebb59187b2db5c456877a9dc3f6497adab57745a1d2bdc2"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/typoscript.py": {
+      "bytes": 8335,
+      "sha256": "75602e398624d17e3113f7f12a0717cfeb0c6251b6c31411e26fddecf5b63d8b"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/typst.py": {
+      "bytes": 7168,
+      "sha256": "aad6c4825f077af86f9dc8155182c29af2eb8321abce0563644d0d94cc676942"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/ul4.py": {
+      "bytes": 10502,
+      "sha256": "8e833e512d3ed811164471cae9ec99f98fbedf4e9881b32b7af318d2183c4136"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/unicon.py": {
+      "bytes": 18562,
+      "sha256": "6e583c0106265384ae8e3b720134e58c463e30bdfd8ac202bc861bd456212f99"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/urbi.py": {
+      "bytes": 6085,
+      "sha256": "8fcee4e9f7bad2465d6c9e80240e20f44d27a3510fd1bc49634e9454fd188275"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/usd.py": {
+      "bytes": 3303,
+      "sha256": "65e21abc5e484a20f22a8545aaff874a2a6652d30bcf09851ef5d179ebd81e26"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/varnish.py": {
+      "bytes": 7476,
+      "sha256": "20d0ad61ba25d7257f357321e7508c0d90da7041e0881dd2991dc7e6e5be1647"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/verification.py": {
+      "bytes": 4256,
+      "sha256": "0448ae501fdafd48edec9de32e8d71195af726295813e73bb063d50127b97de4"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/verifpal.py": {
+      "bytes": 2664,
+      "sha256": "d226534166b017d7fb94566714d3d3c18462bba2ffdb93ed108f37b6e08098a6"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/vip.py": {
+      "bytes": 5714,
+      "sha256": "a4ce711687aefb618f5aa015cd925eeb13d8afa5893e5a33548e74f3848743cd"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/vyper.py": {
+      "bytes": 5618,
+      "sha256": "af0db20fd7362fbc8fb57a8a3ddd1177125264af9a25b5b98c46b48077ca10ed"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/web.py": {
+      "bytes": 916,
+      "sha256": "60caf1a0794a950c1f14995a7bdfd3f45d55a74dd803b216b2682a2f387aa602"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/webassembly.py": {
+      "bytes": 5828,
+      "sha256": "91049e1763323a7680578b5156c607976adc14efc572b023458b74462da8e695"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/webidl.py": {
+      "bytes": 10519,
+      "sha256": "31031a645b2496e076f65306a6218fd9fe9fce88dae2f57c16da02185407e9f3"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/webmisc.py": {
+      "bytes": 40563,
+      "sha256": "8ea4cb070fd2bb1a62ddd881b4c0833cbebf51fe60c699c6822dae3758567943"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/wgsl.py": {
+      "bytes": 11883,
+      "sha256": "be00ed63fab8d93191bdcb324bbbe249a754f03dde1ef6ad7e808d36710fd331"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/whiley.py": {
+      "bytes": 4020,
+      "sha256": "302d95ee8d6cecb2282f2d0593e8bc3b2981a0dd1da4ad813e322b750c2c9d59"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/wowtoc.py": {
+      "bytes": 4079,
+      "sha256": "5e72d2497ee9fd1930648ce59985cef3bddde1bc97f7e03775fbf334be44a1cc"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/wren.py": {
+      "bytes": 3232,
+      "sha256": "da5873c294b6ef15ba9c4458fcd78e0e034df57ea607bbe5de875748f9e0a98f"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/x10.py": {
+      "bytes": 1946,
+      "sha256": "d19d2184f6e849f21513d3538bf8135e023fb91ad2f00463d2f9bb27065a833f"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/xorg.py": {
+      "bytes": 928,
+      "sha256": "2d4294f75b753a97375bf17ae141b3c749c1f87a8a94ddc29ffead173b79218c"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/yang.py": {
+      "bytes": 4502,
+      "sha256": "c88bf0b5e1d60562f6fbccd9b1c9c23c93a7ab7acc39787997126e8f2c00fd9a"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/yara.py": {
+      "bytes": 2430,
+      "sha256": "fc84b3864a3bbfd02127ed5c5883594b21b79b2daf24ec85487c528e6e157536"
+    },
+    "Campus_Lost_Found/vendor/pygments/lexers/zig.py": {
+      "bytes": 3976,
+      "sha256": "09fdbc70fd28accf3dc5cdd0a4955c84842fd36a6bd23b2724b473aa2bd200bd"
+    },
+    "Campus_Lost_Found/vendor/pygments/modeline.py": {
+      "bytes": 1008,
+      "sha256": "99ef20e6bc9289dbcfb4c04eac3cb63b5b0ca99774da5047318e4a0d979f530b"
+    },
+    "Campus_Lost_Found/vendor/pygments/plugin.py": {
+      "bytes": 1933,
+      "sha256": "f4d2931f3bbd495ee17d8dfe4d50b863bc10c7cdc2f22e4b82cdfe0014c131b4"
+    },
+    "Campus_Lost_Found/vendor/pygments/regexopt.py": {
+      "bytes": 3313,
+      "sha256": "2a8f57b570e22c429ead6683e78f7692b08159da6666982f924994fce911992a"
+    },
+    "Campus_Lost_Found/vendor/pygments/scanner.py": {
+      "bytes": 3095,
+      "sha256": "0eda0b8b5a4e2a936efba8e26a42694902d48bf7a9dbd490421bfba00c1858c1"
+    },
+    "Campus_Lost_Found/vendor/pygments/sphinxext.py": {
+      "bytes": 7901,
+      "sha256": "aa6896bf96fbaaae9b3544f6636c197a3576226426bedcc624583a2dc184365d"
+    },
+    "Campus_Lost_Found/vendor/pygments/style.py": {
+      "bytes": 6479,
+      "sha256": "29829f6bf5cf41338fc69853b91ad3f541a76e3e3afc6b6b1324119467baab57"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/__init__.py": {
+      "bytes": 2009,
+      "sha256": "daf8062a76f2b749dffc248312d3211f1a693d200faf68da7f39791625c5b86b"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/_mapping.py": {
+      "bytes": 3381,
+      "sha256": "300df2a81cbee4921cf706b0c4ff32ff4198bfb216451e8e2e8fadd285061134"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/abap.py": {
+      "bytes": 752,
+      "sha256": "4fb01dd76d4a8f3f196eea61ca1ba550bc17caf5ee6d24ba0b3734303385889f"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/algol.py": {
+      "bytes": 2265,
+      "sha256": "eafe995cbc4f26c9bfd6a3ea3aee62840b9685593ae3835d3d73dc66a88e4d32"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/algol_nu.py": {
+      "bytes": 2286,
+      "sha256": "e7cd4b7f975bdf4de0ef30dbef3f9596f1a514da5b5cc225027ad1071b631adb"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/arduino.py": {
+      "bytes": 4560,
+      "sha256": "a051798237db40d06280ac45842ee08942075a5d22782b2186c9bd531088cea8"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/autumn.py": {
+      "bytes": 2198,
+      "sha256": "3fd217e6eb630ef74981ebccd24346c04fb0bd5cac461d6580c9233b57610c31"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/borland.py": {
+      "bytes": 1614,
+      "sha256": "57ca930fc4ab4b4c0ba21a76b9d222ae58a36c77cfa08956664629ab149d912c"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/bw.py": {
+      "bytes": 1409,
+      "sha256": "7b8168e8ac9ac7669186a2ac8ecaaf8b6096ea5914f509e32a83eb1126408fe2"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/coffee.py": {
+      "bytes": 2311,
+      "sha256": "d23c5d72d08429b47502acc0e7d7c540ae2c541744aeb464182527e9f3c5e2c8"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/colorful.py": {
+      "bytes": 2835,
+      "sha256": "a2991f39c8c54ed0e7f45b72ea880cee8905301e9b034891d15b537413c4f4d1"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/default.py": {
+      "bytes": 2591,
+      "sha256": "5852c3b9c2894bf69ce49aaeb668256f3e084dce234d34043a7a8b20ca52b6d0"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/dracula.py": {
+      "bytes": 2185,
+      "sha256": "1fe10cd5633723177638163d6f3a0e6ca978233766862adf0d515b27d5ac8b44"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/emacs.py": {
+      "bytes": 2538,
+      "sha256": "8846163e042b0d093845d0dff3e83b8f89ada05473a36c5c2af644d72b3d9895"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/friendly.py": {
+      "bytes": 2607,
+      "sha256": "4b8dd731ccd6e77b4a7ed99aac42f8fa74eba0f55d37a93c7db36b20dcd1fd05"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/friendly_grayscale.py": {
+      "bytes": 2831,
+      "sha256": "7a5d84f34e03124299e80a57b77379153987024221aa4263fa89a113513c99d1"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/fruity.py": {
+      "bytes": 1327,
+      "sha256": "9ab3438b1a77f502288ad441a3ec8c3abf2d9d82c0c06774108330d80e8677c8"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/gh_dark.py": {
+      "bytes": 3593,
+      "sha256": "c9be04381018b10f60e481843aac99e4b288f8c51bc33df697d581e4470c2da0"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/gruvbox.py": {
+      "bytes": 3390,
+      "sha256": "fd066d46af72d6cdcd6000c7a9e93e0d710b42ab9e3a75435ef589ff56931a0a"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/igor.py": {
+      "bytes": 740,
+      "sha256": "40efcce7e675c48c559eeb045382d9af8553fbe9d311156df9ca5f6e73afe329"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/inkpot.py": {
+      "bytes": 2407,
+      "sha256": "6c9bcd5a292a9c058b8f1d801f8b7fb56e234744ecad4c951571553c07ce8243"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/lightbulb.py": {
+      "bytes": 3175,
+      "sha256": "0a70efd661755f99359ac56f452fdd891e2d929d3a13f8e0d2d2bd71d1c41424"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/lilypond.py": {
+      "bytes": 2069,
+      "sha256": "8120a26b33cf59f47ff7e055e416077bafb6812a2be2f3879f3de7c85408d900"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/lovelace.py": {
+      "bytes": 3181,
+      "sha256": "bd9f92f6d4be4143b07c0d111d8061493444de1d5953e6d99ee316eceea4b32c"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/manni.py": {
+      "bytes": 2446,
+      "sha256": "769b090b565e7acd1ef487168aba96b92cd0c700f48c86e3845aae336ddd9963"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/material.py": {
+      "bytes": 4204,
+      "sha256": "7b2c80689829d459e3978fbf0f7f7f975c07e425b85b455649c4374348ed0205"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/monokai.py": {
+      "bytes": 5187,
+      "sha256": "cf857bb506a1886a015ee7cf397600c0ce0e52c4c01d4b2da5ec4401c3c022c2"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/murphy.py": {
+      "bytes": 2808,
+      "sha256": "1ec3ddf349ce6dbdcebf7fbbc8941b9c9af7cfd982cb3df43e39ff9e45a4318a"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/native.py": {
+      "bytes": 2046,
+      "sha256": "a1acc42546ee687aaa399479bf1fa32214cf230edd0ba4199cac56fb12ebedfb"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/night_owl.py": {
+      "bytes": 4565,
+      "sha256": "6c2e010e16c6ad15df601d83dbefbc9fd906f3144f491b1d75bdbcf6377a4f7d"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/nord.py": {
+      "bytes": 5394,
+      "sha256": "b7b7d98f4e0b520b0b687a62a3ae85a8e18c29bedad950b7b5e5259889cf7d18"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/onedark.py": {
+      "bytes": 2126,
+      "sha256": "517acccd5bc0f4e54fece84243980bd02699ae4e63a3f23ce07266ecb10de464"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/paraiso_dark.py": {
+      "bytes": 5665,
+      "sha256": "af1e7f8f8827651cb68fede10211665a99e39ddf957f3dd9edf7301174541a6d"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/paraiso_light.py": {
+      "bytes": 5671,
+      "sha256": "8844636d845e9aa82c8acbfff538da9c18a0e1b27ffbcd31473e41e69ba131cd"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/pastie.py": {
+      "bytes": 2528,
+      "sha256": "9a729e6c5889d9da3d03fc133eae2d2ad830f9342aa5bd253f790d6de990dada"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/perldoc.py": {
+      "bytes": 2233,
+      "sha256": "f9ed53e1004440d13f975ed1616f96068c0da6b836b8bfe11638520dc68c8833"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/rainbow_dash.py": {
+      "bytes": 2393,
+      "sha256": "60fd873d55c92e63b2f18cfca7cbb919b900cae2b12e5366bba21364131ad4c7"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/rrt.py": {
+      "bytes": 1295,
+      "sha256": "bece299d6c26308411d1e19cce9d3a0186b3b18891d0a15c462454cd27f7ad77"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/sas.py": {
+      "bytes": 1443,
+      "sha256": "111f898d9814db01095a4e4ad3a8870053e35580f588c92f8e3134ae534eb766"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/solarized.py": {
+      "bytes": 4250,
+      "sha256": "55db4b62143bc438ff8931cffc492beab01d31c1377d14ab8259e05526a5eb73"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/staroffice.py": {
+      "bytes": 834,
+      "sha256": "a5e13190806a3e4461a971695bdf67e3db7aa4cc1e848fe90d8554990c2481d0"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/stata_dark.py": {
+      "bytes": 1260,
+      "sha256": "37a8a65b292a1e84f976b3a7fac551533b7501930a1b71c753e43b2cacf6779d"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/stata_light.py": {
+      "bytes": 1292,
+      "sha256": "616ee2878b5e5e812e50722638adab192095c5f9e3e37b6570a3d752cac39118"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/tango.py": {
+      "bytes": 7140,
+      "sha256": "01fd16553c691ff714747affb9aebd2438a34cb239686d519814c5ee8d8a4e09"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/trac.py": {
+      "bytes": 1984,
+      "sha256": "fa1e6253e2e34a6b7e750ef2e635f02792d0f40051e500f94653d18e19f39aff"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/vim.py": {
+      "bytes": 2022,
+      "sha256": "756a82542d984f8e5d2d2a4c4f02c13e4298811b13d7e7057fb647a1cd8f4290"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/vs.py": {
+      "bytes": 1133,
+      "sha256": "ec725e861b621c4e6789b8c2debdd7f9a607066e4171c2f7dcb80eff86a71225"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/xcode.py": {
+      "bytes": 1507,
+      "sha256": "1e607a68f931be6a38cdae438a384b6f90174b2bfa51b5a7c0e5284543416990"
+    },
+    "Campus_Lost_Found/vendor/pygments/styles/zenburn.py": {
+      "bytes": 2206,
+      "sha256": "031ee205b333bd540d4e94f761d33008490bfa72179e9afad1a56b4782e96baa"
+    },
+    "Campus_Lost_Found/vendor/pygments/token.py": {
+      "bytes": 6229,
+      "sha256": "0d58a5e53da5b479138104d4632d5d32d8328a08dabc2b35ca913841fd82ac6a"
+    },
+    "Campus_Lost_Found/vendor/pygments/unistring.py": {
+      "bytes": 63211,
+      "sha256": "678c381df395521b9e09445191f840a90d9bfbaf54ce4858e31b877af604cb98"
+    },
+    "Campus_Lost_Found/vendor/pygments/util.py": {
+      "bytes": 10770,
+      "sha256": "37432e828279a6e031c557865aa1daa2b242f4770792f45489a8536dc592e3c5"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web-0.8.2.dist-info/INSTALLER": {
+      "bytes": 4,
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web-0.8.2.dist-info/METADATA": {
+      "bytes": 7498,
+      "sha256": "0a7598c956d870a969e5833f8a1bca752fbda7d099ca3d2e379ed7e7f54ca6d8"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web-0.8.2.dist-info/RECORD": {
+      "bytes": 6515,
+      "sha256": "a258fd5956cd7515bebf86e9ecb794dd92ffb649c28d3f17c805b37fcbbea551"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web-0.8.2.dist-info/REQUESTED": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web-0.8.2.dist-info/WHEEL": {
+      "bytes": 91,
+      "sha256": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web-0.8.2.dist-info/entry_points.txt": {
+      "bytes": 100,
+      "sha256": "28002a0c6765f06d71d3e8946c35a085654e17f634ef63f557a84082548f852f"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web-0.8.2.dist-info/licenses/LICENSE": {
+      "bytes": 1058,
+      "sha256": "3740096125b08735a247b8dd08cd82e0ba984d3bebd9221d378576637e5240da"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web-0.8.2.dist-info/top_level.txt": {
+      "bytes": 11,
+      "sha256": "5c5f54ad8f983df0e7dd5fe6a7462056969bb42e850dfeb6d0e46a06a0007b8c"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/__main__.py": {
+      "bytes": 69,
+      "sha256": "6dbfb1032addaa4177e060e8e9a19fe0852c8fbe1ead15c511195ed50a04e7e6"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/executor.py": {
+      "bytes": 3635,
+      "sha256": "13518de0de51a695eb839f595e98aaaff7e046bfa2fa66aedb7e82327ca9ef8a"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/sqlite_web.py": {
+      "bytes": 70740,
+      "sha256": "545d82d627cf4e3f100bf84ed7050e2cc9c264d4e0830fa9acfc05e66f6e9148"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/static/css/bootstrap.min.css": {
+      "bytes": 169216,
+      "sha256": "8d924c0fae36d0bda4df7ec0c41ee02f51f5b66cdccb01f6460210bceb773563"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/static/css/sqlbrowse.css": {
+      "bytes": 4277,
+      "sha256": "bafc7095e46c36923b7bf7d95d11cdca77ecd65f5114572b0b244a0dc8aa70dc"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/static/css/syntax-highlight.css": {
+      "bytes": 3489,
+      "sha256": "29608bb68de46cd678e32d47b238746ad805ad525fc98dabbc7f86fa93d2e42e"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/static/img/delete.png": {
+      "bytes": 22970,
+      "sha256": "92ade48bcf5f7036d0b6a600ee8530615eec22bb23ea981af21adbd7e12dc3d5"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/static/img/expression.png": {
+      "bytes": 143813,
+      "sha256": "dd2f9acf2599c72059e7ea1b3a24fe32b215d5236f5aaac289b875991a0e4d01"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/static/img/index-create.png": {
+      "bytes": 26566,
+      "sha256": "8eab225d5322f20c1928a245a88967b42b9c460f20aa1b215cbd40f5f3de6252"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/static/img/index-drop.png": {
+      "bytes": 2982,
+      "sha256": "18962fd1c88889f78bacfbbbc4a499fac3815a6d618cddc4eafb0faa99b26a0e"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/static/img/insert.png": {
+      "bytes": 67276,
+      "sha256": "32538246921d5aef95cebea999fa0770bb4a4dd0993e4d4265d7bbc9b5bd56ac"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/static/img/select-advanced.png": {
+      "bytes": 94076,
+      "sha256": "356edba7ec52d2cc2c411d6bb32b0be523485fa0284134b6e61965bb47ec3a8c"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/static/img/select.png": {
+      "bytes": 14405,
+      "sha256": "e7181d0e5d48d911b1fdbce2070e8794d7d734dc0cc8aee380c6538696f2d616"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/static/img/table-alter.png": {
+      "bytes": 37511,
+      "sha256": "0de2cb35064aa86f081beffcb51cdf0d70b27de0667be7eb197935db6f38c02a"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/static/img/table-create.png": {
+      "bytes": 34408,
+      "sha256": "07fb7d2bbdd59c2cefeb3ff9332dba268993156d73a77f749372d4bb03709467"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/static/img/table-drop.png": {
+      "bytes": 3039,
+      "sha256": "727a1d367ddbce84a297b988e14cbac6894ff0c154021c8bd02f124f830201ba"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/static/img/trigger-create.png": {
+      "bytes": 63197,
+      "sha256": "b388062a5de258ac03a57d9e40a758eb166ea69be45dbc17880d8525657d17af"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/static/img/trigger-drop.png": {
+      "bytes": 3669,
+      "sha256": "45d713af4215dd2be7c81fefd692d8305d1fc26018fac9f9b6f1d4a254c3d433"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/static/img/update.png": {
+      "bytes": 60486,
+      "sha256": "5bd740b19a364988b404360ad0e5a2e89626d739edb1260920e217d228280eed"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/static/img/view-create.png": {
+      "bytes": 27528,
+      "sha256": "a936da0836f5b6e6d8d24f2cf3035533c450a89f542648f4acd217c967a000d4"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/static/img/view-drop.png": {
+      "bytes": 3040,
+      "sha256": "8b07ec883dd458f53390c509a7499a9b30b16807ebc606fddc80c1b7b17f0833"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/static/js/app.js": {
+      "bytes": 17710,
+      "sha256": "fbe46656b64ef130868fa0724b6870313231d44b5693b784bfac7d89d17fdce9"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/static/js/bootstrap.bundle.min.js": {
+      "bytes": 83376,
+      "sha256": "19126b874a32753d42c12dfa6c17892bfd93820a5a5100ba1b34da4d07599b49"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/static/js/jquery-3.7.1.min.js": {
+      "bytes": 87533,
+      "sha256": "fc9a93dd241f6b045cbff0481cf4e1901becd0e12fb45166a8f17f95823f0b1a"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/add_column.html": {
+      "bytes": 1090,
+      "sha256": "1a3340ddd1d6274f9eb919129340a538f9fe133a9f2ffe00c1da1232857557be"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/add_index.html": {
+      "bytes": 1097,
+      "sha256": "d2768ef944377dd3cf6f85ebba9129c50ab38e3c5090687cabca7980c593f8fc"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/base.html": {
+      "bytes": 5789,
+      "sha256": "2ab4f092e7b93490044cd06188d894df80a30721ba39c3e1934e68266f74a701"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/base_table.html": {
+      "bytes": 2102,
+      "sha256": "37a7b9de396756489839176cc3f27faf7fa27d712e4df62b8a58cea056487c9a"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/base_tables.html": {
+      "bytes": 1498,
+      "sha256": "51ef68d2e52ca4560f974670a446d73321dc8af03b78a672c508eac12161ba5f"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/drop_column.html": {
+      "bytes": 811,
+      "sha256": "b7b6e94381a543229992f1179ea8ffa6f4bdefda3a8ffd9f59ad1dc4f6eb8e55"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/drop_index.html": {
+      "bytes": 777,
+      "sha256": "8fa5c72cd86e5afe830cf23b82f325b57c947787612d6ccee7a09b018e926d7d"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/drop_table.html": {
+      "bytes": 640,
+      "sha256": "92bf65684e5b96fa4624029c2aa8507d8deef759dea11c04862b10af59994cf2"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/drop_trigger.html": {
+      "bytes": 796,
+      "sha256": "5156f0231c1b41c66ac9fb08452180fc206b260e89744b2b023dc6f570a90536"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/error.html": {
+      "bytes": 238,
+      "sha256": "36efc83d48c2393b1706bb333b0baf2fdbb172901a870880e13b62fabe6d6df7"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/icons.html": {
+      "bytes": 2132,
+      "sha256": "5ac1569e9fe4fd8af9e87c7c2123ccd1f21de72805849908c676177cbfbb633e"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/index.html": {
+      "bytes": 1816,
+      "sha256": "7a81b043969d5a8e48b32e833c706c922384d74f99aa31c9b206a30e9c35965f"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/load.html": {
+      "bytes": 1432,
+      "sha256": "a6542ffa8fc5e0904bb1e8347637e27e01886c58706be4da870db64b35bec2ad"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/login.html": {
+      "bytes": 465,
+      "sha256": "55b757ee073f5defc31934ce4413998f3b6bf5c2457c91eecc818b88aa43052f"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/pagination.html": {
+      "bytes": 1542,
+      "sha256": "03cb48e121aa320e3bb21c6f9604433bca796fdc4972e317732bc4025f01d94a"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/query.html": {
+      "bytes": 1073,
+      "sha256": "50b30c0d2393fe30652e576856dde14692879b6d5df0abd9ab0bc0e33574ba03"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/query_form.html": {
+      "bytes": 2445,
+      "sha256": "73e1d94383a3d733cf1a30cdd5abebf0df223af2cad4ca4fa297750113bb5ab7"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/query_modals.html": {
+      "bytes": 1502,
+      "sha256": "c1d8778d246305ef42437a252de60353fcb3b2679c51a6bd3c529198935d16c1"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/query_scripts.html": {
+      "bytes": 498,
+      "sha256": "9d3cb40b73a5043afbe91c971ef5995f8bda72e4a1bde59294aa2a9c517dc175"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/rename_column.html": {
+      "bytes": 1149,
+      "sha256": "c5121662da1b6d901838acc2eebe7e415d0723f1a340550b05bd6aec06c7ac13"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/results.html": {
+      "bytes": 2963,
+      "sha256": "edc677ff4f7001c3c171a7f543420d0589d14d85fd287763cdc3ecbefe5ac786"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/results_multi.html": {
+      "bytes": 414,
+      "sha256": "0c50cfb72f88e0c4a078d480753ce20c3a1b9fa9dee70f1a4bfd9543648b4d56"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/table_content.html": {
+      "bytes": 2191,
+      "sha256": "d489fc9dff6821ddc57b890a79fb0f9a3921ac578c5dafc5f9a68bf2b1e2a048"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/table_delete.html": {
+      "bytes": 781,
+      "sha256": "1a1050c0c6f833accec0b547030ca3794de2963eef70aa0141b39b81a739ba0f"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/table_export.html": {
+      "bytes": 1060,
+      "sha256": "7c7035a7a06f21d52b77de2818af88422cc2ec3de8c33f66c208dcf5b0759712"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/table_import.html": {
+      "bytes": 1378,
+      "sha256": "01790ad7dd943642e747c54816001a877b627fb5649af465f69f1e0306f7d4d0"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/table_insert.html": {
+      "bytes": 2636,
+      "sha256": "aad809d3f51bc8f1c5f93f8eeae14fa70b63393bd342cb2d0b0a11eebf39519c"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/table_query.html": {
+      "bytes": 1974,
+      "sha256": "959b0e7ce0e27dfa0ad14d2c8ca6c73d28fca9d58255d5067413f4cfbbf19398"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/table_row.html": {
+      "bytes": 1024,
+      "sha256": "85f0c3d86955942893a9184d9749d514080cc9d67984c50372538158358e0f2d"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/table_structure.html": {
+      "bytes": 5114,
+      "sha256": "cc8d46e138b076b22e9a6175f0e120fad975a841033062745ad423c3b72d33f0"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/table_update.html": {
+      "bytes": 2640,
+      "sha256": "4306538ce63c911b1f8c0b55cb528ef9a416de47a88a24e430b528ad46b06eb6"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/templates/unload.html": {
+      "bytes": 906,
+      "sha256": "7e6d3333cfe47c4a01124d179fa37433652c91eb0b3a705b9076a0471df2f0bf"
+    },
+    "Campus_Lost_Found/vendor/sqlite_web/wsgi_server.py": {
+      "bytes": 1443,
+      "sha256": "7a8770afc3ecf76defb8a8338cd30a92ccfa09879b7c3bf0e2a7c0a7052bf666"
+    },
+    "Campus_Lost_Found/vendor/waitress-3.0.2.dist-info/INSTALLER": {
+      "bytes": 4,
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+    },
+    "Campus_Lost_Found/vendor/waitress-3.0.2.dist-info/LICENSE.txt": {
+      "bytes": 2070,
+      "sha256": "3e671db11df687516cc1db5b3d65e4aa383eaca3c20cea3faf53a0f7335d0a3c"
+    },
+    "Campus_Lost_Found/vendor/waitress-3.0.2.dist-info/METADATA": {
+      "bytes": 5764,
+      "sha256": "103a993b671c333c467cdafe1d1af460093d30846adb889a9f9fd980476df77a"
+    },
+    "Campus_Lost_Found/vendor/waitress-3.0.2.dist-info/RECORD": {
+      "bytes": 2787,
+      "sha256": "edeb831358cc7ebb741b7dbd9ecbdbce79a08174ee7c090a85e23818bb933fbb"
+    },
+    "Campus_Lost_Found/vendor/waitress-3.0.2.dist-info/REQUESTED": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Campus_Lost_Found/vendor/waitress-3.0.2.dist-info/WHEEL": {
+      "bytes": 91,
+      "sha256": "474e8f0375156074e1c07bf1b9158ca9a19cafe3ee9e25da8708e641114c1246"
+    },
+    "Campus_Lost_Found/vendor/waitress-3.0.2.dist-info/entry_points.txt": {
+      "bytes": 106,
+      "sha256": "b4347c7a91b683823bd0b6a4f5dfb5a931db09f07365de450c449c02456e1ff1"
+    },
+    "Campus_Lost_Found/vendor/waitress-3.0.2.dist-info/top_level.txt": {
+      "bytes": 9,
+      "sha256": "fe41675d8b435ef4561d25e9ac7e77879e803368c37d8f98eec8086a45442262"
+    },
+    "Campus_Lost_Found/vendor/waitress/__init__.py": {
+      "bytes": 1370,
+      "sha256": "5ee70bb2085ac1231395400067a4e8379a8a67224dbf78a8958620c7cd766b9a"
+    },
+    "Campus_Lost_Found/vendor/waitress/__main__.py": {
+      "bytes": 75,
+      "sha256": "e7658922b60a69db068b41bdde310c09f6815da55096e1f2e170667d32d3fbaa"
+    },
+    "Campus_Lost_Found/vendor/waitress/adjustments.py": {
+      "bytes": 17907,
+      "sha256": "f1ed00a8217a79f5d3ededad82b2cc8b426079d3167839714760ec9a3a8aea12"
+    },
+    "Campus_Lost_Found/vendor/waitress/buffers.py": {
+      "bytes": 9327,
+      "sha256": "50bf15244d9056a94e4aa6e30cb97a915a02d484361168bd21b854250c5ecc89"
+    },
+    "Campus_Lost_Found/vendor/waitress/channel.py": {
+      "bytes": 19440,
+      "sha256": "6b44713fd38f8917e6d29a5ab35d1579299d582980bcf5d390df7b70e8018215"
+    },
+    "Campus_Lost_Found/vendor/waitress/compat.py": {
+      "bytes": 867,
+      "sha256": "c9eeef06fd122d789c8c9eb600b62b97ceb7314c22b3d3caa9b86c8e20124920"
+    },
+    "Campus_Lost_Found/vendor/waitress/parser.py": {
+      "bytes": 15579,
+      "sha256": "f3c294637d49ced327b97238e8f38714be72607b89e5909ccd5f008fa510b633"
+    },
+    "Campus_Lost_Found/vendor/waitress/proxy_headers.py": {
+      "bytes": 12336,
+      "sha256": "fa16263b0d4e6de75850aaea3703782d999b1af2ab6729bb172c04bf6343070e"
+    },
+    "Campus_Lost_Found/vendor/waitress/receiver.py": {
+      "bytes": 5897,
+      "sha256": "e4b4903d525a6d6af2b7067068a2a21e01bcd165cfa3f54b2bab4dc529a1cfa2"
+    },
+    "Campus_Lost_Found/vendor/waitress/rfc7230.py": {
+      "bytes": 2525,
+      "sha256": "0f5fe455e0896b71bebb88c09e26627854cc7b7c6b31abd38d00c46e3f5205fa"
+    },
+    "Campus_Lost_Found/vendor/waitress/runner.py": {
+      "bytes": 7615,
+      "sha256": "1c73f38c5998d7a33e93e80828d0cdacc58db84a17fdd207fbde69e2887ee0bc"
+    },
+    "Campus_Lost_Found/vendor/waitress/server.py": {
+      "bytes": 13752,
+      "sha256": "93fa60086cb5b979d176bfea7a390e67903d8f1745468abb84d043322d23e6c0"
+    },
+    "Campus_Lost_Found/vendor/waitress/task.py": {
+      "bytes": 21847,
+      "sha256": "fc30d7eb4fde61349094420ef83a6575ddf1532f34ee5b2253edec86eaa984a0"
+    },
+    "Campus_Lost_Found/vendor/waitress/trigger.py": {
+      "bytes": 7811,
+      "sha256": "98fc875bfc940b7627fa26c8216c13598a917b40c97ae6932ba8af398da8ff71"
+    },
+    "Campus_Lost_Found/vendor/waitress/utilities.py": {
+      "bytes": 6356,
+      "sha256": "d7d243c4c848323efc00ef810503ffb72df5a935d5204a56be3ca8f4ad812bbd"
+    },
+    "Campus_Lost_Found/vendor/waitress/wasyncore.py": {
+      "bytes": 18910,
+      "sha256": "ac7821b11b192a195716ecb3acd742b4ddb02fc6427577cd7a43ec644323066b"
+    },
+    "Campus_Lost_Found/vendor/werkzeug-3.1.9.dist-info/INSTALLER": {
+      "bytes": 4,
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+    },
+    "Campus_Lost_Found/vendor/werkzeug-3.1.9.dist-info/METADATA": {
+      "bytes": 4054,
+      "sha256": "9f04352e946ecb0883fbf379994c1cacf6720a124acdd7fd59029a889f4eebba"
+    },
+    "Campus_Lost_Found/vendor/werkzeug-3.1.9.dist-info/RECORD": {
+      "bytes": 8318,
+      "sha256": "b605745c43e74811a731083a34516fce51121a23cfb3b7734660fd7de0134064"
+    },
+    "Campus_Lost_Found/vendor/werkzeug-3.1.9.dist-info/WHEEL": {
+      "bytes": 81,
+      "sha256": "96a37c8d7b7f425a05386731f644adbd66ebca17c45e8236176cfe614466df9d"
+    },
+    "Campus_Lost_Found/vendor/werkzeug-3.1.9.dist-info/licenses/LICENSE.txt": {
+      "bytes": 1475,
+      "sha256": "3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/__init__.py": {
+      "bytes": 165,
+      "sha256": "09e8cd59f099283689fc59ac859170f1d1608cd025bbaab5e5e73b0f058994cf"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/_internal.py": {
+      "bytes": 5555,
+      "sha256": "5c53d01c612745d4c05807fa18fc6ecec066c2a6bae3b171d73354aeeaed0d48"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/_reloader.py": {
+      "bytes": 15100,
+      "sha256": "229a4ede45ff1b1430695ea1f123d67b49524d2c3a91dfc7257a8b894851ec05"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/datastructures/__init__.py": {
+      "bytes": 2615,
+      "sha256": "d15b7c2edf0a5184a801ef000edd63204fb0dc86fdb64ae4d0712104e92da94c"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/datastructures/accept.py": {
+      "bytes": 12183,
+      "sha256": "ac45b658cf9017779056a7e0445a87c5d34a0b524b97b14c7d9091b03ff900ba"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/datastructures/auth.py": {
+      "bytes": 10190,
+      "sha256": "f1033515a33439366846c132d9402aa4ff14fb812a8ff8e6bd8e09fa1d8607d2"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/datastructures/cache_control.py": {
+      "bytes": 9711,
+      "sha256": "a26b529a6021dca810449633696d392ed12de47a0994b9094f18e297e43772e3"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/datastructures/csp.py": {
+      "bytes": 3816,
+      "sha256": "8d69757718646dcebf784f6a1a74c60494a299635096328a6309a5cace1d14e0"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/datastructures/etag.py": {
+      "bytes": 3278,
+      "sha256": "376745aa116c2d1d24e61823a25dd04c6a5c4a5b4986980b59ecb3e956bcd06f"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/datastructures/file_storage.py": {
+      "bytes": 6724,
+      "sha256": "4d8d87d95512ae0f0e908a805271b45435117bda2cc8a5e34f4e108071a5fc4d"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/datastructures/headers.py": {
+      "bytes": 22925,
+      "sha256": "4d4fe73dd0941e40b83071eddad03bb86ef3f7f1fd697b214b5321a496c8f8e4"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/datastructures/mixins.py": {
+      "bytes": 9039,
+      "sha256": "87c2bf0344b0e3bb3670ed993457fad0435b9950ec8b7ae01ebfdfefb545c091"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/datastructures/range.py": {
+      "bytes": 7034,
+      "sha256": "28058b443c8bf1bcd20439bf3a2af1c00d7bc6414cfef75e75920d9b20df3542"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/datastructures/structures.py": {
+      "bytes": 41385,
+      "sha256": "750de7f0a3f9507c9a7754ccb1699004adcaf6934f0722b935dd00574f68380a"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/debug/__init__.py": {
+      "bytes": 20303,
+      "sha256": "f3f03c6295000151582789a80d7db3f9ad7b17cd3812d7335e0a3493400f76b9"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/debug/console.py": {
+      "bytes": 6089,
+      "sha256": "b78859d10835a7a52ed8c5a29aaa0c0e2ed2dd6619bcb3239dcf2ffdd3dac40a"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/debug/repr.py": {
+      "bytes": 9291,
+      "sha256": "f61e76cec2d291a1cf295329e832541e7c82559f8e0874bc43dce003433038fd"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/debug/shared/ICON_LICENSE.md": {
+      "bytes": 222,
+      "sha256": "0e103a6358149792707e0d0d14df518f8556213b7cb54c7422f7467f4bb1f7eb"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/debug/shared/console.png": {
+      "bytes": 507,
+      "sha256": "6f16b1e915d796f3a28ff29eaaf48d5f4a2325ff3761b9d9ee6cbedc6c7dc360"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/debug/shared/debugger.js": {
+      "bytes": 10068,
+      "sha256": "4912fd619f454d59e06980fe20d40d8a770455d67e9011daffe549c7453bfab8"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/debug/shared/less.png": {
+      "bytes": 191,
+      "sha256": "fb8fa435169725238d54b6a1ad0294c4cc171a6f51e0e9d9f52c431a91e5211e"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/debug/shared/more.png": {
+      "bytes": 200,
+      "sha256": "1a780dec28a81d0a15e7cac7ea88e79188bc73fa840f60246b914ee545eb45e6"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/debug/shared/style.css": {
+      "bytes": 6078,
+      "sha256": "fb14b1cd41191b0fc8aa50d1e626718ad365f0b4148c133efd8e1402f5d51fc8"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/debug/tbtools.py": {
+      "bytes": 13645,
+      "sha256": "2ff083d616b95a6c96aca559df3c68bc9e202350804ec73861cd599ace3512f1"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/exceptions.py": {
+      "bytes": 26888,
+      "sha256": "ed736075d315dd4411e943ebee55a5cd21713bc52bf1b48980b76f26e6ae117d"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/formparser.py": {
+      "bytes": 16576,
+      "sha256": "93a06bc788bab8b50cd60890128ad4e3687c9536b6a5ccf53773687a1441b529"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/http.py": {
+      "bytes": 47763,
+      "sha256": "8992fdab16106336238d5d4bdcefed246af9fe5d87f598e817be22585aa71a15"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/local.py": {
+      "bytes": 22184,
+      "sha256": "a38673d5902e351067f2bfa568623109d2978f1c758b4b89ab778dc8a3f2e1c8"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/middleware/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/middleware/dispatcher.py": {
+      "bytes": 2602,
+      "sha256": "cd6379fe5a89affb1cf540eff8f3e84a50c737fcd1df7cfa07be05ff80b1a68f"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/middleware/http_proxy.py": {
+      "bytes": 7818,
+      "sha256": "e2238e7efe6b88f000e72f17822f6e4fa8ff191399339e3d8810ccdab8e2dea7"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/middleware/lint.py": {
+      "bytes": 14476,
+      "sha256": "8d5772963471a64cf5f0c88c47c37b61d8849676bc0c956f3b80828d9b274902"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/middleware/profiler.py": {
+      "bytes": 5670,
+      "sha256": "76e40e529ce9cd1a01bcbc66040b393ab0e4240bdc4af7e89ee8707c628ec000"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/middleware/proxy_fix.py": {
+      "bytes": 6755,
+      "sha256": "9fe1d6f8c45626ab822219aa8992a819d6db11e1ee589a8f447845a6e8f8a736"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/middleware/shared_data.py": {
+      "bytes": 9577,
+      "sha256": "14fdf646297e5daa0350ad1f000ed395f3dc1092c348186e0afe732763a1aaa2"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/py.typed": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/routing/__init__.py": {
+      "bytes": 4820,
+      "sha256": "77c4d1c6c936e085aed8176839851f2fef9d7a8947c2219508126a2e811edd83"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/routing/converters.py": {
+      "bytes": 7391,
+      "sha256": "8d25f905f38e1272d78e00e78cc86062d03938e843ca91c407a91d1a5c42c1cb"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/routing/exceptions.py": {
+      "bytes": 4846,
+      "sha256": "c0d062526524e0eb453a96dd0d2afb28a2948c7ef29fce09ab0062714ba9f29f"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/routing/map.py": {
+      "bytes": 35868,
+      "sha256": "cb8d7cef0d53654c086192d653ef30e96593f894b9078f3ea81dcd76ca0fbb27"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/routing/matcher.py": {
+      "bytes": 7922,
+      "sha256": "76938b590589a65658151f267404279600ea2069699e1e64a4c26eb75e2ecd58"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/routing/rules.py": {
+      "bytes": 32539,
+      "sha256": "1fc9494a2f0655b4b3799c468e3ba67f296114902ba856e0b61b6cd6f80ffb39"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/sansio/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/sansio/http.py": {
+      "bytes": 5696,
+      "sha256": "42a8f3c2f811af4ba32b3713f3093808305421aa1c79a7b308e0fa5e0fa592c5"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/sansio/multipart.py": {
+      "bytes": 12151,
+      "sha256": "dda9e46bf487e4d00a7a79739f7972690449d02651b99494993a41e6d20588e2"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/sansio/request.py": {
+      "bytes": 19891,
+      "sha256": "fadf0226bbe358f32ed83090e16d25b421d0e2739683fced5c92e4c8debe43f5"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/sansio/response.py": {
+      "bytes": 27934,
+      "sha256": "3b8e443fa827ca88bc3ad317345facccc1d29d06bb2be5d4cd99e5c26f9fc9fb"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/sansio/utils.py": {
+      "bytes": 7565,
+      "sha256": "705e43e66310ed710f0ee62db64071512709cb5ae3bd369fdf0889286e12f3f4"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/security.py": {
+      "bytes": 7688,
+      "sha256": "96f26cbb82f6c0a9afc0c1a3f2cb9fb9254e5d868792a284ff48a6c8b9315b2e"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/serving.py": {
+      "bytes": 40052,
+      "sha256": "b976b352fbde78f0873222ae07cc3a9071acf1d248b0a3c57d18255bb3a0dc64"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/test.py": {
+      "bytes": 52964,
+      "sha256": "7e406f6e30031cc74d759052f1b44b2122579f82707dbc960eaca7044fa31bdd"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/testapp.py": {
+      "bytes": 6332,
+      "sha256": "e7f212e4387f59f59f35c4cb99bc9d8f4d65a2681c280ff897d3cf08d66799d2"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/urls.py": {
+      "bytes": 6684,
+      "sha256": "67f0f278834ac7fef3cc32cada16750d05c19771ecb11cd78b479dded107eacb"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/user_agent.py": {
+      "bytes": 1416,
+      "sha256": "95294b60a09c6f30944a46dd0283bcccf936511fbc31d9fa8aefe20369183c10"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/utils.py": {
+      "bytes": 24743,
+      "sha256": "c8b2c0f08aff5b27fb688d19f8ba4c14226e27d6dc3899bbe2962ba299153a9a"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/wrappers/__init__.py": {
+      "bytes": 138,
+      "sha256": "6fbf2308cf31f7a9095062d9e45605477ce52bede99c50263fd449206534b1eb"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/wrappers/request.py": {
+      "bytes": 25081,
+      "sha256": "9ec6b0d94e860525a0434a94fb61fdd64b3a8f8d15d263f1295bdf4ed93b06b7"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/wrappers/response.py": {
+      "bytes": 32691,
+      "sha256": "c0feff98d4f443f4ea3d6fba795ef88e021b4cebba5e60b37abd421395b506b2"
+    },
+    "Campus_Lost_Found/vendor/werkzeug/wsgi.py": {
+      "bytes": 22105,
+      "sha256": "48d23621ebcc1a24e9bd8353925a0cbfc548de383f41fda0936ac4f67b02ba02"
+    },
+    "Evidence/Archive_Assignment4/01_main_desktop.png": {
+      "bytes": 182377,
+      "sha256": "da7c3984cf266fe4456a9f2e70298f7cb9446916b507874b54c0757b94d2ce31"
+    },
+    "Evidence/Archive_Assignment4/03_optimised_screen.png": {
+      "bytes": 90094,
+      "sha256": "12445beb27dc847cfc0194ccf80a085f5fc4a2ba57463602155af999d45661a6"
+    },
+    "Evidence/Archive_Assignment4/04_mobile_360.png": {
+      "bytes": 158310,
+      "sha256": "e0c6398831973e1b3ff497acb9b50f2e1fe8aa986837e27675df5b42eb257653"
+    },
+    "Evidence/Archive_Assignment4/06_notice_created.png": {
+      "bytes": 79842,
+      "sha256": "4837711734e68b820cd68068fbc7149475fa0e9aaac645aa388a038829a3351f"
+    },
+    "Evidence/Archive_Assignment4/07_returned.png": {
+      "bytes": 78802,
+      "sha256": "3938f14fe181853206622c65b9310df6db69831e7b6de87b02c07235c42ebc04"
+    },
+    "Evidence/Archive_Assignment4/network_after_summary.json": {
+      "bytes": 1304,
+      "sha256": "33f4176711e1e08b725443ffef7195ef00eed325f8a02da56742c5764d1fb45a"
+    },
+    "Evidence/Archive_Assignment4/network_before_summary.json": {
+      "bytes": 1357,
+      "sha256": "3bf87106386fc56982d862105b357e444824820bc03a9765a22780de07f4f4cd"
+    },
+    "Evidence/Subagent_Review/data/analytics_tests.log": {
+      "bytes": 1211,
+      "sha256": "eaab0b82c91db826bb3032ed21e53743553c2556a42d6f116da1c1e7db0a6e91"
+    },
+    "Evidence/Subagent_Review/data/backend_tests.log": {
+      "bytes": 2106,
+      "sha256": "32950b367f39cd97c427cde581aa8c62560245c583e1851c24d49f1f5c91e817"
+    },
+    "Evidence/Subagent_Review/data/database_comparison.json": {
+      "bytes": 8010,
+      "sha256": "3a63ca7d36f97cb30dc8b27fa9b619f3e09d62b8ab0c18e2e171a96183efc2af"
+    },
+    "Evidence/Subagent_Review/data/database_comparison.log": {
+      "bytes": 8048,
+      "sha256": "6391aca9a291dc50e9a40ecb1b0ed7ab7adf2d1cc58a14bec0f067dea718a3b1"
+    },
+    "Evidence/Subagent_Review/data/result.json": {
+      "bytes": 3711,
+      "sha256": "e921a42f72de73bc615ee55700253e9c0a71668b7e3a913be596ba6725febb26"
+    },
+    "Evidence/Subagent_Review/extensions/result.json": {
+      "bytes": 6506,
+      "sha256": "ca9ab0cc86e1315005b48c160db6d89b3c0ee46735e763cbb63076ad0a48d11e"
+    },
+    "Evidence/Subagent_Review/extensions/test_stage2_features.log": {
+      "bytes": 1962,
+      "sha256": "0d6de8433425b17c26d0b2d16d93ec71dafdeacc6700e519ec0a0d331d997a3c"
+    },
+    "Evidence/Subagent_Review/recovery/fix_green_full_module.log": {
+      "bytes": 1312,
+      "sha256": "55b28dbb659d6e8de8b052481c3983200cd9132eff17f59df36b38108d5b5d03"
+    },
+    "Evidence/Subagent_Review/recovery/fix_green_targeted.log": {
+      "bytes": 606,
+      "sha256": "f1398c5bdf09a943ecdcf1a95fa928755fe0d592fd86799d2d5d5bbcf5da6f13"
+    },
+    "Evidence/Subagent_Review/recovery/fix_red.log": {
+      "bytes": 2041,
+      "sha256": "6fd74df6eb9719e874b50b8b2209fa4a94cb3b77d894265b033be17ec9275409"
+    },
+    "Evidence/Subagent_Review/recovery/fix_result.json": {
+      "bytes": 3460,
+      "sha256": "421ff2c7a538d7b874baade43d63856fa3d69a6578b10c622cb8a9bb932e86f6"
+    },
+    "Evidence/Subagent_Review/recovery/result.json": {
+      "bytes": 5480,
+      "sha256": "7bd59116ea7d121bd980277c15591a070217218587004b58a7349b87b47a99c0"
+    },
+    "Evidence/Subagent_Review/recovery/test_backup_full.log": {
+      "bytes": 1164,
+      "sha256": "56d6a604f5e18afdbb42e1a3dec7d795c5a9c288fdb657c69a4c37a1bd61762f"
+    },
+    "Evidence/Subagent_Review/recovery/test_backup_full.stderr.log": {
+      "bytes": 809,
+      "sha256": "03a40a5ca1b471f90be2fe8fc1d45f1dbc4a50f4aba9e6f15b9a537fdeeecf95"
+    },
+    "Evidence/Subagent_Review/recovery/test_backup_full.stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Evidence/Subagent_Review/security/result.json": {
+      "bytes": 6589,
+      "sha256": "5a27f784d623dd333ec501f2b2bfc9fc99f61a29ee2a51e5d93ef6cfc4ba565c"
+    },
+    "Evidence/Subagent_Review/security/test_stage2_core.log": {
+      "bytes": 1867,
+      "sha256": "f4d5318f2e68fbc23549dc13ae718753da2ff092a51d77b6adf8d0fc1a36db29"
+    },
+    "Evidence/Subagent_Review/student/browse-boundary-probe.log": {
+      "bytes": 3982,
+      "sha256": "dcb4ef785e51776ab5462f9249779f2cdba15e431ef3e19d9e70dc2592551074"
+    },
+    "Evidence/Subagent_Review/student/browse-boundary-results.json": {
+      "bytes": 598,
+      "sha256": "78798dedd444c2ebaba558fc9f6c64469a5ad169c64ca33c1ca63ea5a562f1e1"
+    },
+    "Evidence/Subagent_Review/student/fix-green.log": {
+      "bytes": 838,
+      "sha256": "d5b8ce3380b5f63b4b85e618efe0b3f64a8bc3eb5a02a799b656327b072c9d01"
+    },
+    "Evidence/Subagent_Review/student/fix-red.log": {
+      "bytes": 57125,
+      "sha256": "0ba85c3275b32e5d5874a72109a8c65a7e70e73f50994aacc31328840249b63a"
+    },
+    "Evidence/Subagent_Review/student/fix-suite-analytics.log": {
+      "bytes": 1276,
+      "sha256": "adb7d1a394d583e4a4ab4a530c2ed8e4115e5b0f7c8197d244ffd4a62714cb7f"
+    },
+    "Evidence/Subagent_Review/student/fix-suite-backend.log": {
+      "bytes": 2207,
+      "sha256": "72b3d86d226ee9a6617df2cb5d0462cff0a09b031fae8b04778f8e689c3c4804"
+    },
+    "Evidence/Subagent_Review/student/fix-suite-backup_full.log": {
+      "bytes": 1365,
+      "sha256": "ebd0fab20463576af1e068a412be41f1e02411835c48d9f7d6cf045937070942"
+    },
+    "Evidence/Subagent_Review/student/fix-suite-media.log": {
+      "bytes": 388,
+      "sha256": "ea46cb9c18cda8d02f2c8c33d5f94574edd58fbce19bf129204ceee1b9d0639f"
+    },
+    "Evidence/Subagent_Review/student/fix-suite-stage2_core.log": {
+      "bytes": 1934,
+      "sha256": "70f6932bb05f9cded12dc74e7d1b342243bcba6c85d8e0dce88b9ab95912266a"
+    },
+    "Evidence/Subagent_Review/student/fix-suite-stage2_features.log": {
+      "bytes": 2033,
+      "sha256": "bd89431fe3b9dcca8e8f2aa3afc9e875510e9a45d259ae6d3095f8b4d2491b6d"
+    },
+    "Evidence/Subagent_Review/student/fix-test-app-all.log": {
+      "bytes": 2990,
+      "sha256": "c21ce3b97095f56343915944a0d485fa8bc624d5bff8375d45fe8e85947f3f3a"
+    },
+    "Evidence/Subagent_Review/student/fix_result.json": {
+      "bytes": 7584,
+      "sha256": "33e577ffa6d3406814abecad93d4f818ac898481667d6afb6045dc7fff8c3879"
+    },
+    "Evidence/Subagent_Review/student/result.json": {
+      "bytes": 7693,
+      "sha256": "706bd3b565ad1ed0768c14dd6f041a57f5f2b8612b07a6ee86c5fdb5b147bcfa"
+    },
+    "Evidence/Subagent_Review/student/test-output.log": {
+      "bytes": 2659,
+      "sha256": "2fd4b2b56689a011e63fda2fad2c11db9cbdcabeb88b215dd92f73e32bc24b84"
+    },
+    "Evidence/Update_2026-11-01/final-suite.log": {
+      "bytes": 11552,
+      "sha256": "c1556d57433209ae4e6ff0cff533104fedcbce47ca4d3551444ea44faa1c1ea1"
+    },
+    "Evidence/Update_2026-11-01/verification.json": {
+      "bytes": 1414,
+      "sha256": "8c7fd8e73f46a8064a3af0bd5c76afbec6e26d573ec510c2a8c098af31323857"
+    },
+    "Evidence/Update_2026-11-05/admin-notices.png": {
+      "bytes": 119215,
+      "sha256": "0e7cd997605fa97d395d39491f4cc45bc5541c68acb5472998b6aeb9927851ac"
+    },
+    "Evidence/Update_2026-11-05/admin-panel.png": {
+      "bytes": 157455,
+      "sha256": "73a93a0a164e05d2a511f20e7d2abca378e8cb6d818862ad7924266522ef3052"
+    },
+    "Evidence/Update_2026-11-05/analytics.png": {
+      "bytes": 67198,
+      "sha256": "a48a41c898094a5face169e9107d2431268f7310e2edbbf3e0ad0f28e6bc9430"
+    },
+    "Evidence/Update_2026-11-05/browse-mobile.png": {
+      "bytes": 35658,
+      "sha256": "a7317980b7eb874f0bf16c11d9a04132714ae429cf129efef0ff0b536c6bbb3d"
+    },
+    "Evidence/Update_2026-11-05/browser-qa.json": {
+      "bytes": 4116,
+      "sha256": "9ddb4e12a64df15cc2b5cd88c8fdfddbef14b591df65ef5caa99c669a98b92ca"
+    },
+    "Evidence/Update_2026-11-05/final-suite.log": {
+      "bytes": 13233,
+      "sha256": "93ecfcd1a4b44d0992c912669ea8d36091705618e263be172087022480c72fee"
+    },
+    "Evidence/Update_2026-11-05/locker-inline.png": {
+      "bytes": 127869,
+      "sha256": "6f1678d32740b1fa1aef0be17eeb48227e7e2e846534b1de3cd61a52494cf800"
+    },
+    "Evidence/Update_2026-11-05/locker-open.png": {
+      "bytes": 65464,
+      "sha256": "0bd227f4fa1f67cd9e17f91c216ceb3274392de9ab9007434f5ac536b1220e1b"
+    },
+    "Evidence/Update_2026-11-05/photo-upload.png": {
+      "bytes": 88008,
+      "sha256": "b1cc185e8f65b7f6999429b50d334f4fff6816eae81842b16a4443a9c023346a"
+    },
+    "Evidence/Update_2026-11-05/site-preview.png": {
+      "bytes": 289437,
+      "sha256": "ce31170f49de849162f7b5f3d22f2cb0fba5356023c33c567383e93fd25eb0a1"
+    },
+    "Evidence/artifact_quality.json": {
+      "bytes": 7868,
+      "sha256": "06986daeed49e4e979763cfaabe7f5d1c7e54fde30524e23de2ef87c1b4df903"
+    },
+    "Evidence/baseline_copy.json": {
+      "bytes": 81,
+      "sha256": "e50ae778b9865a807b2715461640edac59cd6e8a3e05d4941c57b6c51895af1e"
+    },
+    "Evidence/relocated_build_check.json": {
+      "bytes": 2237,
+      "sha256": "12898a7e9bcbc4abfb290213f539d34e4abe65242ce438527d282179708c6d0a"
+    },
+    "Evidence/relocated_tests_65.txt": {
+      "bytes": 10319,
+      "sha256": "d83c73f9fe2109311b7e62fd8aff0d44490e1d020bba0a7a450b316983777c52"
+    },
+    "Evidence/search_performance.json": {
+      "bytes": 1851,
+      "sha256": "b98669724c582e18bb788ac16017bc56be55af2f6cfbd052047f53bfffa7090d"
+    },
+    "Evidence/server_workflow_and_security.json": {
+      "bytes": 2982,
+      "sha256": "594bff49fb3bca635603dbcc1c34fca0b1a27a64b6e5eb48d7bea43386458afc"
+    },
+    "Evidence/stability_30min.json": {
+      "bytes": 5125,
+      "sha256": "0fc206ecada5fbf91c6072bcc234565c752004c9788f24fa009b64fc6cc3a693"
+    },
+    "Evidence/stage1_requirements.json": {
+      "bytes": 4143,
+      "sha256": "1400b60fbc09bffa8bda8ba6cf50b46b1f528127378b4e43ea23a0644c4a14e4"
+    },
+    "Evidence/tests_65.txt": {
+      "bytes": 10603,
+      "sha256": "968207060c75756688ecc7b23fc83235c9ce0c677baa66403adb6e06e3757625"
+    },
+    "Evidence/verification_summary.json": {
+      "bytes": 800,
+      "sha256": "fa62aab88bba516e18a9a7b256bb5d6cfb45e4eb00fa2d655d74487f922e0fe9"
+    },
+    "Previous_Portrait/README.txt": {
+      "bytes": 149,
+      "sha256": "66196c947772299b3e44da28794c3a19bb3ef62e873ee188bb57077b19c3e253"
+    },
+    "Previous_Portrait/SE-2623_Endterm_Presentation.pdf": {
+      "bytes": 1680037,
+      "sha256": "740a18e7d817790d468921c76794330bc58971f9a54b6c393f020a5f0c400b34"
+    },
+    "Previous_Portrait/SE-2623_Endterm_Presentation.pptx": {
+      "bytes": 70129,
+      "sha256": "89325668e50ec19e198c60a8d87128e7baf5f6f802e450d2fb1270161b4ed15e"
+    },
+    "SE-2623_CampusLostFound_ICT_ProjectStage2.pdf": {
+      "bytes": 1278865,
+      "sha256": "550b3e5c2196a7358a0d75450bd60ef2e1b064308437280b21f028d98b698b55"
+    },
+    "SE-2623_Endterm_Defense_Guide.docx": {
+      "bytes": 57072,
+      "sha256": "395ce59da6d5923f91787d399cb4198097021374b299bda76971729c6fc6fa17"
+    },
+    "SE-2623_Endterm_Defense_Guide.pdf": {
+      "bytes": 301295,
+      "sha256": "2855713ab3965db4d104fc2aac690640d4f99ca4e8b53827df487f482efab8c2"
+    },
+    "SE-2623_Endterm_Landscape.pdf": {
+      "bytes": 1224744,
+      "sha256": "229943df457a9a265acd066065a48972522c414ed3e25e461d199d80489e7b94"
+    },
+    "SE-2623_Endterm_Landscape.pptx": {
+      "bytes": 74790,
+      "sha256": "d2beb7ed2fc45c2da87ecb47059e13db2fd362b196810db4c800329a026cd910"
+    },
+    "START_HERE_RU.txt": {
+      "bytes": 10854,
+      "sha256": "16de5966ff58658d5945fc1ad099cda5164e8e2f7a2b4e2a10b5e63296920f0c"
+    },
+    "Sources/Briefs/Endterm_Brief.pdf": {
+      "bytes": 63903,
+      "sha256": "70713dced30519a4bcf1067134289f1a432f554e5f5cc613885241b117248f5e"
+    },
+    "Sources/Briefs/Stage1_Midterm_Portrait.pdf": {
+      "bytes": 197419,
+      "sha256": "80b310c4fb980062ad7556c57b2bb0d7678a9ba7f71d196d797217bbcb5cc11b"
+    },
+    "Sources/IoT_sources.json": {
+      "bytes": 5520,
+      "sha256": "5e63926c536dc7e616bd6867491bf97367a0fc857b34dd7f44b046399b8feff5"
+    },
+    "Sources/bags_source.jpg": {
+      "bytes": 228805,
+      "sha256": "7f2d9f73f4efc2fde25ae3a35037110239c18a95cd729d0637e2c518191fc82a"
+    },
+    "Sources/electronics_source.jpg": {
+      "bytes": 222854,
+      "sha256": "73dd6a5c27033b772637e4cea46d12113120b1395981ba01a1b7520183024e6a"
+    },
+    "Sources/provenance.json": {
+      "bytes": 5640,
+      "sha256": "5cbe4a4064db211df96c7f4167ee61aa156896e5231313c933795762e7b58ce1"
+    },
+    "Sources/stationery_source.jpg": {
+      "bytes": 312291,
+      "sha256": "9bf47eeb3e33be9ded68861605986493d18a8373c46a9d0365e0d3cf4b5e135c"
+    },
+    "Technical_Verification.txt": {
+      "bytes": 5546,
+      "sha256": "1e2c343b3d576e822861ac7e5e46100e48b140aa7620facaf7869a064f4ff096"
+    },
+    "Testing/BROWSER_EVIDENCE_RU.txt": {
+      "bytes": 5963,
+      "sha256": "505dc6920c3fb87292f20fbfa8865e879d36ffa250a13d29b9a90b0465a9c321"
+    },
+    "Testing/INSTRUCTIONS_RU.txt": {
+      "bytes": 10032,
+      "sha256": "67d2948f8c1ed77aba5b843d6aed08e00030fdc27841d2e9fd06d0e1f8f0fad9"
+    },
+    "Testing/TASK_CARDS_EN.txt": {
+      "bytes": 2333,
+      "sha256": "72c940a41c3036de4969f76ab164b457c9b625f27f400fa31d429129b0874f04"
+    },
+    "UPDATE_RU.txt": {
+      "bytes": 5534,
+      "sha256": "c377b8e5a4c2e47795318b440e9e17c2173a11d635b4741396a609a049c35969"
+    },
+    "Video/PRODUCTION_NOTE_EN.txt": {
+      "bytes": 609,
+      "sha256": "fe97b4f76f9c394977c22e9fab6ccb8c9e7c9aa5b1890ded721e6d7dcc6336ae"
+    },
+    "Video/READ_ME_VIDEO_RU.txt": {
+      "bytes": 29505,
+      "sha256": "1919ff5889e6342829e1d1a7224e710a116bdc52c7b4297d6a8ba624b217ff0d"
+    },
+    "Video/SE-2623_Campus_Lost_Found_A4.mp4": {
+      "bytes": 24172240,
+      "sha256": "a2328246c4f192058114d427a19d681bfb6423271f6028cd77e1034e0eee22eb"
+    },
+    "Video/WATCH_VIDEO.txt": {
+      "bytes": 552,
+      "sha256": "056f0840dbafb2ba485528b0899013d0485b23f5e83d47b829db6e5219ad9c69"
+    },
+    "Video/architecture.svg": {
+      "bytes": 1245,
+      "sha256": "c9f5c8304efe58feaf3a33757aa600c5050810e53275b9f722e6dd215ca60e59"
+    },
+    "Video/subtitles_EN_PLANNED.srt": {
+      "bytes": 3084,
+      "sha256": "2b679123c878265f2ad28b430fc3564b4ab16e80eae1332e72fae122a5c557fa"
+    }
+  }
+}

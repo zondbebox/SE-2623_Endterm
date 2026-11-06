@@ -1,0 +1,22 @@
+test_backup_and_scratch_restore_preserve_the_live_database (test_backend.BackendTests.test_backup_and_scratch_restore_preserve_the_live_database) ... ok
+test_category_name_is_unique_case_insensitively (test_backend.BackendTests.test_category_name_is_unique_case_insensitively) ... ok
+test_cli_summary_works_from_another_working_directory (test_backend.BackendTests.test_cli_summary_works_from_another_working_directory) ... ok
+test_connection_configuration_and_row_factory (test_backend.BackendTests.test_connection_configuration_and_row_factory) ... ok
+test_init_is_non_destructive_and_seed_refuses_existing_data (test_backend.BackendTests.test_init_is_non_destructive_and_seed_refuses_existing_data) ... ok
+test_notices_reject_bad_foreign_keys_and_invalid_values (test_backend.BackendTests.test_notices_reject_bad_foreign_keys_and_invalid_values) ... ok
+test_passwords_use_independent_scrypt_hashes (test_backend.BackendTests.test_passwords_use_independent_scrypt_hashes) ... ok
+test_query_allows_join_and_denies_mutation_or_attach (test_backend.BackendTests.test_query_allows_join_and_denies_mutation_or_attach) ... ok
+test_referenced_users_and_categories_cannot_be_deleted (test_backend.BackendTests.test_referenced_users_and_categories_cannot_be_deleted) ... ok
+test_restore_refuses_existing_target_and_live_database (test_backend.BackendTests.test_restore_refuses_existing_target_and_live_database) ... ok
+test_seed_counts_distribution_and_relationships (test_backend.BackendTests.test_seed_counts_distribution_and_relationships) ... ok
+test_transaction_rolls_back_earlier_write_on_constraint_error (test_backend.BackendTests.test_transaction_rolls_back_earlier_write_on_constraint_error) ... ok
+test_unexpected_database_is_not_overwritten (test_backend.BackendTests.test_unexpected_database_is_not_overwritten) ... ok
+test_user_constraints_reject_duplicate_external_or_invalid_role (test_backend.BackendTests.test_user_constraints_reject_duplicate_external_or_invalid_role) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 2.820s
+
+OK
+
+COMMAND: .\python\python.exe -B -m unittest discover -s backend -p test_backend.py -v
+EXIT_CODE: 0

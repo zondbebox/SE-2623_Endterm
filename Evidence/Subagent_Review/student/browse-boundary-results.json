@@ -1,0 +1,34 @@
+{
+  "kind": "AI software review read-only diagnostic",
+  "requests": [
+    {
+      "route": "/",
+      "query": {
+        "page": "2"
+      },
+      "status_code": 200
+    },
+    {
+      "route": "/",
+      "query": {
+        "category": "1"
+      },
+      "status_code": 200
+    },
+    {
+      "route": "/",
+      "query": {
+        "page": "1152921504606846977"
+      },
+      "status_code": 500
+    },
+    {
+      "route": "/",
+      "query": {
+        "category": "9223372036854775808"
+      },
+      "status_code": 500
+    }
+  ],
+  "database_unchanged": true
+}

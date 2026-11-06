@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Synthetic-data analytics · Campus Lost & Found{% endblock %}
+{% block extra_head %}<link rel="stylesheet" href="{{ url_for('static', filename='analytics.css') }}">{% endblock %}
+{% block content %}
+<div class="analytics-page">
+  <div class="analytics-heading"><div><p class="analytics-eyebrow">Administrator / Analysis</p><h1>Notice analytics</h1></div><a class="button" href="{{ url_for('analytics_csv') }}">Download aggregate CSV</a></div>
+  <p class="analytics-disclosure"><strong>Synthetic teaching data.</strong> {{ data.source_description }} These summaries describe the current demo database. They do not measure real campus demand, service effectiveness, or recovery time. Use fictional entries only.</p>
+  <dl class="analytics-metrics"><div><dt>All notices</dt><dd>{{ data.counts.notices }}</dd></div><div><dt>Open notices</dt><dd>{{ data.counts.open }}</dd></div><div><dt>Marked returned</dt><dd>{{ data.counts.returned }}</dd></div><div><dt>Categories</dt><dd>{{ data.counts.categories }}</dd></div></dl>
+
+  <section class="analytics-card" aria-labelledby="category-heading">
+    <p class="analytics-eyebrow">Question 1 / Category</p><h2 id="category-heading">{{ data.questions.category }}</h2>
+    <p>Open and returned add up to all notices in each category. Categories without notices remain visible. Ordered by open count, then total count.</p>
+    <div class="analytics-legend"><span><i class="key-open"></i>Open</span><span><i class="key-returned"></i>Returned</span></div>
+    <div class="chart-scroll" tabindex="0" role="region" aria-label="Category bar chart; scroll horizontally on a narrow screen">
+      <svg class="analytics-chart" viewBox="0 0 800 {{ 30 + category_bars|length * 38 }}" role="img" aria-labelledby="category-title category-description">
+        <title id="category-title">Open and returned notices by category</title><desc id="category-description">Stacked bars show the current synthetic counts. Exact values follow in the category table.</desc>
+        {% for row in category_bars %}<text x="5" y="{{ row.y + 16 }}">{{ row.category }}</text><rect class="bar-open" x="260" y="{{ row.y }}" width="{{ row.first_width }}" height="23"><title>{{ row.category }}: {{ row.open }} open</title></rect><rect class="bar-returned" x="{{ row.second_x }}" y="{{ row.y }}" width="{{ row.second_width }}" height="23"><title>{{ row.category }}: {{ row.returned }} returned</title></rect><text x="715" y="{{ row.y + 16 }}">{{ row.total }} total</text>{% endfor %}
+      </svg>
+    </div>
+    <div class="table-scroll"><table class="analytics-table"><caption>Category counts in the current synthetic snapshot</caption><thead><tr><th scope="col">Category</th><th scope="col">Open</th><th scope="col">Returned</th><th scope="col">All</th></tr></thead><tbody>{% for row in data.category_series %}<tr><th scope="row">{{ row.category }}</th><td>{{ row.open }}</td><td>{{ row.returned }}</td><td>{{ row.total }}</td></tr>{% else %}<tr><td colspan="4">No categories are available.</td></tr>{% endfor %}</tbody></table></div>
+    <details><summary>Reproduce question 1 with SQL</summary><pre><code>{{ data.sql.category }}</code></pre></details>
+  </section>
+
+  <section class="analytics-card" aria-labelledby="location-heading">
+    <p class="analytics-eyebrow">Question 2 / Location</p><h2 id="location-heading">{{ data.questions.location }}</h2>
+    <p>Counts include both open and returned notices, grouped by the saved location label. They are notice counts, not unique physical items or measured loss rates.</p>
+    <div class="analytics-legend"><span><i class="key-lost"></i>Lost</span><span><i class="key-found"></i>Found</span></div>
+    {% if location_bars %}<div class="chart-scroll" tabindex="0" role="region" aria-label="Location bar chart; scroll horizontally on a narrow screen"><svg class="analytics-chart" viewBox="0 0 800 {{ 30 + location_bars|length * 38 }}" role="img" aria-labelledby="location-title location-description"><title id="location-title">Lost and found notices by location</title><desc id="location-description">Stacked bars ordered by all-notice count. Exact values follow in the location table.</desc>{% for row in location_bars %}<text x="5" y="{{ row.y + 16 }}">{{ row.location }}</text><rect class="bar-lost" x="260" y="{{ row.y }}" width="{{ row.first_width }}" height="23"><title>{{ row.location }}: {{ row.lost }} lost</title></rect><rect class="bar-found" x="{{ row.second_x }}" y="{{ row.y }}" width="{{ row.second_width }}" height="23"><title>{{ row.location }}: {{ row.found }} found</title></rect><text x="715" y="{{ row.y + 16 }}">{{ row.total }} total</text>{% endfor %}</svg></div>{% endif %}
+    <div class="table-scroll"><table class="analytics-table"><caption>Location counts in the current synthetic snapshot</caption><thead><tr><th scope="col">Location</th><th scope="col">Lost</th><th scope="col">Found</th><th scope="col">All</th></tr></thead><tbody>{% for row in data.location_series %}<tr><th scope="row">{{ row.location }}</th><td>{{ row.lost }}</td><td>{{ row.found }}</td><td>{{ row.total }}</td></tr>{% else %}<tr><td colspan="4">No notices are available.</td></tr>{% endfor %}</tbody></table></div>
+    <details><summary>Reproduce question 2 with SQL</summary><pre><code>{{ data.sql.location }}</code></pre></details>
+  </section>
+
+  <section class="analytics-card" aria-labelledby="weekly-heading">
+    <p class="analytics-eyebrow">Question 3 / Event-date week</p><h2 id="weekly-heading">{{ data.questions.weekly }}</h2>
+    <p>Weeks run Monday–Sunday and include intervening empty weeks. The first and last weeks may cover only part of the observed date range. The date is the reported item event date; it is not the publication date or the date an item was returned.</p>
+    <div class="analytics-legend"><span><i class="key-lost"></i>Lost / solid line</span><span><i class="key-found"></i>Found / dashed line</span></div>
+    {% if weekly.rows %}<div class="chart-scroll" tabindex="0" role="region" aria-label="Weekly line chart; scroll horizontally on a narrow screen"><svg class="analytics-chart" viewBox="0 0 800 330" role="img" aria-labelledby="weekly-title weekly-description"><title id="weekly-title">Lost and found counts by Monday-start event-date week</title><desc id="weekly-description">The vertical axis is notice count; the horizontal axis is week start. The weekly table contains every plotted value.</desc><line class="chart-axis" x1="65" y1="60" x2="65" y2="250"/><line class="chart-axis" x1="65" y1="250" x2="745" y2="250"/><line class="chart-grid" x1="65" y1="60" x2="745" y2="60"/><text x="35" y="65">{{ weekly.maximum }}</text><text x="45" y="255">0</text><text x="65" y="30">Notice count</text><text x="310" y="318">Event-date week start (Monday)</text><polyline class="line-lost" points="{{ weekly.lost_points }}"/><polyline class="line-found" points="{{ weekly.found_points }}"/>{% for row in weekly.rows %}<circle class="point-lost" cx="{{ row.x }}" cy="{{ row.lost_y }}" r="4"><title>{{ row.label }}: {{ row.lost }} lost</title></circle><circle class="point-found" cx="{{ row.x }}" cy="{{ row.found_y }}" r="4"><title>{{ row.label }}: {{ row.found }} found</title></circle>{% endfor %}{% for row in weekly.ticks %}<text class="week-tick" x="{{ row.x }}" y="277">{{ row.week_start }}</text>{% endfor %}</svg></div>{% endif %}
+    <div class="table-scroll"><table class="analytics-table"><caption>Weekly counts in the current synthetic snapshot</caption><thead><tr><th scope="col">Week (Monday to Sunday)</th><th scope="col">Lost</th><th scope="col">Found</th><th scope="col">All</th></tr></thead><tbody>{% for row in data.weekly_series %}<tr><th scope="row">{{ row.label }}</th><td>{{ row.lost }}</td><td>{{ row.found }}</td><td>{{ row.total }}</td></tr>{% else %}<tr><td colspan="4">No notices are available.</td></tr>{% endfor %}</tbody></table></div>
+    <details><summary>Reproduce question 3 with SQL</summary><pre><code>{{ data.sql.weekly }}</code></pre></details>
+  </section>
+  <p class="analytics-export-note">The CSV contains aggregate labels and counts only. User identities, notice descriptions, password hashes, and photo filenames are excluded. Spreadsheet formula prefixes are escaped.</p>
+</div>
+{% endblock %}

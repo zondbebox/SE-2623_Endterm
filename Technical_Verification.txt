@@ -1,0 +1,56 @@
+TECHNICAL VERIFICATION
+Campus Lost & Found — SE-2623
+Updated 1 November 2026
+
+RESULT
+
+The independent Windows run completed 72 automated test methods in 30.069 seconds: OK, exit code 0. This is software verification using automated checks and temporary fixtures. It is not evidence of human task success or usability.
+
+Run from the Campus_Lost_Found directory:
+    python\python.exe -B -m unittest discover -v
+
+Delivery log:
+    Evidence/Update_2026-11-01/final-suite.log
+
+Suite totals:
+    backend/test_backend.py   14
+    test_app.py               17
+    test_media.py              2
+    test_stage2_core.py       11
+    test_analytics.py          7
+    test_stage2_features.py   14
+    test_backup_full.py        7
+    TOTAL                    72
+
+The portrait report and landscape presentation describe the current 72-test result. The original Defense Guide retains 65 as a historical baseline. Seven regression methods were added: four in test_app.py and three in test_backup_full.py. The unchanged speaking order is slides 1–3 Zhanzhol, 4–6 Daniil and 7–9 Daulet.
+
+REVIEW BY FIVE AI SUBAGENTS
+
+On 1 November 2026, five subagents reviewed separate areas using isolated Windows application copies. Their assigned baseline suites comprised 65 automated test methods in total. They also inspected source and performed selected supplemental checks. This was a technical review, not five human participant sessions.
+
+1. Student workflow and media: 15 baseline checks. Login/logout, notice creation/edit/return, ownership and admin rules, persistence, search input handling, media delivery and alt-attribute presence. Additional numeric-input probes exposed SQLite overflow errors.
+2. Registration and private uploads: 11 baseline checks. University-domain format rules, password hashing, CSRF, duplicate accounts, image validation/re-encoding, access checks, replacement and removal. A domain suffix does not verify university identity.
+3. Database and analytics: 21 baseline checks. Schema constraints, transactions, read-only queries, backup, category/location/weekly aggregation and CSV safety. Independent SQL comparison matched all frozen 122-notice results.
+4. Research recorder and simulated locker: 14 baseline checks. Start/stop timing, unique task attempts, threshold logic, admin permissions, CSV escaping, simulated open/close alerts and valid notice references. Temporary fixtures do not represent real observations.
+5. Backup and recovery: 4 baseline checks. Included files, hashes, scratch restoration, changed live data, traversal and corruption rejection. Source inspection identified inconsistent manifest size handling. Linux launchers were inspected but not executed.
+
+All 65 assigned baseline methods passed. Supplemental probes and source inspection identified the two defects below. Seven new regression methods cover the fixes; the final complete Windows run passed 72/72. Do not add the baseline 65 and final 72 as if they were different test sets.
+
+Original review records and logs: Evidence/Subagent_Review/{student,security,data,extensions,recovery}/.
+
+TWO CORRECTED EDGE CASES
+
+1. Numeric input boundaries. Oversized browse category/page values previously caused SQLite integer-conversion errors; oversized notice IDs could fail similarly. Browse now rejects unsafe numbers with HTTP 400, and notice handlers reject out-of-range IDs with HTTP 404 before querying SQLite. Tests also check valid filtered pagination, existing safe fallbacks, and rejection of invalid category forms without changing notices.
+
+2. Full-backup manifest boundaries. The backup writer and restore reader now share a 1 MiB UTF-8 manifest limit. An oversized manifest is rejected before a ZIP is published; restore rejects it before creating its destination. A manifest exactly at the limit is accepted. Regression checks cover rejection, cleanup, unchanged source data and the exact boundary. Archive format and public commands remain unchanged.
+
+METHOD AND LIMITS
+
+The checks use the bundled Windows Python, Flask test clients and real temporary SQLite databases. They cover authentication, permissions, CSRF, notice persistence, media delivery, photo validation, analytics, recorder logic, simulated locker state, backup and scratch restoration. Passing tests establish the checked behaviors, not exhaustive correctness or production security.
+
+Media checks verify static responses and alt-attribute presence; they do not establish visual quality or screen-reader usability. Recorder timing uses a controlled clock in tests; no measured human attempt is represented. Locker events are software simulation, with no physical sensor or door verification. Backup boundaries use small fixtures and patched limits; no 9,999-file or 512 MiB stress archive was created.
+
+Still pending: the study with five real external participants, observed B2 usability findings, three browser Fast 4G runs with cache disabled, current keyboard/360 px/offline-retry checks, and execution on Linux/WSL. Existing local HTTP search and availability measurements are historical evidence with their own limits; they do not replace browser loading measurements or a human study.
+
+Windows launch: START.bat; repeated checks: TESTS.bat.
+Linux launch: bash START.sh; repeated checks: bash TESTS.sh. Linux needs Bash, Python 3.10+, venv/ensurepip and an Internet connection for initial dependency installation. The scripts create a separate Linux environment and do not run the bundled Windows interpreter. Their presence is not evidence of a completed Linux run.

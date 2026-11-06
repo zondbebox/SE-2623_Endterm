@@ -1,0 +1,42 @@
+CAMPUS LOST & FOUND — PARTICIPANT TASK CARDS
+Use one participant code for both tasks. All items and accounts are fictional.
+The observer starts and stops the timer. You may stop at any time.
+Please work as you normally would. We are testing the interface, not you.
+
+TASK 1 — PUBLISH A FOUND NOTICE
+Starting point: you are signed in as a student and see Browse notices.
+
+Imagine you found a blue notebook in the library today. Publish a found-item notice so its owner can identify it.
+Use these fictional details:
+Title: Blue notebook T01 (replace T01 with your participant code)
+Category: Books and Stationery
+Type: Found
+Location: Library, second floor
+Date: today's date
+Description: A blue notebook with a small star sticker was found near the library. This is a fictional usability-test item with no personal details.
+A photograph is not required for this task.
+
+Tell the observer when you believe the notice has been published.
+Finish condition: the saved notice is visible with the correct title and information.
+The observer records the actual time; the project target is completion within 120 seconds.
+Do not use real identifying information or a real university password.
+
+TASK 2 — FIND THE TARGET NOTEBOOK
+Starting point: Browse notices, with the search box and filters cleared.
+
+Imagine you lost a red notebook near the computer lab corridor.
+Find the existing found-item notice for that notebook. Its category is Books and Stationery.
+Open its details and tell the observer its title and where it was found.
+You may use any controls in the application.
+
+Finish condition: the correct Red notebook details are open and you identify Computer lab corridor.
+The observer records the actual time; the project target is completion within 60 seconds.
+
+OBSERVER ONLY — KEEP THIS SECTION OUT OF THE PARTICIPANT'S VIEW
+Use five different real volunteers outside the team. Keep only pseudonymous codes.
+Do not demonstrate the clicks, coach, prefilter the list or rehearse the first attempt.
+Stop the timer immediately at task completion or abandonment; record notes afterwards.
+A failed task remains in the results. Do not replace participants to improve the score.
+The existing target normally has notice ID 4; verify the shipped data before testing.
+SC3 access-control checks are separate from these two usability tasks.
+

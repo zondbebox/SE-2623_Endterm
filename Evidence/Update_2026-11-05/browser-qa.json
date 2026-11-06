@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-05",
+  "tool": "Codex browser UI and supported CDP",
+  "origin": "http://127.0.0.1:5057",
+  "data": "Isolated copies of application databases; no delivered notices changed",
+  "admin_panel_verified": true,
+  "checks": {
+    "student_login": true,
+    "search_bottle_results": 5,
+    "category_images_loaded": 3,
+    "manual_motion_persistence": true,
+    "os_reduced_motion_off": true,
+    "hero_animations_observed_running": 8,
+    "no_javascript_locker_visible": true,
+    "locker_open_then_closed": true,
+    "analytics_metrics": [
+      122,
+      96,
+      26,
+      10
+    ],
+    "analytics_charts": 3,
+    "admin_counts": [
+      122,
+      96,
+      26,
+      20
+    ],
+    "admin_filter_bottle_returned": 5,
+    "admin_user_daniil_notice_count": 7,
+    "remove_link_opens_confirmation_only": true,
+    "student_admin_page_403": true
+  },
+  "mobile": {
+    "actual_css_width": 360,
+    "document_scroll_width": 346,
+    "pages": [
+      "Browse",
+      "Analytics",
+      "Admin panel",
+      "Manage notices",
+      "Local users"
+    ],
+    "table_container_width": 310.18
+  },
+  "limits": [
+    "Not a human usability study",
+    "Not Fast 4G performance measurements",
+    "Linux execution unverified"
+  ],
+  "environment_note": "Earlier OrangeMonkey noise and a native browser transition fallback during keyboard automation were observed. A deliberately rejected locker assignment produced the expected HTTP 400 and inline validation. No unhandled application-script error was observed in the completed flows.",
+  "temporary_emulation": "Viewport reset, reduced-motion emulation reset, JavaScript re-enabled, Motion on restored. No persistent diagnostic listeners remain.",
+  "navigation_update": {
+    "native_cross_document_transitions_observed": true,
+    "routes_clicked": [
+      "Overview -> Notices",
+      "Notices -> Users",
+      "Users -> Overview",
+      "Post a notice",
+      "Smart locker simulation"
+    ],
+    "forward_animation": "page-enter / page-leave",
+    "back_animation": "page-enter-back / page-leave-back",
+    "shared_highlight": "::view-transition-group(admin-tab-pill)",
+    "desktop_duration_ms": 460,
+    "manual_off": {
+      "animations": 0,
+      "main_opacity": 1
+    },
+    "system_reduce": {
+      "animations": 0,
+      "motion": "off"
+    },
+    "browser_back_forward": "Post form and locker restored; latest closed state visible",
+    "no_referrer_fallback": "Per-tab source path supports direction when activation.from.url is absent",
+    "native_fallback_note": "During keyboard automation, browser occasionally logged Page already revealed and used the visible page-arrival fallback; ordinary clicks showed native transitions."
+  },
+  "photo_upload_update": {
+    "path": "/post",
+    "real_fixture": "static/media/baseline/bags.png",
+    "preview_dimensions": [
+      1280,
+      720
+    ],
+    "displayed_size": "578 KB",
+    "svg_icon_hidden_when_selected": true,
+    "clear_selection": {
+      "file_count": 0,
+      "preview_hidden": true,
+      "button": "Choose photo"
+    },
+    "no_javascript_native_input_visible": true,
+    "mobile": {
+      "css_width": 360,
+      "document_scroll_width": 345,
+      "client_width": 345
+    }
+  },
+  "locker_inline_update": {
+    "giant_banner_removed": true,
+    "title": "Demo locker LF-01",
+    "same_document_for_open_close_heartbeat_and_refresh": true,
+    "verified_performance_time_origin": 1793858280862.9,
+    "control_position_before_after_close": [
+      257.3125,
+      254.91250610351562
+    ],
+    "scroll_before_after_close": [
+      504,
+      506.3999938964844
+    ],
+    "selected_notice_stays": 119,
+    "events": {
+      "close": 5,
+      "open": 6,
+      "heartbeat": 7,
+      "final_close": 8
+    },
+    "open_door_transition_seconds": 0.85,
+    "manual_motion_off_door_transition_seconds": 0,
+    "refresh_evaluated_10_second_warning": true,
+    "wrong_assignment_while_open": "Inline validation; no navigation or added event",
+    "final_state": "closed",
+    "mobile": {
+      "css_width": 360,
+      "document_scroll_width": 345,
+      "client_width": 345
+    }
+  }
+}

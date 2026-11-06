@@ -1,0 +1,102 @@
+{
+  "reviewer_id": "AI-01",
+  "kind": "AI software review",
+  "scope": "Student workflow and media",
+  "review_date": "2026-11-01",
+  "source_path": "C:/Users/Zhanzhol/Documents/Codex/2026-10-06/new-chat/outputs/Endterm/Campus_Lost_Found",
+  "isolated_app_path": "C:/Users/Zhanzhol/Documents/Codex/2026-10-06/new-chat/work/endterm/ai_review_2026-11-01/student/app",
+  "copy": {
+    "method": "Full recursive robocopy into a new reviewer-specific app directory",
+    "excluded_directories": ["runtime", "backups", "__pycache__", "evidence"],
+    "excluded_files": ["*.pyc"],
+    "exit_code": 1,
+    "exit_code_meaning": "Robocopy successful copy",
+    "log_path": "C:/Users/Zhanzhol/Documents/Codex/2026-10-06/new-chat/work/endterm/ai_review_2026-11-01/student/copy.log"
+  },
+  "commands": [
+    {
+      "cwd": "C:/Users/Zhanzhol/Documents/Codex/2026-10-06/new-chat/work/endterm/ai_review_2026-11-01/student/app",
+      "command": ".\\python\\python.exe -B test_app.py",
+      "exit_code": 0,
+      "tests": 13,
+      "passed": 13,
+      "failed": 0,
+      "errors": 0,
+      "seconds_reported_by_runner": 6.654
+    },
+    {
+      "cwd": "C:/Users/Zhanzhol/Documents/Codex/2026-10-06/new-chat/work/endterm/ai_review_2026-11-01/student/app",
+      "command": ".\\python\\python.exe -B test_media.py",
+      "exit_code": 0,
+      "tests": 2,
+      "passed": 2,
+      "failed": 0,
+      "errors": 0,
+      "seconds_reported_by_runner": 0.479
+    },
+    {
+      "cwd": "C:/Users/Zhanzhol/Documents/Codex/2026-10-06/new-chat/work/endterm/ai_review_2026-11-01/student",
+      "command": ".\\app\\python\\python.exe -B browse_boundary_probe.py",
+      "exit_code": 0,
+      "kind": "Additional read-only diagnostic; not counted as existing unit/integration tests",
+      "http_requests": 4,
+      "note": "The diagnostic completed successfully while detecting two HTTP 500 responses. Exit 0 does not mean those requests passed a correctness test."
+    }
+  ],
+  "exit_codes": {"test_app.py": 0, "test_media.py": 0, "browse_boundary_probe.py": 0},
+  "test_counts": {"executed": 15, "passed": 15, "failed": 0, "errors": 0, "skipped": 0},
+  "actually_exercised": [
+    "Valid login sets the student session, rotates CSRF and enables permanent expiry; logout clears authenticated access.",
+    "Wrong passwords fail without putting submitted credentials or IP addresses into the audit; five failures block the next login; a new app instance resets the process-local limiter.",
+    "SQL-like login payloads cannot establish a session or alter record counts.",
+    "Missing and forged CSRF tokens reject notice creation without insertion.",
+    "A student cannot edit/return another owner's notice or use a forged administrator role to remove it.",
+    "An owner creates, edits and marks a notice returned; data persists in the same SQLite database after constructing a fresh app instance. Forged owner/status form values are ignored.",
+    "Administrator deletion confirmation and cancellation are read-only; confirmed POST deletion removes the row and later detail returns 404.",
+    "Search treats SQL and LIKE metacharacters literally, and stored markup is escaped in browse/detail HTML.",
+    "Ten invalid form variants do not insert records: missing/overlong title, short description, empty location, invalid category/type, invalid or out-of-range dates.",
+    "Anonymous requests to selected browse/detail/form/removal routes redirect to login and cannot create notices.",
+    "Help requires authentication. Authenticated browse, baseline browse and help return HTML with at least two image elements, an alt attribute on each image, /static/ image paths and successful HTTP 200 image responses. Media test sets session user_id directly.",
+    "Additional read-only browse probes compare ordinary page/category filters with oversized integer values; captured stack traces identify integer conversion at SQLite parameter binding."
+  ],
+  "findings": [
+    {
+      "id": "AI-01-F1",
+      "severity": "P2",
+      "type": "Confirmed input-boundary defect",
+      "title": "Oversized browse filter numbers cause HTTP 500",
+      "evidence": "With an authenticated student test session, GET /?page=1152921504606846977 and GET /?category=9223372036854775808 each returned HTTP 500. Control requests page=2 and category=1 returned HTTP 200.",
+      "cause": "browse() accepts arbitrary Python integers. (page-1)*8 and int(category) can exceed SQLite's signed 64-bit integer range, causing uncaught OverflowError when bound to the query.",
+      "source_locations": ["app.py:183", "app.py:188", "app.py:195", "app.py:196"],
+      "impact": "An authenticated user following or entering such a malformed filter URL receives a server error instead of a valid empty result or controlled validation response. The four diagnostic GETs left the copied main database unchanged.",
+      "recommendation": "Validate or bound page/category inputs before binding them to SQLite and add focused boundary regression cases.",
+      "fixed": false,
+      "evidence_log_path": "C:/Users/Zhanzhol/Documents/Codex/2026-10-06/new-chat/work/endterm/ai_review_2026-11-01/student/browse-boundary-probe.log"
+    }
+  ],
+  "limitations": [
+    "This is an AI software review, not human usability research. No participant observations, success rates, task times or questionnaire scores were collected or invented.",
+    "No browser was used. Flask test-client checks do not establish visual layout, keyboard navigation, screen-reader behavior, responsive behavior, reduced-motion behavior or perceived usability.",
+    "Media checks assert only presence of alt attributes and successful static delivery. They do not judge alternative-text quality, decode/render image pixels, verify captions against images or measure transfer/performance improvements.",
+    "The assigned 15 tests do not exercise new-account registration or uploaded-photo lifecycle/validation. test_stage2_core.py contains related tests, but this reviewer did not run that suite.",
+    "The selected suites do not comprehensively verify combinations of category/status/My notices filters or pagination navigation; four supplemental read-only requests only probe a narrow numeric boundary.",
+    "Persistence is checked with a fresh Flask application instance and the same database, not an operating-system process restart or deployed multi-process server.",
+    "No external email client was opened and no message was sent. The Contact author link was inspected in the detail template only.",
+    "Tests ran against an isolated local Windows portable-Python copy; this does not verify Linux or a network deployment."
+  ],
+  "preservation": {
+    "production_or_source_files_modified": false,
+    "existing_tests_modified": false,
+    "reports_or_canva_modified": false,
+    "participant_records_created": false,
+    "all_reviewer_writes_confined_to": "C:/Users/Zhanzhol/Documents/Codex/2026-10-06/new-chat/work/endterm/ai_review_2026-11-01/student",
+    "diagnostic_database_unchanged": true,
+    "diagnostic_database_sha256_before_and_after": "949cc097157945d128b5df37c87539f0baf6e853a5942c15ae57650667b03770"
+  },
+  "log_path": "C:/Users/Zhanzhol/Documents/Codex/2026-10-06/new-chat/work/endterm/ai_review_2026-11-01/student/test-output.log",
+  "supplemental_evidence": [
+    "C:/Users/Zhanzhol/Documents/Codex/2026-10-06/new-chat/work/endterm/ai_review_2026-11-01/student/browse_boundary_probe.py",
+    "C:/Users/Zhanzhol/Documents/Codex/2026-10-06/new-chat/work/endterm/ai_review_2026-11-01/student/browse-boundary-probe.log",
+    "C:/Users/Zhanzhol/Documents/Codex/2026-10-06/new-chat/work/endterm/ai_review_2026-11-01/student/browse-boundary-results.json"
+  ]
+}

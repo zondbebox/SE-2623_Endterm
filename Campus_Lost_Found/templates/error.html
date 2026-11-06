@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<div class="empty"><p class="eyebrow">REQUEST {{code}}</p><h1>{{'Access denied' if code==403 else 'Unable to continue'}}</h1><p>{{message}}</p><a class="button" href="{{url_for('browse')}}">Back to notices</a></div>{% endblock %}

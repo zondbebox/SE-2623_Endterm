@@ -1,0 +1,19 @@
+test_contact_is_mailto_and_admin_navigation_is_not_shown_to_student (__main__.Stage2CoreTests.test_contact_is_mailto_and_admin_navigation_is_not_shown_to_student) ... ok
+test_edit_preserves_photo_without_replacement_and_replaces_it_once (__main__.Stage2CoreTests.test_edit_preserves_photo_without_replacement_and_replaces_it_once) ... ok
+test_invalid_photo_extension_type_bytes_and_multiple_files_do_not_insert (__main__.Stage2CoreTests.test_invalid_photo_extension_type_bytes_and_multiple_files_do_not_insert) ... ok
+test_other_student_cannot_replace_photo_and_admin_removal_removes_file (__main__.Stage2CoreTests.test_other_student_cannot_replace_photo_and_admin_removal_removes_file) ... ok
+test_photo_file_limit_pixel_limit_and_request_limit (__main__.Stage2CoreTests.test_photo_file_limit_pixel_limit_and_request_limit) ... ok
+test_photo_is_reencoded_without_metadata_and_only_served_after_login (__main__.Stage2CoreTests.test_photo_is_reencoded_without_metadata_and_only_served_after_login) ... ok
+test_png_photo_is_supported (__main__.Stage2CoreTests.test_png_photo_is_supported) ... ok
+test_registration_creates_student_scrypt_account_that_can_sign_in (__main__.Stage2CoreTests.test_registration_creates_student_scrypt_account_that_can_sign_in) ... ok
+test_registration_duplicate_is_handled_and_missing_csrf_cannot_create (__main__.Stage2CoreTests.test_registration_duplicate_is_handled_and_missing_csrf_cannot_create) ... ok
+test_registration_rate_limit_stops_repeated_submissions (__main__.Stage2CoreTests.test_registration_rate_limit_stops_repeated_submissions) ... ok
+test_registration_rejects_invalid_domain_syntax_and_password_lengths (__main__.Stage2CoreTests.test_registration_rejects_invalid_domain_syntax_and_password_lengths) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 5.502s
+
+OK
+
+COMMAND: .\python\python.exe -B test_stage2_core.py
+EXIT_CODE: 0

@@ -1,0 +1,111 @@
+CAMPUS LOST & FOUND — ENDTERM / STAGE 2
+Linux и Windows на одном ноутбуке
+
+1. Подготовка Linux
+
+Распакуй всю папку Campus_Lost_Found. Рекомендуемый путь:
+~/Projects/Campus_Lost_Found на собственном разделе Linux. Не запускай
+приложение внутри ZIP и не используй Windows-интерпретатор python/python.exe.
+
+Нужны Bash, Python 3.10+, venv с ensurepip и Интернет для ПЕРВОЙ установки.
+Версии закреплены в requirements.txt и requirements-linux.txt, включая
+Pillow 12.3.0 для фотографий. Скрипты не используют sudo, не изменяют
+системный Python и не устанавливают системные пакеты.
+
+    cd ~/Projects/Campus_Lost_Found
+    bash START.sh
+
+Создаётся отдельная Linux-среда:
+~/.cache/campus-lost-found/venvs/<идентификатор-папки>
+Если задан XDG_CACHE_HOME, используется он. Среда создаётся с --copies.
+Другой путь можно выбрать так:
+
+    CAMPUS_VENV_DIR="$HOME/.venvs/campus-demo" bash START.sh
+
+После успешной установки с теми же requirements пакеты повторно не
+скачиваются. Изменение требований требует Интернета. До защиты один раз
+установи зависимости и затем проверь работу без Интернета.
+Windows python/, vendor/ и media_vendor/ на Linux не используются.
+
+2. Запуск и проверки
+
+    bash START.sh
+
+Открой http://127.0.0.1:5055. Сервер использует loopback и HTTP, не HTTPS.
+Держи терминал открытым; Ctrl+C останавливает сервер.
+При занятом порте останови другую копию либо укажи:
+
+    bash START.sh --port 5056
+
+Отдельный инспектор базы, только чтение:
+
+    bash DATABASE.sh
+
+Адрес инспектора: http://127.0.0.1:8088.
+Полный набор из 65 автоматических проверок:
+
+    bash TESTS.sh
+
+Тесты используют временные базы, не сбрасывают рабочие записи и
+останавливаются при первой ошибке. Просмотр основной базы:
+
+    bash DB.sh summary
+    bash DB.sh query "SELECT id,title,status FROM notices ORDER BY id DESC LIMIT 5;"
+
+3. Полный архив и проверка восстановления
+
+Приостанови изменения в приложении. Выполни:
+
+    bash BACKUP.sh
+    bash RESTORE_CHECK.sh
+
+BACKUP создаёт backups/campus_full_*.zip с онлайн-снимками основной базы,
+имеющихся research.sqlite3 / telemetry.sqlite3, фотографиями data/uploads
+и SHA-256 в manifest.json. Session key и audit.jsonl не включаются.
+RESTORE_CHECK берёт последний полный архив и проверяет его в НОВОЙ папке
+data/restore_checks. Существующая рабочая папка никогда не заменяется.
+Для конкретного архива:
+
+    bash RESTORE_CHECK.sh "backups/campus_full_<точное-имя>.zip"
+
+Старые команды bash DB.sh backup и bash DB.sh restore-check работают
+только с основной SQLite-базой. Для полного набора используй BACKUP.sh.
+
+Запуск bash SCRIPT.sh не требует executable-бита. Для ./SCRIPT.sh:
+
+    chmod +x START.sh TESTS.sh DATABASE.sh DB.sh BACKUP.sh RESTORE_CHECK.sh
+
+4. Учебные аккаунты и функции
+
+Студенты: zhanzhol.demo@astanait.edu.kz, daniil.demo@astanait.edu.kz,
+daulet.demo@astanait.edu.kz. Администратор: admin.demo@astanait.edu.kz.
+Публичный учебный пароль: CampusDemo!2026.
+Регистрация проверяет только формат @astanait.edu.kz; SSO и проверка
+владения адресом отсутствуют. Не используй настоящий университетский пароль.
+
+Есть создание, поиск, редактирование своих объявлений, Mark as returned,
+одна фотография JPG/PNG до 5 МБ и 12 миллионов пикселей, Contact author
+через mailto, подтверждённое удаление администратором. Фото заново кодируется
+без метаданных и доступно только после входа. Администратору доступны
+Analytics, User testing (реальные внешние наблюдения) и Smart locker simulation.
+Подробный сценарий: START_HERE_RU.txt. Симуляция не управляет оборудованием.
+
+5. Переключение между ОС
+
+Перед переносом останови приложение и инспектор с обеих сторон, создай
+полный архив и корректно заверши ОС. Не переноси виртуальные среды.
+Основная база — data/campus.sqlite3; также сохраняй data/uploads,
+data/research.sqlite3 и data/telemetry.sqlite3, если они существуют.
+Копии проекта в разных папках независимы и автоматически не синхронизируются.
+Не записывай на Windows-раздел из Linux, если Windows оставлена в гибернации
+или Fast Startup. runtime/session.key создаётся локально при первом запуске
+и исключён из поставки; после восстановления потребуется повторный вход.
+
+6. Статус проверки Linux
+
+Проект подготовлен и автоматически проверен на Windows. Инвентаризация
+wsl -l -q сообщает, что Windows Subsystem for Linux не установлен.
+Установка Linux-пакетов и запуск этих скриптов на Linux здесь НЕ проверялись.
+На своей системе сначала выполни bash TESTS.sh, затем проверь вход,
+регистрацию, объявление с фото, редактирование, защиту чужих записей и backup.
+Наличие .sh-файлов само по себе не означает пройденную проверку Linux.

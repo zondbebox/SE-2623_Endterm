@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}External-user research · Campus Lost & Found{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='stage2.css') }}">
+<div class="stage2">
+<p class="eyebrow">ADMINISTRATOR · REAL OBSERVATIONS ONLY</p>
+<h1>External-user research</h1>
+<p>Record five volunteers outside the team. Each person completes one publish task and one find task. Use a code, never a name or email. The recorder starts empty.</p>
+<div class="stage2-note">Use this admin window for the observer and a separate incognito/private student window for the participant. Start when the task begins. Stop immediately at completion or abandonment; enter observations afterwards. Do not coach the first attempt.</div>
+<div class="stage2-grid">
+{% for criterion in summary.criteria %}
+<section class="stage2-card">
+<h2>{{ criterion.task|capitalize }}</h2>
+<p class="stage2-value">{{ criterion.met_count }} / 5</p>
+<p>Target: at least 4 of 5 complete successfully without help in ≤ {{ criterion.target }} seconds.</p>
+<p><strong>{{ criterion.status }}</strong> · {{ criterion.completed }} timed attempts stopped</p>
+</section>{% endfor %}
+</div>
+<p>{{ summary.participants }} / 5 distinct participants enrolled. Results remain <strong>Pending</strong> until all ten first attempts have final observations. Failed attempts stay in the cohort.</p>
+<section class="stage2-card"><h2>Start an attempt</h2>
+<form method="post" class="stage2-form">
+<input type="hidden" name="csrf" value="{{ session.csrf }}"><input type="hidden" name="action" value="start">
+<label>Participant code <input name="participant" placeholder="T01" pattern="T(0[1-9]|[1-9][0-9])" maxlength="3" required></label>
+<label>Task <select name="task" required><option value="publish">Publish a found notice · 120 seconds</option><option value="find">Find the target notebook · 60 seconds</option></select></label>
+<label>Device and browser (no personal details)<input name="device" placeholder="Laptop, Chrome; keyboard and trackpad" maxlength="120" required></label>
+<label class="stage2-check"><input type="checkbox" name="external_consent" value="yes" required> This is a real volunteer outside our team who agreed to anonymous observation and can stop at any time.</label>
+<button type="submit">Start timer</button>
+</form></section>
+<h2>Attempts</h2>
+{% for row in rows %}
+<section class="stage2-card">
+<h3>{{ row.participant }} · {{ row.task|capitalize }} · Attempt {{ row.id }}</h3>
+<p>{{ row.device }} · Started {{ row.started_at }} (UTC)</p>
+{% if not row.finished_at %}
+<p><strong>Timer running.</strong> Stop immediately when the task is completed or abandoned.</p>
+<form method="post"><input type="hidden" name="csrf" value="{{ session.csrf }}"><input type="hidden" name="action" value="stop"><input type="hidden" name="session_id" value="{{ row.id }}"><button type="submit">Stop timer for {{ row.participant }} {{ row.task }}</button></form>
+{% elif row.outcome is none %}
+<p><strong>Timer stopped: {{ '%.2f'|format(row.duration_seconds) }} seconds.</strong> Record observations; this does not add to the task time.</p>
+<form method="post" class="stage2-form">
+<input type="hidden" name="csrf" value="{{ session.csrf }}"><input type="hidden" name="action" value="finish"><input type="hidden" name="session_id" value="{{ row.id }}">
+<label>Task outcome<select name="outcome" required><option value="">Choose observed result</option><option value="success">Successfully completed</option><option value="failure">Failed / abandoned / incomplete</option></select></label>
+<label>Did the observer give help?<select name="helped" required><option value="">Choose</option><option value="no">No help</option><option value="yes">Help given</option></select></label>
+{% for i in range(1,4) %}<label>Observation {{ i }} (optional; behaviour only, no identifying details)<textarea name="observation{{ i }}" rows="2" maxlength="1000"></textarea></label>{% endfor %}
+<button type="submit">Save final observations</button></form>
+{% else %}
+<p><strong>{{ '%.2f'|format(row.duration_seconds) }} seconds · {{ row.outcome|capitalize }}</strong> · Help: {{ 'Yes' if row.helped else 'No' }}</p>
+{% for i in range(1,4) %}{% if row['observation' ~ i] %}<p>{{ i }}. {{ row['observation' ~ i] }}</p>{% endif %}{% endfor %}
+<p class="stage2-muted">Completed measurements are retained without replacement or retiming.</p>
+{% endif %}
+</section>
+{% else %}<p>No observations recorded. Automated tests and team rehearsals must not be entered here.</p>{% endfor %}
+<a class="button" href="{{ url_for('stage2.research_csv') }}">Download observation CSV</a>
+<p class="stage2-muted">Raw observations are stored separately from notices. Proposed retention: 30 days after assessment; operator cleanup is manual. CSV export protects formula-like text. This records SC1/SC2; the five invalid-access checks for SC3 are separate security evidence.</p>
+</div>
+{% endblock %}
+

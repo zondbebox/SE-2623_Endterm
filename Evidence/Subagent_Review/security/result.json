@@ -1,0 +1,78 @@
+{
+  "reviewer_id": "AI-02",
+  "kind": "automated technical review",
+  "review_date": "2026-11-01",
+  "human_participant": false,
+  "external_human_study": false,
+  "scope": "Stage 2 core registration, authentication-related checks, and private image handling; read-only source review plus the existing test suite on an isolated copy.",
+  "source": "C:/Users/Zhanzhol/Documents/Codex/2026-10-06/new-chat/outputs/Endterm/Campus_Lost_Found",
+  "working_directory": "C:/Users/Zhanzhol/Documents/Codex/2026-10-06/new-chat/work/endterm/ai_review_2026-11-01/security/app",
+  "command": "./python/python.exe -B test_stage2_core.py",
+  "exit_code": 0,
+  "test_count": 11,
+  "passed": 11,
+  "failed": 0,
+  "errors": 0,
+  "duration_seconds_reported_by_unittest": 6.856,
+  "status": "passed",
+  "complete_log": "test_stage2_core.log",
+  "copy_verification": {
+    "artifact": "copy_verification.json",
+    "file_count": 897,
+    "sha256_matches_source_after_tests": 897,
+    "missing_files": 0,
+    "different_files": 0,
+    "excluded_directories": ["runtime", "backups", "__pycache__", "evidence"],
+    "excluded_files": ["*.pyc"]
+  },
+  "concrete_findings": [
+    {
+      "finding": "Registration normalizes the email, forces the student role even when admin is submitted, stores a verifiable scrypt password hash, permits sign-in, and does not place the submitted password in the tested audit log.",
+      "evidence": ["test_stage2_core.py:92", "app.py:122", "app.py:131"],
+      "verification": "Existing test passed."
+    },
+    {
+      "finding": "The suite rejected six selected invalid address/password combinations, an existing address, a registration request without CSRF, and the sixth registration attempt within the same in-process IP bucket.",
+      "evidence": ["test_stage2_core.py:103", "test_stage2_core.py:116", "test_stage2_core.py:123"],
+      "verification": "Existing tests passed; no user records were added by those negative cases."
+    },
+    {
+      "finding": "An @astanait.edu.kz suffix is a local registration format rule, not proof of email ownership or university identity. Registration inserts the account immediately without a verification challenge or SSO. The template explicitly discloses both limitations.",
+      "evidence": ["app.py:1", "app.py:124", "app.py:131", "templates/register.html:7"],
+      "verification": "Source inspection, consistent with the test creating a fictional matching address."
+    },
+    {
+      "finding": "A JPEG upload is re-encoded, given a 48-hex-character filename, stripped of the tested EXIF metadata, served to a signed-in client, redirected for a signed-out client, and unavailable at the tested static upload URL. PNG creation also passed.",
+      "evidence": ["test_stage2_core.py:129", "test_stage2_core.py:146", "app.py:211", "app.py:250"],
+      "verification": "Existing tests passed. Image access is login-gated; the route does not impose per-owner reading restrictions."
+    },
+    {
+      "finding": "The tested SVG extension, invalid image bytes, PNG/JPEG mismatch, MIME mismatch, multiple files, over-5-MB file, over-12-million-pixel image, and oversized request were rejected without inserting a notice. Invalid extension/type/byte/multiple-file cases also left no uploaded files.",
+      "evidence": ["test_stage2_core.py:153", "test_stage2_core.py:167", "app.py:235", "app.py:240", "app.py:247"],
+      "verification": "Existing tests passed."
+    },
+    {
+      "finding": "Owner edits preserve an existing photo when no replacement is provided, replace and remove the old file when a new photo is supplied, deny a different student's replacement, and delete the photo when an administrator removes its notice.",
+      "evidence": ["test_stage2_core.py:178", "test_stage2_core.py:190", "app.py:308", "app.py:341"],
+      "verification": "Existing tests passed."
+    },
+    {
+      "finding": "The student detail page has a mailto contact link, hides the analytics navigation link, and the administrator page exposes the three expected administration links.",
+      "evidence": ["test_stage2_core.py:202"],
+      "verification": "Existing test passed; navigation visibility alone is not a test of direct-route authorization."
+    }
+  ],
+  "limitations": [
+    "This is an AI-run technical review with synthetic fixtures, not a human usability study, participant session, penetration test, or external security certification.",
+    "Only test_stage2_core.py was executed. Other suites were not executed by this reviewer, so these coverage limits are specific to this 11-test suite.",
+    "No browser, live deployment, network service, university identity provider, email delivery, mailbox ownership check, or real university account was exercised.",
+    "The registration regex checks an application-specific local-part character set and exact domain suffix, not comprehensive mailbox validity. Cases such as leading or consecutive dots are not tested.",
+    "The suite does not directly test incorrect-password or nonexistent-account login, login rate limiting, rate-limit expiry, multi-process/restart persistence, concurrent attempts, session expiry, logout invalidation, cookie flags, or CSRF rotation. Source inspection shows in-memory rate-limit state and SESSION_COOKIE_SECURE=False for the localhost prototype.",
+    "Missing CSRF is tested on registration only. Invalid, forged, expired, or cross-session tokens on other mutations are not directly covered by this suite.",
+    "Direct student requests to administration routes, broad role/access matrices, and cross-user image reading policy are not covered. The photo route checks login rather than ownership, so private here means unavailable to signed-out clients.",
+    "Upload coverage uses selected synthetic JPEG/PNG inputs; it does not establish safety against every malformed image or decoder vulnerability. Exact allowed size/pixel boundaries, EXIF orientation, thumbnail dimensions, PNG metadata, ICC/XMP data, transparency, and animated images are not asserted.",
+    "The source contains filename-pattern and symlink guards, but this suite does not exercise path traversal, corrupted database filenames, symlinks, or missing-photo handling.",
+    "Filesystem/database failure rollback, disk exhaustion, concurrency, storage quotas, broad audit confidentiality, and production TLS/security configuration are not tested.",
+    "Source and tests were not edited. Tests used temporary SQLite databases and upload folders inside the private application copy and cleaned them up. Participant records, Canva, and documents were not changed."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "tests": 65,
+  "backend": 14,
+  "app": 13,
+  "media": 2,
+  "stage2_core": 11,
+  "analytics": 7,
+  "stage2_features": 14,
+  "full_backup": 4,
+  "windows_command": "TESTS.bat",
+  "exit_code": 0,
+  "linux_execution": "Not performed; WSL is not installed",
+  "browser_evidence": "Pending; computer-use tool stopped because current browser URL could not be verified",
+  "relocated_build": "Passed login, analytics, empty observation/telemetry, Pillow encoding, backup and restore; all 65 tests passed again after extraction.",
+  "external_participants": "Not yet supplied; five real non-team participants required by original success criteria.",
+  "availability": {
+    "checks": 20,
+    "passed": 20,
+    "elapsed_seconds": 1800.0,
+    "N4": "Partly; offline/retry pending"
+  }
+}

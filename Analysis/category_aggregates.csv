@@ -1,0 +1,11 @@
+source,category_id,category,total,open,returned
+synthetic,4,Books and Stationery,13,12,1
+synthetic,9,Accessories,12,12,0
+synthetic,3,Bags,12,12,0
+synthetic,5,Clothing,12,12,0
+synthetic,8,Documents,12,12,0
+synthetic,2,Keys and Access Cards,12,12,0
+synthetic,10,Other,12,12,0
+synthetic,7,Sports Equipment,12,12,0
+synthetic,6,Drinkware,13,0,13
+synthetic,1,Electronics,12,0,12

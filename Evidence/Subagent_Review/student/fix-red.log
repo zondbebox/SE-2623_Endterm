@@ -1,0 +1,581 @@
+test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite (__main__.CampusApplicationIntegrationTests.test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite) ... [2026-11-01 23:33:03,587] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 195, in browse
+    count = db().execute('SELECT count(*) FROM notices n' + where, params).fetchone()[0]
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+
+  test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite (__main__.CampusApplicationIntegrationTests.test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite) (field='category', digits=19) ... FAIL
+[2026-11-01 23:33:03,594] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 195, in browse
+    count = db().execute('SELECT count(*) FROM notices n' + where, params).fetchone()[0]
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+  test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite (__main__.CampusApplicationIntegrationTests.test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite) (field='category', digits=100) ... FAIL
+[2026-11-01 23:33:03,599] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 189, in browse
+    clauses.append('n.category_id=?'); params.append(int(category))
+                                                     ~~~^^^^^^^^^^
+ValueError: Exceeds the limit (4300 digits) for integer string conversion: value has 5000 digits; use sys.set_int_max_str_digits() to increase the limit
+  test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite (__main__.CampusApplicationIntegrationTests.test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite) (field='category', digits=5000) ... FAIL
+[2026-11-01 23:33:03,603] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 189, in browse
+    clauses.append('n.category_id=?'); params.append(int(category))
+                                                     ~~~^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '\xb2'
+  test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite (__main__.CampusApplicationIntegrationTests.test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite) (field='category', digits=1) ... FAIL
+[2026-11-01 23:33:03,609] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 196, in browse
+    notices = db().execute('SELECT n.*, c.name AS category FROM notices n JOIN categories c ON c.id=n.category_id' + where + ' ORDER BY n.id DESC LIMIT 8 OFFSET ?', params + [(page-1)*8]).fetchall()
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+  test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite (__main__.CampusApplicationIntegrationTests.test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite) (field='page', digits=19) ... FAIL
+[2026-11-01 23:33:03,614] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 196, in browse
+    notices = db().execute('SELECT n.*, c.name AS category FROM notices n JOIN categories c ON c.id=n.category_id' + where + ' ORDER BY n.id DESC LIMIT 8 OFFSET ?', params + [(page-1)*8]).fetchall()
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+  test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite (__main__.CampusApplicationIntegrationTests.test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite) (field='page', digits=100) ... FAIL
+test_browse_retains_valid_filters_pagination_and_safe_fallbacks (__main__.CampusApplicationIntegrationTests.test_browse_retains_valid_filters_pagination_and_safe_fallbacks) ... ok
+test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) ... [2026-11-01 23:33:04,540] ERROR in app: Exception on /notice/9223372036854775808 [GET]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 209, in detail
+    return render_template('detail.html', notice=load_notice(notice_id))
+                                                 ~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 97, in load_notice
+    notice = db().execute('SELECT n.*,c.name AS category,u.email FROM notices n JOIN categories c ON c.id=n.category_id JOIN users u ON u.id=n.owner_id WHERE n.id=?', (notice_id,)).fetchone()
+             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+
+  test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=19, suffix='', method='get') ... FAIL
+[2026-11-01 23:33:04,548] ERROR in app: Exception on /notice/9223372036854775808/photo [GET]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 214, in photo
+    notice = load_notice(notice_id)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 97, in load_notice
+    notice = db().execute('SELECT n.*,c.name AS category,u.email FROM notices n JOIN categories c ON c.id=n.category_id JOIN users u ON u.id=n.owner_id WHERE n.id=?', (notice_id,)).fetchone()
+             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+  test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=19, suffix='/photo', method='get') ... FAIL
+[2026-11-01 23:33:04,557] ERROR in app: Exception on /notice/9223372036854775808/edit [GET]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 308, in edit
+    notice = load_notice(notice_id); require_owner(notice)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 97, in load_notice
+    notice = db().execute('SELECT n.*,c.name AS category,u.email FROM notices n JOIN categories c ON c.id=n.category_id JOIN users u ON u.id=n.owner_id WHERE n.id=?', (notice_id,)).fetchone()
+             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+  test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=19, suffix='/edit', method='get') ... FAIL
+[2026-11-01 23:33:04,567] ERROR in app: Exception on /notice/9223372036854775808/edit [POST]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 308, in edit
+    notice = load_notice(notice_id); require_owner(notice)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 97, in load_notice
+    notice = db().execute('SELECT n.*,c.name AS category,u.email FROM notices n JOIN categories c ON c.id=n.category_id JOIN users u ON u.id=n.owner_id WHERE n.id=?', (notice_id,)).fetchone()
+             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+  test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=19, suffix='/edit', method='post') ... FAIL
+[2026-11-01 23:33:04,577] ERROR in app: Exception on /notice/9223372036854775808/returned [POST]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 332, in returned
+    notice = load_notice(notice_id); require_owner(notice)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 97, in load_notice
+    notice = db().execute('SELECT n.*,c.name AS category,u.email FROM notices n JOIN categories c ON c.id=n.category_id JOIN users u ON u.id=n.owner_id WHERE n.id=?', (notice_id,)).fetchone()
+             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+  test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=19, suffix='/returned', method='post') ... FAIL
+[2026-11-01 23:33:04,583] ERROR in app: Exception on /notice/9223372036854775808/remove [GET]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 343, in remove
+    notice = load_notice(notice_id)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 97, in load_notice
+    notice = db().execute('SELECT n.*,c.name AS category,u.email FROM notices n JOIN categories c ON c.id=n.category_id JOIN users u ON u.id=n.owner_id WHERE n.id=?', (notice_id,)).fetchone()
+             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+  test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=19, suffix='/remove', method='get') ... FAIL
+[2026-11-01 23:33:04,594] ERROR in app: Exception on /notice/9223372036854775808/remove [POST]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 343, in remove
+    notice = load_notice(notice_id)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 97, in load_notice
+    notice = db().execute('SELECT n.*,c.name AS category,u.email FROM notices n JOIN categories c ON c.id=n.category_id JOIN users u ON u.id=n.owner_id WHERE n.id=?', (notice_id,)).fetchone()
+             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+  test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=19, suffix='/remove', method='post') ... FAIL
+[2026-11-01 23:33:04,601] ERROR in app: Exception on /notice/9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 [GET]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 209, in detail
+    return render_template('detail.html', notice=load_notice(notice_id))
+                                                 ~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 97, in load_notice
+    notice = db().execute('SELECT n.*,c.name AS category,u.email FROM notices n JOIN categories c ON c.id=n.category_id JOIN users u ON u.id=n.owner_id WHERE n.id=?', (notice_id,)).fetchone()
+             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+  test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=100, suffix='', method='get') ... FAIL
+[2026-11-01 23:33:04,609] ERROR in app: Exception on /notice/9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999/photo [GET]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 214, in photo
+    notice = load_notice(notice_id)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 97, in load_notice
+    notice = db().execute('SELECT n.*,c.name AS category,u.email FROM notices n JOIN categories c ON c.id=n.category_id JOIN users u ON u.id=n.owner_id WHERE n.id=?', (notice_id,)).fetchone()
+             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+  test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=100, suffix='/photo', method='get') ... FAIL
+[2026-11-01 23:33:04,615] ERROR in app: Exception on /notice/9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999/edit [GET]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 308, in edit
+    notice = load_notice(notice_id); require_owner(notice)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 97, in load_notice
+    notice = db().execute('SELECT n.*,c.name AS category,u.email FROM notices n JOIN categories c ON c.id=n.category_id JOIN users u ON u.id=n.owner_id WHERE n.id=?', (notice_id,)).fetchone()
+             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+  test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=100, suffix='/edit', method='get') ... FAIL
+[2026-11-01 23:33:04,625] ERROR in app: Exception on /notice/9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999/edit [POST]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 308, in edit
+    notice = load_notice(notice_id); require_owner(notice)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 97, in load_notice
+    notice = db().execute('SELECT n.*,c.name AS category,u.email FROM notices n JOIN categories c ON c.id=n.category_id JOIN users u ON u.id=n.owner_id WHERE n.id=?', (notice_id,)).fetchone()
+             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+  test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=100, suffix='/edit', method='post') ... FAIL
+[2026-11-01 23:33:04,632] ERROR in app: Exception on /notice/9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999/returned [POST]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 332, in returned
+    notice = load_notice(notice_id); require_owner(notice)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 97, in load_notice
+    notice = db().execute('SELECT n.*,c.name AS category,u.email FROM notices n JOIN categories c ON c.id=n.category_id JOIN users u ON u.id=n.owner_id WHERE n.id=?', (notice_id,)).fetchone()
+             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+  test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=100, suffix='/returned', method='post') ... FAIL
+[2026-11-01 23:33:04,639] ERROR in app: Exception on /notice/9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999/remove [GET]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 343, in remove
+    notice = load_notice(notice_id)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 97, in load_notice
+    notice = db().execute('SELECT n.*,c.name AS category,u.email FROM notices n JOIN categories c ON c.id=n.category_id JOIN users u ON u.id=n.owner_id WHERE n.id=?', (notice_id,)).fetchone()
+             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+  test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=100, suffix='/remove', method='get') ... FAIL
+[2026-11-01 23:33:04,646] ERROR in app: Exception on /notice/9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999/remove [POST]
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\vendor\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 343, in remove
+    notice = load_notice(notice_id)
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\app.py", line 97, in load_notice
+    notice = db().execute('SELECT n.*,c.name AS category,u.email FROM notices n JOIN categories c ON c.id=n.category_id JOIN users u ON u.id=n.owner_id WHERE n.id=?', (notice_id,)).fetchone()
+             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+  test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=100, suffix='/remove', method='post') ... FAIL
+test_out_of_range_form_categories_cannot_create_or_change_notices (__main__.CampusApplicationIntegrationTests.test_out_of_range_form_categories_cannot_create_or_change_notices) ... ok
+
+======================================================================
+FAIL: test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite (__main__.CampusApplicationIntegrationTests.test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite) (field='category', digits=19)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\test_app.py", line 330, in test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite
+    self.assertEqual(response.status_code, 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 400
+
+======================================================================
+FAIL: test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite (__main__.CampusApplicationIntegrationTests.test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite) (field='category', digits=100)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\test_app.py", line 330, in test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite
+    self.assertEqual(response.status_code, 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 400
+
+======================================================================
+FAIL: test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite (__main__.CampusApplicationIntegrationTests.test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite) (field='category', digits=5000)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\test_app.py", line 330, in test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite
+    self.assertEqual(response.status_code, 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 400
+
+======================================================================
+FAIL: test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite (__main__.CampusApplicationIntegrationTests.test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite) (field='category', digits=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\test_app.py", line 330, in test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite
+    self.assertEqual(response.status_code, 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 400
+
+======================================================================
+FAIL: test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite (__main__.CampusApplicationIntegrationTests.test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite) (field='page', digits=19)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\test_app.py", line 330, in test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite
+    self.assertEqual(response.status_code, 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 400
+
+======================================================================
+FAIL: test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite (__main__.CampusApplicationIntegrationTests.test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite) (field='page', digits=100)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\test_app.py", line 330, in test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite
+    self.assertEqual(response.status_code, 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 400
+
+======================================================================
+FAIL: test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=19, suffix='', method='get')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\test_app.py", line 372, in test_notice_routes_reject_out_of_range_ids_without_changing_rows
+    self.assertEqual(response.status_code, 404)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 404
+
+======================================================================
+FAIL: test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=19, suffix='/photo', method='get')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\test_app.py", line 372, in test_notice_routes_reject_out_of_range_ids_without_changing_rows
+    self.assertEqual(response.status_code, 404)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 404
+
+======================================================================
+FAIL: test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=19, suffix='/edit', method='get')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\test_app.py", line 372, in test_notice_routes_reject_out_of_range_ids_without_changing_rows
+    self.assertEqual(response.status_code, 404)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 404
+
+======================================================================
+FAIL: test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=19, suffix='/edit', method='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\test_app.py", line 372, in test_notice_routes_reject_out_of_range_ids_without_changing_rows
+    self.assertEqual(response.status_code, 404)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 404
+
+======================================================================
+FAIL: test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=19, suffix='/returned', method='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\test_app.py", line 372, in test_notice_routes_reject_out_of_range_ids_without_changing_rows
+    self.assertEqual(response.status_code, 404)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 404
+
+======================================================================
+FAIL: test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=19, suffix='/remove', method='get')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\test_app.py", line 372, in test_notice_routes_reject_out_of_range_ids_without_changing_rows
+    self.assertEqual(response.status_code, 404)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 404
+
+======================================================================
+FAIL: test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=19, suffix='/remove', method='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\test_app.py", line 372, in test_notice_routes_reject_out_of_range_ids_without_changing_rows
+    self.assertEqual(response.status_code, 404)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 404
+
+======================================================================
+FAIL: test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=100, suffix='', method='get')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\test_app.py", line 372, in test_notice_routes_reject_out_of_range_ids_without_changing_rows
+    self.assertEqual(response.status_code, 404)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 404
+
+======================================================================
+FAIL: test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=100, suffix='/photo', method='get')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\test_app.py", line 372, in test_notice_routes_reject_out_of_range_ids_without_changing_rows
+    self.assertEqual(response.status_code, 404)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 404
+
+======================================================================
+FAIL: test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=100, suffix='/edit', method='get')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\test_app.py", line 372, in test_notice_routes_reject_out_of_range_ids_without_changing_rows
+    self.assertEqual(response.status_code, 404)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 404
+
+======================================================================
+FAIL: test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=100, suffix='/edit', method='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\test_app.py", line 372, in test_notice_routes_reject_out_of_range_ids_without_changing_rows
+    self.assertEqual(response.status_code, 404)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 404
+
+======================================================================
+FAIL: test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=100, suffix='/returned', method='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\test_app.py", line 372, in test_notice_routes_reject_out_of_range_ids_without_changing_rows
+    self.assertEqual(response.status_code, 404)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 404
+
+======================================================================
+FAIL: test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=100, suffix='/remove', method='get')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\test_app.py", line 372, in test_notice_routes_reject_out_of_range_ids_without_changing_rows
+    self.assertEqual(response.status_code, 404)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 404
+
+======================================================================
+FAIL: test_notice_routes_reject_out_of_range_ids_without_changing_rows (__main__.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) (id_length=100, suffix='/remove', method='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Zhanzhol\Documents\Codex\2026-10-06\new-chat\outputs\Endterm\Campus_Lost_Found\test_app.py", line 372, in test_notice_routes_reject_out_of_range_ids_without_changing_rows
+    self.assertEqual(response.status_code, 404)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 404
+
+----------------------------------------------------------------------
+Ran 4 tests in 4.434s
+
+FAILED (failures=20)
+
+EXIT_CODE: 1

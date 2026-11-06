@@ -1,0 +1,11 @@
+# Install Linux packages into a Linux virtual environment.
+# Never use the bundled Windows python/ or vendor/ directories on Linux.
+-r requirements.txt
+blinker==1.9.0
+click==8.5.0
+itsdangerous==2.2.0
+Jinja2==3.1.6
+MarkupSafe==3.0.4
+peewee==4.5.3
+Pygments==2.21.0
+Pillow==12.3.0

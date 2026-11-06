@@ -1,0 +1,208 @@
+{
+  "method": "20 authenticated HTTP checks evenly spaced over 1800 seconds; server loopback. This checks availability, not human usability or offline retry.",
+  "start_utc": "2026-10-30T10:35:23.495281+00:00",
+  "checks": [
+    {
+      "check": 1,
+      "utc": "2026-10-30T10:35:23.502281+00:00",
+      "elapsed_seconds": 0.0,
+      "path": "/",
+      "status": 200,
+      "passed": true,
+      "response_ms": 6.755,
+      "error": null
+    },
+    {
+      "check": 2,
+      "utc": "2026-10-30T10:36:58.262902+00:00",
+      "elapsed_seconds": 94.766,
+      "path": "/?q=notebook",
+      "status": 200,
+      "passed": true,
+      "response_ms": 22.454,
+      "error": null
+    },
+    {
+      "check": 3,
+      "utc": "2026-10-30T10:38:32.981691+00:00",
+      "elapsed_seconds": 189.485,
+      "path": "/notice/1",
+      "status": 200,
+      "passed": true,
+      "response_ms": 10.684,
+      "error": null
+    },
+    {
+      "check": 4,
+      "utc": "2026-10-30T10:40:07.735943+00:00",
+      "elapsed_seconds": 284.235,
+      "path": "/post",
+      "status": 200,
+      "passed": true,
+      "response_ms": 25.595,
+      "error": null
+    },
+    {
+      "check": 5,
+      "utc": "2026-10-30T10:41:42.469366+00:00",
+      "elapsed_seconds": 378.969,
+      "path": "/admin/analytics",
+      "status": 200,
+      "passed": true,
+      "response_ms": 19.106,
+      "error": null
+    },
+    {
+      "check": 6,
+      "utc": "2026-10-30T10:43:17.334271+00:00",
+      "elapsed_seconds": 473.844,
+      "path": "/",
+      "status": 200,
+      "passed": true,
+      "response_ms": 142.086,
+      "error": null
+    },
+    {
+      "check": 7,
+      "utc": "2026-10-30T10:44:51.959234+00:00",
+      "elapsed_seconds": 568.469,
+      "path": "/?q=notebook",
+      "status": 200,
+      "passed": true,
+      "response_ms": 44.518,
+      "error": null
+    },
+    {
+      "check": 8,
+      "utc": "2026-10-30T10:46:26.665386+00:00",
+      "elapsed_seconds": 663.172,
+      "path": "/notice/1",
+      "status": 200,
+      "passed": true,
+      "response_ms": 15.308,
+      "error": null
+    },
+    {
+      "check": 9,
+      "utc": "2026-10-30T10:48:01.401190+00:00",
+      "elapsed_seconds": 757.906,
+      "path": "/post",
+      "status": 200,
+      "passed": true,
+      "response_ms": 9.332,
+      "error": null
+    },
+    {
+      "check": 10,
+      "utc": "2026-10-30T10:49:36.144437+00:00",
+      "elapsed_seconds": 852.641,
+      "path": "/admin/analytics",
+      "status": 200,
+      "passed": true,
+      "response_ms": 16.299,
+      "error": null
+    },
+    {
+      "check": 11,
+      "utc": "2026-10-30T10:51:10.868057+00:00",
+      "elapsed_seconds": 947.375,
+      "path": "/",
+      "status": 200,
+      "passed": true,
+      "response_ms": 9.592,
+      "error": null
+    },
+    {
+      "check": 12,
+      "utc": "2026-10-30T10:52:45.610660+00:00",
+      "elapsed_seconds": 1042.11,
+      "path": "/?q=notebook",
+      "status": 200,
+      "passed": true,
+      "response_ms": 9.185,
+      "error": null
+    },
+    {
+      "check": 13,
+      "utc": "2026-10-30T10:54:20.353183+00:00",
+      "elapsed_seconds": 1136.86,
+      "path": "/notice/1",
+      "status": 200,
+      "passed": true,
+      "response_ms": 8.868,
+      "error": null
+    },
+    {
+      "check": 14,
+      "utc": "2026-10-30T10:55:55.081269+00:00",
+      "elapsed_seconds": 1231.578,
+      "path": "/post",
+      "status": 200,
+      "passed": true,
+      "response_ms": 8.084,
+      "error": null
+    },
+    {
+      "check": 15,
+      "utc": "2026-10-30T10:57:29.816337+00:00",
+      "elapsed_seconds": 1326.313,
+      "path": "/admin/analytics",
+      "status": 200,
+      "passed": true,
+      "response_ms": 11.6,
+      "error": null
+    },
+    {
+      "check": 16,
+      "utc": "2026-10-30T10:59:04.562239+00:00",
+      "elapsed_seconds": 1421.063,
+      "path": "/",
+      "status": 200,
+      "passed": true,
+      "response_ms": 19.431,
+      "error": null
+    },
+    {
+      "check": 17,
+      "utc": "2026-10-30T11:00:39.320543+00:00",
+      "elapsed_seconds": 1515.828,
+      "path": "/?q=notebook",
+      "status": 200,
+      "passed": true,
+      "response_ms": 30.178,
+      "error": null
+    },
+    {
+      "check": 18,
+      "utc": "2026-10-30T11:02:14.028994+00:00",
+      "elapsed_seconds": 1610.531,
+      "path": "/notice/1",
+      "status": 200,
+      "passed": true,
+      "response_ms": 8.585,
+      "error": null
+    },
+    {
+      "check": 19,
+      "utc": "2026-10-30T11:03:48.771726+00:00",
+      "elapsed_seconds": 1705.281,
+      "path": "/post",
+      "status": 200,
+      "passed": true,
+      "response_ms": 8.308,
+      "error": null
+    },
+    {
+      "check": 20,
+      "utc": "2026-10-30T11:05:23.501114+00:00",
+      "elapsed_seconds": 1800.0,
+      "path": "/admin/analytics",
+      "status": 200,
+      "passed": true,
+      "response_ms": 8.148,
+      "error": null
+    }
+  ],
+  "passed": 20,
+  "complete": true
+}
