@@ -168,9 +168,9 @@ def main():
         v['VIDEO_ROW'] = f'<tr><td>Demo video</td><td>Re-recorded Final demo video on the current interface: <span class="mono">{E(url)}</span>.</td><td>Backup: {old_video}.</td></tr>'
         v['VIDEO_NOTE'] = '<div class="fact"><b>Video.</b> The demo video was re-recorded on the final interface (student journey, administrator panel, analytics, smart-locker simulation, Microsoft sign-in) and is linked above. The Assignment 4 video is kept only as an older backup.</div>'
     else:
-        v['VIDEO_ROW'] = f'<tr><td>Demo video</td><td>Re-recorded Final demo video: <b>link to be added</b> (<span class="mono">Final/Video/</span>).</td><td>Backup now: {old_video}.</td></tr>'
-        v['VIDEO_NOTE'] = ('<div class="note"><b>Video status.</b> The Assignment 4 video shows the earlier white-and-teal interface without the administrator panel, analytics or locker, so the team is re-recording it on the final build; '
-                           'the scenes are listed in <span class="mono">Final/Demo/Demo_Plan_and_Backup.md</span> and the new link goes in <span class="mono">Final/Video/</span>.</div>')
+        v['VIDEO_ROW'] = f'<tr><td>Demo video</td><td>{old_video}.</td><td>Not re-recorded: the team presents the final system live.</td></tr>'
+        v['VIDEO_NOTE'] = ('<div class="note"><b>Video status.</b> The Assignment 4 video shows the earlier white-and-teal interface, without the administrator panel, analytics, locker or Microsoft sign-in. '
+                           'The team decided not to re-record it and to rely on the live demonstration; the old video is kept only as a fallback for the student flow, and the scenes it lacks are listed in <span class="mono">Final/Demo/Demo_Plan_and_Backup.md</span>.</div>')
     v['STATEMENT_STATUS'] = ('Each member confirmed that the statement under their name is accurate; signatures are on the printed copy.' if cfg['statements_confirmed'] else
                              '<b>Status: drafted from the team-confirmed contribution table (Stage 2 report, p. 9) and the code; each member must check every fact, especially the “problem I solved”, edit it in their own words and sign before submission.</b>')
 

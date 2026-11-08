@@ -508,7 +508,7 @@ notes(s, [
 // BACKUP SLIDES
 pres.addSection({ title: "Backup (not presented)" });
 s = content("Backup · if the live demo fails, we keep going", "Backup B1", "Backup (not presented)");
-const fb = [["Server stopped", "Close the window, double-click START.bat again, sign in (30 s)."], ["Port 5055 busy", "Stop the old window with Ctrl+C, or run python\\python.exe app.py --port 5056."], ["Laptop or browser fails", "Narrate slides 4, 5 and 10 — every frame is a real capture of the final build."], ["Need motion", VIDEO_URL ? `Final demo video: ${VIDEO_URL} (re-recorded on the final interface).` : "Final demo video: link to be added (Final/Video/). Until then: Video/SE-2623_Campus_Lost_Found_A4.mp4 — older interface; say so."]];
+const fb = [["Server stopped", "Close the window, double-click START.bat again, sign in (30 s)."], ["Port 5055 busy", "Stop the old window with Ctrl+C, or run python\\python.exe app.py --port 5056."], ["Laptop or browser fails", "Narrate slides 4, 5 and 10 — every frame is a real capture of the final build."], ["Need motion", VIDEO_URL ? `Final demo video: ${VIDEO_URL} (re-recorded on the final interface).` : "Local MP4 Video/SE-2623_Campus_Lost_Found_A4.mp4 (2:14) or youtu.be/76M3hSqR-7w — older interface, student flow only; say so."]];
 fb.forEach(([a, b], i) => {
   const y = 1.8 + i * 1.15;
   text(s, a, { x: MX, y, w: 3.4, h: 0.9, fontSize: 18, bold: true, color: C.green, valign: "middle", fontFace: HEAD });
