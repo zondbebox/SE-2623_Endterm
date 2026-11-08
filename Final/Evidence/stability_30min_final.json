@@ -1,0 +1,190 @@
+{
+ "checks": 20,
+ "planned_duration_s": 1800.0,
+ "passed": 20,
+ "completed": 20,
+ "records": [
+  {
+   "n": 1,
+   "utc": "2026-11-08T14:44:56+00:00",
+   "elapsed_s": 0.0,
+   "path": "/",
+   "status": 200,
+   "ms": 28.33,
+   "ok": true
+  },
+  {
+   "n": 2,
+   "utc": "2026-11-08T14:46:31+00:00",
+   "elapsed_s": 94.7,
+   "path": "/?q=notebook",
+   "status": 200,
+   "ms": 4.04,
+   "ok": true
+  },
+  {
+   "n": 3,
+   "utc": "2026-11-08T14:48:06+00:00",
+   "elapsed_s": 189.5,
+   "path": "/notice/1",
+   "status": 200,
+   "ms": 23.61,
+   "ok": true
+  },
+  {
+   "n": 4,
+   "utc": "2026-11-08T14:49:40+00:00",
+   "elapsed_s": 284.3,
+   "path": "/post",
+   "status": 200,
+   "ms": 54.75,
+   "ok": true
+  },
+  {
+   "n": 5,
+   "utc": "2026-11-08T14:51:15+00:00",
+   "elapsed_s": 379.0,
+   "path": "/admin/analytics",
+   "status": 200,
+   "ms": 34.52,
+   "ok": true
+  },
+  {
+   "n": 6,
+   "utc": "2026-11-08T14:52:50+00:00",
+   "elapsed_s": 473.7,
+   "path": "/",
+   "status": 200,
+   "ms": 6.83,
+   "ok": true
+  },
+  {
+   "n": 7,
+   "utc": "2026-11-08T14:54:25+00:00",
+   "elapsed_s": 568.4,
+   "path": "/?q=notebook",
+   "status": 200,
+   "ms": 7.15,
+   "ok": true
+  },
+  {
+   "n": 8,
+   "utc": "2026-11-08T14:55:59+00:00",
+   "elapsed_s": 663.2,
+   "path": "/notice/1",
+   "status": 200,
+   "ms": 15.25,
+   "ok": true
+  },
+  {
+   "n": 9,
+   "utc": "2026-11-08T14:57:34+00:00",
+   "elapsed_s": 757.9,
+   "path": "/post",
+   "status": 200,
+   "ms": 42.98,
+   "ok": true
+  },
+  {
+   "n": 10,
+   "utc": "2026-11-08T14:59:09+00:00",
+   "elapsed_s": 852.7,
+   "path": "/admin/analytics",
+   "status": 200,
+   "ms": 23.56,
+   "ok": true
+  },
+  {
+   "n": 11,
+   "utc": "2026-11-08T15:00:44+00:00",
+   "elapsed_s": 947.4,
+   "path": "/",
+   "status": 200,
+   "ms": 18.83,
+   "ok": true
+  },
+  {
+   "n": 12,
+   "utc": "2026-11-08T15:02:18+00:00",
+   "elapsed_s": 1042.2,
+   "path": "/?q=notebook",
+   "status": 200,
+   "ms": 58.44,
+   "ok": true
+  },
+  {
+   "n": 13,
+   "utc": "2026-11-08T15:03:53+00:00",
+   "elapsed_s": 1136.9,
+   "path": "/notice/1",
+   "status": 200,
+   "ms": 41.54,
+   "ok": true
+  },
+  {
+   "n": 14,
+   "utc": "2026-11-08T15:05:28+00:00",
+   "elapsed_s": 1231.6,
+   "path": "/post",
+   "status": 200,
+   "ms": 7.48,
+   "ok": true
+  },
+  {
+   "n": 15,
+   "utc": "2026-11-08T15:07:03+00:00",
+   "elapsed_s": 1326.3,
+   "path": "/admin/analytics",
+   "status": 200,
+   "ms": 15.86,
+   "ok": true
+  },
+  {
+   "n": 16,
+   "utc": "2026-11-08T15:08:37+00:00",
+   "elapsed_s": 1421.1,
+   "path": "/",
+   "status": 200,
+   "ms": 7.93,
+   "ok": true
+  },
+  {
+   "n": 17,
+   "utc": "2026-11-08T15:10:12+00:00",
+   "elapsed_s": 1515.8,
+   "path": "/?q=notebook",
+   "status": 200,
+   "ms": 25.36,
+   "ok": true
+  },
+  {
+   "n": 18,
+   "utc": "2026-11-08T15:11:47+00:00",
+   "elapsed_s": 1610.6,
+   "path": "/notice/1",
+   "status": 200,
+   "ms": 25.34,
+   "ok": true
+  },
+  {
+   "n": 19,
+   "utc": "2026-11-08T15:13:21+00:00",
+   "elapsed_s": 1705.3,
+   "path": "/post",
+   "status": 200,
+   "ms": 5.57,
+   "ok": true
+  },
+  {
+   "n": 20,
+   "utc": "2026-11-08T15:14:56+00:00",
+   "elapsed_s": 1800.0,
+   "path": "/admin/analytics",
+   "status": 200,
+   "ms": 36.14,
+   "ok": true
+  }
+ ],
+ "method": "Real authenticated HTTP sessions (student + admin) against the local Waitress server; a check passes only with HTTP 200, the expected page content and no sign-in form.",
+ "limits": "Does not simulate browser offline/retry; see browser_checks.json for that."
+}

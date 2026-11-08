@@ -374,6 +374,8 @@ def create_app(test_config=None):
     register_analytics(app)
     from admin_panel import register_admin_panel
     register_admin_panel(app)
+    from microsoft_auth import register_microsoft_auth  # optional; off unless CAMPUS_ENTRA_* is set
+    register_microsoft_auth(app)
     return app
 
 if __name__ == '__main__':

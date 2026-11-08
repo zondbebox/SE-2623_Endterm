@@ -1,0 +1,7 @@
+participant_code,outside_team,consent,date,device,os_browser,task,seconds,completed_correctly,assisted,observation
+T01,yes,yes,2026-11-07,laptop,Windows 11 / Chrome,publish,89,yes,no,
+T01,yes,yes,2026-11-07,laptop,Windows 11 / Chrome,find,40,yes,no,
+T02,yes,yes,2026-11-06,laptop,Windows 11 / Microsoft Edge,publish,84,yes,no,
+T02,yes,yes,2026-11-06,laptop,Windows 11 / Microsoft Edge,find,45,yes,no,
+T03,yes,yes,2026-11-07,phone,Android / Chrome,publish,78,yes,no,
+T03,yes,yes,2026-11-07,phone,Android / Chrome,find,42,yes,no,

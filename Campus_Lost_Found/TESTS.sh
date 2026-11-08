@@ -9,4 +9,5 @@ campus_prepare
 "$CAMPUS_PYTHON" -B test_analytics.py
 "$CAMPUS_PYTHON" -B test_admin_panel.py
 "$CAMPUS_PYTHON" -B test_stage2_features.py
-exec "$CAMPUS_PYTHON" -B test_backup_full.py
+"$CAMPUS_PYTHON" -B test_backup_full.py
+exec "$CAMPUS_PYTHON" -B test_microsoft_auth.py

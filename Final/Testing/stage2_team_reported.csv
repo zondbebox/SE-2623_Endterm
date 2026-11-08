@@ -1,0 +1,11 @@
+source,stage,task,seconds,target_seconds,within_target,note
+team-reported (no raw record in package),Stage 2 / Endterm,publish,78,120,yes,"Reported by the team after the Stage 2 report was submitted; the Stage 2 report itself records SC1 as Pending."
+team-reported (no raw record in package),Stage 2 / Endterm,publish,70,120,yes,
+team-reported (no raw record in package),Stage 2 / Endterm,publish,82,120,yes,
+team-reported (no raw record in package),Stage 2 / Endterm,publish,88,120,yes,
+team-reported (no raw record in package),Stage 2 / Endterm,publish,92,120,yes,
+team-reported (no raw record in package),Stage 2 / Endterm,find,45,60,yes,"Reported by the team; the Stage 2 report records SC2 as Pending."
+team-reported (no raw record in package),Stage 2 / Endterm,find,48,60,yes,
+team-reported (no raw record in package),Stage 2 / Endterm,find,49,60,yes,
+team-reported (no raw record in package),Stage 2 / Endterm,find,53,60,yes,
+team-reported (no raw record in package),Stage 2 / Endterm,find,47,60,yes,

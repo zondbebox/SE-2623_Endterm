@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" width="1000" height="1200" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#173d31"/></marker>
+  </defs>
+  <rect width="1000" height="1200" fill="#f7f5ee"/>
+  <!-- boundary -->
+  <rect x="18" y="44" width="964" height="868" rx="22" fill="none" stroke="#173d31" stroke-width="3.5" stroke-dasharray="16 10"/>
+  <rect x="36" y="26" width="610" height="36" rx="9" fill="#173d31"/>
+  <text x="52" y="51" font-size="19" font-weight="700" fill="#eef5e4">SECURITY BOUNDARY · demo laptop, Windows user account</text>
+
+  <!-- browser -->
+  <rect x="50" y="88" width="540" height="196" rx="16" fill="#fff" stroke="#c9cfc2" stroke-width="2"/>
+  <text x="72" y="124" font-size="25" font-weight="700" fill="#16231c">Browser on the same laptop</text>
+  <text x="72" y="152" font-size="19" fill="#56635b">Chrome · Edge · Firefox</text>
+  <rect x="72" y="168" width="242" height="96" rx="11" fill="#e3f1c8"/>
+  <text x="88" y="200" font-size="20" font-weight="700" fill="#173d31">Student session</text>
+  <text x="88" y="226" font-size="17" fill="#26342c">post · search · contact</text>
+  <text x="88" y="249" font-size="17" fill="#26342c">edit · mark returned</text>
+  <rect x="328" y="168" width="242" height="96" rx="11" fill="#dbe8e1"/>
+  <text x="344" y="200" font-size="20" font-weight="700" fill="#173d31">Admin session</text>
+  <text x="344" y="226" font-size="17" fill="#26342c">panel · remove · analytics</text>
+  <text x="344" y="249" font-size="17" fill="#26342c">testing timer · locker</text>
+
+  <!-- operator tools -->
+  <rect x="618" y="88" width="336" height="196" rx="16" fill="#fff" stroke="#c9cfc2" stroke-width="2"/>
+  <text x="638" y="124" font-size="22" font-weight="700" fill="#16231c">Operator tools</text>
+  <text x="638" y="156" font-size="17" fill="#26342c">START.bat / START.sh</text>
+  <text x="638" y="182" font-size="17" fill="#26342c">TESTS.bat — 83 tests</text>
+  <text x="638" y="208" font-size="17" fill="#26342c">BACKUP · RESTORE_CHECK</text>
+  <text x="638" y="234" font-size="17" fill="#26342c">DATABASE.bat → sqlite-web</text>
+  <text x="638" y="260" font-size="17" fill="#26342c">127.0.0.1:8088, read-only</text>
+
+  <!-- http arrow -->
+  <line x1="300" y1="286" x2="300" y2="344" stroke="#173d31" stroke-width="4" marker-start="url(#a)" marker-end="url(#a)"/>
+  <rect x="322" y="296" width="372" height="40" rx="9" fill="#fff4dc" stroke="#d9a441"/>
+  <text x="336" y="323" font-size="19" font-weight="700" fill="#6b4a06">HTTP · 127.0.0.1:5055 · no TLS</text>
+
+  <!-- server -->
+  <rect x="50" y="348" width="600" height="352" rx="16" fill="#173d31"/>
+  <text x="72" y="388" font-size="25" font-weight="700" fill="#f3f7e8">Waitress + Flask 3.1 application</text>
+  <text x="72" y="415" font-size="18" fill="#cfe2c2">Bundled Python 3.14 · 4 threads · trusted hosts: localhost</text>
+  <rect x="72" y="432" width="556" height="122" rx="11" fill="#2a5545"/>
+  <text x="90" y="462" font-size="19" font-weight="700" fill="#d6ee9b">Checked on every request</text>
+  <text x="90" y="490" font-size="17" fill="#f3f7e8">signed session cookie (HttpOnly, SameSite=Lax, 30 min)</text>
+  <text x="90" y="515" font-size="17" fill="#f3f7e8">CSRF token on every POST · login/register rate limit</text>
+  <text x="90" y="540" font-size="17" fill="#f3f7e8">owner and admin role checks · CSP and nosniff headers</text>
+  <text x="72" y="584" font-size="17" fill="#f3f7e8">app.py · admin_panel.py · analytics_routes.py</text>
+  <text x="72" y="609" font-size="17" fill="#f3f7e8">stage2_features.py · microsoft_auth.py (off) · static/*.js</text>
+  <rect x="72" y="626" width="556" height="56" rx="11" fill="#d6ee9b"/>
+  <text x="90" y="651" font-size="17" font-weight="700" fill="#173d31">Passwords: scrypt hashes · photos: re-encoded,</text>
+  <text x="90" y="673" font-size="17" font-weight="700" fill="#173d31">metadata removed, random names, login-only route</text>
+
+  <!-- locker -->
+  <rect x="676" y="348" width="278" height="352" rx="16" fill="#fff" stroke="#173d31" stroke-width="2.5" stroke-dasharray="9 7"/>
+  <text x="696" y="386" font-size="22" font-weight="700" fill="#16231c">Smart locker LF-01</text>
+  <text x="696" y="414" font-size="18" font-weight="700" fill="#9a5b12">SOFTWARE SIMULATION</text>
+  <text x="696" y="450" font-size="17" fill="#26342c">Admin buttons (fetch,</text>
+  <text x="696" y="474" font-size="17" fill="#26342c">no page reload) or the</text>
+  <text x="696" y="498" font-size="17" fill="#26342c">simulate_locker.py CLI.</text>
+  <text x="696" y="534" font-size="17" fill="#26342c">“OPEN TOO LONG” after</text>
+  <text x="696" y="558" font-size="17" fill="#26342c">10 s, checked when the</text>
+  <text x="696" y="582" font-size="17" fill="#26342c">page is requested.</text>
+  <text x="696" y="618" font-size="17" fill="#26342c">No sensor, door or</text>
+  <text x="696" y="642" font-size="17" fill="#26342c">device on any network.</text>
+  <line x1="350" y1="702" x2="350" y2="752" stroke="#173d31" stroke-width="4" marker-start="url(#a)" marker-end="url(#a)"/>
+  <line x1="815" y1="702" x2="815" y2="752" stroke="#173d31" stroke-width="3" marker-end="url(#a)"/>
+
+  <!-- disk -->
+  <rect x="50" y="756" width="904" height="132" rx="16" fill="#fff" stroke="#c9cfc2" stroke-width="2"/>
+  <text x="72" y="788" font-size="21" font-weight="700" fill="#16231c">Local disk · Campus_Lost_Found/</text>
+  <text x="430" y="788" font-size="18" font-weight="700" fill="#9a3b2b">not encrypted by the application</text>
+  <g font-size="17">
+    <rect x="72" y="802" width="196" height="70" rx="9" fill="#eef0e8"/><text x="84" y="828" font-weight="700" fill="#16231c">campus.sqlite3</text><text x="84" y="852" fill="#56635b" font-size="15">users · categories ·</text><text x="84" y="868" fill="#56635b" font-size="15">notices</text>
+    <rect x="278" y="802" width="140" height="70" rx="9" fill="#eef0e8"/><text x="290" y="828" font-weight="700" fill="#16231c">uploads/</text><text x="290" y="852" fill="#56635b" font-size="15">private photos</text>
+    <rect x="428" y="802" width="170" height="70" rx="9" fill="#eef0e8"/><text x="440" y="828" font-weight="700" fill="#16231c">research.sqlite3</text><text x="440" y="852" fill="#56635b" font-size="15">codes T01…</text>
+    <rect x="608" y="802" width="170" height="70" rx="9" fill="#eef0e8"/><text x="620" y="828" font-weight="700" fill="#16231c">telemetry.sqlite3</text><text x="620" y="852" fill="#56635b" font-size="15">SIMULATED events</text>
+    <rect x="788" y="802" width="150" height="70" rx="9" fill="#eef0e8"/><text x="800" y="828" font-weight="700" fill="#16231c">runtime/ backups/</text><text x="800" y="852" fill="#56635b" font-size="15">key · audit · ZIPs</text>
+  </g>
+
+  <!-- outside -->
+  <text x="22" y="955" font-size="23" font-weight="700" fill="#16231c">Outside the boundary</text>
+  <g font-size="16">
+    <rect x="20" y="972" width="232" height="150" rx="13" fill="#fff" stroke="#c9cfc2" stroke-width="2"/>
+    <text x="36" y="1004" font-size="19" font-weight="700" fill="#16231c">Email app</text>
+    <text x="36" y="1032" fill="#26342c">“Contact author” opens</text><text x="36" y="1054" fill="#26342c">a mailto: draft; the site</text><text x="36" y="1076" fill="#26342c">never sends email.</text>
+    <rect x="266" y="972" width="232" height="150" rx="13" fill="#fff" stroke="#c9cfc2" stroke-width="2"/>
+    <text x="282" y="1004" font-size="19" font-weight="700" fill="#16231c">Other devices</text>
+    <text x="282" y="1032" fill="#26342c">Phones and PCs on Wi-Fi</text><text x="282" y="1054" fill="#26342c">cannot connect: server</text><text x="282" y="1076" fill="#26342c">binds 127.0.0.1 only.</text>
+    <rect x="512" y="972" width="232" height="150" rx="13" fill="#fff" stroke="#173d31" stroke-width="2.5" stroke-dasharray="9 7"/>
+    <text x="528" y="1004" font-size="19" font-weight="700" fill="#16231c">Microsoft Entra ID</text>
+    <text x="528" y="1032" fill="#26342c">Sign-in code ready</text><text x="528" y="1054" fill="#26342c">(OIDC + PKCE), off until</text><text x="528" y="1076" fill="#26342c">IT registers the app.</text>
+    <rect x="758" y="972" width="222" height="150" rx="13" fill="#fff" stroke="#c9cfc2" stroke-width="2"/>
+    <text x="774" y="1004" font-size="19" font-weight="700" fill="#16231c">GitHub</text>
+    <text x="774" y="1032" fill="#26342c">Public source copy,</text><text x="774" y="1054" fill="#26342c">synthetic data only;</text><text x="774" y="1076" fill="#26342c">no runtime link.</text>
+  </g>
+  <g font-size="16" fill="#56635b">
+    <line x1="22" y1="1160" x2="70" y2="1160" stroke="#173d31" stroke-width="3" stroke-dasharray="12 8"/><text x="80" y="1166">security boundary</text>
+    <rect x="250" y="1148" width="46" height="24" rx="5" fill="none" stroke="#173d31" stroke-dasharray="7 5"/><text x="306" y="1166">simulated / not connected</text>
+    <rect x="540" y="1148" width="46" height="24" rx="5" fill="#d6ee9b"/><text x="596" y="1166">protected by hashing</text>
+    <rect x="790" y="1148" width="46" height="24" rx="5" fill="#fff4dc" stroke="#d9a441"/><text x="846" y="1166">unencrypted</text>
+  </g>
+</svg>

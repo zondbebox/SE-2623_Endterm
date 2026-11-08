@@ -1,0 +1,241 @@
+{
+ "run_utc": "2026-11-08T14:49:04+00:00",
+ "browser": "Microsoft Edge (headless, Chromium) via DevTools Protocol",
+ "code": "commit a7e5c74, isolated scratch copy",
+ "note": "Automated browser evidence, not a human usability or accessibility audit.",
+ "F2_created_notice_path": "/notice/123",
+ "F5_search": {
+  "url": "/?q=red+notebook&category=4&status=",
+  "result_count_text": "1 notices \u00b7 Page 1",
+  "titles": [
+   "Red notebook"
+  ]
+ },
+ "F6_mailto": {
+  "notice": "/notice/4",
+  "href": "mailto:student01.demo@astanait.edu.kz?subject=Campus%20Lost%20%26%20Found%20notice%20%234",
+  "posted_by": "student01.demo@astanait.edu.kz"
+ },
+ "F7_returned_badge": "Returned",
+ "F8_admin_removal": {
+  "notice": 123,
+  "after_url": "/",
+  "flash": "Notice removed by the administrator."
+ },
+ "locker_simulation": {
+  "alert_text": "OPEN TOO LONG \u2014 last reported open for 13.6 seconds.",
+  "updated_without_page_reload": true,
+  "status_message": "Reading saved. Door is closed.",
+  "door_state_after_close": "closed"
+ },
+ "N4_offline_retry": {
+  "locker_refresh_while_offline": "The result could not be confirmed. Refresh status before trying another action.",
+  "locker_refresh_after_reconnect": "Status refreshed. Door is closed.",
+  "page_navigation_while_offline_shows_app": false,
+  "reload_after_reconnect_shows_app": true,
+  "passed": true
+ },
+ "N3_360px": {
+  "pages": {
+   "/": {
+    "scrollWidth": 360,
+    "clientWidth": 360
+   },
+   "/post": {
+    "scrollWidth": 360,
+    "clientWidth": 360
+   },
+   "/notice/4": {
+    "scrollWidth": 360,
+    "clientWidth": 360
+   },
+   "/how-it-works": {
+    "scrollWidth": 360,
+    "clientWidth": 360
+   },
+   "/admin": {
+    "scrollWidth": 360,
+    "clientWidth": 360
+   },
+   "/admin/notices": {
+    "scrollWidth": 360,
+    "clientWidth": 360
+   },
+   "/admin/users": {
+    "scrollWidth": 360,
+    "clientWidth": 360
+   },
+   "/admin/analytics": {
+    "scrollWidth": 360,
+    "clientWidth": 360
+   },
+   "/admin/research": {
+    "scrollWidth": 360,
+    "clientWidth": 360
+   },
+   "/admin/smart-locker": {
+    "scrollWidth": 360,
+    "clientWidth": 360
+   },
+   "/login": {
+    "scrollWidth": 360,
+    "clientWidth": 360
+   },
+   "/register": {
+    "scrollWidth": 360,
+    "clientWidth": 360
+   }
+  },
+  "no_horizontal_scroll": true
+ },
+ "N3_labels": {
+  "/": {
+   "fields": 3,
+   "all_labelled": true
+  },
+  "/post": {
+   "fields": 7,
+   "all_labelled": true
+  },
+  "/login": {
+   "fields": 2,
+   "all_labelled": true
+  }
+ },
+ "N3_keyboard_post_form": {
+  "tab_order": [
+   {
+    "tag": "a",
+    "text": "Skip to content",
+    "visible_focus": true
+   },
+   {
+    "tag": "a",
+    "text": "Campus Lost & Found\nFind it. Return it. ",
+    "visible_focus": true
+   },
+   {
+    "tag": "a",
+    "text": "Browse notices",
+    "visible_focus": true
+   },
+   {
+    "tag": "a",
+    "text": "Post a notice",
+    "visible_focus": true
+   },
+   {
+    "tag": "a",
+    "text": "My notices",
+    "visible_focus": true
+   },
+   {
+    "tag": "a",
+    "text": "How it works",
+    "visible_focus": true
+   },
+   {
+    "tag": "button",
+    "text": "Sign out",
+    "visible_focus": true
+   },
+   {
+    "tag": "a",
+    "text": "\u2190 Back to notices",
+    "visible_focus": true
+   },
+   {
+    "tag": "select",
+    "text": "Lost\nFound",
+    "visible_focus": true
+   },
+   {
+    "tag": "select",
+    "text": "Choose a category\nAccessories\nBags\nBooks",
+    "visible_focus": true
+   },
+   {
+    "tag": "input",
+    "text": "title",
+    "visible_focus": true
+   },
+   {
+    "tag": "textarea",
+    "text": "description",
+    "visible_focus": true
+   },
+   {
+    "tag": "input",
+    "text": "location",
+    "visible_focus": true
+   },
+   {
+    "tag": "input",
+    "text": "2026-11-08",
+    "visible_focus": true
+   },
+   {
+    "tag": "input",
+    "text": "2026-11-08",
+    "visible_focus": false
+   },
+   {
+    "tag": "button",
+    "text": "Choose photo",
+    "visible_focus": true
+   },
+   {
+    "tag": "button",
+    "text": "Publish notice",
+    "visible_focus": true
+   },
+   {
+    "tag": "a",
+    "text": "Cancel",
+    "visible_focus": true
+   },
+   {
+    "tag": "a",
+    "text": "Media credits",
+    "visible_focus": true
+   },
+   {
+    "tag": "button",
+    "text": "\u25c9\nMotion off",
+    "visible_focus": true
+   },
+   {
+    "tag": "body",
+    "text": "Skip to content\nLOCAL DEMO\nSynthetic acc",
+    "visible_focus": false
+   },
+   {
+    "tag": "a",
+    "text": "Skip to content",
+    "visible_focus": true
+   },
+   {
+    "tag": "a",
+    "text": "Campus Lost & Found\nFind it. Return it. ",
+    "visible_focus": true
+   },
+   {
+    "tag": "a",
+    "text": "Browse notices",
+    "visible_focus": true
+   },
+   {
+    "tag": "a",
+    "text": "Post a notice",
+    "visible_focus": true
+   },
+   {
+    "tag": "a",
+    "text": "My notices",
+    "visible_focus": true
+   }
+  ],
+  "all_focus_visible": false,
+  "reaches_publish_button": true
+ }
+}

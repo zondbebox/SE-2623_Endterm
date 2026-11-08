@@ -1,0 +1,75 @@
+﻿[
+ {
+  "account": "zhanzhol.demo@astanait.edu.kz",
+  "login_status": 302,
+  "redirect": "/",
+  "login_ok": true,
+  "pages": {
+   "/": 200,
+   "/admin": 403,
+   "/admin/notices": 403,
+   "/admin/users": 403,
+   "/admin/analytics": 403,
+   "/admin/research": 403,
+   "/admin/smart-locker": 403
+  }
+ },
+ {
+  "account": "daniil.demo@astanait.edu.kz",
+  "login_status": 302,
+  "redirect": "/",
+  "login_ok": true,
+  "pages": {
+   "/": 200,
+   "/admin": 403,
+   "/admin/notices": 403,
+   "/admin/users": 403,
+   "/admin/analytics": 403,
+   "/admin/research": 403,
+   "/admin/smart-locker": 403
+  }
+ },
+ {
+  "account": "daulet.demo@astanait.edu.kz",
+  "login_status": 302,
+  "redirect": "/",
+  "login_ok": true,
+  "pages": {
+   "/": 200,
+   "/admin": 403,
+   "/admin/notices": 403,
+   "/admin/users": 403,
+   "/admin/analytics": 403,
+   "/admin/research": 403,
+   "/admin/smart-locker": 403
+  }
+ },
+ {
+  "account": "admin.demo@astanait.edu.kz",
+  "login_status": 302,
+  "redirect": "/",
+  "login_ok": true,
+  "pages": {
+   "/": 200,
+   "/admin": 200,
+   "/admin/notices": 200,
+   "/admin/users": 200,
+   "/admin/analytics": 200,
+   "/admin/research": 200,
+   "/admin/smart-locker": 200
+  }
+ },
+ {
+  "account": "zhanzhol.demo (wrong password)",
+  "login_status": 200,
+  "login_ok": false
+ },
+ {
+  "account": "anonymous",
+  "pages": {
+   "/": 302,
+   "/notice/1": 302,
+   "/admin": 302
+  }
+ }
+]

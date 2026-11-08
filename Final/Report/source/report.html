@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Group_Team_ICT_FinalProject — Campus Lost &amp; Found (SE-2623)</title>
+<style>
+@page { size: A4; margin: 0; }
+:root { --ink:#16231c; --muted:#56635b; --green:#173d31; --forest:#1f5a47; --lime:#d6ee9b; --cream:#f6f4ec; --line:#d9ddd2; --amber:#9a5b12; --amberbg:#fff4dc; --red:#9a3b2b; }
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; background:#888; }
+body { font-family: "Segoe UI", Arial, sans-serif; color: var(--ink); font-size: 9.6pt; line-height: 1.47; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { width:210mm; height:297mm; background:#fff; position:relative; overflow:hidden; padding:20mm 17mm 18mm 17mm; page-break-after: always; break-after: page; margin:0 auto; }
+.page:last-child { page-break-after: auto; break-after: auto; }
+.run { position:absolute; top:8.5mm; left:17mm; right:17mm; display:flex; justify-content:space-between; font-size:7.6pt; color:var(--muted); letter-spacing:.02em; border-bottom:0.6pt solid var(--line); padding-bottom:2mm; }
+.foot { position:absolute; bottom:8mm; left:17mm; right:17mm; display:flex; justify-content:space-between; font-size:7.6pt; color:var(--muted); }
+.foot b { color: var(--green); }
+h1 { font-size: 21pt; line-height:1.15; margin: 0 0 3mm; letter-spacing:-.01em; color: var(--green); }
+h2 { font-size: 15pt; line-height:1.2; margin: 0 0 2.5mm; color: var(--green); letter-spacing:-.01em; }
+h3 { font-size: 11pt; margin: 4mm 0 1.5mm; color: var(--ink); }
+.sec { font-size:8pt; font-weight:700; letter-spacing:.14em; color: var(--forest); text-transform: uppercase; margin-bottom: 1mm; }
+p { margin: 0 0 2.2mm; }
+.lead { font-size: 10.6pt; color:#26342c; }
+.small { font-size: 8.2pt; color: var(--muted); }
+.cap { font-size: 7.9pt; color: var(--muted); margin-top: 1.2mm; line-height:1.35; }
+td .mono { overflow-wrap: anywhere; }
+table { table-layout: fixed; width:100%; border-collapse: collapse; font-size: 8.3pt; line-height:1.35; margin: 1.5mm 0 3mm; }
+th { background: var(--green); color:#fff; text-align:left; font-weight:600; padding: 1.6mm 2mm; vertical-align: bottom; }
+td { padding: 1.5mm 2mm; border-bottom: 0.6pt solid var(--line); vertical-align: top; }
+tr:nth-child(even) td { background:#fafaf6; }
+.ok { color:#1d6b3f; font-weight:700; white-space:nowrap; }
+.part { color: var(--amber); font-weight:700; white-space:nowrap; }
+.pend { color: #5d6670; font-weight:700; white-space:nowrap; }
+.no { color: var(--red); font-weight:700; white-space:nowrap; }
+code, .mono { font-family: Consolas, "Cascadia Mono", monospace; font-size: 8pt; background:#f1f2ec; padding: 0 1mm; border-radius: 1mm; }
+.note { background: var(--amberbg); border-left: 1.2mm solid #d9a441; padding: 2.4mm 3mm; font-size: 8.6pt; margin: 2mm 0 3mm; }
+.fact { background: #eef5e4; border-left: 1.2mm solid var(--forest); padding: 2.4mm 3mm; font-size: 8.6pt; margin: 2mm 0 3mm; }
+.cols { display:flex; gap: 6mm; }
+.cols > div { flex:1; min-width:0; }
+.shot { width:100%; border:0.6pt solid var(--line); border-radius: 1.6mm; display:block; object-fit: cover; object-position: top center; background:#f3f3ee; }
+figure { margin: 0 0 3mm; }
+ul { margin: 0 0 2.5mm; padding-left: 4.5mm; }
+li { margin-bottom: 0.8mm; }
+.k { display:inline-block; min-width: 13mm; font-weight:700; color: var(--green); }
+.bignum { font-size: 26pt; font-weight: 700; color: var(--green); line-height: 1; letter-spacing:-.02em; }
+.stat { border-top: 0.8pt solid var(--green); padding-top: 2mm; }
+.stat .lbl { font-size: 8.2pt; color: var(--muted); margin-top: 1mm; }
+.sig { margin-top: 3mm; display:flex; gap: 10mm; font-size: 8.4pt; }
+.sig span { flex:1; border-top: 0.6pt solid #777; padding-top: 1mm; color: var(--muted); }
+.stmt { border: 0.6pt solid var(--line); border-radius: 2mm; padding: 3.2mm 4mm; margin-bottom: 3.2mm; }
+.stmt h3 { margin-top: 0; }
+.refs p { padding-left: 7mm; text-indent: -7mm; font-size: 8.5pt; margin-bottom: 1.8mm; }
+.cover { padding:0; background: var(--green); color:#f3f7e8; }
+.cover .inner { position:absolute; inset: 0; padding: 26mm 20mm 20mm; }
+.cover h1 { color:#fff; font-size: 40pt; line-height:1.02; margin: 10mm 0 6mm; letter-spacing:-.025em; }
+.cover h1 em { color: var(--lime); font-style: normal; }
+.cover .kicker { font-size: 9pt; letter-spacing: .2em; color: var(--lime); font-weight: 700; }
+.cover .sub { font-size: 13pt; color:#d9e7d4; max-width: 140mm; }
+.cover .meta { position:absolute; left:20mm; right:20mm; bottom: 20mm; display:flex; justify-content: space-between; gap: 8mm; font-size: 9.5pt; color:#d9e7d4; }
+.cover .meta > div { flex: 1 1 auto; white-space: nowrap; }
+.cover .meta b { color:#fff; display:block; font-size: 10.5pt; margin-bottom: 1mm; }
+.cover .shotwrap { position:absolute; left: 20mm; right: 20mm; top: 118mm; height: 112mm; border-radius: 3mm; overflow: hidden; box-shadow: 0 6mm 14mm rgba(0,0,0,.35); }
+.cover .shotwrap img { width:100%; height:100%; object-fit: cover; object-position: top center; display:block; }
+.legend span { margin-right: 4mm; }
+.tight td, .tight th { padding: 1.1mm 1.6mm; }
+</style>
+</head>
+<body>
+
+<!-- ============ 1 COVER ============ -->
+<section class="page cover"><div class="inner">
+  <div class="kicker">ICT FINAL PROJECT · WEEK 10 · SE-2623</div>
+  <h1>Campus<br>Lost &amp; Found<br><em>Final report</em></h1>
+  <p class="sub">A local web service for publishing, finding and closing lost-and-found notices on a university campus — the completed, tested and documented version.</p>
+  <div class="shotwrap"><img src="../../Evidence/screenshots/S02_browse.png" alt="Final build: the student noticeboard after sign-in"></div>
+  <div class="meta">
+    <div><b>Team</b>Mengdigerey Zhanzhol<br>Galitskiy Daniil<br>Bisengaliev Daulet</div>
+    <div><b>System version</b>github.com/zondbebox/SE-2623_Endterm<br>branch main · commit a7e5c74<br>evidence re-run 8 November 2026</div>
+    <div><b>Document</b>Group_Team_ICT_FinalProject.pdf<br>Built 8 November 2026<br>Cover: real screenshot, final build</div>
+  </div>
+</div></section>
+
+<!-- ============ 2 EXEC SUMMARY ============ -->
+<section class="page">
+  <div class="run"><span>Campus Lost &amp; Found · ICT Final Project · SE-2623</span><span>Executive summary</span></div>
+  <div class="sec">Executive summary</div>
+  <h1>One place to report, find and close lost items — working locally, tested, with honest limits</h1>
+  <p class="lead">Students who lose an item on campus depend on scattered chats and paper notes; in our Stage 1 survey, 4 of 10 respondents said a return had taken more than three days (a small convenience sample). Campus Lost &amp; Found gives the campus one place to publish, search and close lost-and-found notices. The final version is a Flask web application with an SQLite database, private photo uploads, owner and administrator permissions, an administrator panel with analytics, a user-testing timer and a clearly labelled smart-locker simulation. All functional Must requirements work except real university sign-in: Microsoft sign-in code is ready and tested, but no university app registration exists yet. On the final code, 94 of 94 automated tests passed, all five invalid-access attempts were blocked, the 95th-percentile search time was 45 ms against a two-second target, and 20 of 20 availability checks passed over 30 minutes. In the final test, 3 of 3 people outside the team published a notice within two minutes and 3 of 3 found the target notice within one minute. The system runs on one laptop over local HTTP; hosting in Kazakhstan, HTTPS and university sign-in are the main future work.</p>
+  <p class="small">Executive summary: 193 words.</p>
+  <div class="cols" style="margin-top:5mm">
+    <div class="stat"><div class="bignum">9 / 11</div><div class="lbl">Must requirements done; F1, N2 partly done; Should F3 done</div></div>
+    <div class="stat"><div class="bignum">94 / 94</div><div class="lbl">automated tests passed on the final code, 8 November 2026</div></div>
+    <div class="stat"><div class="bignum">45 ms</div><div class="lbl">search p95 with 10 concurrent sessions (target ≤ 2,000 ms)</div></div>
+    <div class="stat"><div class="bignum">3/3 · 3/3</div><div class="lbl">external testers within target: publish ≤ 120 s · find ≤ 60 s</div></div>
+  </div>
+  <h3>How to read this report</h3>
+  <table class="tight">
+    <tr><th style="width:30%">Item</th><th>What it means here</th></tr>
+    <tr><td>Final system</td><td>The code in GitHub commit <span class="mono">a7e5c749095e…</span> (6 Nov 2026), the only commit on <span class="mono">main</span>. The ZIP <span class="mono">SE-2623_Endterm.zip</span> was compared file by file with it: 1,164 files, no differences. For the Final one optional module was added locally and is <b>not yet committed</b>: Microsoft sign-in (<span class="mono">microsoft_auth.py</span>, its 11 tests, one line in <span class="mono">app.py</span>, two template lines). It is switched off until configured; nothing else in the application changed.</td></tr>
+    <tr><td>Evidence re-run</td><td>All tests, measurements and screenshots in this report were produced again on 8 November 2026 on an isolated copy of that code (Windows 11, bundled Python 3.14.8, Microsoft Edge 157). After the sign-in module was added, the test suite, SC3 and the account checks were run again; because the module is off unless configured, pages, screenshots and timings are unaffected. Files: <span class="mono">Final/Evidence/</span>.</td></tr>
+    <tr><td>Data</td><td>All notices and accounts are synthetic teaching data (122 notices, 20 accounts, 10 categories). No real campus data is used.</td></tr>
+    <tr><td>Fact / interpretation</td><td>Measured results are stated with method and sample. Interpretation is marked “we interpret”; recommendations are in Section 9.</td></tr>
+    <tr><td>Not claimed</td><td>Public hosting, HTTPS, LAN access and a physical smart locker do not exist. Microsoft sign-in code exists but has never signed in a real university account.</td></tr>
+  </table>
+  <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>2</b></div>
+</section>
+
+<!-- ============ 3 PROBLEM + USERS ============ -->
+<section class="page">
+  <div class="run"><span>Campus Lost &amp; Found · ICT Final Project · SE-2623</span><span>1–2 Problem, evidence and users</span></div>
+  <div class="sec">1 · Problem and evidence</div>
+  <h2>Lost-item messages are scattered, so returns are slow</h2>
+  <p>On our campus, a student who loses or finds an item posts in group chats, tells a guard or puts up a paper note. Each channel reaches only part of the campus, posts scroll away, and nobody knows when an item has been returned. Our Stage 1 hypothesis was that one searchable noticeboard tied to university accounts would make matching faster.</p>
+  <div class="cols">
+    <div class="stat"><div class="bignum">9 / 10</div><div class="lbl">survey respondents rated such a service useful</div></div>
+    <div class="stat"><div class="bignum">4 / 10</div><div class="lbl">said a return had taken more than three days</div></div>
+    <div class="stat"><div class="bignum">10</div><div class="lbl">responses — a convenience sample of fellow students</div></div>
+  </div>
+  <p class="cap">Source: SE-2623 Stage 1 student survey, October 2026 (SE-2623 team, 2026a, p. 2). The sample is small and not representative of all students; we treat it as a signal that the problem exists, not as a measurement of its size.</p>
+  <p>The project is a small <b>information system</b> for a campus service, the kind of ICT use in public-sector and education services covered in Week 10: it replaces informal, paper-and-chat processes with a shared, searchable record, while keeping a human in the loop for the actual hand-over (Parsons, 2022, Module 9; Nurpeisova &amp; Kaidash, 2017). The Final brief asks for the Stage 1 design, Assignment 3 database and security, Assignment 4 multimedia and Stage 2 prototype as one finished system (Astana IT University, 2026); this report follows that structure, building on the earlier reports (SE-2623 team, 2026a, 2026b) and the repository (SE-2623 team, 2026c).</p>
+
+  <div class="sec" style="margin-top:4mm">2 · Users and requirements</div>
+  <h2>Two user groups, one shared record</h2>
+  <table>
+    <tr><th style="width:18%">User group</th><th style="width:27%">Need</th><th>What they can do in the final system</th></tr>
+    <tr><td><b>Student</b></td><td>Find a lost item or return a found one</td><td>Register a local account, sign in, publish a lost/found notice with one photo, search by title, filter by category and status, open details, contact the author by email draft, edit own notice, mark it returned, see “My notices”.</td></tr>
+    <tr><td><b>Administrator</b></td><td>Keep the noticeboard relevant and safe</td><td>Everything a student can do, plus: admin overview with live counts, notice and user lists with search, removal of misuse with a confirmation page, analytics with CSV export, the user-testing timer and the smart-locker simulation.</td></tr>
+  </table>
+  <p><b>Out of scope since Stage 1:</b> payments, live chat, delivery and automatic item matching. They were excluded to keep the core flow — publish, search, contact, close — reliable. Stage 1 defined eight functional requirements (F1–F8), four non-functional requirements (N1–N4, all Must) and three success criteria (SC1–SC3). Their wording and priorities are kept unchanged in Section 3; no target was weakened.</p>
+  <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>3</b></div>
+</section>
+
+<!-- ============ 4 REQUIREMENTS F ============ -->
+<section class="page">
+  <div class="run"><span>Campus Lost &amp; Found · ICT Final Project · SE-2623</span><span>3 Requirements status (A1)</span></div>
+  <div class="sec">3 · Requirement status — functional</div>
+  <h2>Every functional Must works; university identity is the one partial item</h2>
+  <p class="small">Wording/priority: Stage 1 report pp. 3–4; Stage 2 status: Stage 2 report p. 5; evidence re-run 8 November 2026 (tests in <span class="mono">Campus_Lost_Found/</span>, screenshots S01–S16 in <span class="mono">Final/Evidence/screenshots/</span>).</p>
+  <table>
+    <tr><th style="width:5%">ID</th><th style="width:25%">Requirement (acceptance check)</th><th style="width:7%">Priority</th><th style="width:9%">Stage 2</th><th style="width:10%">Final</th><th>Evidence</th></tr>
+    <tr><td><b>F1</b></td><td>University account sign-in (reject identities outside astanait.edu.kz)</td><td>Must</td><td class="part">◐ Partly</td><td class="part">◐ Partly</td><td>Other domains rejected: <span class="mono">test_registration_rejects_invalid_domain_syntax_and_password_lengths</span>; SC3-1; S01. Microsoft sign-in code: 11 tests with simulated responses; never connected to a real tenant.</td></tr>
+    <tr><td><b>F2</b></td><td>Publish a lost or found notice (valid notice appears in the list)</td><td>Must</td><td class="ok">✓ Done</td><td class="ok">✓ Done</td><td><span class="mono">test_owner_create_edit_and_return_persist_after_application_restart</span>; browser run created notice #123 (S04 → S05).</td></tr>
+    <tr><td><b>F3</b></td><td>Attach one photo (JPG/PNG up to 5 MB)</td><td>Should</td><td class="ok">✓ Done</td><td class="ok">✓ Done</td><td><span class="mono">test_photo_file_limit_pixel_limit_and_request_limit</span>, <span class="mono">test_png_photo_is_supported</span>, <span class="mono">test_photo_is_reencoded_without_metadata…</span>; S04 photo picker, S05 stored photo.</td></tr>
+    <tr><td><b>F4</b></td><td>Browse notices and open details (list and details show saved content)</td><td>Must</td><td class="ok">✓ Done</td><td class="ok">✓ Done</td><td><span class="mono">test_stored_markup_is_escaped_in_browse_and_detail</span>; S02, S03, S07.</td></tr>
+    <tr><td><b>F5</b></td><td>Search title; filter by category (seeded matching notices appear)</td><td>Must</td><td class="ok">✓ Done</td><td class="ok">✓ Done</td><td><span class="mono">test_search_treats_sql_and_like_metacharacters_as_literal_text</span>, <span class="mono">test_browse_retains_valid_filters…</span>; browser query “red notebook” + Books and Stationery → 1 result, “Red notebook” (S06).</td></tr>
+    <tr><td><b>F6</b></td><td>Contact via university email (contact opens the author’s email)</td><td>Must</td><td class="ok">✓ Done</td><td class="ok">✓ Done</td><td><span class="mono">test_contact_is_mailto_and_admin_navigation_is_not_shown_to_student</span>; browser check: link is <span class="mono">mailto:student01.demo@…?subject=…%234</span> (S07). The site sends no email itself.</td></tr>
+    <tr><td><b>F7</b></td><td>Edit own notice; mark returned (owner changes persist after refresh)</td><td>Must</td><td class="ok">✓ Done</td><td class="ok">✓ Done</td><td>Persistence after app restart (test above); <span class="mono">test_student_cannot_edit_or_close_another_owners_notice</span>; browser: badge “Returned” (S08).</td></tr>
+    <tr><td><b>F8</b></td><td>Administrator removes misuse (admin succeeds; student is denied)</td><td>Must</td><td class="ok">✓ Done</td><td class="ok">✓ Done</td><td><span class="mono">test_admin_confirmation_is_read_only_until_posted</span>, <span class="mono">test_student_cannot_remove_notice_even_with_forged_admin_role</span>; browser removal of #123 (S12); student gets 403 (SC3-5).</td></tr>
+  </table>
+  <div class="fact"><b>Why F1 is still partly done (one sentence).</b> Signing in with a real Astana IT University account requires an application registration in the university’s Microsoft Entra ID tenant, which only university IT can create, so the final system keeps local accounts with an <span class="mono">@astanait.edu.kz</span> format check; the Microsoft sign-in code (OpenID Connect with PKCE) is ready and passes 11 tests against simulated Microsoft responses, but it stays off and is not counted as done until a real registration signs in a real account (set-up: <span class="mono">Final/SSO/</span>).</div>
+  <p class="small">Instructor comments on Stage 1: none were reported to the team (Stage 2 report, p. 9), so no Stage 1 comment remains open.</p>
+  <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>4</b></div>
+</section>
+
+<!-- ============ 5 REQUIREMENTS N + SC ============ -->
+<section class="page">
+  <div class="run"><span>Campus Lost &amp; Found · ICT Final Project · SE-2623</span><span>3 Requirements status (A1)</span></div>
+  <div class="sec">3 · Requirement status — non-functional and success criteria</div>
+  <h2>Quality targets were re-measured on the final code</h2>
+  <table>
+    <tr><th style="width:5%">ID</th><th style="width:24%">Requirement (check)</th><th style="width:9%">Stage 2</th><th style="width:10%">Final</th><th>Evidence and method</th></tr>
+    <tr><td><b>N1</b></td><td>Search p95 ≤ 2 s with 10 concurrent users</td><td class="ok">✓ Done<br><span class="small">p95 81 ms</span></td><td class="ok">✓ Done</td><td>p95 <b>44.9 ms</b>, max 54.6 ms, median 28.8 ms; 10 signed-in sessions × 10 title searches, started together. Loopback HTTP until the full HTML is received; images and painting excluded. <span class="mono">search_performance_final.json</span></td></tr>
+    <tr><td><b>N2</b></td><td>Enforce university identity and owner/admin rights</td><td class="part">◐ Partly</td><td class="part">◐ Partly</td><td>Rights: SC3 5/5 blocked; every <span class="mono">/admin/*</span> page returns 403 to all three student accounts and 200 to the administrator (<span class="mono">account_checks.json</span>). Identity: same limit as F1.</td></tr>
+    <tr><td><b>N3</b></td><td>Support 360 px screens and keyboard input (core screens, labels, focus order)</td><td class="part">◐ Partly</td><td class="ok">✓ Done</td><td>Edge at 360 × 760 px: 12 of 12 pages without horizontal scrolling; all form fields on browse, post and sign-in have labels; Tab reaches every control of the post form in visual order with a visible focus ring (M01–M04, K01; <span class="mono">browser_checks.json</span>). Automated browser check — not tested by users with assistive technology.</td></tr>
+    <tr><td><b>N4</b></td><td>Pass 20/20 checks during a 30-minute demo (core pages plus retry when offline)</td><td class="part">◐ Partly</td><td class="ok">✓ Done</td><td><b>20/20</b> authenticated checks of five core pages over 30 minutes (student + admin sessions; <span class="mono">stability_30min_final.json</span>). Offline retry in Edge: with the network cut the locker refresh reports that the result could not be confirmed; after reconnecting, “Refresh status” and a page reload both succeed.</td></tr>
+  </table>
+  <h3>Success criteria from Stage 1 (details in Section 7)</h3>
+  <table>
+    <tr><th style="width:28%">Criterion</th><th style="width:17%">Target</th><th style="width:27%">Stage 2 result</th><th style="width:20%">Final result</th><th>Met?</th></tr>
+    <tr><td><b>SC1</b> · Testers post a notice within 2 minutes</td><td>≥ 80 % (Stage 1: 4/5), ≤ 120 s</td><td>Stage 2 report: <b>Pending</b>.<br>Team-reported afterwards: 5/5 (70–92 s), no raw record</td><td>3/3 within target<br><span class="small">times (s): 89, 84, 78</span></td><td><span class="ok">✓ Yes</span></td></tr><tr><td><b>SC2</b> · Testers find an item within 1 minute</td><td>≥ 80 % (Stage 1: 4/5), ≤ 60 s</td><td>Stage 2 report: <b>Pending</b>.<br>Team-reported afterwards: 5/5 (45–53 s), no raw record</td><td>3/3 within target<br><span class="small">times (s): 40, 45, 42</span></td><td><span class="ok">✓ Yes</span></td></tr><tr><td><b>SC3</b> · Invalid-access checks are blocked</td><td>5/5</td><td>5/5</td><td>5/5 (8 November 2026)</td><td><span class="ok">✓ Yes</span></td></tr>
+  </table>
+  <div class="note"><b>Honesty note.</b> Automated checks and AI-assisted reviews verify software behaviour; they are never counted as human testers. SC1 and SC2 can only be met by people outside the team using the system.</div>
+  <h3>Should requirements</h3>
+  <p>Stage 1 had one Should requirement, F3 (one photo). It is done. Beyond Stage 1 the team added an administrator panel, analytics, a user-testing timer, a backup with restore check and a smart-locker simulation; these are extras, not substitutes for any Must requirement.</p>
+  <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>5</b></div>
+</section>
+
+<!-- ============ 6 ARCHITECTURE ============ -->
+<section class="page">
+  <div class="run"><span>Campus Lost &amp; Found · ICT Final Project · SE-2623</span><span>4 Architecture and technologies (A2)</span></div>
+  <div class="sec">4 · As-built architecture</div>
+  <h2>Everything runs on one laptop, behind the operating-system account</h2>
+  <p>The diagram shows what actually runs, not the Stage 1 plan. Browser and server share one laptop and talk over the loopback address <span class="mono">127.0.0.1:5055</span>; the server refuses other host names, so phones or other computers on the same Wi-Fi cannot connect.</p>
+  <div class="cols" style="gap:5mm">
+    <figure style="flex:0 0 118mm"><img src="../../Architecture/as_built_architecture_portrait.svg" style="width:100%;border:0.6pt solid var(--line);border-radius:1.6mm;display:block" alt="As-built architecture diagram"><figcaption class="cap">Figure 1. As-built architecture of commit a7e5c74. Source: <span class="mono">Final/Architecture/</span> (portrait and landscape SVG).</figcaption></figure>
+    <div style="font-size:8.4pt">
+      <h3 style="margin-top:0">Encrypted</h3><p>Nothing. Traffic is local HTTP without TLS; files on disk are not encrypted by the application.</p>
+      <h3>Hashed or signed</h3><p>Passwords: scrypt hashes. Session cookie: signed with a random 256-bit key in <span class="mono">runtime/session.key</span> — tamper-proof, but readable.</p>
+      <h3>Authenticated</h3><p>Every page except sign-in and registration. Photos only through a signed-in route. Admin pages also need role&nbsp;=&nbsp;admin.</p>
+      <h3>Public</h3><p>Nothing on the network. The GitHub repository is public and holds synthetic data only, including demo password hashes.</p>
+      <h3>Not in the system</h3><p>LAN or Internet access, HTTPS, a physical locker. Microsoft sign-in: code ready, switched off, never connected to a real tenant.</p>
+    </div>
+  </div>
+  <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>6</b></div>
+</section>
+
+<!-- ============ 7 CHANGES + TECH ============ -->
+<section class="page">
+  <div class="run"><span>Campus Lost &amp; Found · ICT Final Project · SE-2623</span><span>4 Architecture and technologies (A2)</span></div>
+  <div class="sec">4 · Differences from the Stage 1 design</div>
+  <h2>What changed between plan and build, and why</h2>
+  <table>
+    <tr><th style="width:20%">Area</th><th style="width:26%">Stage 1 design</th><th style="width:26%">Final (as built)</th><th>Reason</th></tr>
+    <tr><td>Identity</td><td>University SSO via the university identity provider</td><td>Local accounts (<span class="mono">@astanait.edu.kz</span>, scrypt) + optional Microsoft sign-in code, off until configured</td><td>No app registration in the university Entra tenant; Stage 1 risk plan allowed a labelled local sign-in.</td></tr>
+    <tr><td>Network</td><td>Wi-Fi / HTTPS, DNS-resolved host</td><td>Loopback HTTP only (127.0.0.1)</td><td>No TLS certificate or host; binding to loopback keeps unencrypted traffic off the network.</td></tr>
+    <tr><td>Hosting</td><td>Prototype server (deployment “needs setup”)</td><td>Waitress on the demo laptop; portable Windows runtime included</td><td>Free static hosts cannot run Flask + SQLite; KZ data-location rules (Section 5) need a deliberate choice.</td></tr>
+    <tr><td>Stored data</td><td>Planned disk encryption, restricted file access</td><td>Plain SQLite and photo files under <span class="mono">data/</span></td><td>Disk encryption is an operating-system setting, not part of the app; demo data is synthetic.</td></tr>
+    <tr><td>Databases</td><td>One SQLite database + photo files</td><td>Main DB + separate research DB + separate telemetry DB</td><td>Test timings and simulated sensor events must never mix with notices.</td></tr>
+    <tr><td>Administrator UI</td><td>One moderation screen with confirmation</td><td>Admin panel, notice and user lists, analytics, CSV export</td><td>Stage 2 required data analysis inside the product.</td></tr>
+    <tr><td>Smart component</td><td>None</td><td>Smart-locker LF-01 software simulation</td><td>Stage 2 smart-extension task; no hardware was bought.</td></tr>
+    <tr><td>Recovery</td><td>Offline copy of files</td><td>Full backup ZIP with SHA-256 manifest + non-destructive restore check</td><td>A single SQLite file is easy to lose or corrupt during a demo.</td></tr>
+    <tr><td>Team tools</td><td>VS Code, Git, Google Drive</td><td>Same; GitHub holds one upload commit</td><td>History was not committed per feature (see Section 9 and A3).</td></tr>
+  </table>
+  <div class="sec" style="margin-top:3mm">Technologies</div>
+  <table class="tight">
+    <tr><th style="width:22%">Layer</th><th style="width:34%">Technology (version)</th><th>Why it fits</th></tr>
+    <tr><td>Interface</td><td>HTML (Jinja2 3.1.6), CSS, small vanilla JS files</td><td>Works without a build step; pages still work with JavaScript disabled.</td></tr>
+    <tr><td>Application</td><td>Python 3.14.8, Flask 3.1.3, Werkzeug 3.1.9</td><td>Small, readable code the whole team can explain.</td></tr>
+    <tr><td>Web server</td><td>Waitress 3.0.2, 4 threads</td><td>Production-grade WSGI server that runs on Windows.</td></tr>
+    <tr><td>Data</td><td>SQLite (Python <span class="mono">sqlite3</span>), sqlite-web 0.8.2 read-only inspector</td><td>One file, no server to install, constraints in SQL.</td></tr>
+    <tr><td>Media</td><td>Pillow 12.3.0</td><td>Validates and re-encodes uploaded photos.</td></tr>
+    <tr><td>Quality</td><td><span class="mono">unittest</span> (94 tests), custom benchmark and monitor scripts</td><td>No extra dependencies; runs from <span class="mono">TESTS.bat</span>.</td></tr>
+  </table>
+  <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>7</b></div>
+</section>
+
+<!-- ============ 8 DATA ============ -->
+<section class="page">
+  <div class="run"><span>Campus Lost &amp; Found · ICT Final Project · SE-2623</span><span>5 Data and security</span></div>
+  <div class="sec">5 · Data</div>
+  <h2>Three related tables hold the notices; two side databases stay separate</h2>
+  <svg viewBox="0 0 700 250" style="width:100%;height:auto;margin:1mm 0 2mm" font-family="Segoe UI, Arial" font-size="12">
+    <rect x="5" y="20" width="200" height="130" rx="8" fill="#eef5e4" stroke="#1f5a47"/><text x="18" y="42" font-weight="700" font-size="14" fill="#173d31">users</text>
+    <text x="18" y="64" fill="#16231c">id PK</text><text x="18" y="82" fill="#16231c">email UNIQUE (@astanait.edu.kz)</text><text x="18" y="100" fill="#16231c">password_hash (scrypt)</text><text x="18" y="118" fill="#16231c">role: student | admin</text>
+    <rect x="250" y="20" width="200" height="225" rx="8" fill="#eef5e4" stroke="#1f5a47"/><text x="263" y="42" font-weight="700" font-size="14" fill="#173d31">notices</text>
+    <text x="263" y="64" fill="#16231c">id PK</text><text x="263" y="82" fill="#16231c">owner_id FK → users</text><text x="263" y="100" fill="#16231c">category_id FK → categories</text><text x="263" y="118" fill="#16231c">title 3–120 · description 10–1200</text><text x="263" y="136" fill="#16231c">location 2–100 · event_date</text><text x="263" y="154" fill="#16231c">type lost|found · status open|returned</text><text x="263" y="172" fill="#16231c">created_at · updated_at (UTC)</text><text x="263" y="190" fill="#16231c">photo_filename (random hex)</text><text x="263" y="214" fill="#56635b" font-size="11">CHECK: event_date ≤ created date</text>
+    <rect x="495" y="20" width="200" height="80" rx="8" fill="#eef5e4" stroke="#1f5a47"/><text x="508" y="42" font-weight="700" font-size="14" fill="#173d31">categories</text><text x="508" y="64" fill="#16231c">id PK</text><text x="508" y="82" fill="#16231c">name UNIQUE NOCASE</text>
+    <line x1="205" y1="80" x2="250" y2="80" stroke="#173d31" stroke-width="2"/><text x="207" y="72" fill="#173d31" font-size="11">1 : N</text>
+    <line x1="450" y1="100" x2="495" y2="60" stroke="#173d31" stroke-width="2"/><text x="455" y="95" fill="#173d31" font-size="11">N : 1</text>
+    <rect x="495" y="125" width="200" height="50" rx="8" fill="#fff" stroke="#8a8f86" stroke-dasharray="5 4"/><text x="508" y="146" font-weight="700" fill="#16231c">research.sqlite3</text><text x="508" y="164" fill="#56635b" font-size="11">research_sessions (T01–T99 codes)</text>
+    <rect x="495" y="190" width="200" height="55" rx="8" fill="#fff" stroke="#8a8f86" stroke-dasharray="5 4"/><text x="508" y="211" font-weight="700" fill="#16231c">telemetry.sqlite3</text><text x="508" y="229" fill="#56635b" font-size="11">locker_events (source = SIMULATED)</text>
+  </svg>
+  <p class="cap" style="margin-top:-1mm">Figure 2. Schema from <span class="mono">backend/schema.sql</span> (main database, foreign keys ON, ON DELETE RESTRICT) and <span class="mono">stage2_features.py</span> (side databases). The telemetry <span class="mono">notice_id</span> is checked by application code, not by a cross-file foreign key.</p>
+  <h3>What is stored, and where it physically is</h3>
+  <table>
+    <tr><th style="width:24%">Data</th><th style="width:15%">Personal?</th><th>Physical location in the final configuration</th></tr>
+    <tr><td>Email address (account name)</td><td>Yes — identifies a person</td><td><span class="mono">Campus_Lost_Found/data/campus.sqlite3</span>, table <span class="mono">users</span>, on the demo laptop’s local disk.</td></tr>
+    <tr><td>Password</td><td>Secret</td><td>Only the scrypt hash, same file. The plain password is never stored or logged.</td></tr>
+    <tr><td>Notice text, location, date, owner link</td><td>Can become personal when linked to the author</td><td>Same file, table <span class="mono">notices</span>.</td></tr>
+    <tr><td>Item photographs</td><td>Can contain faces or ID cards</td><td><span class="mono">data/uploads/</span>, random 48-hex-character names, metadata removed, served only to signed-in users.</td></tr>
+    <tr><td>Test observations</td><td>Pseudonymous (T01…)</td><td><span class="mono">data/research.sqlite3</span>; no names or emails are accepted.</td></tr>
+    <tr><td>Audit log, session key</td><td>Account ids, times</td><td><span class="mono">runtime/audit.jsonl</span>, <span class="mono">runtime/session.key</span>.</td></tr>
+    <tr><td>Backups</td><td>All of the above</td><td><span class="mono">backups/campus_full_*.zip</span> on the same disk (session key excluded).</td></tr>
+  </table>
+  <p>The shipped database is synthetic: 122 notices (96 open, 26 returned; 60 lost, 62 found), 20 accounts (1 administrator) and 10 categories. Its SHA-256 equals the frozen analysis copy in <span class="mono">Analysis/frozen_campus.sqlite3</span>, so the charts in Section 7 describe the delivered data.</p>
+  <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>8</b></div>
+</section>
+
+<!-- ============ 9 SECURITY + LAW ============ -->
+<section class="page">
+  <div class="run"><span>Campus Lost &amp; Found · ICT Final Project · SE-2623</span><span>5 Data and security</span></div>
+  <div class="sec">5 · Security</div>
+  <h2>Controls inside the boundary, and what lies outside it</h2>
+  <table class="tight">
+    <tr><th style="width:24%">Threat</th><th style="width:44%">Control in the code</th><th>Verified by</th></tr>
+    <tr><td>Password theft from the DB</td><td>scrypt hashes; constant-time check with a dummy hash for unknown emails</td><td><span class="mono">test_passwords_use_independent_scrypt_hashes</span></td></tr>
+    <tr><td>Password guessing</td><td>5 attempts per minute per address for login and registration</td><td><span class="mono">test_five_failed_logins_trigger_rate_limit…</span></td></tr>
+    <tr><td>SQL injection</td><td>Parameterised queries; LIKE wildcards escaped</td><td><span class="mono">test_sql_injection_cannot_bypass_login</span></td></tr>
+    <tr><td>Cross-site request forgery</td><td>Random token on every POST form, compared with <span class="mono">hmac.compare_digest</span></td><td><span class="mono">test_missing_or_wrong_csrf_rejects_write</span></td></tr>
+    <tr><td>Cross-site scripting</td><td>Jinja auto-escaping; Content-Security-Policy <span class="mono">default-src 'self'</span></td><td><span class="mono">test_stored_markup_is_escaped…</span></td></tr>
+    <tr><td>Acting on others’ data</td><td>Server-side owner check and role check on every change</td><td>SC3-4, SC3-5; 403 matrix</td></tr>
+    <tr><td>Malicious upload</td><td>Type, size (5 MiB) and pixel (12 MP) limits; re-encode; random name</td><td><span class="mono">test_invalid_photo_extension_type_bytes…</span></td></tr>
+    <tr><td>Forged Microsoft sign-in</td><td>state + nonce + PKCE; RS256 signature, issuer, audience, tenant, expiry and domain checked</td><td><span class="mono">test_microsoft_auth.py</span> (simulated)</td></tr>
+    <tr><td>Spreadsheet formulas in CSV</td><td>Cells starting with = + − @ are prefixed</td><td><span class="mono">test_csv_neutralizes_formulas…</span></td></tr>
+  </table>
+  <p class="cap" style="margin-top:-1.5mm">Controls follow common guidance for Flask applications and password and CSRF handling (Pallets, n.d.; OWASP Foundation, n.d.-a, n.d.-b).</p>
+  <p><b>Outside the boundary:</b> anyone who can sign in to the laptop’s Windows account can copy the SQLite files, photos and backups; the application cannot stop that. Traffic is HTTP, which is acceptable only because it never leaves the machine.</p>
+
+  <div class="sec" style="margin-top:3mm">5 · Personal data and Kazakhstan law</div>
+  <h2>Why the storage location matters</h2>
+  <p><b>What the law says (checked on adilet.zan.kz, 8 Nov 2026).</b> The Law of the Republic of Kazakhstan No. 94-V “On Personal Data and Their Protection” (21 May 2013, last amended 14 Sep 2026) defines personal data as information about an identifiable person (Art. 1). Art. 12(2) requires personal data to be stored in a database or digital object located on the territory of Kazakhstan, and storage ends when the purpose of collection is achieved. Collection needs the subject’s consent (Arts. 7–8). Owners and operators must protect data from unauthorised access (Art. 22) and, in the Russian text, notify the authorised body of a breach within one working day of detecting it (Art. 25(2)(8)) (Republic of Kazakhstan, 2013/2026). The law does not name a ministry; the ministry currently publishing personal-data guidance is the Ministry of Artificial Intelligence and Digital Development (n.d.).</p>
+  <p><b>Our interpretation.</b> Email addresses linked to notices are personal data. In the final configuration they exist only on the demo laptop, which stays in Kazakhstan. Two things would change that: (1) committing a database with real users to GitHub, whose servers are outside Kazakhstan — today the repository holds synthetic accounts only, and the data folder should be excluded from Git before any real use; (2) hosting the app on a foreign cloud region. We do not claim legal compliance; a real launch would need the university’s legal review.</p>
+  <table class="tight">
+    <tr><th style="width:30%">If the system were hosted publicly</th><th>What must change</th></tr>
+    <tr><td>Data location</td><td>Database, photos and backups in a data centre located in Kazakhstan (Art. 12(2)).</td></tr>
+    <tr><td>Transport and identity</td><td>HTTPS with a valid certificate; university Microsoft Entra sign-in instead of local passwords.</td></tr>
+    <tr><td>Consent and retention</td><td>Consent text at registration; delete or anonymise returned notices after a fixed period.</td></tr>
+    <tr><td>Incidents</td><td>A named responsible person and a procedure to notify the authorised body within one working day.</td></tr>
+  </table>
+  <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>9</b></div>
+</section>
+
+<!-- ============ 10 STUDENT UI ============ -->
+<section class="page">
+  <div class="run"><span>Campus Lost &amp; Found · ICT Final Project · SE-2623</span><span>6 Interface and multimedia</span></div>
+  <div class="sec">6 · Interface — student journey</div>
+  <h2>From “I found something” to “Returned” in four screens</h2>
+  <p>All screenshots were captured from the final build on 8 November 2026 at 1440 × 900 px, signed in as the synthetic student <span class="mono">zhanzhol.demo</span>. The notice “Blue notebook with star sticker” was created during this run and later removed by the administrator.</p>
+  <div class="cols">
+    <figure><img class="shot" style="height:auto" src="../../Evidence/screenshots/S04_post_form.png" alt="Post a notice form with a photo selected"><figcaption class="cap"><b>S04 · Publish.</b> Labelled fields with limits; photo picker shows a preview, size and pixel count before upload.</figcaption></figure>
+    <figure><img class="shot" style="height:auto" src="../../Evidence/screenshots/S05_notice_created.png" alt="Notice saved with photo"><figcaption class="cap"><b>S05 · Saved.</b> Confirmation “Notice published and saved to the database”; the re-encoded photo is served through a signed-in route.</figcaption></figure>
+  </div>
+  <div class="cols">
+    <figure><img class="shot" style="height:auto" src="../../Evidence/screenshots/S06_search_result.png" alt="Search result for red notebook"><figcaption class="cap"><b>S06 · Find.</b> Title search “red notebook” plus the category filter returns exactly one notice.</figcaption></figure>
+    <figure><img class="shot" style="height:auto" src="../../Evidence/screenshots/S07_detail_contact.png" alt="Notice detail with contact author"><figcaption class="cap"><b>S07 · Contact.</b> “Contact author” opens an email draft to the stored owner; safety advice sits next to it.</figcaption></figure>
+  </div>
+  <figure><img class="shot" style="height:34mm;object-position:0 18%" src="../../Evidence/screenshots/S08_returned.png" alt="Notice marked returned"><figcaption class="cap"><b>S08 · Close.</b> The owner marks the notice returned; the badge changes to “Returned” and the change is saved.</figcaption></figure>
+  <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>10</b></div>
+</section>
+
+<!-- ============ 11 ADMIN UI ============ -->
+<section class="page">
+  <div class="run"><span>Campus Lost &amp; Found · ICT Final Project · SE-2623</span><span>6 Interface and multimedia</span></div>
+  <div class="sec">6 · Interface — administrator journey and small screens</div>
+  <h2>The administrator sees the whole board and removes misuse with a confirmation step</h2>
+  <div class="cols">
+    <figure><img class="shot" style="height:auto" src="../../Evidence/screenshots/S09_admin_panel.png" alt="Admin panel overview"><figcaption class="cap"><b>S09 · Admin panel.</b> Live counts read from SQLite (123 = 122 seeded + the demo notice created during the run).</figcaption></figure>
+    <figure><img class="shot" style="height:auto" src="../../Evidence/screenshots/S12_remove_confirm.png" alt="Remove confirmation page"><figcaption class="cap"><b>S12 · Remove.</b> Opening the page changes nothing; only the confirmed POST deletes the notice and its photo.</figcaption></figure>
+  </div>
+  <div class="cols">
+    <figure><img class="shot" style="height:auto" src="../../Evidence/screenshots/S11_admin_notices.png" alt="Admin notice list"><figcaption class="cap"><b>S11 · Notices.</b> Search, status filter and pages of 20; links to the existing detail and removal pages.</figcaption></figure>
+    <figure><img class="shot" style="height:auto" src="../../Evidence/screenshots/S10_analytics.png" alt="Analytics dashboard"><figcaption class="cap"><b>S10 · Analytics.</b> Three SQL questions with an explicit “synthetic teaching data” notice and CSV export.</figcaption></figure>
+  </div>
+  <div class="cols" style="gap:4mm">
+    <figure style="flex:0 0 32mm"><img class="shot" style="height:58mm" src="../../Evidence/screenshots/M01_browse_360.png" alt="Noticeboard at 360 px"></figure>
+    <figure style="flex:0 0 32mm"><img class="shot" style="height:58mm" src="../../Evidence/screenshots/M02_post_360.png" alt="Form at 360 px"></figure>
+    <figure style="flex:0 0 32mm"><img class="shot" style="height:58mm" src="../../Evidence/screenshots/M04_locker_360.png" alt="Locker page at 360 px"></figure>
+    <div><p class="cap" style="font-size:8.4pt;margin-top:0"><b>M01–M04 · 360 px.</b> The same pages at a 360 × 760 px mobile viewport. On all 12 checked pages the page width equals the screen width (no sideways scrolling), in the spirit of WCAG 2.2 “Reflow” (W3C, 2023).</p><p class="cap" style="font-size:8.4pt">Observed limitation: at 360 px the header and both navigation bars take about the first screen before the content starts. It works, but a collapsible menu would shorten the path to “Post a notice”.</p></div>
+  </div>
+  <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>11</b></div>
+</section>
+
+<!-- ============ 12 MULTIMEDIA ============ -->
+<section class="page">
+  <div class="run"><span>Campus Lost &amp; Found · ICT Final Project · SE-2623</span><span>6 Interface and multimedia</span></div>
+  <div class="sec">6 · Multimedia and accessibility</div>
+  <h2>Images help recognition; motion and video are optional extras</h2>
+  <table>
+    <tr><th style="width:20%">Element</th><th style="width:44%">How it works in the final build</th><th>Evidence / limit</th></tr>
+    <tr><td>Item photos</td><td>One JPG/PNG per notice, ≤ 5 MiB and ≤ 12 MP; rotated by EXIF, scaled to ≤ 1600 px, re-encoded (JPEG quality 85) so metadata such as GPS is removed.</td><td><span class="mono">test_photo_is_reencoded_without_metadata_and_only_served_after_login</span></td></tr>
+    <tr><td>Category images</td><td>Three WebP illustrations (9–31 KB) replace 0.6–1.3 MB PNG originals; licences in <span class="mono">static/media/CREDITS.txt</span>.</td><td>Alternative text on every image: <span class="mono">test_media_is_served_and_has_alternative_text</span></td></tr>
+    <tr><td>Hero illustration, locker door</td><td>Inline SVG/CSS drawings; the locker door shows the stored simulated state.</td><td>Decorative parts are <span class="mono">aria-hidden</span>.</td></tr>
+    <tr><td>Motion</td><td>Card and chart entrance animations, page transitions; a “Motion on/off” switch, and the system “reduce motion” setting is respected.</td><td>Content does not depend on animation; screenshots were taken with reduced motion.</td></tr>
+    <tr><td>Demo video</td><td>Assignment 4 video, 2:14, 1920 × 1080, 30 fps, H.264/AAC; unlisted on YouTube (<span class="mono">youtu.be/76M3hSqR-7w</span>, reachable on 8 November 2026) and as a local MP4.</td><td>Recorded on the older Assignment 4 interface — see note below.</td></tr>
+  </table>
+  <div class="note"><b>Video status.</b> We extracted frames from the MP4: it shows the earlier white-and-teal interface (“Find what matters.”, label “Multimedia project / Part 2”), the old photo field and no administrator panel, analytics or locker. It is therefore kept only as a backup for the student flow. Scenes to re-record are listed in <span class="mono">Final/Demo/Demo_Plan_and_Backup.md</span>; the captions also still need re-timing.</div>
+  <h3>Keyboard and labels (browser check, 8 November 2026)</h3>
+  <div class="cols">
+    <div>
+      <p>An automated Edge session pressed Tab through the “Post a notice” page. Focus moved in visual order: skip link → header → navigation → back link → type → category → title → description → location → date → Choose photo → <b>Publish notice</b> → Cancel → footer. A visible focus ring was detected on every control except one reading inside the date field’s internal segments. All 12 form fields on the browse, post and sign-in pages have a programmatic label.</p>
+      <p class="small">This is automated browser evidence, not an accessibility audit with assistive-technology users.</p>
+    </div>
+    <figure style="flex:0 0 72mm"><img class="shot" style="height:46mm;object-position:0 30%" src="../../Evidence/screenshots/K01_keyboard_focus.png" alt="Visible keyboard focus on the post form"><figcaption class="cap">K01. Keyboard focus on the form during the Tab walk.</figcaption></figure>
+  </div>
+  <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>12</b></div>
+</section>
+
+<!-- ============ 13 TESTING ============ -->
+<section class="page">
+  <div class="run"><span>Campus Lost &amp; Found · ICT Final Project · SE-2623</span><span>7 Testing and data analysis</span></div>
+  <div class="sec">7 · Testing — software checks</div>
+  <h2>94 automated tests, five access attacks and two timed measurements on the final code</h2>
+  <table class="tight">
+    <tr><th style="width:30%">Test file</th><th style="width:8%">Tests</th><th>What it covers</th></tr>
+    <tr><td><span class="mono">backend/test_backend.py</span></td><td>14</td><td>Schema constraints, seed data, transactions, read-only queries, backup/restore</td></tr>
+    <tr><td><span class="mono">test_app.py</span></td><td>17</td><td>Login, rate limit, SQL injection, CSRF, ownership, persistence, escaping, number limits</td></tr>
+    <tr><td><span class="mono">test_stage2_core.py</span></td><td>11</td><td>Registration, photo validation and re-encoding, mailto, role navigation</td></tr>
+    <tr><td><span class="mono">test_admin_panel.py</span></td><td>11</td><td>Admin-only access, counts, pagination, search, no password hashes in pages</td></tr>
+    <tr><td><span class="mono">test_analytics.py</span></td><td>7</td><td>Aggregates vs independent SQL, empty data, CSV safety, access</td></tr>
+    <tr><td><span class="mono">test_stage2_features.py</span></td><td>14</td><td>Research timer rules, consent, CSV; locker open/alert/close/reset</td></tr>
+    <tr><td><span class="mono">test_backup_full.py</span> · <span class="mono">test_media.py</span></td><td>7 · 2</td><td>Archive contents, hashes, traversal/corruption rejection · media and alt text</td></tr>
+    <tr><td><span class="mono">test_microsoft_auth.py</span> (new)</td><td>11</td><td>Microsoft sign-in against simulated Microsoft: off when unconfigured, PKCE/state/nonce, RS256 signature, wrong issuer/audience/tenant/expiry, non-university email</td></tr>
+  </table>
+  <p class="cap" style="margin-top:-1mm">Run: <span class="mono">python\python.exe -B -m unittest discover -v</span> in an isolated copy, 8 November 2026: <b>Ran 94 tests in 29.6 s — OK</b>. Log: <span class="mono">Final/Evidence/test_suite_final.log</span>.</p>
+  <div class="cols">
+    <div>
+      <h3>SC3 — five invalid-access attempts</h3>
+      <table class="tight">
+        <tr><th>Attempt</th><th>Answer</th><th>Result</th></tr>
+        <tr><td>Register an address outside astanait.edu.kz</td><td>200</td><td class="ok">✓ blocked</td></tr><tr><td>Sign in with an incorrect password</td><td>200</td><td class="ok">✓ blocked</td></tr><tr><td>Anonymous visitor opens notice details</td><td>302</td><td class="ok">✓ blocked</td></tr><tr><td>Student edits another owner&#x27;s notice</td><td>403</td><td class="ok">✓ blocked</td></tr><tr><td>Student opens and submits administrator removal</td><td>403/403</td><td class="ok">✓ blocked</td></tr>
+      </table>
+      <p class="small">Each check also verifies the database did not change (no new user, unchanged title, unchanged notice count).</p>
+    </div>
+    <div>
+      <h3>N1 — search under 10 concurrent users</h3>
+      <svg viewBox="0 0 330 120" style="width:100%" font-family="Segoe UI, Arial" font-size="11">
+        <text x="0" y="14" fill="#56635b">Response time, milliseconds (log scale not used)</text>
+        <rect x="70" y="30" width="250" height="22" fill="#eef0ea"/><rect x="70" y="30" width="5.6" height="22" fill="#1f5a47"/>
+        <text x="0" y="46" fill="#16231c" font-weight="700">p95</text><text x="81.6" y="46" fill="#16231c">44.9 ms</text>
+        <rect x="70" y="62" width="250" height="22" fill="#d6ee9b"/><text x="0" y="78" fill="#16231c" font-weight="700">target</text><text x="235" y="78" fill="#173d31" font-weight="700">2,000 ms</text>
+        <text x="0" y="110" fill="#56635b" font-size="10">Same scale. 100 requests, 10 signed-in sessions, loopback HTTP.</text>
+      </svg>
+      <h3>N4 — 30-minute availability</h3>
+      <p><b>20 of 20</b> checks passed, spread evenly over 30 minutes (14:44–15:14 UTC, 8 November 2026). Slowest response 58 ms. A check passes only with HTTP 200, the expected page content and no sign-in form.</p>
+    </div>
+  </div>
+  <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>13</b></div>
+</section>
+
+<!-- ============ 14 FINAL USER TEST ============ -->
+<section class="page">
+  <div class="run"><span>Campus Lost &amp; Found · ICT Final Project · SE-2623</span><span>7 Testing and data analysis (A4)</span></div>
+  <div class="sec">7 · Final test with people outside the team</div>
+  <h2>3 people outside the team re-tested the Stage 1 criteria on the final build</h2>
+  <p><b>Method (fixed before testing).</b> Each participant is a volunteer outside the three-person team who agrees to take part. They use the student role on the final build with the same two task cards (<span class="mono">Testing/TASK_CARDS_EN.txt</span>): <i>Task 1</i> — publish a found “Blue notebook” notice with given details; <i>Task 2</i> — from a cleared noticeboard, find the “Red notebook” notice and say where it was found. The observer starts timing when the card is handed over and stops when the participant says the task is complete; one first attempt per task counts, failures are kept, and no coaching is given. A task counts as met if it is completed correctly, without help, within 120 s (publish) or 60 s (find). Stage 1 thresholds are 4 of 5 testers (80 %); with N participants the criterion is met when at least 80 % meet it.</p>
+  <table>
+    <tr><th style="width:20%">Success criterion</th><th style="width:13%">Target</th><th style="width:23%">Stage 2 result</th><th style="width:22%">Final result</th><th style="width:8%">Met?</th><th>Evidence</th></tr>
+    <tr><td><b>SC1</b> · Testers post a notice within 2 minutes</td><td>≥ 80 % (Stage 1: 4/5), ≤ 120 s</td><td>Stage 2 report: <b>Pending</b>.<br>Team-reported afterwards: 5/5 (70–92 s), no raw record</td><td>3/3 within target<br><span class="small">times (s): 89, 84, 78</span></td><td><span class="ok">✓ Yes</span></td><td><span class="mono">Testing/final_test_results.csv</span></td></tr><tr><td><b>SC2</b> · Testers find an item within 1 minute</td><td>≥ 80 % (Stage 1: 4/5), ≤ 60 s</td><td>Stage 2 report: <b>Pending</b>.<br>Team-reported afterwards: 5/5 (45–53 s), no raw record</td><td>3/3 within target<br><span class="small">times (s): 40, 45, 42</span></td><td><span class="ok">✓ Yes</span></td><td><span class="mono">Testing/final_test_results.csv</span></td></tr><tr><td><b>SC3</b> · Invalid-access checks are blocked</td><td>5/5</td><td>5/5</td><td>5/5 (8 November 2026)</td><td><span class="ok">✓ Yes</span></td><td><span class="mono">Evidence/sc3_final.json</span></td></tr>
+  </table>
+  <p><b>Sample.</b> 3 participants (T01, T02, T03), all outside the team and consenting; dates 2026-11-06, 2026-11-07; devices: laptop · Windows 11 / Chrome; laptop · Windows 11 / Microsoft Edge; phone · Android / Chrome. The brief's minimum is three people; the Stage 1 targets were written for five. With 3 participants one person is 33 percentage points, so we report counts, not percentages alone.</p>
+  <div class="note"><b>Observations.</b> Participants made no specific comments; all three said that, overall, the system worked well. We interpret the results as evidence that first-time users can complete the two core tasks; they are not a measure of satisfaction.</div>
+  <p class="small"><b>About the Stage 2 column.</b> The submitted Stage 2 report recorded SC1 and SC2 as <i>Pending</i> because no external sessions had been completed by its evidence freeze. The team later reported an Endterm session with five people: publish times 78, 70, 82, 88 and 92 s; find times 45, 48, 49, 53 and 47 s; devices three Windows 11/Chrome, one Android/Chrome and one Linux/Firefox; no comments. No raw record of that session (recorder database, sheet or notes) is in the package, so it is shown as team-reported history, not as Final evidence.</p>
+  <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>14</b></div>
+</section>
+
+<!-- ============ 15 DATA ANALYSIS ============ -->
+<section class="page">
+  <div class="run"><span>Campus Lost &amp; Found · ICT Final Project · SE-2623</span><span>7 Testing and data analysis</span></div>
+  <div class="sec">7 · Data analysis (synthetic data)</div>
+  <h2>Three SQL questions show the dashboard is wired to the database — not how the campus behaves</h2>
+  <p>The same three queries power <span class="mono">/admin/analytics</span> and the files in <span class="mono">Analysis/</span>. Data: the delivered synthetic database (122 notices, frozen 30 Oct 2026; identical to the shipped file).</p>
+  <div class="cols">
+    <figure><img class="shot" style="height:60mm;object-fit:contain;background:#fff" src="assets/01_category_backlog.png" alt="Open backlog by category"><figcaption class="cap"><b>Q1 · Category backlog.</b> Eight categories have 12 open notices each; Drinkware (13) and Electronics (12) are all returned. <i>We interpret</i> this as a pattern of the data generator, not of real recovery rates.</figcaption></figure>
+    <figure><img class="shot" style="height:60mm;object-fit:contain;background:#fff" src="assets/02_location_types.png" alt="Lost and found by location"><figcaption class="cap"><b>Q2 · Locations.</b> “Library study area” has the most notices (13: 12 lost, 1 found). Free-text locations split one place into two labels (“Library, second floor”).</figcaption></figure>
+  </div>
+  <figure><img class="shot" style="height:66mm;object-fit:contain;background:#fff" src="assets/03_weekly_events.png" alt="Weekly lost and found events"><figcaption class="cap"><b>Q3 · Weekly events.</b> Monday–Sunday weeks by event date, including empty weeks; four September weeks reach 21 events. This reflects the seed schedule.</figcaption></figure>
+  <p><b>Finding we act on.</b> The location question exposed a data-quality problem: free-text locations make counts unreliable. The recommended change (Section 9) is a fixed list of campus locations with an “Other” option. A live defense query shows the link to stored data: changing <span class="mono">GROUP BY status</span> (96 / 26) to <span class="mono">GROUP BY type</span> (60 / 62) keeps the total at 122.</p>
+  <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>15</b></div>
+</section>
+
+<!-- ============ 16 SMART EXTENSION ============ -->
+<section class="page">
+  <div class="run"><span>Campus Lost &amp; Found · ICT Final Project · SE-2623</span><span>8 Smart extension</span></div>
+  <div class="sec">8 · Smart extension</div>
+  <h2>A simulated found-property locker warns staff when its door stays open</h2>
+  <p>A real campus could keep found items in a locker with a door sensor. We built the software side only: the administrator page <span class="mono">/admin/smart-locker</span> records <b>SIMULATED</b> door readings for locker LF-01 linked to an existing “found” notice. No sensor, microcontroller or door exists, and every record says so.</p>
+  <div class="cols">
+    <figure><img class="shot" style="height:70mm" src="../../Evidence/screenshots/S16_locker_alert.png" alt="Locker OPEN TOO LONG alert"><figcaption class="cap"><b>S16.</b> After “Simulate open”, 11 s of waiting and “Refresh status”, the page shows <b>OPEN TOO LONG</b> (last reported open for 13.6 seconds).</figcaption></figure>
+    <figure><img class="shot" style="height:70mm" src="../../Evidence/screenshots/S16b_locker_closed.png" alt="Locker closed"><figcaption class="cap"><b>S16b.</b> “Simulate close” resolves it; the status line reads “Reading saved. Door is closed.”. The browser updated in place, without a page reload.</figcaption></figure>
+  </div>
+  <table class="tight">
+    <tr><th style="width:25%">Part</th><th style="width:40%">Implemented and verified</th><th>Proposed only (physical pilot)</th></tr>
+    <tr><td>Device</td><td>Admin buttons and <span class="mono">simulate_locker.py</span> CLI</td><td>Reed switch + Wi-Fi microcontroller</td></tr>
+    <tr><td>Network</td><td>Same-origin <span class="mono">fetch</span> with CSRF token, 15 s timeout, never re-sends a POST automatically</td><td>Campus IoT network, HTTPS, per-device credentials</td></tr>
+    <tr><td>Processing</td><td>Warning after 10 s, evaluated when the page is requested</td><td>Periodic rule (30 s), offline detection after 120 s</td></tr>
+    <tr><td>Storage</td><td><span class="mono">telemetry.sqlite3</span>, notice reference validated, history kept; reset for a removed notice</td><td>Retention limit and automatic expiry</td></tr>
+    <tr><td>Human role</td><td>Never marks a notice returned; staff verify the claimant</td><td>Same</td></tr>
+  </table>
+  <p><b>Failure behaviour (tested offline in the browser).</b> With the network cut, “Refresh status” shows “The result could not be confirmed. Refresh status before trying another action.”; after reconnecting, the same button shows “Status refreshed”. A missing “close” reading can create a false warning, which is why a person must check the locker.</p>
+  <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>16</b></div>
+</section>
+
+<!-- ============ 17 LIMITATIONS ============ -->
+<section class="page">
+  <div class="run"><span>Campus Lost &amp; Found · ICT Final Project · SE-2623</span><span>9 Limitations and future work</span></div>
+  <div class="sec">9 · Limitations and future work</div>
+  <h2>What the prototype cannot do yet, and the next sensible steps</h2>
+  <table>
+    <tr><th style="width:24%">Limitation (fact)</th><th style="width:36%">Consequence</th><th>Next step (recommendation)</th></tr>
+    <tr><td>University sign-in not connected</td><td>Local registration accepts any well-formed <span class="mono">@astanait.edu.kz</span> address without proof of ownership.</td><td>Ask university IT for an Entra app registration, set three environment variables and test a real sign-in; the OpenID Connect code is ready (Microsoft, n.d.-a, n.d.-b; <span class="mono">Final/SSO/</span>).</td></tr>
+    <tr><td>Loopback HTTP on one laptop</td><td>Only one machine can use it; a demo depends on that laptop.</td><td>Host in a Kazakhstan data centre with HTTPS; keep the loopback build for offline demos.</td></tr>
+    <tr><td>SQLite + in-memory rate limit</td><td>One writer at a time; limits reset on restart and are not shared between servers.</td><td>PostgreSQL and a shared limiter (e.g. Redis) when moving beyond one server.</td></tr>
+    <tr><td>No email notifications</td><td>Owners must check the board themselves.</td><td>Optional notification email after a matching notice is posted.</td></tr>
+    <tr><td>Free-text locations</td><td>Analytics split one place into several labels.</td><td>Fixed location list with “Other”.</td></tr>
+    <tr><td>Simulated locker</td><td>No evidence about real hardware, networks or misuse.</td><td>Small physical pilot with device authentication and retention rules.</td></tr>
+    <tr><td>One upload commit</td><td>Git does not show who wrote which part.</td><td>Feature branches and commits from each member’s own account.</td></tr>
+  </table>
+  <h3>If 10,000 users joined tomorrow</h3>
+  <p><b>What fails first (our analysis).</b> The single laptop and loopback binding mean nobody else can even reach the site, so access fails before load does. Once hosted, the next bottleneck is writes: SQLite allows one writer at a time, and Waitress has 4 threads, so bursts of posts and photo uploads (up to 6 MB each) would queue; SQLite’s own guidance points to a client/server database for many concurrent writers (SQLite, n.d.). Photos on one disk and the in-memory rate limit would follow. The measured 45 ms p95 is for 10 sessions on a laptop and does not predict 10,000. <b>Plan:</b> host in Kazakhstan behind HTTPS; move to PostgreSQL; store photos in object storage with size-checked uploads; run several app instances behind a load balancer with a shared rate limiter; add SSO so accounts are real; load-test with a tool such as Locust before launch.</p>
+  <h3>Lessons learned</h3>
+  <ul>
+    <li><b>Evidence beats claims.</b> Writing the requirement table forced us to separate “works in a test” from “seen by a real user”.</li>
+    <li><b>Scope is a design decision.</b> Dropping chat, matching and real SSO kept the core flow stable enough to test.</li>
+    <li><b>Process shows in Git.</b> Uploading the project in one commit hid our individual work; next time each feature goes in its own commit.</li>
+    <li><b>Users first, polish later.</b> The external user study should have started in Week 7, not at the end; heuristics (Nielsen, 2024) helped us design screens but cannot replace observing people.</li>
+  </ul>
+  <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>17</b></div>
+</section>
+
+<!-- ============ 18 STATEMENTS ============ -->
+<section class="page">
+  <div class="run"><span>Campus Lost &amp; Found · ICT Final Project · SE-2623</span><span>B2 Individual contribution statements</span></div>
+  <div class="sec">B2 · Individual contribution statements</div>
+  <h2>Who built what</h2>
+  <p class="small"><b>Status: drafted from the team-confirmed contribution table (Stage 2 report, p. 9) and the code; each member must check every fact, especially the “problem I solved”, edit it in their own words and sign before submission.</b> File paths are in the repository <span class="mono">github.com/zondbebox/SE-2623_Endterm</span>, commit <span class="mono">a7e5c74</span>.</p>
+  <div class="stmt"><h3>Mengdigerey Zhanzhol <span class="small" style="font-weight:400">— Accounts, notices, photos, security and backup · 112 words</span></h3><p>I built the account and notice workflow: local registration and sign-in, publishing and editing notices, the single-photo upload, owner and administrator permissions, and the full backup with restore check. My files are Campus_Lost_Found/app.py, templates/form.html, backup_full.py and backup_tools.py. The only repository commit, a7e5c74, was uploaded from my GitHub account, zondbebox. One problem I solved: the backup writer and the restore reader used different size limits for the manifest file, so a backup could be created that restore would then refuse. I made both use one shared 1 MiB limit and added three regression tests. Next time I would commit every feature separately, so the history shows who built what.</p><div class="sig"><span>Signature: Mengdigerey Zhanzhol</span><span>Date</span></div></div><div class="stmt"><h3>Galitskiy Daniil <span class="small" style="font-weight:400">— Browsing and search, performance, SQL analytics, user study · 110 words</span></h3><p>I was responsible for browsing and search, the search performance test, the SQL analytics and the user-testing method. My files are Campus_Lost_Found/analytics_routes.py, backend/analytics.py, Analysis/01-03 SQL queries, benchmark_search.py, the research timer in stage2_features.py and Testing/TASK_CARDS_EN.txt. They are in commit a7e5c74, uploaded from Zhanzhol&#x27;s account; my own commits are still to be added. One problem I solved: very large numbers in the category and page filters crashed SQLite with an overflow error. I added range checks that return HTTP 400 or 404 before any query runs, plus four regression tests. Next time I would run the external user study weeks earlier, not at the end.</p><div class="sig"><span>Signature: Galitskiy Daniil</span><span>Date</span></div></div><div class="stmt"><h3>Bisengaliev Daulet <span class="small" style="font-weight:400">— Smart-locker simulation, multimedia, mobile and availability evidence · 111 words</span></h3><p>I worked on the smart-locker extension, the multimedia and the 360 px, keyboard and availability evidence. My files are the locker part of Campus_Lost_Found/stage2_features.py, static/locker.js, static/locker.css, templates/smart_locker.html, simulate_locker.py, static/media/CREDITS.txt and the Assignment 4 video. They are in commit a7e5c74, uploaded from Zhanzhol&#x27;s account; my own commits are still to be added. One problem I solved: when the found notice linked to an open locker was deleted, the simulation could not be closed. I added a reset action that records a new closed, unassigned state and keeps the history. Next time I would test on a real phone early and re-record the video after every interface change.</p><div class="sig"><span>Signature: Bisengaliev Daulet</span><span>Date</span></div></div>
+  <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>18</b></div>
+</section>
+
+<!-- ============ 19 REFERENCES ============ -->
+<section class="page refs">
+  <div class="run"><span>Campus Lost &amp; Found · ICT Final Project · SE-2623</span><span>10 References</span></div>
+  <div class="sec">10 · References (APA 7th)</div>
+  <h2>Sources</h2>
+  <p>Astana IT University. (2026). <i>Final project — completed ICT project, presentation and individual defense</i> [Course brief, ICT_Final.pdf]. Unpublished course document.</p>
+  <p>Microsoft. (n.d.-a). <i>OpenID Connect on the Microsoft identity platform</i>. Microsoft Learn. Retrieved November 8, 2026, from https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols-oidc</p>
+  <p>Microsoft. (n.d.-b). <i>Quickstart: Register an application with the Microsoft identity platform</i>. Microsoft Learn. Retrieved November 8, 2026, from https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app</p>
+  <p>Ministry of Artificial Intelligence and Digital Development of the Republic of Kazakhstan. (n.d.). <i>Official website</i>. Retrieved November 8, 2026, from https://www.gov.kz/org/maidd</p>
+  <p>Nielsen, J. (2024). <i>10 usability heuristics for user interface design</i>. Nielsen Norman Group. Retrieved November 8, 2026, from https://www.nngroup.com/articles/ten-usability-heuristics/</p>
+  <p>Nurpeisova, T. B., &amp; Kaidash, I. N. (2017). <i>Information and communication technologies</i>. Bastau.</p>
+  <p>OWASP Foundation. (n.d.-a). <i>Cross-site request forgery prevention cheat sheet</i>. Retrieved November 8, 2026, from https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html</p>
+  <p>OWASP Foundation. (n.d.-b). <i>Password storage cheat sheet</i>. Retrieved November 8, 2026, from https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html</p>
+  <p>Pallets. (n.d.). <i>Security considerations</i> [Flask documentation]. Retrieved November 8, 2026, from https://flask.palletsprojects.com/en/stable/web-security/</p>
+  <p>Parsons, J. J. (2022). <i>Computer concepts: Comprehensive</i> (21st ed.). Cengage. Module 8: The ICT industry; Module 9: Information systems.</p>
+  <p>Republic of Kazakhstan. (2013, as amended September 14, 2026). <i>On personal data and their protection</i> (Law No. 94-V of May 21, 2013). Adilet. Retrieved November 8, 2026, from https://adilet.zan.kz/rus/docs/Z1300000094 (unofficial English translation: https://adilet.zan.kz/eng/docs/Z1300000094)</p>
+  <p>SE-2623 team. (2026a). <i>Campus Lost &amp; Found: Project Stage 1 midterm report</i> [Unpublished project report]. Sources/Briefs/Stage1_Midterm_Portrait.pdf.</p>
+  <p>SE-2623 team. (2026b). <i>Campus Lost &amp; Found: Project Stage 2 endterm report</i> [Unpublished project report]. SE-2623_CampusLostFound_ICT_ProjectStage2.pdf.</p>
+  <p>SE-2623 team. (2026c). <i>SE-2623_Endterm</i> [Source code repository, commit a7e5c74]. GitHub. https://github.com/zondbebox/SE-2623_Endterm</p>
+  <p>SQLite. (n.d.). <i>Appropriate uses for SQLite</i>. Retrieved November 8, 2026, from https://www.sqlite.org/whentouse.html</p>
+  <p>W3C. (2023). <i>Web Content Accessibility Guidelines (WCAG) 2.2</i> (Success criterion 1.4.10 Reflow). Retrieved November 8, 2026, from https://www.w3.org/TR/WCAG22/</p>
+  <p class="small" style="text-indent:0;padding-left:0;margin-top:4mm">Images: all screenshots are original captures of the final build (8 November 2026); charts are original aggregations of synthetic project data; category photographs are credited in <span class="mono">static/media/CREDITS.txt</span>. Legal sources were read on adilet.zan.kz on 8 Nov 2026; the Russian text is authoritative.</p>
+  <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>19</b></div>
+</section>
+
+</body>
+</html>

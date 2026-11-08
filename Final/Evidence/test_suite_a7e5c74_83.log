@@ -1,0 +1,173 @@
+﻿python.exe : test_backup_and_scratch_restore_preserve_the_live_database 
+(backend.test_backend.BackendTests.test_backup_and_scratch_restore_preserve_the_live_database) ... ok
+At line:1 char:731
++ ... e-Command { & .\python\python.exe -B -m unittest discover -v *> "$s\r ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_backup_and...atabase) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_category_name_is_unique_case_insensitively 
+(backend.test_backend.BackendTests.test_category_name_is_unique_case_insensitively) ... ok
+test_cli_summary_works_from_another_working_directory 
+(backend.test_backend.BackendTests.test_cli_summary_works_from_another_working_directory) ... ok
+test_connection_configuration_and_row_factory 
+(backend.test_backend.BackendTests.test_connection_configuration_and_row_factory) ... ok
+test_init_is_non_destructive_and_seed_refuses_existing_data 
+(backend.test_backend.BackendTests.test_init_is_non_destructive_and_seed_refuses_existing_data) ... ok
+test_notices_reject_bad_foreign_keys_and_invalid_values 
+(backend.test_backend.BackendTests.test_notices_reject_bad_foreign_keys_and_invalid_values) ... ok
+test_passwords_use_independent_scrypt_hashes 
+(backend.test_backend.BackendTests.test_passwords_use_independent_scrypt_hashes) ... ok
+test_query_allows_join_and_denies_mutation_or_attach 
+(backend.test_backend.BackendTests.test_query_allows_join_and_denies_mutation_or_attach) ... ok
+test_referenced_users_and_categories_cannot_be_deleted 
+(backend.test_backend.BackendTests.test_referenced_users_and_categories_cannot_be_deleted) ... ok
+test_restore_refuses_existing_target_and_live_database 
+(backend.test_backend.BackendTests.test_restore_refuses_existing_target_and_live_database) ... ok
+test_seed_counts_distribution_and_relationships 
+(backend.test_backend.BackendTests.test_seed_counts_distribution_and_relationships) ... ok
+test_transaction_rolls_back_earlier_write_on_constraint_error 
+(backend.test_backend.BackendTests.test_transaction_rolls_back_earlier_write_on_constraint_error) ... ok
+test_unexpected_database_is_not_overwritten 
+(backend.test_backend.BackendTests.test_unexpected_database_is_not_overwritten) ... ok
+test_user_constraints_reject_duplicate_external_or_invalid_role 
+(backend.test_backend.BackendTests.test_user_constraints_reject_duplicate_external_or_invalid_role) ... ok
+test_all_routes_require_login_and_admin_role 
+(test_admin_panel.AdminPanelTests.test_all_routes_require_login_and_admin_role) ... ok
+test_gets_preserve_database_and_remove_uses_existing_confirmation 
+(test_admin_panel.AdminPanelTests.test_gets_preserve_database_and_remove_uses_existing_confirmation) ... ok
+test_invalid_filters_and_enormous_page_numbers_are_controlled 
+(test_admin_panel.AdminPanelTests.test_invalid_filters_and_enormous_page_numbers_are_controlled) ... ok
+test_no_notices_and_no_matching_users_have_usable_empty_states 
+(test_admin_panel.AdminPanelTests.test_no_notices_and_no_matching_users_have_usable_empty_states) ... ok
+test_notice_pagination_is_complete_and_out_of_range_is_404 
+(test_admin_panel.AdminPanelTests.test_notice_pagination_is_complete_and_out_of_range_is_404) ... ok
+test_notice_search_combines_literal_keyword_and_status 
+(test_admin_panel.AdminPanelTests.test_notice_search_combines_literal_keyword_and_status) ... ok
+test_overview_counts_latest_notices_and_quicklinks 
+(test_admin_panel.AdminPanelTests.test_overview_counts_latest_notices_and_quicklinks) ... ok
+test_pages_never_render_password_hashes (test_admin_panel.AdminPanelTests.test_pages_never_render_password_hashes) ... 
+ok
+test_pagination_links_retain_the_search (test_admin_panel.AdminPanelTests.test_pagination_links_retain_the_search) ... 
+ok
+test_untrusted_titles_categories_and_search_are_escaped 
+(test_admin_panel.AdminPanelTests.test_untrusted_titles_categories_and_search_are_escaped) ... ok
+test_users_are_paginated_searchable_and_include_zero_notice_counts 
+(test_admin_panel.AdminPanelTests.test_users_are_paginated_searchable_and_include_zero_notice_counts) ... ok
+test_admin_dashboard_discloses_simulation_and_escapes_untrusted_labels 
+(test_analytics.AnalyticsTests.test_admin_dashboard_discloses_simulation_and_escapes_untrusted_labels) ... ok
+test_aggregates_match_independent_queries_without_modifying_database 
+(test_analytics.AnalyticsTests.test_aggregates_match_independent_queries_without_modifying_database) ... ok
+test_anonymous_and_student_cannot_access_dashboard_or_export 
+(test_analytics.AnalyticsTests.test_anonymous_and_student_cannot_access_dashboard_or_export) ... ok
+test_csv_neutralizes_formulas_and_omits_personal_fields 
+(test_analytics.AnalyticsTests.test_csv_neutralizes_formulas_and_omits_personal_fields) ... ok
+test_full_monday_sunday_weeks_include_gaps_and_sort_by_date 
+(test_analytics.AnalyticsTests.test_full_monday_sunday_weeks_include_gaps_and_sort_by_date) ... ok
+test_location_counts_sort_largest_first_with_stable_name_tiebreak 
+(test_analytics.AnalyticsTests.test_location_counts_sort_largest_first_with_stable_name_tiebreak) ... ok
+test_zero_categories_and_empty_dataset_are_retained 
+(test_analytics.AnalyticsTests.test_zero_categories_and_empty_dataset_are_retained) ... ok
+test_admin_confirmation_is_read_only_until_posted 
+(test_app.CampusApplicationIntegrationTests.test_admin_confirmation_is_read_only_until_posted) ... ok
+test_anonymous_requests_cannot_read_or_write_notices 
+(test_app.CampusApplicationIntegrationTests.test_anonymous_requests_cannot_read_or_write_notices) ... ok
+test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite 
+(test_app.CampusApplicationIntegrationTests.test_browse_rejects_numbers_that_cannot_be_bound_to_sqlite) ... ok
+test_browse_retains_valid_filters_pagination_and_safe_fallbacks 
+(test_app.CampusApplicationIntegrationTests.test_browse_retains_valid_filters_pagination_and_safe_fallbacks) ... ok
+test_five_failed_logins_trigger_rate_limit_on_next_attempt 
+(test_app.CampusApplicationIntegrationTests.test_five_failed_logins_trigger_rate_limit_on_next_attempt) ... ok
+test_invalid_forms_do_not_insert_records 
+(test_app.CampusApplicationIntegrationTests.test_invalid_forms_do_not_insert_records) ... ok
+test_invalid_password_rejected_without_leaking_credentials_to_audit 
+(test_app.CampusApplicationIntegrationTests.test_invalid_password_rejected_without_leaking_credentials_to_audit) ... ok
+test_missing_or_wrong_csrf_rejects_write 
+(test_app.CampusApplicationIntegrationTests.test_missing_or_wrong_csrf_rejects_write) ... ok
+test_notice_routes_reject_out_of_range_ids_without_changing_rows 
+(test_app.CampusApplicationIntegrationTests.test_notice_routes_reject_out_of_range_ids_without_changing_rows) ... ok
+test_out_of_range_form_categories_cannot_create_or_change_notices 
+(test_app.CampusApplicationIntegrationTests.test_out_of_range_form_categories_cannot_create_or_change_notices) ... ok
+test_owner_create_edit_and_return_persist_after_application_restart 
+(test_app.CampusApplicationIntegrationTests.test_owner_create_edit_and_return_persist_after_application_restart) ... ok
+test_search_treats_sql_and_like_metacharacters_as_literal_text 
+(test_app.CampusApplicationIntegrationTests.test_search_treats_sql_and_like_metacharacters_as_literal_text) ... ok
+test_sql_injection_cannot_bypass_login 
+(test_app.CampusApplicationIntegrationTests.test_sql_injection_cannot_bypass_login) ... ok
+test_stored_markup_is_escaped_in_browse_and_detail 
+(test_app.CampusApplicationIntegrationTests.test_stored_markup_is_escaped_in_browse_and_detail) ... ok
+test_student_cannot_edit_or_close_another_owners_notice 
+(test_app.CampusApplicationIntegrationTests.test_student_cannot_edit_or_close_another_owners_notice) ... ok
+test_student_cannot_remove_notice_even_with_forged_admin_role 
+(test_app.CampusApplicationIntegrationTests.test_student_cannot_remove_notice_even_with_forged_admin_role) ... ok
+test_valid_login_establishes_session_and_logout_clears_it 
+(test_app.CampusApplicationIntegrationTests.test_valid_login_establishes_session_and_logout_clears_it) ... ok
+test_archive_includes_online_databases_photos_hashes_and_excludes_session_key 
+(test_backup_full.FullBackupTests.test_archive_includes_online_databases_photos_hashes_and_excludes_session_key) ... ok
+test_backup_rejects_oversized_manifest_before_publishing_archive 
+(test_backup_full.FullBackupTests.test_backup_rejects_oversized_manifest_before_publishing_archive) ... ok
+test_corrupt_payload_hash_is_rejected_without_creating_restored_folder 
+(test_backup_full.FullBackupTests.test_corrupt_payload_hash_is_rejected_without_creating_restored_folder) ... ok
+test_manifest_at_shared_limit_can_be_written_and_restored 
+(test_backup_full.FullBackupTests.test_manifest_at_shared_limit_can_be_written_and_restored) ... ok
+test_recovery_keeps_changed_live_database_and_rejects_existing_destination 
+(test_backup_full.FullBackupTests.test_recovery_keeps_changed_live_database_and_rejects_existing_destination) ... ok
+test_restore_rejects_manifest_above_shared_limit_without_destination 
+(test_backup_full.FullBackupTests.test_restore_rejects_manifest_above_shared_limit_without_destination) ... ok
+test_traversal_zip_is_rejected_without_writing_destination 
+(test_backup_full.FullBackupTests.test_traversal_zip_is_rejected_without_writing_destination) ... ok
+test_help_requires_login (test_media.MediaIntegrationTests.test_help_requires_login) ... ok
+test_media_is_served_and_has_alternative_text 
+(test_media.MediaIntegrationTests.test_media_is_served_and_has_alternative_text) ... ok
+test_contact_is_mailto_and_admin_navigation_is_not_shown_to_student 
+(test_stage2_core.Stage2CoreTests.test_contact_is_mailto_and_admin_navigation_is_not_shown_to_student) ... ok
+test_edit_preserves_photo_without_replacement_and_replaces_it_once 
+(test_stage2_core.Stage2CoreTests.test_edit_preserves_photo_without_replacement_and_replaces_it_once) ... ok
+test_invalid_photo_extension_type_bytes_and_multiple_files_do_not_insert 
+(test_stage2_core.Stage2CoreTests.test_invalid_photo_extension_type_bytes_and_multiple_files_do_not_insert) ... ok
+test_other_student_cannot_replace_photo_and_admin_removal_removes_file 
+(test_stage2_core.Stage2CoreTests.test_other_student_cannot_replace_photo_and_admin_removal_removes_file) ... ok
+test_photo_file_limit_pixel_limit_and_request_limit 
+(test_stage2_core.Stage2CoreTests.test_photo_file_limit_pixel_limit_and_request_limit) ... ok
+test_photo_is_reencoded_without_metadata_and_only_served_after_login 
+(test_stage2_core.Stage2CoreTests.test_photo_is_reencoded_without_metadata_and_only_served_after_login) ... ok
+test_png_photo_is_supported (test_stage2_core.Stage2CoreTests.test_png_photo_is_supported) ... ok
+test_registration_creates_student_scrypt_account_that_can_sign_in 
+(test_stage2_core.Stage2CoreTests.test_registration_creates_student_scrypt_account_that_can_sign_in) ... ok
+test_registration_duplicate_is_handled_and_missing_csrf_cannot_create 
+(test_stage2_core.Stage2CoreTests.test_registration_duplicate_is_handled_and_missing_csrf_cannot_create) ... ok
+test_registration_rate_limit_stops_repeated_submissions 
+(test_stage2_core.Stage2CoreTests.test_registration_rate_limit_stops_repeated_submissions) ... ok
+test_registration_rejects_invalid_domain_syntax_and_password_lengths 
+(test_stage2_core.Stage2CoreTests.test_registration_rejects_invalid_domain_syntax_and_password_lengths) ... ok
+test_admin_forms_reject_missing_csrf (test_stage2_features.Stage2Tests.test_admin_forms_reject_missing_csrf) ... ok
+test_cli_heartbeat_preserves_current_simulated_state 
+(test_stage2_features.Stage2Tests.test_cli_heartbeat_preserves_current_simulated_state) ... ok
+test_consent_code_device_and_task_are_required 
+(test_stage2_features.Stage2Tests.test_consent_code_device_and_task_are_required) ... ok
+test_csv_export_neutralises_spreadsheet_formulas 
+(test_stage2_features.Stage2Tests.test_csv_export_neutralises_spreadsheet_formulas) ... ok
+test_duplicate_participant_task_cannot_inflate_results 
+(test_stage2_features.Stage2Tests.test_duplicate_participant_task_cannot_inflate_results) ... ok
+test_empty_research_has_no_invented_observations 
+(test_stage2_features.Stage2Tests.test_empty_research_has_no_invented_observations) ... ok
+test_five_people_both_tasks_required_and_exact_boundaries 
+(test_stage2_features.Stage2Tests.test_five_people_both_tasks_required_and_exact_boundaries) ... ok
+test_get_and_post_permissions (test_stage2_features.Stage2Tests.test_get_and_post_permissions) ... ok
+test_invalid_notice_is_rejected_without_event 
+(test_stage2_features.Stage2Tests.test_invalid_notice_is_rejected_without_event) ... ok
+test_locker_open_alert_close_and_heartbeat_preserve_state 
+(test_stage2_features.Stage2Tests.test_locker_open_alert_close_and_heartbeat_preserve_state) ... ok
+test_new_features_do_not_mutate_main_database 
+(test_stage2_features.Stage2Tests.test_new_features_do_not_mutate_main_database) ... ok
+test_observation_entry_does_not_extend_stopped_task_time 
+(test_stage2_features.Stage2Tests.test_observation_entry_does_not_extend_stopped_task_time) ... ok
+test_timer_uses_server_duration_and_finishes_once 
+(test_stage2_features.Stage2Tests.test_timer_uses_server_duration_and_finishes_once) ... ok
+test_unavailable_open_locker_assignment_can_be_reset_without_erasing_history 
+(test_stage2_features.Stage2Tests.test_unavailable_open_locker_assignment_can_be_reset_without_erasing_history) ... ok
+
+----------------------------------------------------------------------
+Ran 83 tests in 37.837s
+
+OK

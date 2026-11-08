@@ -1,0 +1,38 @@
+{
+ "run_utc": "2026-11-08T15:40:32+00:00",
+ "code": "commit a7e5c74 (unchanged), isolated scratch copy",
+ "blocked": 5,
+ "total": 5,
+ "checks": [
+  {
+   "id": "SC3-1",
+   "check": "Register an address outside astanait.edu.kz",
+   "http": 200,
+   "blocked": true
+  },
+  {
+   "id": "SC3-2",
+   "check": "Sign in with an incorrect password",
+   "http": 200,
+   "blocked": true
+  },
+  {
+   "id": "SC3-3",
+   "check": "Anonymous visitor opens notice details",
+   "http": 302,
+   "blocked": true
+  },
+  {
+   "id": "SC3-4",
+   "check": "Student edits another owner's notice",
+   "http": 403,
+   "blocked": true
+  },
+  {
+   "id": "SC3-5",
+   "check": "Student opens and submits administrator removal",
+   "http": "403/403",
+   "blocked": true
+  }
+ ]
+}

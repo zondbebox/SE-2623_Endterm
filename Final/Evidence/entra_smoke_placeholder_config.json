@@ -1,0 +1,15 @@
+﻿{
+ "button_shown": true,
+ "bar_says_configured": true,
+ "from_127_redirects_to": "http://localhost:5057/auth/microsoft/login",
+ "status": 302,
+ "authorize_endpoint": "https://login.microsoftonline.com/00000000-0000-0000-0000-000000000000/oauth2/v2.0/authorize",
+ "params": {
+  "client_id": "11111111-1111-1111-1111-111111111111",
+  "response_type": "code",
+  "redirect_uri": "http://localhost:5057/auth/microsoft/callback",
+  "scope": "openid profile email",
+  "code_challenge_method": "S256"
+ },
+ "secret_in_url": false
+}

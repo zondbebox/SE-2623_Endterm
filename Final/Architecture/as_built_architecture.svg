@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1d3b30"/></marker>
+    <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8a8f86"/></marker>
+  </defs>
+  <rect width="1600" height="900" fill="#f7f5ee"/>
+  <text x="48" y="58" font-size="30" font-weight="700" fill="#14211b">Campus Lost &amp; Found — as-built architecture (Final, commit a7e5c74)</text>
+  <text x="48" y="90" font-size="17" fill="#4b574f">What actually runs: one Windows laptop, loopback HTTP only. No public hosting, no LAN exposure, no university SSO, no physical locker.</text>
+
+  <!-- Security boundary: the laptop / OS account -->
+  <rect x="40" y="120" width="1180" height="740" rx="22" fill="none" stroke="#1d3b30" stroke-width="3" stroke-dasharray="14 9"/>
+  <rect x="58" y="106" width="520" height="30" rx="8" fill="#1d3b30"/>
+  <text x="72" y="127" font-size="16" font-weight="700" fill="#f3f7e8">SECURITY BOUNDARY · demo laptop, Windows user account</text>
+
+  <!-- Client -->
+  <rect x="80" y="170" width="300" height="250" rx="16" fill="#ffffff" stroke="#c9cfc2" stroke-width="2"/>
+  <text x="100" y="204" font-size="20" font-weight="700" fill="#14211b">Browser (same laptop)</text>
+  <text x="100" y="234" font-size="15" fill="#33413a">Chrome / Edge / Firefox</text>
+  <rect x="100" y="252" width="260" height="56" rx="10" fill="#e9f4d4"/>
+  <text x="114" y="276" font-size="15" font-weight="600" fill="#1d3b30">Student session</text>
+  <text x="114" y="296" font-size="13" fill="#33413a">post · search · contact · edit · return</text>
+  <rect x="100" y="318" width="260" height="56" rx="10" fill="#dfe9e3"/>
+  <text x="114" y="342" font-size="15" font-weight="600" fill="#1d3b30">Administrator session</text>
+  <text x="114" y="362" font-size="13" fill="#33413a">panel · remove · analytics · locker</text>
+  <text x="100" y="402" font-size="13" fill="#4b574f">Separate cookie sessions (normal + private window)</text>
+
+  <!-- Network -->
+  <line x1="380" y1="295" x2="500" y2="295" stroke="#1d3b30" stroke-width="3" marker-end="url(#arr)" marker-start="url(#arr)"/>
+  <rect x="384" y="236" width="112" height="44" rx="8" fill="#fff6dc" stroke="#e0c46a"/>
+  <text x="396" y="256" font-size="13" font-weight="700" fill="#5a4605">HTTP, no TLS</text>
+  <text x="396" y="273" font-size="12" fill="#5a4605">127.0.0.1:5055</text>
+
+  <!-- Server -->
+  <rect x="500" y="160" width="400" height="430" rx="16" fill="#1d3b30"/>
+  <text x="522" y="196" font-size="20" font-weight="700" fill="#f3f7e8">Waitress WSGI · Flask 3.1 app</text>
+  <text x="522" y="220" font-size="14" fill="#cfe2c2">Bundled Python 3.14 runtime · 4 threads</text>
+  <rect x="522" y="236" width="356" height="98" rx="10" fill="#2b5244"/>
+  <text x="538" y="260" font-size="15" font-weight="700" fill="#e9f4d4">Security layer (every request)</text>
+  <text x="538" y="282" font-size="13" fill="#f3f7e8">Signed session cookie · HttpOnly · SameSite=Lax · 30 min</text>
+  <text x="538" y="302" font-size="13" fill="#f3f7e8">CSRF token on every POST · login/register rate limit</text>
+  <text x="538" y="322" font-size="13" fill="#f3f7e8">CSP + nosniff headers · owner/admin role checks</text>
+  <text x="522" y="362" font-size="15" font-weight="700" fill="#e9f4d4">Modules</text>
+  <text x="522" y="388" font-size="14" fill="#f3f7e8">app.py — accounts, notices, photos, removal</text>
+  <text x="522" y="412" font-size="14" fill="#f3f7e8">admin_panel.py — overview, notices, users</text>
+  <text x="522" y="436" font-size="14" fill="#f3f7e8">analytics_routes.py — 3 SQL series + CSV</text>
+  <text x="522" y="460" font-size="14" fill="#f3f7e8">stage2_features.py — research timer, locker sim</text>
+  <text x="522" y="484" font-size="14" fill="#f3f7e8">static/*.js — photo preview, motion, locker fetch</text>
+  <rect x="522" y="504" width="356" height="66" rx="10" fill="#d8ef9f"/>
+  <text x="538" y="528" font-size="14" font-weight="700" fill="#1d3b30">Passwords: scrypt hashes (not reversible)</text>
+  <text x="538" y="550" font-size="13" fill="#1d3b30">Photos: re-encoded, metadata stripped, random names</text>
+
+  <!-- Storage -->
+  <rect x="960" y="160" width="240" height="430" rx="16" fill="#ffffff" stroke="#c9cfc2" stroke-width="2"/>
+  <text x="980" y="194" font-size="20" font-weight="700" fill="#14211b">Local disk · data/</text>
+  <text x="980" y="216" font-size="13" fill="#9a3b2b">Not encrypted by the app</text>
+  <g font-size="14" fill="#14211b">
+    <rect x="980" y="230" width="200" height="62" rx="9" fill="#f1efe6"/><text x="992" y="254" font-weight="700">campus.sqlite3</text><text x="992" y="276" font-size="12" fill="#4b574f">users · categories · notices</text>
+    <rect x="980" y="300" width="200" height="50" rx="9" fill="#f1efe6"/><text x="992" y="322" font-weight="700">uploads/</text><text x="992" y="340" font-size="12" fill="#4b574f">private photos (login only)</text>
+    <rect x="980" y="358" width="200" height="50" rx="9" fill="#f1efe6"/><text x="992" y="380" font-weight="700">research.sqlite3</text><text x="992" y="398" font-size="12" fill="#4b574f">test timings (codes T01…)</text>
+    <rect x="980" y="416" width="200" height="50" rx="9" fill="#f1efe6"/><text x="992" y="438" font-weight="700">telemetry.sqlite3</text><text x="992" y="456" font-size="12" fill="#4b574f">locker events · SIMULATED</text>
+    <rect x="980" y="474" width="200" height="50" rx="9" fill="#f1efe6"/><text x="992" y="496" font-weight="700">runtime/</text><text x="992" y="514" font-size="12" fill="#4b574f">session.key · audit.jsonl</text>
+    <rect x="980" y="532" width="200" height="44" rx="9" fill="#f1efe6"/><text x="992" y="559" font-weight="700">backups/ (ZIP + SHA-256)</text>
+  </g>
+  <line x1="900" y1="375" x2="960" y2="375" stroke="#1d3b30" stroke-width="3" marker-end="url(#arr)" marker-start="url(#arr)"/>
+
+  <!-- Locker simulation -->
+  <rect x="500" y="630" width="400" height="200" rx="16" fill="#fff" stroke="#1d3b30" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="522" y="664" font-size="19" font-weight="700" fill="#14211b">Smart locker LF-01 — software simulation</text>
+  <text x="522" y="692" font-size="14" fill="#33413a">Admin buttons (fetch, no page reload) or</text>
+  <text x="522" y="714" font-size="14" fill="#33413a">simulate_locker.py CLI write labelled events.</text>
+  <text x="522" y="742" font-size="14" fill="#33413a">Warning "OPEN TOO LONG" after 10 s, evaluated</text>
+  <text x="522" y="764" font-size="14" fill="#33413a">when the page is requested. No sensor, no door,</text>
+  <text x="522" y="786" font-size="14" fill="#33413a">no network device. Notice never auto-closed.</text>
+  <line x1="900" y1="730" x2="1080" y2="730" stroke="#1d3b30" stroke-width="2.5"/>
+  <line x1="1080" y1="730" x2="1080" y2="470" stroke="#1d3b30" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- DB inspector -->
+  <rect x="80" y="460" width="300" height="130" rx="16" fill="#ffffff" stroke="#c9cfc2" stroke-width="2"/>
+  <text x="100" y="494" font-size="18" font-weight="700" fill="#14211b">sqlite-web inspector</text>
+  <text x="100" y="520" font-size="14" fill="#33413a">DATABASE.bat · 127.0.0.1:8088</text>
+  <text x="100" y="544" font-size="14" fill="#33413a">--read-only · for analysis/defense</text>
+  <text x="100" y="568" font-size="13" fill="#4b574f">Separate local process</text>
+  <path d="M380 525 C 700 620, 900 620, 975 255" fill="none" stroke="#8a8f86" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrg)"/>
+
+  <!-- CLI / tests -->
+  <rect x="80" y="630" width="300" height="200" rx="16" fill="#ffffff" stroke="#c9cfc2" stroke-width="2"/>
+  <text x="100" y="664" font-size="18" font-weight="700" fill="#14211b">Operator tools</text>
+  <text x="100" y="692" font-size="14" fill="#33413a">START.bat / START.sh</text>
+  <text x="100" y="716" font-size="14" fill="#33413a">TESTS.bat — 83 automated tests</text>
+  <text x="100" y="740" font-size="14" fill="#33413a">BACKUP.bat · RESTORE_CHECK.bat</text>
+  <text x="100" y="764" font-size="14" fill="#33413a">DB.bat query "SELECT …" (read-only)</text>
+  <text x="100" y="796" font-size="13" fill="#4b574f">Need OS access to the laptop</text>
+
+  <!-- Outside the boundary -->
+  <text x="1250" y="150" font-size="18" font-weight="700" fill="#14211b">Outside the boundary</text>
+  <g font-size="14">
+    <rect x="1250" y="170" width="310" height="96" rx="14" fill="#fff" stroke="#c9cfc2" stroke-width="2"/>
+    <text x="1268" y="200" font-weight="700" fill="#14211b">User's email app</text>
+    <text x="1268" y="224" fill="#33413a">"Contact author" opens a mailto: draft.</text>
+    <text x="1268" y="246" fill="#33413a">The site never sends email.</text>
+    <rect x="1250" y="290" width="310" height="96" rx="14" fill="#fff" stroke="#c9cfc2" stroke-width="2"/>
+    <text x="1268" y="320" font-weight="700" fill="#14211b">Other devices on Wi-Fi / Internet</text>
+    <text x="1268" y="344" fill="#33413a">Cannot connect: server binds 127.0.0.1;</text>
+    <text x="1268" y="366" fill="#33413a">trusted hosts = 127.0.0.1, localhost.</text>
+    <rect x="1250" y="410" width="310" height="96" rx="14" fill="#fff" stroke="#c9cfc2" stroke-width="2" stroke-dasharray="7 6"/>
+    <text x="1268" y="440" font-weight="700" fill="#14211b">University identity (Microsoft Entra)</text>
+    <text x="1268" y="464" fill="#33413a">OIDC code ready but switched off; no</text>
+    <text x="1268" y="486" fill="#33413a">university app registration yet.</text>
+    <rect x="1250" y="530" width="310" height="96" rx="14" fill="#fff" stroke="#c9cfc2" stroke-width="2"/>
+    <text x="1268" y="560" font-weight="700" fill="#14211b">GitHub (source, read-only copy)</text>
+    <text x="1268" y="584" fill="#33413a">zondbebox/SE-2623_Endterm, branch main.</text>
+    <text x="1268" y="606" fill="#33413a">Holds demo data only; no runtime link.</text>
+  </g>
+  <line x1="1220" y1="218" x2="1250" y2="218" stroke="#8a8f86" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrg)"/>
+
+  <!-- Legend -->
+  <g font-size="14" fill="#33413a">
+    <rect x="1250" y="660" width="310" height="190" rx="14" fill="#efede4"/>
+    <text x="1268" y="690" font-weight="700" fill="#14211b">Legend</text>
+    <line x1="1268" y1="714" x2="1318" y2="714" stroke="#1d3b30" stroke-width="3" stroke-dasharray="14 9"/><text x="1330" y="719">security boundary</text>
+    <rect x="1268" y="734" width="50" height="22" rx="5" fill="none" stroke="#1d3b30" stroke-dasharray="7 6"/><text x="1330" y="751">simulated / not connected</text>
+    <rect x="1268" y="768" width="50" height="22" rx="5" fill="#d8ef9f"/><text x="1330" y="785">protected by hashing</text>
+    <text x="1268" y="822" fill="#9a3b2b">Unencrypted: HTTP on loopback,</text>
+    <text x="1268" y="842" fill="#9a3b2b">SQLite files, photos, backups</text>
+  </g>
+</svg>

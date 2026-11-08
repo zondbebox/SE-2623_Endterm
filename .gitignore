@@ -1,0 +1,15 @@
+# Secrets and per-machine runtime files (never commit)
+Campus_Lost_Found/runtime/session.key
+Campus_Lost_Found/runtime/audit.jsonl
+.env
+*.env
+
+# Generated data that may contain real users' content
+Campus_Lost_Found/backups/
+Campus_Lost_Found/data/uploads/
+Campus_Lost_Found/data/restore_checks/
+
+# Build and cache folders
+__pycache__/
+Final/Presentation/source/node_modules/
+Final/Report/source/.edge-print-profile/

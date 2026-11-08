@@ -1,0 +1,143 @@
+{
+ "report": {
+  "pages": 19,
+  "all_portrait_A4": true,
+  "pages_12_to_20": true,
+  "exec_summary_words_declared": 193,
+  "sections_found": {
+   "Executive summary": true,
+   "Problem and evidence": true,
+   "Users and requirements": true,
+   "As-built architecture": true,
+   "Data": true,
+   "Security": true,
+   "Interface": true,
+   "Testing": true,
+   "Data analysis": true,
+   "Smart extension": true,
+   "Limitations and future work": true,
+   "References": true,
+   "Individual contribution statements": true
+  }
+ },
+ "statements_words": {
+  "Mengdigerey Zhanzhol": 112,
+  "Galitskiy Daniil": 110,
+  "Bisengaliev Daulet": 111
+ },
+ "statements_confirmed": false,
+ "presentation_pdf": {
+  "pages": 16,
+  "all_16x9_landscape": true
+ },
+ "presentation_notes": [
+  {
+   "slide": 1,
+   "notes_chars": 514,
+   "speaker": "Mengdigerey Zhanzhol "
+  },
+  {
+   "slide": 2,
+   "notes_chars": 759,
+   "speaker": "Zhanzhol "
+  },
+  {
+   "slide": 3,
+   "notes_chars": 1141,
+   "speaker": "Zhanzhol "
+  },
+  {
+   "slide": 4,
+   "notes_chars": 1398,
+   "speaker": "Zhanzhol "
+  },
+  {
+   "slide": 5,
+   "notes_chars": 1109,
+   "speaker": "Galitskiy Daniil "
+  },
+  {
+   "slide": 6,
+   "notes_chars": 924,
+   "speaker": "Daniil "
+  },
+  {
+   "slide": 7,
+   "notes_chars": 1013,
+   "speaker": "Daniil "
+  },
+  {
+   "slide": 8,
+   "notes_chars": 1246,
+   "speaker": "Bisengaliev Daulet "
+  },
+  {
+   "slide": 9,
+   "notes_chars": 830,
+   "speaker": "Daulet "
+  },
+  {
+   "slide": 10,
+   "notes_chars": 1085,
+   "speaker": "Daulet "
+  },
+  {
+   "slide": 11,
+   "notes_chars": 933,
+   "speaker": "Daulet "
+  },
+  {
+   "slide": 12,
+   "notes_chars": 433,
+   "speaker": "Daulet"
+  },
+  {
+   "slide": 13,
+   "notes_chars": 232,
+   "speaker": null
+  },
+  {
+   "slide": 14,
+   "notes_chars": 267,
+   "speaker": null
+  },
+  {
+   "slide": 15,
+   "notes_chars": 83,
+   "speaker": null
+  },
+  {
+   "slide": 16,
+   "notes_chars": 43,
+   "speaker": null
+  }
+ ],
+ "speaking_seconds": {
+  "Zhanzhol": 180,
+  "Daniil": 165,
+  "Daulet": 185
+ },
+ "total_minutes": 8.83,
+ "links": {
+  "https://github.com/zondbebox/SE-2623_Endterm": 200,
+  "https://github.com/zondbebox/SE-2623_Endterm/commit/a7e5c749095e63e1cff1280b95279ca8bae6e447": 200,
+  "https://github.com/zondbebox/SE-2623_Endterm/blob/main/Campus_Lost_Found/app.py": 200,
+  "https://github.com/zondbebox/SE-2623_Endterm/blob/main/Campus_Lost_Found/stage2_features.py": 200,
+  "https://github.com/zondbebox/SE-2623_Endterm/blob/main/Campus_Lost_Found/static/locker.js": 200,
+  "https://github.com/zondbebox/SE-2623_Endterm/blob/main/Campus_Lost_Found/backend/analytics.py": 200,
+  "https://www.youtube.com/oembed?url=https://youtu.be/76M3hSqR-7w&format=json": 200,
+  "https://adilet.zan.kz/rus/docs/Z1300000094": 200,
+  "https://adilet.zan.kz/eng/docs/Z1300000094": 200,
+  "https://adilet.zan.kz/rus/docs/Z2600000326": 200,
+  "https://www.gov.kz/org/maidd": 200,
+  "https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app": 200,
+  "https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols-oidc": 200,
+  "https://www.sqlite.org/whentouse.html": 200,
+  "https://www.w3.org/TR/WCAG22/": 200,
+  "https://www.nngroup.com/articles/ten-usability-heuristics/": 200,
+  "https://flask.palletsprojects.com/en/stable/web-security/": 200,
+  "https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html": 200,
+  "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html": 200
+ },
+ "screenshots": 26
+}

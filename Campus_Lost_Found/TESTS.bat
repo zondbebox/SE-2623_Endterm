@@ -15,6 +15,8 @@ if errorlevel 1 goto finished
 "python\python.exe" -B test_stage2_features.py
 if errorlevel 1 goto finished
 "python\python.exe" -B test_backup_full.py
+if errorlevel 1 goto finished
+"python\python.exe" -B test_microsoft_auth.py
 :finished
 set "CAMPUS_TEST_EXIT=%ERRORLEVEL%"
 pause
