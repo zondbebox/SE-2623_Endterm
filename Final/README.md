@@ -2,7 +2,7 @@
 
 Final-project package for the ICT course (brief: `ICT_Final.pdf`, Week 10). Team: Mengdigerey Zhanzhol, Galitskiy Daniil, Bisengaliev Daulet.
 
-**System assessed:** <https://github.com/zondbebox/SE-2623_Endterm>, branch `main`, commit `a7e5c749095e63e1cff1280b95279ca8bae6e447` (only commit, 6 Nov 2026). The Endterm ZIP (`SE-2623_Endterm.zip`, 8 Nov 2026) is file-for-file identical to it. For the Final, one optional module was added to the application — **Microsoft sign-in** (`microsoft_auth.py`, `test_microsoft_auth.py`, one line in `app.py`, two template lines, test scripts). It is off unless configured and is **not yet committed**. Endterm documents, evidence and data were left untouched. All evidence was re-run on **8 Nov 2026**.
+**System assessed:** <https://github.com/zondbebox/SE-2623_Endterm>, branch `main`, commit `a7e5c749095e63e1cff1280b95279ca8bae6e447` (only commit, 6 Nov 2026). The Endterm ZIP (`SE-2623_Endterm.zip`, 8 Nov 2026) is file-for-file identical to it. For the Final the application gained Microsoft sign-in (`microsoft_auth.py`, `START_MICROSOFT.bat`, tests) and lost the "LOCAL DEMO" bar; the header shows the Microsoft display name. Endterm documents, evidence and data were left untouched. All evidence was re-run on **8 Nov 2026**.
 
 How to run the app and the verified test accounts: see the root [`README.md`](../README.md).
 
@@ -23,7 +23,7 @@ How to run the app and the verified test accounts: see the root [`README.md`](..
 | Defense preparation (D) | `Defense/00_System_Map.md`, `Defense/Defense_<name>.md`, `Defense/Live_Change_Drills.md`, `Defense/Eight_Questions.md`, `Defense/practice/` | ready |
 | Demo plan and video fallback | `Demo/Demo_Plan_and_Backup.md` | ready; video **not** re-recorded |
 | Personal data & Kazakhstan law | `Legal/Personal_Data_Kazakhstan.md` | ready (sources checked 8 Nov 2026) |
-| Microsoft sign-in | `../Campus_Lost_Found/microsoft_auth.py`, `SSO/Microsoft_Entra_SignIn_Status_and_Setup.md` | code + 11 tests (simulated Microsoft); **not connected** — needs a university app registration |
+| Microsoft sign-in | `../Campus_Lost_Found/microsoft_auth.py`, `START_MICROSOFT.bat`, `SSO/Microsoft_Entra_SignIn_Status_and_Setup.md` | **working** — real university account signed in 8 Nov 2026; 13 tests |
 | Evidence | `Evidence/` — test log, measurements, browser checks, account checks, 26 screenshots | re-run 8 Nov 2026 |
 | Team checklist (RU) | `CHECKLIST_RU.md`, guide `START_HERE_RU.md` | ready |
 
@@ -31,7 +31,7 @@ How to run the app and the verified test accounts: see the root [`README.md`](..
 
 | File | What it proves |
 |---|---|
-| `test_suite_final.log` | `Ran 94 tests in 29.590s — OK` (final code incl. Microsoft sign-in); `test_suite_a7e5c74_83.log`: 83/83 on the unchanged commit |
+| `test_suite_final.log` | `Ran 96 tests in 42.249s — OK` (final code) |
 | `entra_smoke_placeholder_config.json` | real server with placeholder Entra IDs: button shown, redirect to Microsoft authorize endpoint with PKCE, secret not in URL |
 | `search_performance_final.json` | N1: p95 44.866 ms, max 54.597 ms (10 sessions × 10 searches) |
 | `sc3_final.json` | SC3: 5/5 invalid-access attempts blocked, with database-state checks |
@@ -54,4 +54,4 @@ powershell -ExecutionPolicy Bypass -File Final\_build\export_pptx.ps1
 
 ## What is not claimed
 
-No public URL, no LAN access, no HTTPS, no working university sign-in (code only), no physical locker, no human results beyond the three participants supplied by the team, no upload to the LMS, no push to GitHub.
+No public URL, no LAN access, no HTTPS, no physical locker, no human results beyond the three participants supplied by the team, no upload to the LMS, no push to GitHub.

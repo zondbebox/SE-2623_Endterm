@@ -1,16 +1,16 @@
 # Microsoft sign-in (Entra ID) — status and set-up
 
-## Status on 8 Nov 2026: **code ready and tested against simulated Microsoft; not connected to a real tenant**
+## Status: **working — verified 8 Nov 2026, 16:40 UTC**
 
 | What | State | Evidence |
 |---|---|---|
-| Code | `Campus_Lost_Found/microsoft_auth.py`, wired in `app.py` (`register_microsoft_auth`), button in `templates/login.html`, top-bar text in `templates/base.html` | local change, **not yet committed** |
-| Tests | 11 tests in `test_microsoft_auth.py` with a throw-away RSA key and simulated Microsoft endpoints — all pass; full suite 94/94 | `Final/Evidence/test_suite_final.log` |
-| Real server smoke test | Placeholder IDs (no real tenant): button shown, top bar says "Microsoft sign-in configured", `/auth/microsoft/login` → 302 to `https://login.microsoftonline.com/<tenant>/oauth2/v2.0/authorize` with PKCE S256; the secret is not in the URL | `Final/Evidence/entra_smoke_placeholder_config.json` |
-| Real sign-in with a university account | **not done** — the team has no app registration | — |
-| Requirement F1 / N2 | stays **Partly** until a real account signs in | report p. 4 |
+| App registration | Single-tenant web app "Campus Lost & Found SE-2623" in the Astana IT University Entra directory, created by a team member; redirect URI `http://localhost:5055/auth/microsoft/callback` | tenant and client IDs in `START_MICROSOFT.bat` (IDs are not secrets) |
+| Real sign-in | A real `@astanait.edu.kz` account signed in; a student row was created; audit `microsoft_login_success` | `runtime/audit.jsonl` on the demo laptop (not in Git) |
+| Code | `microsoft_auth.py`; Microsoft display name shown in the header (session only, not stored); local self-registration closed while Microsoft sign-in is on | `main` branch |
+| Tests | 13 tests with simulated Microsoft (signature, issuer, tenant, audience, expiry, nonce, domain, PKCE, single-use state, escaping, registration closed); full suite 96/96 | `Final/Evidence/test_suite_final.log` |
+| Requirement F1 / N2 | **Done** | report pp. 4–5 |
 
-Without configuration the module is off: both routes return 404, the login page and the "No university SSO" bar are exactly as before. The code was written with an AI assistant during Final preparation; whoever commits it must be able to explain it (`Final/Defense/Defense_Zhanzhol.md` §10).
+**Secret hygiene.** One client secret was accidentally pasted into a chat. It must be deleted in Entra (Certificates & secrets) and replaced. Secrets are typed into `START_MICROSOFT.bat` at start-up only.
 
 ## How it works (OpenID Connect, authorization code flow + PKCE)
 
@@ -43,7 +43,7 @@ python\python.exe app.py
 
 Open `http://localhost:5055/login` → **Sign in with Microsoft (university account)**. Optional `CAMPUS_ENTRA_REDIRECT_URI` if you use a different port (it must exactly match the registration).
 
-**Verification to record before calling it done:** a real `@astanait.edu.kz` account signs in; `DB.bat query "SELECT email, role FROM users ORDER BY id DESC LIMIT 1;"` shows the account; `runtime/audit.jsonl` has `microsoft_login_success`; a non-university Microsoft account is refused. Add a screenshot to `Final/Evidence/` and change F1 in `report_template.html`/`Requirements_Status.md` only then.
+**How it was verified (repeat before the defense):** a real `@astanait.edu.kz` account signs in; `DB.bat query "SELECT email, role FROM users ORDER BY id DESC LIMIT 1;"` shows the account; `runtime/audit.jsonl` has `microsoft_login_success`; a non-university Microsoft account is refused. Add a screenshot to `Final/Evidence/` and change F1 in `report_template.html`/`Requirements_Status.md` only then.
 
 ## Known limits
 

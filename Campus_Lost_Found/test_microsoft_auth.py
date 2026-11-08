@@ -155,7 +155,7 @@ class MicrosoftSignInTests(unittest.TestCase):
         self.assertEqual(client.get('/auth/microsoft/callback?code=x&state=y').status_code, 404)
         page = client.get('/login').get_data(as_text=True)
         self.assertNotIn('Sign in with Microsoft', page)
-        self.assertIn('No university SSO', page)
+        self.assertNotIn('LOCAL DEMO', page)
 
     def test_enabled_shows_button_and_redirects_with_pkce_state_and_nonce(self):
         page = self.client.get('/login').get_data(as_text=True)
@@ -191,6 +191,27 @@ class MicrosoftSignInTests(unittest.TestCase):
         self.assertEqual(sent['grant_type'], 'authorization_code')
         self.assertIn('microsoft_login_success', (Path(self.temp.name) / 'audit.jsonl').read_text())
         self.assertNotIn('test-secret-not-real', (Path(self.temp.name) / 'audit.jsonl').read_text())
+
+    def test_display_name_from_microsoft_is_shown_and_escaped(self):
+        self.start()
+        self.finish(name='Mengdigerey  Zhanzhol')
+        self.assertIn('<strong>Mengdigerey Zhanzhol</strong>', self.client.get('/').get_data(as_text=True))
+        with self.client.session_transaction() as s:
+            s.clear()
+        self.start()
+        self.finish(name='<script>alert(1)</script>')
+        page = self.client.get('/').get_data(as_text=True)
+        self.assertNotIn('<script>alert(1)</script>', page)
+        self.assertIn('&lt;script&gt;', page)
+        with closing(sqlite3.connect(self.db)) as c:
+            self.assertNotIn('name', [r[1] for r in c.execute('PRAGMA table_info(users)')])
+
+    def test_self_registration_is_closed_only_when_microsoft_is_enabled(self):
+        self.assertEqual(self.client.get('/register').status_code, 404)
+        self.assertNotIn('Create a local student account', self.client.get('/login').get_data(as_text=True))
+        local = self.make_app(enabled=False).test_client()
+        self.assertEqual(local.get('/register').status_code, 200)
+        self.assertIn('Create a local student account', local.get('/login').get_data(as_text=True))
 
     def test_existing_account_keeps_its_role(self):
         self.start()

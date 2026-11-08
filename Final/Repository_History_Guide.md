@@ -3,9 +3,11 @@
 ## What was checked (8 Nov 2026)
 
 * Repository: <https://github.com/zondbebox/SE-2623_Endterm> — public, default and only branch `main`.
-* History: **one commit**, `a7e5c749095e63e1cff1280b95279ca8bae6e447`, message "Initial commit", 6 Nov 2026 17:29 UTC, author and committer name `zombeparkour09`, GitHub login `zondbebox`. GitHub lists one contributor (`zondbebox`, 1 contribution).
+* History at the start of the Final: **one commit**, `a7e5c749095e63e1cff1280b95279ca8bae6e447`, message "Initial commit", 6 Nov 2026 17:29 UTC, author and committer name `zombeparkour09`, GitHub login `zondbebox`. GitHub lists one contributor (`zondbebox`, 1 contribution).
 * The team confirmed that `zondbebox` is **Mengdigerey Zhanzhol's** account.
 * The local folder and `SE-2623_Endterm.zip` are identical to this commit (1,164 files compared, 0 differences).
+
+**Update 8 Nov 2026:** Final commits `ca5d0e5` and later were pushed from Zhanzhol's account with Daniil and Daulet as `Co-authored-by` co-authors (they agreed). Their own commits from their own accounts are still recommended.
 
 **Consequence for the Final rubric (A3: "a commit history in which each member's work is visible under their own account"):** not met yet. Daniil's and Daulet's work exists in the files but not under their accounts. This cannot be fixed by anyone else: commits must be made by each member, from their own GitHub account, on their own computer.
 

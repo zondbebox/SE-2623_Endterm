@@ -60,7 +60,7 @@ python\python.exe -B -m unittest test_app test_stage2_core -v
 
 ## 7. Незакрытое из Stage 1
 
-F1 university sign-in — Partly. Код входа через Microsoft готов (§10), но нужна регистрация приложения в Entra-тенанте университета, её может сделать только IT. Риск был записан ещё в Stage 1 («SSO approval is delayed → clearly label simulated sign-in»). Инструкция: `Final/SSO/`.
+Незакрытых Must нет: F1 закрыт в Final — вход через Microsoft (§10) проверен реальной учёткой 8.11.2026. Риск был записан ещё в Stage 1 («SSO approval is delayed → clearly label simulated sign-in»). Инструкция: `Final/SSO/`.
 
 ## 8. Что сделал бы иначе
 
@@ -72,9 +72,9 @@ F1 university sign-in — Partly. Код входа через Microsoft гот�
 
 ## 10. Вход через Microsoft — объяснить за 60 секунд (English)
 
-Код `Campus_Lost_Found/microsoft_auth.py` написан при подготовке Final с помощью ИИ-ассистента. Это зона аккаунтов — если коммитишь ты, ты должен уметь его объяснить. Честно скажи на защите, что использовался ИИ и что вход ещё не проверен на реальном тенанте.
+Код `Campus_Lost_Found/microsoft_auth.py` написан при подготовке Final с помощью ИИ-ассистента. Это зона аккаунтов — если коммитишь ты, ты должен уметь его объяснить. Честно скажи на защите, что использовался ИИ-ассистент; вход проверен твоей реальной учёткой 8 ноября.
 
-"We added optional Microsoft sign-in with OpenID Connect. It is off unless three environment variables are set, so without them nothing changes. The login route creates a random state, nonce and PKCE verifier, keeps them in the signed session, and sends the user to Microsoft's authorize endpoint. On the callback we check the state, exchange the code for tokens on the server with the client secret and the PKCE verifier, and then validate the ID token: RS256 signature against Microsoft's published keys, issuer and tenant, audience, expiry, nonce, and that the email is an astanait.edu.kz address. A new user becomes a student; an existing admin keeps the admin role. We tested this with 11 tests against a simulated Microsoft, but no real university account has signed in yet, because we have no app registration from IT — so F1 stays 'partly'."
+"We added optional Microsoft sign-in with OpenID Connect. It is off unless three environment variables are set, so without them nothing changes. The login route creates a random state, nonce and PKCE verifier, keeps them in the signed session, and sends the user to Microsoft's authorize endpoint. On the callback we check the state, exchange the code for tokens on the server with the client secret and the PKCE verifier, and then validate the ID token: RS256 signature against Microsoft's published keys, issuer and tenant, audience, expiry, nonce, and that the email is an astanait.edu.kz address. A new user becomes a student; an existing admin keeps the admin role. We registered the app in the university Entra directory, tested it with 13 tests against a simulated Microsoft, and on 8 November signed in with a real university account. The header shows the Microsoft display name, which we keep only in the session."
 
 | Вопрос | Ответ |
 |---|---|
@@ -83,6 +83,7 @@ F1 university sign-in — Partly. Код входа через Microsoft гот�
 | Why check the signature if the token came over HTTPS? | "Defence in depth: we verify it with Microsoft's public keys, so a tampered or foreign token is refused — tested with a wrong key." |
 | Where is the secret? | "Only in an environment variable on the demo laptop. Not in code, Git or the audit log; the test checks it is not in the redirect URL." |
 | Why 127.0.0.1 → localhost redirect? | "Cookies are per host. Microsoft returns to localhost, so the session must already live there." |
-| What fails without IT? | "Nothing breaks: the button is hidden and the routes return 404. Local sign-in keeps working." |
+| What if Microsoft or Wi-Fi is down? | "START.bat runs without Microsoft: the button is hidden and demo accounts still work." |
+| Why can't people self-register now? | "In Microsoft mode every new account must come from the university directory, so nobody can claim someone else's address." |
 
-Демо (если спросят): `python\python.exe -B test_microsoft_auth.py` → 11 OK; открыть `microsoft_auth.py` функции `login`, `callback`, `validate_id_token`.
+Демо (если спросят): `python\python.exe -B test_microsoft_auth.py` → 13 OK; открыть `microsoft_auth.py` функции `login`, `callback`, `validate_id_token`.

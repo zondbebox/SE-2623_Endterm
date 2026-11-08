@@ -20,7 +20,7 @@ Use the table in `Live_Change_Drills.md` (Drill 5). Example: "Daulet's locker pa
 
 ### 4. "Which instructor comment from Stage 1 did you not address, and why?"
 
-"We did not receive written instructor comments on Stage 1, as recorded in our Stage 2 report. The one Stage 1 commitment we could not fully deliver is university sign-in, F1: our Stage 1 risk table already said SSO approval might be delayed and that we would clearly label a simulated sign-in — that is what we did. For the Final we wrote the Microsoft sign-in code — OpenID Connect with PKCE — and tested it against simulated Microsoft responses, but it needs an app registration in the university's Entra tenant, which only IT can create, so we do not claim it works yet."
+"We did not receive written instructor comments on Stage 1, as recorded in our Stage 2 report. The one Stage 1 commitment we could not fully deliver is university sign-in, F1: our Stage 1 risk table already said SSO approval might be delayed and that we would clearly label a simulated sign-in — that is what we did. For the Final we closed it: we registered the app in the university's Microsoft Entra directory and added OpenID Connect sign-in with PKCE; on 8 November a real university account signed in."
 RU: если преподаватель напомнит конкретное замечание — признайте и назовите, что сделано/не сделано; не спорьте.
 
 ### 5. "Where is your users' personal data physically stored, and why does that matter under Kazakhstan law?"
@@ -30,11 +30,11 @@ RU: источник — adilet.zan.kz, проверено 8.11.2026 (`Final/Leg
 
 ### 6. "Show me the as-built architecture. Where is the security boundary, and what lies outside it?"
 
-Show report page 6 or slide 8. "Everything runs on one laptop. The boundary is the laptop's Windows account: inside are the browser, Waitress + Flask, and the SQLite files. Inside the app, sessions, CSRF tokens and role checks protect every action, and passwords are scrypt hashes. What is **not** protected: traffic is plain HTTP — acceptable only because it never leaves 127.0.0.1 — and files on disk are not encrypted, so anyone with the laptop login can copy them. Outside the boundary: other devices, which cannot connect; the user's email app; Microsoft Entra, which is not connected; and GitHub, which holds only synthetic data."
+Show report page 6 or slide 8. "Everything runs on one laptop. The boundary is the laptop's Windows account: inside are the browser, Waitress + Flask, and the SQLite files. Inside the app, sessions, CSRF tokens and role checks protect every action, and passwords are scrypt hashes. What is **not** protected: traffic is plain HTTP — acceptable only because it never leaves 127.0.0.1 — and files on disk are not encrypted, so anyone with the laptop login can copy them. Outside the boundary: other devices, which cannot connect; the user's email app; Microsoft Entra, the university directory that signs students in; and GitHub, which holds only synthetic data."
 
 ### 7. "Which requirement was hardest to finish, and what did you have to cut to finish it?"
 
-"The hardest was N4/N3 evidence and, overall, identity. Identity we could not finish without university IT: the Microsoft sign-in code is written and tested against simulated responses, but it is switched off until a real registration exists, and local accounts are labelled honestly. To keep the core flow stable we also cut what Stage 1 already listed as out of scope — chat, payments, delivery, automatic matching — and we did not build LAN access or HTTPS, because exposing the app on Wi-Fi without TLS would send passwords in clear text."
+"The hardest was N4/N3 evidence and, overall, identity. Identity was the last piece: university sign-in only worked in the final week, after we registered the app in the university Entra directory. To keep the core flow stable we also cut what Stage 1 already listed as out of scope — chat, payments, delivery, automatic matching — and we did not build LAN access or HTTPS, because exposing the app on Wi-Fi without TLS would send passwords in clear text."
 RU: каждый может назвать своё «самое трудное» (см. личный гайд), но ответ должен совпадать с отчётом.
 
 ### 8. "If 10,000 users joined tomorrow, which part of your system would fail first, and what would you do?"

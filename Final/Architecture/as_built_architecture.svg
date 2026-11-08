@@ -102,10 +102,10 @@
     <text x="1268" y="320" font-weight="700" fill="#14211b">Other devices on Wi-Fi / Internet</text>
     <text x="1268" y="344" fill="#33413a">Cannot connect: server binds 127.0.0.1;</text>
     <text x="1268" y="366" fill="#33413a">trusted hosts = 127.0.0.1, localhost.</text>
-    <rect x="1250" y="410" width="310" height="96" rx="14" fill="#fff" stroke="#c9cfc2" stroke-width="2" stroke-dasharray="7 6"/>
+    <rect x="1250" y="410" width="310" height="96" rx="14" fill="#fff" stroke="#c9cfc2" stroke-width="2"/>
     <text x="1268" y="440" font-weight="700" fill="#14211b">University identity (Microsoft Entra)</text>
-    <text x="1268" y="464" fill="#33413a">OIDC code ready but switched off; no</text>
-    <text x="1268" y="486" fill="#33413a">university app registration yet.</text>
+    <text x="1268" y="464" fill="#33413a">Sign-in with university accounts</text>
+    <text x="1268" y="486" fill="#33413a">(OIDC + PKCE), verified 8 Nov 2026.</text>
     <rect x="1250" y="530" width="310" height="96" rx="14" fill="#fff" stroke="#c9cfc2" stroke-width="2"/>
     <text x="1268" y="560" font-weight="700" fill="#14211b">GitHub (source, read-only copy)</text>
     <text x="1268" y="584" fill="#33413a">zondbebox/SE-2623_Endterm, branch main.</text>

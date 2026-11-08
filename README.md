@@ -78,27 +78,20 @@ In PowerShell, prefix the scripts with `.\` (for example `.\DB.bat summary`). `D
 
 ```bat
 cd Campus_Lost_Found
-python\python.exe -B -m unittest discover -v      & rem 94 tests, about 30–40 s
+python\python.exe -B -m unittest discover -v      & rem 96 tests, about 40 s
 ```
 
-Result on 8 Nov 2026: `Ran 94 tests … OK` (83 from commit a7e5c74 + 11 for the new Microsoft sign-in) (`Final/Evidence/test_suite_final.log`). `TESTS.bat` runs the same files one by one.
+Result on 8 Nov 2026: `Ran 96 tests … OK` (83 from commit a7e5c74 + 13 for Microsoft sign-in) (`Final/Evidence/test_suite_final.log`). `TESTS.bat` runs the same files one by one.
 
-## 6a. Optional: Microsoft sign-in (Entra ID)
+## 6a. Microsoft sign-in with a university account (Entra ID)
 
-Code: `Campus_Lost_Found/microsoft_auth.py` (OpenID Connect, authorization code + PKCE, state, nonce, RS256 signature, issuer/audience/tenant/expiry checks, only `@astanait.edu.kz` accounts). It is **off** unless three environment variables are set; without them the sign-in page and every route behave exactly as before.
+**Status: working — verified 8 Nov 2026** with a real Astana IT University account (audit log entry `microsoft_login_success`). The app is registered in the university's Microsoft Entra directory as a single-tenant web app with redirect URI `http://localhost:5055/auth/microsoft/callback`.
 
-**Status:** tested only against simulated Microsoft responses (`test_microsoft_auth.py`, 11 tests) and a placeholder-configuration smoke test. **No real university account has signed in yet**, because the team has no app registration. Do not call it "SSO implemented" until that happens.
+Start with **`Campus_Lost_Found\START_MICROSOFT.bat`**. It sets the tenant and application IDs (not secrets) and asks for the **client secret** in a hidden prompt; the secret stays only in that window's memory — never in a file, Git or chat. Then open **http://localhost:5055/login** (localhost, not 127.0.0.1) and click **Sign in with Microsoft (university account)**. The header shows the user's Microsoft display name.
 
-To switch it on (needs an app registration from university IT — platform "Web", redirect URI `http://localhost:5055/auth/microsoft/callback`):
+In this mode new users can only come from the university directory: local self-registration is closed. The synthetic demo accounts still sign in with the demo password, and `START.bat` runs the whole demo offline without Microsoft.
 
-```bat
-set CAMPUS_ENTRA_TENANT_ID=<directory (tenant) ID>
-set CAMPUS_ENTRA_CLIENT_ID=<application (client) ID>
-set CAMPUS_ENTRA_CLIENT_SECRET=<client secret value>
-START.bat
-```
-
-Then open **http://localhost:5055/login** (localhost, not 127.0.0.1 — the app redirects you if needed) and click **Sign in with Microsoft (university account)**. Never put the secret in a file inside the repository or in chat. Full guide: `Final/SSO/Microsoft_Entra_SignIn_Status_and_Setup.md`.
+Code: `microsoft_auth.py` (OpenID Connect, authorization code + PKCE, state, nonce, RS256 signature, issuer/audience/tenant/expiry checks, only `@astanait.edu.kz`). Tests: `test_microsoft_auth.py` (13, simulated Microsoft). Client secrets expire — create a new one in Entra (Certificates & secrets) before it runs out. Details: `Final/SSO/Microsoft_Entra_SignIn_Status_and_Setup.md`.
 
 ## 7. Stop safely
 
@@ -124,4 +117,4 @@ Final/               Final report, presentation, requirement table, evidence, de
 
 ## 10. Known limitations
 
-University sign-in is not connected (the Microsoft sign-in code exists but needs a real app registration — section 6a); loopback HTTP only (no TLS, no LAN); SQLite and photos are not encrypted by the application; the smart locker is a software simulation with no hardware. Details and next steps: `Final/Report/Group_Team_ICT_FinalProject.pdf`, Section 9.
+Microsoft sign-in works only on this laptop (localhost redirect); loopback HTTP only (no TLS, no LAN); SQLite and photos are not encrypted by the application; the smart locker is a software simulation with no hardware. Details and next steps: `Final/Report/Group_Team_ICT_FinalProject.pdf`, Section 9.

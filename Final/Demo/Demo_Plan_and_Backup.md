@@ -12,6 +12,11 @@ Total talk: **about 8:50**, 12 slides + 4 backup slides. Every member speaks. Ex
 6. Zoom the browser to 125 % so the room can read it.
 7. Open the PDF of the slides as a second fallback (no PowerPoint needed).
 
+## Which start script
+
+* Live demo with Wi-Fi: `START_MICROSOFT.bat` (type the client secret). Zhanzhol can show "Sign in with Microsoft" in 10 seconds, then continue with the demo accounts.
+* No Wi-Fi or Microsoft problem: `START.bat` — everything else works offline with the demo accounts.
+
 ## Demo moments
 
 | Slide | Who | Window | Steps (≈ time) | Say |
@@ -37,7 +42,7 @@ Total talk: **about 8:50**, 12 slides + 4 backup slides. Every member speaks. Ex
 * **Availability:** YouTube oEmbed returned HTTP 200, title "ICT Assignment 4" (unlisted link works without sign-in). Local MP4: 24,172,240 bytes, 2:14, 1920×1080, 30 fps.
 * **Does it match the final version? No.** Frames extracted from the MP4 show the earlier white-and-teal interface, the old hero "Find what matters.", the top-bar label "Multimedia project / Part 2", the old plain photo field, notices "#121 Blue notebook - live database demo" and "#123 A4 video demo bottle", DevTools network throttling and an image-format comparison page. It shows **no** administrator panel, analytics, user-testing page, smart-locker simulation, registration page or the new photo picker. The browser bookmark bar with personal tabs is visible. Captions still need re-timing (`Video/subtitles_EN_PLANNED.srt`).
 * **Scenes to re-record** (the brief says "update it if the system has changed"):
-  1. Opening: new green noticeboard hero and "LOCAL DEMO · No university SSO" bar.
+  1. Opening: new green noticeboard hero, header with the student name; sign in with Microsoft (university account).
   2. Student: Post a notice with the new **Choose photo** picker (preview, size, pixels) → saved notice.
   3. Student: search + category filter → detail → Contact author → Mark as returned.
   4. Administrator (new): Admin panel counts → Notices list → Remove with confirmation.

@@ -12,7 +12,7 @@
 
 | ID | Requirement (Stage 1 wording) | Priority | Stage 2 status | Final status | Evidence |
 |---|---|---|---|---|---|
-| F1 | University account sign-in. Check: reject identities outside astanait.edu.kz | Must | Partly | **Partly** — the acceptance check is met (other domains are rejected), but sign-in uses local accounts, not the university identity provider | `test_stage2_core.py::test_registration_rejects_invalid_domain_syntax_and_password_lengths`; `Evidence/sc3_final.json` SC3-1; screenshot `S01_login.png`; Microsoft sign-in code: `test_microsoft_auth.py` (11 tests, simulated) |
+| F1 | University account sign-in. Check: reject identities outside astanait.edu.kz | Must | Partly | **Done** — sign-in with Astana IT University Microsoft accounts (Entra ID, OpenID Connect + PKCE), verified with a real account on 8 Nov 2026; other domains rejected | `test_stage2_core.py::test_registration_rejects_invalid_domain_syntax_and_password_lengths`; `Evidence/sc3_final.json` SC3-1; screenshot `S01_login.png`; Microsoft sign-in code: `test_microsoft_auth.py` (11 tests, simulated) |
 | F2 | Publish a lost or found notice. Check: a valid notice appears in the list | Must | Done | **Done** | `test_app.py::test_owner_create_edit_and_return_persist_after_application_restart`; screenshots `S04_post_form.png`, `S05_notice_created.png` |
 | F3 | Attach one photo. Check: accept JPG/PNG up to 5 MB | Should | Done | **Done** | `test_stage2_core.py::test_photo_file_limit_pixel_limit_and_request_limit`, `::test_png_photo_is_supported`; screenshot `S04_post_form.png` (photo picker), `S05_notice_created.png` |
 | F4 | Browse notices and open details. Check: list and details show saved content | Must | Done | **Done** | `test_app.py::test_stored_markup_is_escaped_in_browse_and_detail`; screenshots `S02_browse.png`, `S06_search_result.png` |
@@ -26,13 +26,13 @@
 | ID | Requirement | Priority | Stage 2 status | Final status | Evidence |
 |---|---|---|---|---|---|
 | N1 | Search p95 ≤ 2 s with 10 concurrent users (repeated searches on the demo laptop) | Must | Done (p95 81.47 ms, 30 Oct) | **Done** — p95 44.87 ms, max 54.60 ms, 100 requests from 10 authenticated sessions (8 Nov 2026) | `Evidence/search_performance_final.json` (`benchmark_search.py`). Loopback HTTP; assets and painting excluded |
-| N2 | Enforce university identity and owner/admin rights | Must | Partly | **Partly** — owner/admin rights enforced (5/5 blocked; 94/94 tests). Identity is a domain-format check, not proof of a university account | `Evidence/sc3_final.json`; `Evidence/account_checks.json`; `Evidence/test_suite_final.log` |
+| N2 | Enforce university identity and owner/admin rights | Must | Partly | **Done** — identity via university Microsoft sign-in (new accounts only that way in Microsoft mode); owner/admin rights enforced (5/5 blocked; 96/96 tests). Synthetic demo accounts kept for the offline demo | `Evidence/sc3_final.json`; `Evidence/account_checks.json`; `Evidence/test_suite_final.log` |
 | N3 | Support 360 px screens and keyboard input (core screens, labels, focus order) | Must | Partly | see `Evidence/browser_checks.json` — filled after the browser check run (automated browser evidence, not a human accessibility audit) | `Evidence/browser_checks.json`; screenshots `M01–M03` (360 px) |
 | N4 | Pass 20/20 checks during a 30-minute demo (core pages plus retry when offline) | Must | Partly (20/20 HTTP; offline retry not covered) | see `Evidence/stability_30min_final.json` and the offline/retry part of `Evidence/browser_checks.json` | as listed |
 
 ## C. Requirements not fully done — one-sentence reasons
 
-* **F1 / N2 (Partly):** Signing in with a real Astana IT University account needs an app registration in the university's Microsoft Entra tenant, which only university IT can grant; the team kept local accounts with a domain-format check; the Microsoft sign-in code (`microsoft_auth.py`, 11 tests against simulated Microsoft) is ready but switched off, so F1 stays Partly until a real university account signs in.
+* **F1 / N2:** closed in the Final by Microsoft Entra sign-in (verified 8 Nov 2026). No Must requirement remains open.
 * Instructor comment from Stage 1 not addressed: none reported (team to confirm).
 
 ## D. Success criteria (Stage 1) — see `Final/Testing/Final_Test_Results.md`

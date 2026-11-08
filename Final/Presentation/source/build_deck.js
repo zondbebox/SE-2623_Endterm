@@ -23,7 +23,7 @@ const TESTS = suite[1], TESTS_TIME = Number(suite[2]).toFixed(1);
 const stabDone = stab && stab.completed === stab.checks;
 const n3ok = br.N3_360px.no_horizontal_scroll && Object.values(br.N3_labels).every((x) => x.all_labelled) && br.N3_keyboard_post_form.reaches_publish_button;
 const n4ok = stabDone && stab.passed === stab.checks && br.N4_offline_retry.passed;
-const mustDone = 6 + 1 + (n3ok ? 1 : 0) + (n4ok ? 1 : 0);
+const mustDone = 9 + (n3ok ? 1 : 0) + (n4ok ? 1 : 0);   // F2,F4-F8 (6) + F1 + N2 + N1   // F1 and N2 closed by a real Microsoft sign-in on 8 Nov 2026
 
 function parseCsv(text) {
   const rows = []; let row = [], cell = "", q = false;
@@ -167,9 +167,9 @@ notes(s, [
 
 // =====================================================================
 // 3 REQUIREMENTS
-s = content(`${mustDone} of 11 Musts done; university sign-in is the gap`, "Zhanzhol · 0:45", "Opening — Zhanzhol");
-const reqs = [["F1", "University sign-in", "part"], ["F2", "Publish", "done"], ["F3", "One photo", "should"], ["F4", "Browse + details", "done"], ["F5", "Search + filter", "done"], ["F6", "Email author", "done"], ["F7", "Edit + returned", "done"], ["F8", "Admin removes", "done"],
-  ["N1", "Search ≤ 2 s", "done"], ["N2", "Identity + rights", "part"], ["N3", "360 px + keyboard", n3ok ? "done" : "part"], ["N4", "30-min demo", n4ok ? "done" : "part"]];
+s = content(mustDone === 11 ? "All 11 Must requirements are done" : `${mustDone} of 11 Must requirements are done`, "Zhanzhol · 0:45", "Opening — Zhanzhol");
+const reqs = [["F1", "University sign-in", "done"], ["F2", "Publish", "done"], ["F3", "One photo", "should"], ["F4", "Browse + details", "done"], ["F5", "Search + filter", "done"], ["F6", "Email author", "done"], ["F7", "Edit + returned", "done"], ["F8", "Admin removes", "done"],
+  ["N1", "Search ≤ 2 s", "done"], ["N2", "Identity + rights", "done"], ["N3", "360 px + keyboard", n3ok ? "done" : "part"], ["N4", "30-min demo", n4ok ? "done" : "part"]];
 const step = (W - 2 * MX) / 12;
 reqs.forEach(([id, label, st], i) => {
   const cx = MX + i * step + step / 2, d = 0.82, y = 2.0;
@@ -183,11 +183,11 @@ reqs.forEach(([id, label, st], i) => {
 });
 text(s, "FUNCTIONAL (F) · F3 is the only Should", { x: MX, y: 1.55, w: 6, h: 0.3, fontSize: 11, color: C.muted, charSpacing: 1 });
 text(s, "NON-FUNCTIONAL (N)", { x: MX + 8 * step + 0.1, y: 1.55, w: 4, h: 0.3, fontSize: 11, color: C.muted, charSpacing: 1 });
-s.addShape(pres.shapes.RECTANGLE, { x: MX, y: 4.05, w: 7.4, h: 2.55, fill: { color: C.amberBg }, line: { type: "none" } });
-text(s, "Why F1 and N2 are only partly done", { x: MX + 0.3, y: 4.25, w: 6.9, h: 0.4, fontSize: 18, bold: true, color: C.amber, fontFace: HEAD });
+s.addShape(pres.shapes.RECTANGLE, { x: MX, y: 4.05, w: 7.4, h: 2.55, fill: { color: C.sage }, line: { type: "none" } });
+text(s, "University sign-in now works", { x: MX + 0.3, y: 4.25, w: 6.9, h: 0.4, fontSize: 18, bold: true, color: C.green, fontFace: HEAD });
 text(s, [
-  { text: "Accounts are local. Registration only accepts an @astanait.edu.kz address, passwords are scrypt-hashed and owner/admin rights are enforced.", options: { breakLine: true } },
-  { text: "Microsoft sign-in code is ready (OpenID Connect + PKCE, 11 tests on simulated Microsoft), but it needs an app registration in the university’s Entra tenant — only IT can create it. Until a real account signs in, it stays “partly”." },
+  { text: "Students sign in with their Astana IT University Microsoft account (OpenID Connect + PKCE). Verified with a real account on 8 Nov 2026.", options: { breakLine: true } },
+  { text: "Only @astanait.edu.kz accounts from the university directory get in; in this mode nobody can self-register with an unverified address. Demo accounts stay for offline demos." },
 ], { x: MX + 0.3, y: 4.75, w: 6.9, h: 1.75, fontSize: 15, paraSpaceAfter: 8 });
 text(s, [{ text: "Evidence for every row", options: { bold: true, breakLine: true, color: C.green } },
   { text: "Final/Requirements/Requirements_Status.md lists the test, screenshot or measurement behind each status. All were re-run on 8 Nov 2026 on the final code.", options: { color: C.ink } }],
@@ -196,7 +196,7 @@ notes(s, [
   "SPEAKER: Zhanzhol · about 0:45",
   "",
   `Stage 1 gave us eleven Must requirements and one Should. ${mustDone} Musts are fully done, and the photo upload — our only Should — is done as well.`,
-  "The two amber ones, F1 and N2, are the same problem: identity. Our accounts are local. We only accept astanait.edu.kz addresses, hash passwords with scrypt and enforce owner and admin rights on the server — but anyone can type a well-formed university address. For the Final we added the Microsoft sign-in code: OpenID Connect with PKCE, state and nonce, signature and issuer checks, and only @astanait.edu.kz accounts. It passes 11 tests against simulated Microsoft responses. But it needs an app registration in the university Entra tenant, which only IT can create, so we do not count F1 as done until a real account signs in.",
+  "All eleven Must requirements are done, and the photo upload — our only Should — too. The last two, F1 and N2, were about identity. In Stage 2 our accounts were local. For the Final we registered the app in the Astana IT University Microsoft Entra directory and added OpenID Connect sign-in with PKCE: the server checks the token signature, issuer, tenant, audience, expiry, nonce and the astanait.edu.kz domain. On 8 November a real university account signed in, and in this mode nobody can self-register with an unverified address. Local demo accounts remain only so the demo works offline.",
   "Every status in this row has a test, screenshot or measurement behind it in our requirements table.",
   "",
   "→ Transition: 'Let me show you the student side live.' (switch to the browser)",
@@ -377,7 +377,7 @@ text(s, "HTTP\n127.0.0.1\nno TLS", { x: MX + 2.5, y: 2.85, w: 0.85, h: 0.75, fon
 arrow(s, MX + 6.0, 3.25, MX + 6.3, 3.25); arrow(s, MX + 6.0, 5.4, MX + 6.3, 5.4);
 // outside
 text(s, "OUTSIDE THE BOUNDARY", { x: 9.4, y: 1.75, w: 3.4, h: 0.3, fontSize: 12, bold: true, color: C.muted, charSpacing: 1 });
-const outside = [["Other devices", "cannot connect — server binds 127.0.0.1"], ["Email app", "“Contact author” opens a draft; site sends nothing"], ["Microsoft Entra ID", "sign-in code ready, off until IT registers the app"], ["GitHub", "public source with synthetic data only"]];
+const outside = [["Other devices", "cannot connect — server binds 127.0.0.1"], ["Email app", "“Contact author” opens a draft; site sends nothing"], ["Microsoft Entra ID", "university sign-in (OIDC + PKCE), verified"], ["GitHub", "public source with synthetic data only"]];
 outside.forEach(([a, b], i) => {
   const y = 2.15 + i * 1.12;
   s.addShape(pres.shapes.RECTANGLE, { x: 9.4, y, w: 3.33, h: 0.98, fill: { color: C.white }, line: { color: C.line, width: 1, dashType: i === 2 ? "dash" : "solid" } });
@@ -388,8 +388,8 @@ notes(s, [
   "",
   "This is the system as built, not as planned in Stage 1. Browser and server are on the same laptop and talk over 127.0.0.1 port 5055. The server refuses other host names, so a phone on the same Wi-Fi cannot reach it.",
   "Inside: Waitress runs the Flask app; every request goes through the signed session cookie, the CSRF token on every POST, the rate limit and the owner/admin checks. Passwords are scrypt hashes. Data lives in three SQLite files and an uploads folder on the local disk — not encrypted by the app.",
-  "The security boundary is the laptop's Windows account: anyone who can log in to the laptop can copy the database. Outside the boundary are the email app, Microsoft Entra — our sign-in code is ready but switched off because there is no university registration — and GitHub, which holds only synthetic data.",
-  "Changes from Stage 1: SSO code ready but not connected, no HTTPS, local hosting, three databases instead of one, and the locker simulation was added.",
+  "The security boundary is the laptop's Windows account: anyone who can log in to the laptop can copy the database. Outside the boundary are the email app, Microsoft Entra — the university directory that signs students in — and GitHub, which holds only synthetic data. The client secret is typed in at start-up and never stored.",
+  "Changes from Stage 1: university sign-in works as planned (on localhost), no HTTPS, local hosting, three databases instead of one, and the locker simulation was added.",
   "",
   "→ Transition: 'Next: does it work on a phone, with a keyboard and after a network drop?'",
   "SOURCES: app.py lines 29–33 (cookie flags, TRUSTED_HOSTS) and 388 (host 127.0.0.1); Final/Architecture/as_built_architecture*.svg; report Section 4.",
@@ -454,7 +454,7 @@ notes(s, [
 // =====================================================================
 // 11 LIMITS & LESSONS
 s = content("What we would build next, and what we learned", "Daulet · 0:40", "System — Daulet");
-const lim = [["University sign-in not connected", "Code is ready: IT registers the app, we set 3 variables and test a real sign-in"], ["One laptop, local HTTP", "Host in a Kazakhstan data centre with HTTPS — personal data must stay in Kazakhstan"], ["SQLite, one writer", "PostgreSQL + object storage before 10,000 users"], ["Free-text locations", "A fixed list of campus places for cleaner analytics"]];
+const lim = [["Sign-in only on localhost", "HTTPS redirect, secret in a vault, store the immutable oid claim"], ["One laptop, local HTTP", "Host in a Kazakhstan data centre with HTTPS — personal data must stay in Kazakhstan"], ["SQLite, one writer", "PostgreSQL + object storage before 10,000 users"], ["Free-text locations", "A fixed list of campus places for cleaner analytics"]];
 text(s, "LIMIT NOW", { x: MX, y: 1.7, w: 3.3, h: 0.3, fontSize: 12, bold: true, color: C.muted, charSpacing: 2 });
 text(s, "NEXT STEP", { x: MX + 3.55, y: 1.7, w: 4, h: 0.3, fontSize: 12, bold: true, color: C.forest, charSpacing: 2 });
 lim.forEach(([a, b], i) => {
@@ -468,14 +468,14 @@ s.addShape(pres.shapes.RECTANGLE, { x: 8.75, y: 1.7, w: 3.98, h: 4.95, fill: { c
 text(s, "Lessons", { x: 9.05, y: 1.95, w: 3.4, h: 0.5, fontSize: 22, color: C.lime, fontFace: HEAD });
 text(s, [
   { text: "Evidence beats claims — the requirement table separated “passes a test” from “a person used it”.", options: { bullet: true, breakLine: true } },
-  { text: "Cutting chat and matching kept the core flow stable; SSO is built but honestly marked “not connected”.", options: { bullet: true, breakLine: true } },
+  { text: "Cutting chat and matching kept the core flow stable; university sign-in came last, once the core worked.", options: { bullet: true, breakLine: true } },
   { text: "One upload commit hid our individual work — next time, one commit per feature.", options: { bullet: true, breakLine: true } },
   { text: "Start testing with real users in week 7, not week 10.", options: { bullet: true } },
 ], { x: 9.05, y: 2.55, w: 3.45, h: 3.9, fontSize: 14, color: C.white, paraSpaceAfter: 10 });
 notes(s, [
   "SPEAKER: Daulet · about 0:40",
   "",
-  "Four limits matter most. University sign-in: the OpenID Connect code is ready, but it needs an Entra app registration from university IT before anyone can really sign in. One laptop over local HTTP — the next step is hosting in a Kazakhstan data centre with HTTPS, because under Article 12 of the personal data law, personal data must be stored in a database located in Kazakhstan. SQLite allows one writer at a time — fine for a demo, not for ten thousand users. And free-text locations made our analytics split one place into two.",
+  "Four limits matter most. Microsoft sign-in works, but only on localhost: a hosted version needs an HTTPS redirect, the secret in a vault and the immutable oid claim. One laptop over local HTTP — the next step is hosting in a Kazakhstan data centre with HTTPS, because under Article 12 of the personal data law, personal data must be stored in a database located in Kazakhstan. SQLite allows one writer at a time — fine for a demo, not for ten thousand users. And free-text locations made our analytics split one place into two.",
   "What we learned: evidence beats claims; cutting scope kept the core stable; our single upload commit hid who did what — next time, one commit per feature; and real users should come much earlier.",
   "",
   "→ Transition: 'Thank you — we are ready for questions.'",
@@ -525,7 +525,7 @@ text(s, [
   { text: "Law RK No. 94-V “On Personal Data and Their Protection”: Art. 12(2) storage in a database located in Kazakhstan; Arts. 7–8 consent; Art. 22 protection; Art. 25(2)(8) breach notice within one working day (Russian text, as amended 14 Sep 2026).", options: { breakLine: true } },
   { text: " ", options: { breakLine: true, fontSize: 8 } },
   { text: "If we went public", options: { bold: true, color: C.green, breakLine: true, fontSize: 18 } },
-  { text: "Kazakhstan data centre · HTTPS · university sign-in · consent text · retention period · incident procedure. We do not claim legal compliance." },
+  { text: "Kazakhstan data centre · HTTPS · consent text · retention period · incident procedure. We do not claim legal compliance." },
 ], { x: MX, y: 1.75, w: 12.1, h: 4.9, fontSize: 15 });
 notes(s, ["BACKUP for defense question 5. Source: adilet.zan.kz/rus/docs/Z1300000094 (checked 8 Nov 2026). The law does not name the ministry; the Ministry of AI and Digital Development publishes personal-data guidance (gov.kz/org/maidd). Interpretation only — not legal advice."]);
 
@@ -537,7 +537,7 @@ chain.forEach(([a, b], i) => {
   text(s, [{ text: a, options: { bold: true, breakLine: true, color: i === 0 ? C.amber : C.green, fontSize: 17 } }, { text: b, options: { fontSize: 14 } }], { x: x + 0.2, y: 2.05, w: 2.5, h: 2.0 });
   if (i < 3) arrow(s, x + 2.88, 3.0, x + 3.05, 3.0, C.forest, 1.5);
 });
-text(s, [{ text: "Plan: ", options: { bold: true, color: C.green } }, { text: "host in Kazakhstan with HTTPS → PostgreSQL → object storage for photos → several app instances behind a load balancer with a shared rate limiter → Entra sign-in → load-test before launch. Our 45 ms p95 is for 10 users on a laptop and does not predict 10,000." }],
+text(s, [{ text: "Plan: ", options: { bold: true, color: C.green } }, { text: "host in Kazakhstan with HTTPS → PostgreSQL → object storage for photos → several app instances behind a load balancer with a shared rate limiter → HTTPS redirect for Entra sign-in → load-test before launch. Our 45 ms p95 is for 10 users on a laptop and does not predict 10,000." }],
   { x: MX, y: 4.55, w: 12.1, h: 1.5, fontSize: 16 });
 notes(s, ["BACKUP for defense question 8. Source: report Section 9; sqlite.org/whentouse.html."]);
 

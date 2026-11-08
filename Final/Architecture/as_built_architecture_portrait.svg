@@ -45,7 +45,7 @@
   <text x="90" y="515" font-size="17" fill="#f3f7e8">CSRF token on every POST · login/register rate limit</text>
   <text x="90" y="540" font-size="17" fill="#f3f7e8">owner and admin role checks · CSP and nosniff headers</text>
   <text x="72" y="584" font-size="17" fill="#f3f7e8">app.py · admin_panel.py · analytics_routes.py</text>
-  <text x="72" y="609" font-size="17" fill="#f3f7e8">stage2_features.py · microsoft_auth.py (off) · static/*.js</text>
+  <text x="72" y="609" font-size="17" fill="#f3f7e8">stage2_features.py · microsoft_auth.py · static/*.js</text>
   <rect x="72" y="626" width="556" height="56" rx="11" fill="#d6ee9b"/>
   <text x="90" y="651" font-size="17" font-weight="700" fill="#173d31">Passwords: scrypt hashes · photos: re-encoded,</text>
   <text x="90" y="673" font-size="17" font-weight="700" fill="#173d31">metadata removed, random names, login-only route</text>
@@ -86,9 +86,9 @@
     <rect x="266" y="972" width="232" height="150" rx="13" fill="#fff" stroke="#c9cfc2" stroke-width="2"/>
     <text x="282" y="1004" font-size="19" font-weight="700" fill="#16231c">Other devices</text>
     <text x="282" y="1032" fill="#26342c">Phones and PCs on Wi-Fi</text><text x="282" y="1054" fill="#26342c">cannot connect: server</text><text x="282" y="1076" fill="#26342c">binds 127.0.0.1 only.</text>
-    <rect x="512" y="972" width="232" height="150" rx="13" fill="#fff" stroke="#173d31" stroke-width="2.5" stroke-dasharray="9 7"/>
+    <rect x="512" y="972" width="232" height="150" rx="13" fill="#fff" stroke="#c9cfc2" stroke-width="2"/>
     <text x="528" y="1004" font-size="19" font-weight="700" fill="#16231c">Microsoft Entra ID</text>
-    <text x="528" y="1032" fill="#26342c">Sign-in code ready</text><text x="528" y="1054" fill="#26342c">(OIDC + PKCE), off until</text><text x="528" y="1076" fill="#26342c">IT registers the app.</text>
+    <text x="528" y="1032" fill="#26342c">University sign-in via</text><text x="528" y="1054" fill="#26342c">OpenID Connect + PKCE;</text><text x="528" y="1076" fill="#26342c">verified 8 Nov 2026.</text>
     <rect x="758" y="972" width="222" height="150" rx="13" fill="#fff" stroke="#c9cfc2" stroke-width="2"/>
     <text x="774" y="1004" font-size="19" font-weight="700" fill="#16231c">GitHub</text>
     <text x="774" y="1032" fill="#26342c">Public source copy,</text><text x="774" y="1054" fill="#26342c">synthetic data only;</text><text x="774" y="1076" fill="#26342c">no runtime link.</text>

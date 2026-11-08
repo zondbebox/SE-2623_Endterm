@@ -74,7 +74,7 @@ li { margin-bottom: 0.8mm; }
   <div class="shotwrap"><img src="../../Evidence/screenshots/S02_browse.png" alt="Final build: the student noticeboard after sign-in"></div>
   <div class="meta">
     <div><b>Team</b>Mengdigerey Zhanzhol<br>Galitskiy Daniil<br>Bisengaliev Daulet</div>
-    <div><b>System version</b>github.com/zondbebox/SE-2623_Endterm<br>branch main · commit a7e5c74<br>evidence re-run 8 November 2026</div>
+    <div><b>System version</b>github.com/zondbebox/SE-2623_Endterm<br>branch main · Final commits after a7e5c74<br>evidence re-run 8 November 2026</div>
     <div><b>Document</b>Group_Team_ICT_FinalProject.pdf<br>Built 8 November 2026<br>Cover: real screenshot, final build</div>
   </div>
 </div></section>
@@ -84,22 +84,22 @@ li { margin-bottom: 0.8mm; }
   <div class="run"><span>Campus Lost &amp; Found · ICT Final Project · SE-2623</span><span>Executive summary</span></div>
   <div class="sec">Executive summary</div>
   <h1>One place to report, find and close lost items — working locally, tested, with honest limits</h1>
-  <p class="lead">Students who lose an item on campus depend on scattered chats and paper notes; in our Stage 1 survey, 4 of 10 respondents said a return had taken more than three days (a small convenience sample). Campus Lost &amp; Found gives the campus one place to publish, search and close lost-and-found notices. The final version is a Flask web application with an SQLite database, private photo uploads, owner and administrator permissions, an administrator panel with analytics, a user-testing timer and a clearly labelled smart-locker simulation. All functional Must requirements work except real university sign-in: Microsoft sign-in code is ready and tested, but no university app registration exists yet. On the final code, 94 of 94 automated tests passed, all five invalid-access attempts were blocked, the 95th-percentile search time was 45 ms against a two-second target, and 20 of 20 availability checks passed over 30 minutes. In the final test, 3 of 3 people outside the team published a notice within two minutes and 3 of 3 found the target notice within one minute. The system runs on one laptop over local HTTP; hosting in Kazakhstan, HTTPS and university sign-in are the main future work.</p>
-  <p class="small">Executive summary: 193 words.</p>
+  <p class="lead">Students who lose an item on campus depend on scattered chats and paper notes; in our Stage 1 survey, 4 of 10 respondents said a return had taken more than three days (a small convenience sample). Campus Lost &amp; Found gives the campus one place to publish, search and close lost-and-found notices. The final version is a Flask web application with an SQLite database, private photo uploads, owner and administrator permissions, an administrator panel with analytics, a user-testing timer and a clearly labelled smart-locker simulation. All Must requirements now work, including sign-in with university Microsoft accounts, which was verified with a real account. On the final code, 96 of 96 automated tests passed, all five invalid-access attempts were blocked, the 95th-percentile search time was 45 ms against a two-second target, and 20 of 20 availability checks passed over 30 minutes. In the final test, 3 of 3 people outside the team published a notice within two minutes and 3 of 3 found the target notice within one minute. The system runs on one laptop over local HTTP; hosting in Kazakhstan with HTTPS is the main future work.</p>
+  <p class="small">Executive summary: 186 words.</p>
   <div class="cols" style="margin-top:5mm">
-    <div class="stat"><div class="bignum">9 / 11</div><div class="lbl">Must requirements done; F1, N2 partly done; Should F3 done</div></div>
-    <div class="stat"><div class="bignum">94 / 94</div><div class="lbl">automated tests passed on the final code, 8 November 2026</div></div>
+    <div class="stat"><div class="bignum">11 / 11</div><div class="lbl">Must requirements done; Should F3 done</div></div>
+    <div class="stat"><div class="bignum">96 / 96</div><div class="lbl">automated tests passed on the final code, 8 November 2026</div></div>
     <div class="stat"><div class="bignum">45 ms</div><div class="lbl">search p95 with 10 concurrent sessions (target ≤ 2,000 ms)</div></div>
     <div class="stat"><div class="bignum">3/3 · 3/3</div><div class="lbl">external testers within target: publish ≤ 120 s · find ≤ 60 s</div></div>
   </div>
   <h3>How to read this report</h3>
   <table class="tight">
     <tr><th style="width:30%">Item</th><th>What it means here</th></tr>
-    <tr><td>Final system</td><td>The code in GitHub commit <span class="mono">a7e5c749095e…</span> (6 Nov 2026), the only commit on <span class="mono">main</span>. The ZIP <span class="mono">SE-2623_Endterm.zip</span> was compared file by file with it: 1,164 files, no differences. For the Final one optional module was added locally and is <b>not yet committed</b>: Microsoft sign-in (<span class="mono">microsoft_auth.py</span>, its 11 tests, one line in <span class="mono">app.py</span>, two template lines). It is switched off until configured; nothing else in the application changed.</td></tr>
-    <tr><td>Evidence re-run</td><td>All tests, measurements and screenshots in this report were produced again on 8 November 2026 on an isolated copy of that code (Windows 11, bundled Python 3.14.8, Microsoft Edge 157). After the sign-in module was added, the test suite, SC3 and the account checks were run again; because the module is off unless configured, pages, screenshots and timings are unaffected. Files: <span class="mono">Final/Evidence/</span>.</td></tr>
+    <tr><td>Final system</td><td>GitHub <span class="mono">main</span>, 8 Nov 2026: the Endterm commit <span class="mono">a7e5c74</span> (6 Nov; identical to <span class="mono">SE-2623_Endterm.zip</span>, 1,164 files compared) plus the Final commits, which add this documentation and Microsoft sign-in (<span class="mono">microsoft_auth.py</span>, its tests, small template changes) and remove the old “LOCAL DEMO” bar. Microsoft sign-in is used when the app is started with <span class="mono">START_MICROSOFT.bat</span>; <span class="mono">START.bat</span> keeps the offline local-account mode.</td></tr>
+    <tr><td>Evidence re-run</td><td>All tests, measurements and screenshots in this report were produced again on 8 November 2026 on an isolated copy of that code (Windows 11, bundled Python 3.14.8, Microsoft Edge 157). After the Final code changes the test suite, SC3, the account checks, the browser checks and all screenshots were run again; the search benchmark and the 30-minute monitor (made before the changes) cover server code that did not change. Files: <span class="mono">Final/Evidence/</span>.</td></tr>
     <tr><td>Data</td><td>All notices and accounts are synthetic teaching data (122 notices, 20 accounts, 10 categories). No real campus data is used.</td></tr>
     <tr><td>Fact / interpretation</td><td>Measured results are stated with method and sample. Interpretation is marked “we interpret”; recommendations are in Section 9.</td></tr>
-    <tr><td>Not claimed</td><td>Public hosting, HTTPS, LAN access and a physical smart locker do not exist. Microsoft sign-in code exists but has never signed in a real university account.</td></tr>
+    <tr><td>Not claimed</td><td>Public hosting, HTTPS, LAN access and a physical smart locker do not exist. Microsoft sign-in works on the demo laptop (<span class="mono">http://localhost:5055</span>) only.</td></tr>
   </table>
   <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>2</b></div>
 </section>
@@ -133,11 +133,11 @@ li { margin-bottom: 0.8mm; }
 <section class="page">
   <div class="run"><span>Campus Lost &amp; Found · ICT Final Project · SE-2623</span><span>3 Requirements status (A1)</span></div>
   <div class="sec">3 · Requirement status — functional</div>
-  <h2>Every functional Must works; university identity is the one partial item</h2>
+  <h2>Every functional Must requirement works, including university sign-in</h2>
   <p class="small">Wording/priority: Stage 1 report pp. 3–4; Stage 2 status: Stage 2 report p. 5; evidence re-run 8 November 2026 (tests in <span class="mono">Campus_Lost_Found/</span>, screenshots S01–S16 in <span class="mono">Final/Evidence/screenshots/</span>).</p>
   <table>
     <tr><th style="width:5%">ID</th><th style="width:25%">Requirement (acceptance check)</th><th style="width:7%">Priority</th><th style="width:9%">Stage 2</th><th style="width:10%">Final</th><th>Evidence</th></tr>
-    <tr><td><b>F1</b></td><td>University account sign-in (reject identities outside astanait.edu.kz)</td><td>Must</td><td class="part">◐ Partly</td><td class="part">◐ Partly</td><td>Other domains rejected: <span class="mono">test_registration_rejects_invalid_domain_syntax_and_password_lengths</span>; SC3-1; S01. Microsoft sign-in code: 11 tests with simulated responses; never connected to a real tenant.</td></tr>
+    <tr><td><b>F1</b></td><td>University account sign-in (reject identities outside astanait.edu.kz)</td><td>Must</td><td class="part">◐ Partly</td><td class="ok">✓ Done</td><td>Real sign-in with an Astana IT University Microsoft account on 8 Nov 2026, 16:40 UTC (audit <span class="mono">microsoft_login_success</span>, single-tenant app in the university Entra directory); 13 tests in <span class="mono">test_microsoft_auth.py</span>; other domains rejected (SC3-1, <span class="mono">test_registration_rejects_invalid_domain…</span>).</td></tr>
     <tr><td><b>F2</b></td><td>Publish a lost or found notice (valid notice appears in the list)</td><td>Must</td><td class="ok">✓ Done</td><td class="ok">✓ Done</td><td><span class="mono">test_owner_create_edit_and_return_persist_after_application_restart</span>; browser run created notice #123 (S04 → S05).</td></tr>
     <tr><td><b>F3</b></td><td>Attach one photo (JPG/PNG up to 5 MB)</td><td>Should</td><td class="ok">✓ Done</td><td class="ok">✓ Done</td><td><span class="mono">test_photo_file_limit_pixel_limit_and_request_limit</span>, <span class="mono">test_png_photo_is_supported</span>, <span class="mono">test_photo_is_reencoded_without_metadata…</span>; S04 photo picker, S05 stored photo.</td></tr>
     <tr><td><b>F4</b></td><td>Browse notices and open details (list and details show saved content)</td><td>Must</td><td class="ok">✓ Done</td><td class="ok">✓ Done</td><td><span class="mono">test_stored_markup_is_escaped_in_browse_and_detail</span>; S02, S03, S07.</td></tr>
@@ -146,7 +146,7 @@ li { margin-bottom: 0.8mm; }
     <tr><td><b>F7</b></td><td>Edit own notice; mark returned (owner changes persist after refresh)</td><td>Must</td><td class="ok">✓ Done</td><td class="ok">✓ Done</td><td>Persistence after app restart (test above); <span class="mono">test_student_cannot_edit_or_close_another_owners_notice</span>; browser: badge “Returned” (S08).</td></tr>
     <tr><td><b>F8</b></td><td>Administrator removes misuse (admin succeeds; student is denied)</td><td>Must</td><td class="ok">✓ Done</td><td class="ok">✓ Done</td><td><span class="mono">test_admin_confirmation_is_read_only_until_posted</span>, <span class="mono">test_student_cannot_remove_notice_even_with_forged_admin_role</span>; browser removal of #123 (S12); student gets 403 (SC3-5).</td></tr>
   </table>
-  <div class="fact"><b>Why F1 is still partly done (one sentence).</b> Signing in with a real Astana IT University account requires an application registration in the university’s Microsoft Entra ID tenant, which only university IT can create, so the final system keeps local accounts with an <span class="mono">@astanait.edu.kz</span> format check; the Microsoft sign-in code (OpenID Connect with PKCE) is ready and passes 11 tests against simulated Microsoft responses, but it stays off and is not counted as done until a real registration signs in a real account (set-up: <span class="mono">Final/SSO/</span>).</div>
+  <div class="fact"><b>How F1 was closed.</b> A team member registered the app in the Astana IT University Microsoft Entra directory (single tenant, redirect <span class="mono">http://localhost:5055/auth/microsoft/callback</span>). The app uses OpenID Connect with PKCE, checks the ID token’s signature, issuer, tenant, audience, expiry, nonce and <span class="mono">@astanait.edu.kz</span> domain, and shows the user’s Microsoft display name. The client secret is typed in at start-up and never stored in files or Git. In Microsoft mode local self-registration is closed; the synthetic demo accounts remain so the offline classroom demo still works.</div>
   <p class="small">Instructor comments on Stage 1: none were reported to the team (Stage 2 report, p. 9), so no Stage 1 comment remains open.</p>
   <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>4</b></div>
 </section>
@@ -159,7 +159,7 @@ li { margin-bottom: 0.8mm; }
   <table>
     <tr><th style="width:5%">ID</th><th style="width:24%">Requirement (check)</th><th style="width:9%">Stage 2</th><th style="width:10%">Final</th><th>Evidence and method</th></tr>
     <tr><td><b>N1</b></td><td>Search p95 ≤ 2 s with 10 concurrent users</td><td class="ok">✓ Done<br><span class="small">p95 81 ms</span></td><td class="ok">✓ Done</td><td>p95 <b>44.9 ms</b>, max 54.6 ms, median 28.8 ms; 10 signed-in sessions × 10 title searches, started together. Loopback HTTP until the full HTML is received; images and painting excluded. <span class="mono">search_performance_final.json</span></td></tr>
-    <tr><td><b>N2</b></td><td>Enforce university identity and owner/admin rights</td><td class="part">◐ Partly</td><td class="part">◐ Partly</td><td>Rights: SC3 5/5 blocked; every <span class="mono">/admin/*</span> page returns 403 to all three student accounts and 200 to the administrator (<span class="mono">account_checks.json</span>). Identity: same limit as F1.</td></tr>
+    <tr><td><b>N2</b></td><td>Enforce university identity and owner/admin rights</td><td class="part">◐ Partly</td><td class="ok">✓ Done</td><td>Identity: Microsoft sign-in verified with a real university account; new accounts only via Microsoft in that mode (test). Rights: SC3 5/5 blocked; every <span class="mono">/admin/*</span> page returns 403 to students and 200 to the administrator (<span class="mono">account_checks.json</span>). Synthetic demo accounts are kept for the offline demo.</td></tr>
     <tr><td><b>N3</b></td><td>Support 360 px screens and keyboard input (core screens, labels, focus order)</td><td class="part">◐ Partly</td><td class="ok">✓ Done</td><td>Edge at 360 × 760 px: 12 of 12 pages without horizontal scrolling; all form fields on browse, post and sign-in have labels; Tab reaches every control of the post form in visual order with a visible focus ring (M01–M04, K01; <span class="mono">browser_checks.json</span>). Automated browser check — not tested by users with assistive technology.</td></tr>
     <tr><td><b>N4</b></td><td>Pass 20/20 checks during a 30-minute demo (core pages plus retry when offline)</td><td class="part">◐ Partly</td><td class="ok">✓ Done</td><td><b>20/20</b> authenticated checks of five core pages over 30 minutes (student + admin sessions; <span class="mono">stability_30min_final.json</span>). Offline retry in Edge: with the network cut the locker refresh reports that the result could not be confirmed; after reconnecting, “Refresh status” and a page reload both succeed.</td></tr>
   </table>
@@ -187,7 +187,7 @@ li { margin-bottom: 0.8mm; }
       <h3>Hashed or signed</h3><p>Passwords: scrypt hashes. Session cookie: signed with a random 256-bit key in <span class="mono">runtime/session.key</span> — tamper-proof, but readable.</p>
       <h3>Authenticated</h3><p>Every page except sign-in and registration. Photos only through a signed-in route. Admin pages also need role&nbsp;=&nbsp;admin.</p>
       <h3>Public</h3><p>Nothing on the network. The GitHub repository is public and holds synthetic data only, including demo password hashes.</p>
-      <h3>Not in the system</h3><p>LAN or Internet access, HTTPS, a physical locker. Microsoft sign-in: code ready, switched off, never connected to a real tenant.</p>
+      <h3>Not in the system</h3><p>LAN or Internet access, HTTPS, a physical locker. Microsoft sign-in runs from the same laptop (localhost redirect).</p>
     </div>
   </div>
   <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>6</b></div>
@@ -200,7 +200,7 @@ li { margin-bottom: 0.8mm; }
   <h2>What changed between plan and build, and why</h2>
   <table>
     <tr><th style="width:20%">Area</th><th style="width:26%">Stage 1 design</th><th style="width:26%">Final (as built)</th><th>Reason</th></tr>
-    <tr><td>Identity</td><td>University SSO via the university identity provider</td><td>Local accounts (<span class="mono">@astanait.edu.kz</span>, scrypt) + optional Microsoft sign-in code, off until configured</td><td>No app registration in the university Entra tenant; Stage 1 risk plan allowed a labelled local sign-in.</td></tr>
+    <tr><td>Identity</td><td>University SSO via the university identity provider</td><td>Microsoft Entra sign-in (OpenID Connect + PKCE) in the university directory; local demo accounts kept for offline use</td><td>Works as planned; local accounts stay because the demo must run without Internet.</td></tr>
     <tr><td>Network</td><td>Wi-Fi / HTTPS, DNS-resolved host</td><td>Loopback HTTP only (127.0.0.1)</td><td>No TLS certificate or host; binding to loopback keeps unencrypted traffic off the network.</td></tr>
     <tr><td>Hosting</td><td>Prototype server (deployment “needs setup”)</td><td>Waitress on the demo laptop; portable Windows runtime included</td><td>Free static hosts cannot run Flask + SQLite; KZ data-location rules (Section 5) need a deliberate choice.</td></tr>
     <tr><td>Stored data</td><td>Planned disk encryption, restricted file access</td><td>Plain SQLite and photo files under <span class="mono">data/</span></td><td>Disk encryption is an operating-system setting, not part of the app; demo data is synthetic.</td></tr>
@@ -218,7 +218,7 @@ li { margin-bottom: 0.8mm; }
     <tr><td>Web server</td><td>Waitress 3.0.2, 4 threads</td><td>Production-grade WSGI server that runs on Windows.</td></tr>
     <tr><td>Data</td><td>SQLite (Python <span class="mono">sqlite3</span>), sqlite-web 0.8.2 read-only inspector</td><td>One file, no server to install, constraints in SQL.</td></tr>
     <tr><td>Media</td><td>Pillow 12.3.0</td><td>Validates and re-encodes uploaded photos.</td></tr>
-    <tr><td>Quality</td><td><span class="mono">unittest</span> (94 tests), custom benchmark and monitor scripts</td><td>No extra dependencies; runs from <span class="mono">TESTS.bat</span>.</td></tr>
+    <tr><td>Quality</td><td><span class="mono">unittest</span> (96 tests), custom benchmark and monitor scripts</td><td>No extra dependencies; runs from <span class="mono">TESTS.bat</span>.</td></tr>
   </table>
   <div class="foot"><span>SE-2623 · Zhanzhol · Daniil · Daulet</span><b>7</b></div>
 </section>
@@ -269,7 +269,7 @@ li { margin-bottom: 0.8mm; }
     <tr><td>Cross-site scripting</td><td>Jinja auto-escaping; Content-Security-Policy <span class="mono">default-src 'self'</span></td><td><span class="mono">test_stored_markup_is_escaped…</span></td></tr>
     <tr><td>Acting on others’ data</td><td>Server-side owner check and role check on every change</td><td>SC3-4, SC3-5; 403 matrix</td></tr>
     <tr><td>Malicious upload</td><td>Type, size (5 MiB) and pixel (12 MP) limits; re-encode; random name</td><td><span class="mono">test_invalid_photo_extension_type_bytes…</span></td></tr>
-    <tr><td>Forged Microsoft sign-in</td><td>state + nonce + PKCE; RS256 signature, issuer, audience, tenant, expiry and domain checked</td><td><span class="mono">test_microsoft_auth.py</span> (simulated)</td></tr>
+    <tr><td>Forged Microsoft sign-in</td><td>state + nonce + PKCE; RS256 signature, issuer, audience, tenant, expiry and domain checked</td><td><span class="mono">test_microsoft_auth.py</span> (13 tests) + real sign-in</td></tr>
     <tr><td>Spreadsheet formulas in CSV</td><td>Cells starting with = + − @ are prefixed</td><td><span class="mono">test_csv_neutralizes_formulas…</span></td></tr>
   </table>
   <p class="cap" style="margin-top:-1.5mm">Controls follow common guidance for Flask applications and password and CSRF handling (Pallets, n.d.; OWASP Foundation, n.d.-a, n.d.-b).</p>
@@ -282,7 +282,7 @@ li { margin-bottom: 0.8mm; }
   <table class="tight">
     <tr><th style="width:30%">If the system were hosted publicly</th><th>What must change</th></tr>
     <tr><td>Data location</td><td>Database, photos and backups in a data centre located in Kazakhstan (Art. 12(2)).</td></tr>
-    <tr><td>Transport and identity</td><td>HTTPS with a valid certificate; university Microsoft Entra sign-in instead of local passwords.</td></tr>
+    <tr><td>Transport and identity</td><td>HTTPS with a valid certificate and an HTTPS redirect URI for Microsoft sign-in; local demo accounts switched off.</td></tr>
     <tr><td>Consent and retention</td><td>Consent text at registration; delete or anonymise returned notices after a fixed period.</td></tr>
     <tr><td>Incidents</td><td>A named responsible person and a procedure to notify the authorised body within one working day.</td></tr>
   </table>
@@ -358,7 +358,7 @@ li { margin-bottom: 0.8mm; }
 <section class="page">
   <div class="run"><span>Campus Lost &amp; Found · ICT Final Project · SE-2623</span><span>7 Testing and data analysis</span></div>
   <div class="sec">7 · Testing — software checks</div>
-  <h2>94 automated tests, five access attacks and two timed measurements on the final code</h2>
+  <h2>96 automated tests, five access attacks and two timed measurements on the final code</h2>
   <table class="tight">
     <tr><th style="width:30%">Test file</th><th style="width:8%">Tests</th><th>What it covers</th></tr>
     <tr><td><span class="mono">backend/test_backend.py</span></td><td>14</td><td>Schema constraints, seed data, transactions, read-only queries, backup/restore</td></tr>
@@ -368,9 +368,9 @@ li { margin-bottom: 0.8mm; }
     <tr><td><span class="mono">test_analytics.py</span></td><td>7</td><td>Aggregates vs independent SQL, empty data, CSV safety, access</td></tr>
     <tr><td><span class="mono">test_stage2_features.py</span></td><td>14</td><td>Research timer rules, consent, CSV; locker open/alert/close/reset</td></tr>
     <tr><td><span class="mono">test_backup_full.py</span> · <span class="mono">test_media.py</span></td><td>7 · 2</td><td>Archive contents, hashes, traversal/corruption rejection · media and alt text</td></tr>
-    <tr><td><span class="mono">test_microsoft_auth.py</span> (new)</td><td>11</td><td>Microsoft sign-in against simulated Microsoft: off when unconfigured, PKCE/state/nonce, RS256 signature, wrong issuer/audience/tenant/expiry, non-university email</td></tr>
+    <tr><td><span class="mono">test_microsoft_auth.py</span> (new)</td><td>13</td><td>Microsoft sign-in against simulated Microsoft: off when unconfigured, PKCE/state/nonce, RS256 signature, wrong issuer/audience/tenant/expiry, non-university email, display name escaping, registration closed in Microsoft mode</td></tr>
   </table>
-  <p class="cap" style="margin-top:-1mm">Run: <span class="mono">python\python.exe -B -m unittest discover -v</span> in an isolated copy, 8 November 2026: <b>Ran 94 tests in 29.6 s — OK</b>. Log: <span class="mono">Final/Evidence/test_suite_final.log</span>.</p>
+  <p class="cap" style="margin-top:-1mm">Run: <span class="mono">python\python.exe -B -m unittest discover -v</span> in an isolated copy, 8 November 2026: <b>Ran 96 tests in 42.2 s — OK</b>. Log: <span class="mono">Final/Evidence/test_suite_final.log</span>.</p>
   <div class="cols">
     <div>
       <h3>SC3 — five invalid-access attempts</h3>
@@ -434,7 +434,7 @@ li { margin-bottom: 0.8mm; }
   <h2>A simulated found-property locker warns staff when its door stays open</h2>
   <p>A real campus could keep found items in a locker with a door sensor. We built the software side only: the administrator page <span class="mono">/admin/smart-locker</span> records <b>SIMULATED</b> door readings for locker LF-01 linked to an existing “found” notice. No sensor, microcontroller or door exists, and every record says so.</p>
   <div class="cols">
-    <figure><img class="shot" style="height:70mm" src="../../Evidence/screenshots/S16_locker_alert.png" alt="Locker OPEN TOO LONG alert"><figcaption class="cap"><b>S16.</b> After “Simulate open”, 11 s of waiting and “Refresh status”, the page shows <b>OPEN TOO LONG</b> (last reported open for 13.6 seconds).</figcaption></figure>
+    <figure><img class="shot" style="height:70mm" src="../../Evidence/screenshots/S16_locker_alert.png" alt="Locker OPEN TOO LONG alert"><figcaption class="cap"><b>S16.</b> After “Simulate open”, 11 s of waiting and “Refresh status”, the page shows <b>OPEN TOO LONG</b> (last reported open for 13.5 seconds).</figcaption></figure>
     <figure><img class="shot" style="height:70mm" src="../../Evidence/screenshots/S16b_locker_closed.png" alt="Locker closed"><figcaption class="cap"><b>S16b.</b> “Simulate close” resolves it; the status line reads “Reading saved. Door is closed.”. The browser updated in place, without a page reload.</figcaption></figure>
   </div>
   <table class="tight">
@@ -456,7 +456,7 @@ li { margin-bottom: 0.8mm; }
   <h2>What the prototype cannot do yet, and the next sensible steps</h2>
   <table>
     <tr><th style="width:24%">Limitation (fact)</th><th style="width:36%">Consequence</th><th>Next step (recommendation)</th></tr>
-    <tr><td>University sign-in not connected</td><td>Local registration accepts any well-formed <span class="mono">@astanait.edu.kz</span> address without proof of ownership.</td><td>Ask university IT for an Entra app registration, set three environment variables and test a real sign-in; the OpenID Connect code is ready (Microsoft, n.d.-a, n.d.-b; <span class="mono">Final/SSO/</span>).</td></tr>
+    <tr><td>Sign-in only on localhost</td><td>Microsoft redirects to <span class="mono">http://localhost:5055</span>; the secret is typed in at each start; accounts are matched by email.</td><td>With hosting: HTTPS redirect URI, secret in a vault, store the immutable <span class="mono">oid</span> claim (Microsoft, n.d.-a, n.d.-b).</td></tr>
     <tr><td>Loopback HTTP on one laptop</td><td>Only one machine can use it; a demo depends on that laptop.</td><td>Host in a Kazakhstan data centre with HTTPS; keep the loopback build for offline demos.</td></tr>
     <tr><td>SQLite + in-memory rate limit</td><td>One writer at a time; limits reset on restart and are not shared between servers.</td><td>PostgreSQL and a shared limiter (e.g. Redis) when moving beyond one server.</td></tr>
     <tr><td>No email notifications</td><td>Owners must check the board themselves.</td><td>Optional notification email after a matching notice is posted.</td></tr>
@@ -469,7 +469,7 @@ li { margin-bottom: 0.8mm; }
   <h3>Lessons learned</h3>
   <ul>
     <li><b>Evidence beats claims.</b> Writing the requirement table forced us to separate “works in a test” from “seen by a real user”.</li>
-    <li><b>Scope is a design decision.</b> Dropping chat, matching and real SSO kept the core flow stable enough to test.</li>
+    <li><b>Scope is a design decision.</b> Dropping chat and matching kept the core flow stable; university sign-in came last, once the core worked.</li>
     <li><b>Process shows in Git.</b> Uploading the project in one commit hid our individual work; next time each feature goes in its own commit.</li>
     <li><b>Users first, polish later.</b> The external user study should have started in Week 7, not at the end; heuristics (Nielsen, 2024) helped us design screens but cannot replace observing people.</li>
   </ul>

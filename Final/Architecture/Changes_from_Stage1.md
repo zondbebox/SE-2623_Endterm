@@ -1,10 +1,10 @@
 # A2 — Differences between the Stage 1 design and the as-built system
 
-Diagram: `as_built_architecture.svg` (landscape, for slides) and `as_built_architecture_portrait.svg` (report page 6). Both describe commit `a7e5c74` plus the optional Microsoft sign-in module added for the Final (switched off until configured; not yet committed).
+Diagram: `as_built_architecture.svg` (landscape, for slides) and `as_built_architecture_portrait.svg` (report page 6). Both describe commit `a7e5c74` plus the Final changes (Microsoft sign-in, LOCAL DEMO bar removed).
 
 | Area | Stage 1 design (Stage 1 report p. 5) | Final, as built | Reason |
 |---|---|---|---|
-| Identity | University SSO via the university identity provider | Local accounts (`@astanait.edu.kz`, scrypt) + optional Microsoft sign-in code (OpenID Connect + PKCE), switched off until configured | No app registration in the university Entra tenant yet; Stage 1 risk plan allowed a clearly labelled local sign-in |
+| Identity | University SSO via the university identity provider | Microsoft Entra sign-in in the university directory (OpenID Connect + PKCE), verified 8 Nov 2026; local demo accounts kept for offline demos | As planned; local accounts remain because the demo must also run without Internet |
 | Network | Wi-Fi / HTTPS, DNS-resolved host | Loopback HTTP only (`127.0.0.1:5055`, trusted hosts `127.0.0.1`, `localhost`) | No certificate or host; loopback keeps unencrypted traffic off the network |
 | Hosting | Prototype server, deployment "needs setup" | Waitress 3.0.2 on the demo laptop; portable Windows Python 3.14.8 bundled | Static hosts cannot run Flask + SQLite; Kazakhstan data-location rule needs a deliberate hosting choice |
 | Stored data | Planned disk encryption, restricted file access | Plain SQLite files and photos under `data/` | Disk encryption is an OS setting outside the app; demo data is synthetic |
@@ -15,4 +15,4 @@ Diagram: `as_built_architecture.svg` (landscape, for slides) and `as_built_archi
 | Contact | Contact via university email | `mailto:` draft to the stored owner; the site sends no email | No mail server; avoids storing messages |
 | Team tools | VS Code, Git, Google Drive | Same; GitHub repository holds one upload commit | History was not committed per feature |
 
-**Not built although discussed:** LAN access (the task description mentions an Endterm "LAN launch", but the code binds only to 127.0.0.1 and no LAN build exists in the repository or ZIP), public hosting, HTTPS, a *working* Microsoft sign-in (code exists, not connected), physical locker hardware.
+**Not built although discussed:** LAN access (the task description mentions an Endterm "LAN launch", but the code binds only to 127.0.0.1 and no LAN build exists in the repository or ZIP), public hosting, HTTPS, physical locker hardware.

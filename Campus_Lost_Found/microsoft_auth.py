@@ -223,6 +223,10 @@ def register_microsoft_auth(app):
                 user = db.execute('SELECT id, role FROM users WHERE email=?', (email,)).fetchone()
         session.clear()
         session.update(user_id=user['id'], csrf=secrets.token_urlsafe(32), auth='microsoft')
+        # Display name from the verified ID token; kept only in the signed session, not in the database.
+        display_name = ' '.join(str(claims.get('name') or '').split())[:60]
+        if display_name:
+            session['display_name'] = display_name
         session.permanent = True
         audit('microsoft_login_success', user['id'])
         return redirect(url_for('browse'))

@@ -31,8 +31,8 @@ Browser ──HTTP 127.0.0.1:5055──▶ Waitress (4 threads) ──▶ Flask 
 | `static/locker.js` | Locker buttons without page reload (fetch) | `requestUpdate`, `updatePage` |
 | `static/photo-upload.js` | Photo picker preview and checks in the browser | — |
 | `templates/*.html` | Jinja pages (`base.html` = layout, top bar, navigation) | — |
-| `microsoft_auth.py` | Optional Microsoft Entra sign-in (OIDC + PKCE), off unless `CAMPUS_ENTRA_*` env vars are set | `settings`, `login`, `callback`, `validate_id_token`, `rsa_sha256_verify` |
-| `test_*.py`, `backend/test_backend.py` | 94 automated tests (11 in `test_microsoft_auth.py`) | — |
+| `microsoft_auth.py` | Microsoft Entra sign-in (OIDC + PKCE); on when started with `START_MICROSOFT.bat` (env vars `CAMPUS_ENTRA_*`) | `settings`, `login`, `callback`, `validate_id_token`, `rsa_sha256_verify` |
+| `test_*.py`, `backend/test_backend.py` | 96 automated tests (13 in `test_microsoft_auth.py`) | — |
 
 ## 3. Routes
 
@@ -53,7 +53,7 @@ Browser ──HTTP 127.0.0.1:5055──▶ Waitress (4 threads) ──▶ Flask 
 | `/admin/analytics`, `/admin/analytics.csv` | GET | admin | three SQL series; CSV export |
 | `/admin/research`, `/admin/research.csv` | GET, POST | admin | timer for real external testers |
 | `/admin/smart-locker` | GET, POST | admin | SIMULATED door readings for LF-01 |
-| `/auth/microsoft/login`, `/auth/microsoft/callback` | GET | anyone | Microsoft sign-in; **404 unless configured** |
+| `/auth/microsoft/login`, `/auth/microsoft/callback` | GET | anyone | Microsoft sign-in; 404 when started with `START.bat` |
 
 ## 4. Database tables
 
@@ -72,7 +72,7 @@ Remember: `backend/db.py` checks the exact column list (`TABLE_COLUMNS`). **Addi
 
 ## 5. Security in one breath
 
-scrypt password hashes · signed HttpOnly SameSite=Lax session cookie, 30 min · CSRF token on every POST (`hmac.compare_digest`) · rate limit on login/register · parameterised SQL with escaped LIKE · Jinja auto-escaping + CSP `default-src 'self'` · owner check (`require_owner`) and role check (`admin_required`) on the server · uploads: type/size/pixel checks, re-encode, random 48-hex names, served only to signed-in users · CSV formula neutralising · server only on 127.0.0.1 with trusted hosts localhost. **Not present:** HTTPS, encryption at rest, LAN/Internet access, a *connected* university sign-in (code ready, off).
+scrypt password hashes · signed HttpOnly SameSite=Lax session cookie, 30 min · CSRF token on every POST (`hmac.compare_digest`) · rate limit on login/register · parameterised SQL with escaped LIKE · Jinja auto-escaping + CSP `default-src 'self'` · owner check (`require_owner`) and role check (`admin_required`) on the server · uploads: type/size/pixel checks, re-encode, random 48-hex names, served only to signed-in users · CSV formula neutralising · server only on 127.0.0.1 with trusted hosts localhost. **Not present:** HTTPS, encryption at rest, LAN/Internet access. University sign-in works on localhost only.
 
 ## 6. Who presented / owns what (team-confirmed contribution table, Stage 2 report p. 9)
 
@@ -86,4 +86,4 @@ Git cannot prove this split yet: the repository has one upload commit from Zhanz
 
 ## 7. Numbers to know (all from 8 Nov 2026 re-run)
 
-94/94 tests · SC1 3/3, SC2 3/3 (T01–T03) · p95 search 44.9 ms (target 2,000 ms, 10 sessions, 100 requests) · SC3 5/5 · N4 20/20 over 30 min · 12/12 pages without sideways scroll at 360 px · 122 notices (96 open/26 returned; 60 lost/62 found), 20 users, 10 categories · seed creates 120 notices · locker warning after 10 s · photo ≤ 5 MiB, ≤ 12 MP, scaled to ≤ 1600 px · session 30 min · login limit 5 per 60 s.
+96/96 tests · real Microsoft sign-in 8 Nov 2026 · SC1 3/3, SC2 3/3 (T01–T03) · p95 search 44.9 ms (target 2,000 ms, 10 sessions, 100 requests) · SC3 5/5 · N4 20/20 over 30 min · 12/12 pages without sideways scroll at 360 px · 122 notices (96 open/26 returned; 60 lost/62 found), 20 users, 10 categories · seed creates 120 notices · locker warning after 10 s · photo ≤ 5 MiB, ≤ 12 MP, scaled to ≤ 1600 px · session 30 min · login limit 5 per 60 s.

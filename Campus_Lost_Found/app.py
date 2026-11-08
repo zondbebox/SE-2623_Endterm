@@ -110,6 +110,9 @@ def create_app(test_config=None):
 
     @app.route('/register', methods=['GET', 'POST'])
     def register():
+        if app.jinja_env.globals.get('microsoft_login_enabled', lambda: False)():
+            # With university sign-in configured, new accounts must come from Microsoft (verified identity).
+            abort(404, description='New accounts are created by signing in with your university Microsoft account.')
         error, email = None, ''
         if request.method == 'POST':
             now, key = time.monotonic(), ('register', request.remote_addr or 'local')

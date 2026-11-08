@@ -95,8 +95,10 @@ def main():
 
     # Must requirements: F1,F2,F4-F8 (7) + N1-N4 (4) = 11. F1 and N2 remain partly done.
     n_status = {'N1': True, 'N3': v['N3_CLASS'] == 'ok', 'N4': v['N4_CLASS'] == 'ok'}
-    v['MUST_DONE'] = str(6 + sum(n_status.values()))
-    v['MUST_PARTLY'] = ', '.join(['F1', 'N2'] + [k for k, ok in n_status.items() if not ok])
+    # F1 and N2: closed on 8 Nov 2026 by a real Microsoft sign-in with a university account (see Final/SSO/).
+    v['MUST_DONE'] = str(8 + sum(n_status.values()))
+    partly = [k for k, ok in n_status.items() if not ok]
+    v['MUST_LABEL'] = 'Must requirements done' + (f"; {', '.join(partly)} partly" if partly else '') + '; Should F3 done'
 
     # Final test
     s2 = {'publish': 'Stage 2 report: <b>Pending</b>.<br>Team-reported afterwards: 5/5 (70–92 s), no raw record',
@@ -143,10 +145,10 @@ def main():
         "Students who lose an item on campus depend on scattered chats and paper notes; in our Stage 1 survey, 4 of 10 respondents said a return had taken more than three days (a small convenience sample). "
         "Campus Lost & Found gives the campus one place to publish, search and close lost-and-found notices. "
         "The final version is a Flask web application with an SQLite database, private photo uploads, owner and administrator permissions, an administrator panel with analytics, a user-testing timer and a clearly labelled smart-locker simulation. "
-        "All functional Must requirements work except real university sign-in: Microsoft sign-in code is ready and tested, but no university app registration exists yet. "
+        "All Must requirements now work, including sign-in with university Microsoft accounts, which was verified with a real account. "
         f"On the final code, {v['TESTS_N']} of {v['TESTS_N']} automated tests passed, all five invalid-access attempts were blocked, the 95th-percentile search time was {p95:.0f} ms against a two-second target, and {stab_phrase}. "
         f"{exec_ft} "
-        "The system runs on one laptop over local HTTP; hosting in Kazakhstan, HTTPS and university sign-in are the main future work.")
+        "The system runs on one laptop over local HTTP; hosting in Kazakhstan with HTTPS is the main future work.")
     n_exec = words(exec_summary)
     v['EXEC_SUMMARY'] = E(exec_summary)
     v['EXEC_WORDS'] = str(n_exec)

@@ -1,7 +1,7 @@
 {
- "run_utc": "2026-11-08T14:49:04+00:00",
+ "run_utc": "2026-11-08T16:43:21+00:00",
  "browser": "Microsoft Edge (headless, Chromium) via DevTools Protocol",
- "code": "commit a7e5c74, isolated scratch copy",
+ "code": "final code (a7e5c74 + Final changes, Microsoft sign-in off), isolated scratch copy",
  "note": "Automated browser evidence, not a human usability or accessibility audit.",
  "F2_created_notice_path": "/notice/123",
  "F5_search": {
@@ -23,7 +23,7 @@
   "flash": "Notice removed by the administrator."
  },
  "locker_simulation": {
-  "alert_text": "OPEN TOO LONG \u2014 last reported open for 13.6 seconds.",
+  "alert_text": "OPEN TOO LONG \u2014 last reported open for 13.5 seconds.",
   "updated_without_page_reload": true,
   "status_message": "Reading saved. Door is closed.",
   "door_state_after_close": "closed"
@@ -206,7 +206,7 @@
    },
    {
     "tag": "body",
-    "text": "Skip to content\nLOCAL DEMO\nSynthetic acc",
+    "text": "Skip to content\nCampus Lost & Found\nFind",
     "visible_focus": false
    },
    {
