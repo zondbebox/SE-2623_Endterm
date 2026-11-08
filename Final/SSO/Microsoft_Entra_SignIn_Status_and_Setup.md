@@ -10,7 +10,7 @@
 | Tests | 13 tests with simulated Microsoft (signature, issuer, tenant, audience, expiry, nonce, domain, PKCE, single-use state, escaping, registration closed); full suite 96/96 | `Final/Evidence/test_suite_final.log` |
 | Requirement F1 / N2 | **Done** | report pp. 4–5 |
 
-**Secret hygiene.** One client secret was accidentally pasted into a chat. It must be deleted in Entra (Certificates & secrets) and replaced. Secrets are typed into `START_MICROSOFT.bat` at start-up only.
+**Secret hygiene.** A client secret that was once pasted into a chat has been deleted in Entra by the owner and replaced. Secrets are typed into `START_MICROSOFT.bat` at start-up only.
 
 ## How it works (OpenID Connect, authorization code flow + PKCE)
 

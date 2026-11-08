@@ -162,7 +162,16 @@ def main():
         blocks.append(f"<div class=\"stmt\"><h3>{E(s['name'])} <span class=\"small\" style=\"font-weight:400\">— {E(s['role'])} · {n} words</span></h3>"
                       f"<p>{E(s['text'])}</p><div class=\"sig\"><span>Signature: {E(s['name'])}</span><span>Date</span></div></div>")
     v['STATEMENTS'] = ''.join(blocks)
-    v['STATEMENT_STATUS'] = ('Each statement was written and signed by its author.' if cfg['statements_confirmed'] else
+    url = cfg.get('updated_video_url', '').strip()
+    old_video = 'Assignment 4 video (2:14, 1920 × 1080, 30 fps) — <span class="mono">youtu.be/76M3hSqR-7w</span>, older interface, kept as a backup'
+    if url:
+        v['VIDEO_ROW'] = f'<tr><td>Demo video</td><td>Re-recorded Final demo video on the current interface: <span class="mono">{E(url)}</span>.</td><td>Backup: {old_video}.</td></tr>'
+        v['VIDEO_NOTE'] = '<div class="fact"><b>Video.</b> The demo video was re-recorded on the final interface (student journey, administrator panel, analytics, smart-locker simulation, Microsoft sign-in) and is linked above. The Assignment 4 video is kept only as an older backup.</div>'
+    else:
+        v['VIDEO_ROW'] = f'<tr><td>Demo video</td><td>Re-recorded Final demo video: <b>link to be added</b> (<span class="mono">Final/Video/</span>).</td><td>Backup now: {old_video}.</td></tr>'
+        v['VIDEO_NOTE'] = ('<div class="note"><b>Video status.</b> The Assignment 4 video shows the earlier white-and-teal interface without the administrator panel, analytics or locker, so the team is re-recording it on the final build; '
+                           'the scenes are listed in <span class="mono">Final/Demo/Demo_Plan_and_Backup.md</span> and the new link goes in <span class="mono">Final/Video/</span>.</div>')
+    v['STATEMENT_STATUS'] = ('Each member confirmed that the statement under their name is accurate; signatures are on the printed copy.' if cfg['statements_confirmed'] else
                              '<b>Status: drafted from the team-confirmed contribution table (Stage 2 report, p. 9) and the code; each member must check every fact, especially the “problem I solved”, edit it in their own words and sign before submission.</b>')
 
     # locker
